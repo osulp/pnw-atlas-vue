@@ -1,1 +1,1 @@
-Atlas of the Pacific Northwest
+http://rawgit.com/osulp/pnw-atlas-vue/master/index.html
