@@ -35,6 +35,7 @@
                 "id":1,
                 "type":"chart",
                 "title":"Hover Over Map for Details",
+                "chartHeight":160,
                 "chartID":"raceChart",
                 "description":"Population of each racial group within one census block group. Data from 2011-2015."
             }],
