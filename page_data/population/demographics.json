@@ -47,6 +47,7 @@
             "colors":["#80b1d3","#9fdf9f","#bebada","#fb8072","#ffffb3","#fdb462"],
             "options": {
                 "responsive": true,
+                "maintainAspectRatio": false,
                 "legend": {
                     "position": "left",
                     "labels": {
@@ -103,7 +104,7 @@
                 "id":1,
                 "type":"chart",
                 "hoverContainer":true,
-                "chartHeight":260,
+                "chartHeight":250,
                 "title":"Hover Over Map for Details",
                 "chartID":"ageChart",
                 "description":"Population of each age group within a census block group."
@@ -117,6 +118,7 @@
             "colors":["#261a32","#332343","#402c54","#4d3564","#593e75","#664686","#734f96","#8058a7","#8c69b0","#9979b9","#a68ac1","#b39bca","#bfabd3","#ccbcdc","#d9cde5","#e6deed","#f2eef6","#fcfbfd"],
             "options": {
                 "responsive": true,
+                "maintainAspectRatio": false,
                 "scales": {
                     "yAxes": [{
                         "ticks": {
