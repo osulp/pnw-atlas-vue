@@ -5,7 +5,7 @@
     "initial":0,
     "dropdownText":"Select Map",
     "basemap":[{"title":"terrain","opacity":1},
-        {"title":"geoserver","layer":"pnw_outline2","opacity":0.3},
+        {"title":"geoserver","layer":"pnw_outline2","opacity":0.8},
         {"title":"label","opacity":1}],
     "infoBackground":"rgba(255,255,255,1)",
     "maps":[{
