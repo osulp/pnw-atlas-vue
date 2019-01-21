@@ -1,0 +1,559 @@
+{
+    "title": "Water Pollution",
+    "URL":"pollution_icon",
+    "chapter":"water",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "basemap":[{"title":"terrain","opacity":1},
+      {"title":"geoserver","layer":"pnw_outline2","opacity":0.3},
+      {"title":"label","opacity":1}],
+    "maps":[{
+        "id":0,
+        "title":"Total",
+        "border":{"title":"pnw_borders_black","opacity":0.3},
+        "tileLayers":[{"title":"pnw_water","pane":450,"opacity":1}],
+        "jsonLayers":[{
+            "url":"map_data/water/pollution_hexgrid.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"pol_points",
+            "values":[50,25,10,5,0],
+            "fillColors":["#a50f15","#de2d26","#fb6a4a","#fcae91","#fee5d9","#ffffff"],
+            "colors":["#a50f15","#de2d26","#fb6a4a","#fcae91","#fee5d9","#ffffff"],
+            "fillOpacity":[0.8,0.8,0.8,0.8,0.8,0],
+            "opacity":[0.1,0.1,0.1,0.1,0.1,0],
+            "tooltip":"tooltip",
+            "tooltipVars":["pol_points"],
+            "tooltipText":["<b style='display:inline;'>Total Impairments:&nbsp</b><p3 style='font-weight:normal;'>","</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"Total Impairments",
+                "icon":"pollution",
+                "containers":[{
+                    "color":"#a50f15",
+                    "label":"50+"
+                  },
+                  {
+                    "color":"#de2d26",
+                    "label":"25 to 50"
+                  },
+                  {
+                    "color":"#fb6a4a",
+                    "label":"10 to 25"
+                  },
+                  {
+                    "color":"#fcae91",
+                    "label":"5 to 10"
+                  },
+                  {
+                    "color":"#fee5d9",
+                    "label":"Less than 5"
+                  },
+                  {
+                    "color":"#ffffff",
+                    "label":"0 or No Data"
+                  }],
+                "description":"Total impairments in waterways. These include Metals, Sediments, Algae, Pathogens, Oxygen Impairment, Ammonia, and more."
+            },
+            {
+                "id":1,
+                "type":"none",
+                "subtitle":"Impaired waters are listed in the 2015 303(d) list provided by the U.S Environmental Protection Agency."
+            }]
+      },
+      {
+        "id":1,
+        "title":"Metals",
+        "border":{"title":"pnw_borders_black","opacity":0.3},
+        "tileLayers":[{"title":"pnw_water","pane":450,"opacity":1}],
+        "jsonLayers":[{
+            "url":"map_data/water/pollution_hexgrid.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"metals",
+            "values":[20,10,5,2,0],
+            "fillColors":["#434323","#76763d","#b1b168","#cbcb9a","#e5e5cc","#ffffff"],
+            "colors":["#434323","#76763d","#b1b168","#cbcb9a","#e5e5cc","#ffffff"],
+            "fillOpacity":[0.8,0.8,0.8,0.8,0.8,0],
+            "opacity":[0.1,0.1,0.1,0.1,0.1,0],
+            "tooltip":"tooltip",
+            "tooltipVars":["metals"],
+            "tooltipText":["<b style='display:inline;'>Metal Impairments:&nbsp</b><p3 style='font-weight:normal;'>","</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"Metal Impairments",
+                "icon":"mining",
+                "containers":[{
+                    "color":"#434323",
+                    "label":"20+"
+                  },
+                  {
+                    "color":"#76763d",
+                    "label":"10 to 20"
+                  },
+                  {
+                    "color":"#b1b168",
+                    "label":"5 to 10"
+                  },
+                  {
+                    "color":"#cbcb9a",
+                    "label":"2 to 2"
+                  },
+                  {
+                    "color":"#e5e5cc",
+                    "label":"Less than 2"
+                  },
+                  {
+                    "color":"#ffffff",
+                    "label":"0 or No Data"
+                  }],
+                "description":"Total metal impairments in waterways. Metals can include Mercury, Iron, Lead, Manganese, Nickel, Zinc, and More."
+            },
+            {
+                "id":1,
+                "type":"none",
+                "subtitle":"Impaired waters are listed in the 2015 303(d) list provided by the U.S Environmental Protection Agency."
+            }]
+      },
+      {
+        "id":2,
+        "title":"Oxygen",
+        "border":{"title":"pnw_borders_black","opacity":0.3},
+        "tileLayers":[{"title":"pnw_water","pane":450,"opacity":1}],
+        "jsonLayers":[{
+            "url":"map_data/water/pollution_hexgrid.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"oxgyen_dep",
+            "values":[20,10,5,2,0],
+            "fillColors":["#283e3e","#507c7c","#83afaf","#b1cdcd","#e0ebeb","#ffffff"],
+            "colors":["#283e3e","#507c7c","#83afaf","#b1cdcd","#e0ebeb","#ffffff"],
+            "fillOpacity":[0.8,0.8,0.8,0.8,0.8,0],
+            "opacity":[0.1,0.1,0.1,0.1,0.1,0],
+            "tooltip":"tooltip",
+            "tooltipVars":["oxgyen_dep"],
+            "tooltipText":["<b style='display:inline;'>Oxygen Depletion Impairments:&nbsp</b><p3 style='font-weight:normal;'>","</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"Oxygen Depletion Impairments",
+                "icon":"oxygen",
+                "containers":[{
+                    "color":"#283e3e",
+                    "label":"20+"
+                  },
+                  {
+                    "color":"#507c7c",
+                    "label":"10 to 20"
+                  },
+                  {
+                    "color":"#83afaf",
+                    "label":"5 to 10"
+                  },
+                  {
+                    "color":"#b1cdcd",
+                    "label":"2 to 2"
+                  },
+                  {
+                    "color":"#e0ebeb",
+                    "label":"Less than 2"
+                  },
+                  {
+                    "color":"#ffffff",
+                    "label":"0 or No Data"
+                  }],
+                "description":"Total oxygen impairments in waterways. Oxygen depletion is usually caused by organic enrichment."
+            },
+            {
+                "id":1,
+                "type":"none",
+                "subtitle":"Impaired waters are listed in the 2015 303(d) list provided by the U.S Environmental Protection Agency."
+            }]
+      },
+      {
+        "id":3,
+        "title":"Pathogen",
+        "border":{"title":"pnw_borders_black","opacity":0.3},
+        "tileLayers":[{"title":"pnw_water","pane":450,"opacity":1}],
+        "jsonLayers":[{
+            "url":"map_data/water/pollution_hexgrid.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"pathogens",
+            "values":[20,15,10,5,0],
+            "fillColors":["#980043","#dd1c77","#df65b0","#d7b5d8","#f1eef6","#ffffff"],
+            "colors":["#980043","#dd1c77","#df65b0","#d7b5d8","#f1eef6","#ffffff"],
+            "fillOpacity":[0.8,0.8,0.8,0.8,0.8,0],
+            "opacity":[0.1,0.1,0.1,0.1,0.1,0],
+            "tooltip":"tooltip",
+            "tooltipVars":["pathogens"],
+            "tooltipText":["<b style='display:inline;'>Pathogen Impairments:&nbsp</b><p3 style='font-weight:normal;'>","</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"Pathogen Impairments",
+                "icon":"pathogen",
+                "containers":[{
+                    "color":"#980043",
+                    "label":"20+"
+                  },
+                  {
+                    "color":"#dd1c77",
+                    "label":"15 to 20"
+                  },
+                  {
+                    "color":"#df65b0",
+                    "label":"10 to 15"
+                  },
+                  {
+                    "color":"#d7b5d8",
+                    "label":"5 to 10"
+                  },
+                  {
+                    "color":"#f1eef6",
+                    "label":"Less than 5"
+                  },
+                  {
+                    "color":"#ffffff",
+                    "label":"0 or No Data"
+                  }],
+                "description":"Total pathogen impairments in waterways. Pathogens include E. Coli and Fecal Coliform."
+            },
+            {
+                "id":1,
+                "type":"none",
+                "subtitle":"Impaired waters are listed in the 2015 303(d) list provided by the U.S Environmental Protection Agency."
+            }]
+      },
+      {
+        "id":4,
+        "title":"Sediment",
+        "border":{"title":"pnw_borders_black","opacity":0.3},
+        "tileLayers":[{"title":"pnw_water","pane":450,"opacity":1}],
+        "jsonLayers":[{
+            "url":"map_data/water/pollution_hexgrid.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"sediment",
+            "values":[10,8,6,4,0],
+            "fillColors":["#4d3319","#996633","#c68c53","#d9b38c","#ecd9c6","#ffffff"],
+            "colors":["#4d3319","#996633","#c68c53","#d9b38c","#ecd9c6","#ffffff"],
+            "fillOpacity":[0.8,0.8,0.8,0.8,0.8,0],
+            "opacity":[0.1,0.1,0.1,0.1,0.1,0],
+            "tooltip":"tooltip",
+            "tooltipVars":["sediment"],
+            "tooltipText":["<b style='display:inline;'>Sediment Impairments:&nbsp</b><p3 style='font-weight:normal;'>","</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"Sediment Impairments",
+                "icon":"sediment",
+                "containers":[{
+                    "color":"#4d3319",
+                    "label":"10+"
+                  },
+                  {
+                    "color":"#996633",
+                    "label":"8 to 10"
+                  },
+                  {
+                    "color":"#c68c53",
+                    "label":"6 to 8"
+                  },
+                  {
+                    "color":"#d9b38c",
+                    "label":"4 to 6"
+                  },
+                  {
+                    "color":"#ecd9c6",
+                    "label":"Less than 4"
+                  },
+                  {
+                    "color":"#ffffff",
+                    "label":"0 or No Data"
+                  }],
+                "description":"Total sediment impairments in waterways."
+            },
+            {
+                "id":1,
+                "type":"none",
+                "subtitle":"Impaired waters are listed in the 2015 303(d) list provided by the U.S Environmental Protection Agency."
+            }]
+      },
+      {
+        "id":5,
+        "title":"Temperature",
+        "border":{"title":"pnw_borders_black","opacity":0.3},
+        "tileLayers":[{"title":"pnw_water","pane":450,"opacity":1}],
+        "jsonLayers":[{
+            "url":"map_data/water/pollution_hexgrid.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"temp",
+            "values":[20,15,10,5,0],
+            "fillColors":["#54278f","#756bb1","#9e9ac8","#cbc9e2","#f2f0f7","#ffffff"],
+            "colors":["#54278f","#756bb1","#9e9ac8","#cbc9e2","#f2f0f7","#ffffff"],
+            "fillOpacity":[0.8,0.8,0.8,0.8,0.8,0],
+            "opacity":[0.1,0.1,0.1,0.1,0.1,0],
+            "tooltip":"tooltip",
+            "tooltipVars":["temp"],
+            "tooltipText":["<b style='display:inline;'>Temperature Impairments:&nbsp</b><p3 style='font-weight:normal;'>","</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"Temperature Impairments",
+                "icon":"temp",
+                "containers":[{
+                    "color":"#54278f",
+                    "label":"20+"
+                  },
+                  {
+                    "color":"#756bb1",
+                    "label":"15 to 20"
+                  },
+                  {
+                    "color":"#9e9ac8",
+                    "label":"10 to 15"
+                  },
+                  {
+                    "color":"#cbc9e2",
+                    "label":"5 to 10"
+                  },
+                  {
+                    "color":"#f2f0f7",
+                    "label":"Less than 5"
+                  },
+                  {
+                    "color":"#ffffff",
+                    "label":"0 or No Data"
+                  }],
+                "description":"Total temperature impairments in each waterways."
+            },
+            {
+                "id":1,
+                "type":"none",
+                "subtitle":"Impaired waters are listed in the 2015 303(d) list provided by the U.S Environmental Protection Agency."
+            }]
+      },
+      {
+        "id":6,
+        "title":"Phosphorus",
+        "border":{"title":"pnw_borders_black","opacity":0.3},
+        "tileLayers":[{"title":"pnw_water","pane":450,"opacity":1}],
+        "jsonLayers":[{
+            "url":"map_data/water/pollution_hexgrid.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"phos_year",
+            "values":[100,50,10,5,0],
+            "fillColors":["#810f7c","#8856a7","#8c96c6","#b3cde3","#edf8fb","#ffffff"],
+            "colors":["#810f7c","#8856a7","#8c96c6","#b3cde3","#edf8fb","#ffffff"],
+            "fillOpacity":[0.8,0.8,0.8,0.8,0.8,0.8],
+            "opacity":[0.1,0.1,0.1,0.1,0.1,0.1],
+            "tooltip":"tooltip",
+            "tooltipVars":["phos_year"],
+            "tooltipText":["<b style='display:inline;'>P in Thousands KG/Year:&nbsp</b><p3 style='font-weight:normal;'>","</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"Phosphorus Inputs (1000s KG/yr)",
+                "icon":"phosphorus",
+                "containers":[{
+                    "color":"#810f7c",
+                    "label":"100+"
+                  },
+                  {
+                    "color":"#8856a7",
+                    "label":"50 to 100"
+                  },
+                  {
+                    "color":"#8c96c6",
+                    "label":"10 to 50"
+                  },
+                  {
+                    "color":"#b3cde3",
+                    "label":"5 to 10"
+                  },
+                  {
+                    "color":"#edf8fb",
+                    "label":"Less than 5"
+                  },
+                  {
+                    "color":"#ffffff",
+                    "label":"0 or No Data"
+                  }],
+                "description":"Total phosphorus input to water in thousands of KG/yr in 2002."
+            },
+            {
+                "id":1,
+                "type":"none",
+                "subtitle":"Data compiled by U.S Geological Survey."
+            }]
+      },
+      {
+        "id":7,
+        "title":"Nitrogen",
+        "border":{"title":"pnw_borders_black","opacity":0.3},
+        "tileLayers":[{"title":"pnw_water","pane":450,"opacity":1}],
+        "jsonLayers":[{
+            "url":"map_data/water/pollution_hexgrid.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"nit_year",
+            "values":[1000,250,50,10,0],
+            "fillColors":["#806600","#cca300","#ffd11a","#ffe066","#fff0b3","#ffffff"],
+            "colors":["#806600","#cca300","#ffd11a","#ffe066","#fff0b3","#ffffff"],
+            "fillOpacity":[0.8,0.8,0.8,0.8,0.8,0.8],
+            "opacity":[0.1,0.1,0.1,0.1,0.1,0.1],
+            "tooltip":"tooltip",
+            "tooltipVars":["nit_year"],
+            "tooltipText":["<b style='display:inline;'>N in Thousands KG/Year:&nbsp</b><p3 style='font-weight:normal;'>","</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"Nitrogen Inputs (1000s KG/yr)",
+                "icon":"nitrogen",
+                "containers":[{
+                    "color":"#806600",
+                    "label":"1000+"
+                  },
+                  {
+                    "color":"#cca300",
+                    "label":"250 to 1000"
+                  },
+                  {
+                    "color":"#ffd11a",
+                    "label":"50 to 250"
+                  },
+                  {
+                    "color":"#ffe066",
+                    "label":"10 to 50"
+                  },
+                  {
+                    "color":"#fff0b3",
+                    "label":"Less than 10"
+                  },
+                  {
+                    "color":"#ffffff",
+                    "label":"0 or No Data"
+                  }],
+                "description":"Total nitrogen input to water in thousands of KG/yr in 2002."
+            },
+            {
+                "id":1,
+                "type":"none",
+                "subtitle":"Data compiled by U.S Geological Survey."
+            }]
+      },
+      {
+        "id":8,
+        "title":"Arsenic",
+        "border":{"title":"pnw_borders_black","opacity":0.3},
+        "tileLayers":[{"title":"pnw_water","pane":450,"opacity":1}],
+        "jsonLayers":[{
+            "url":"map_data/water/pollution_hexgrid.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"AS_quart3",
+            "values":[50,10,5,3,0],
+            "fillColors":["#d7191c","#fdae61","#ffffbf","#abd9e9","#2c7bb6","#ffffff"],
+            "colors":["#d7191c","#fdae61","#ffffbf","#abd9e9","#2c7bb6","#ffffff"],
+            "fillOpacity":[0.8,0.8,0.8,0.8,0.8,0],
+            "opacity":[0.1,0.1,0.1,0.1,0.1,0],
+            "tooltip":"tooltip",
+            "tooltipVars":["AS_quart3","AS_pts"],
+            "tooltipText":["<b style='display:inline;'>Arsenic in &#xb5;/L: </b><p3 style='font-weight:normal;'>","</p3><br/><b style='display:inline;'># of Samples: </b><p3 style='font-weight:normal;'>","</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"Arsenic Concentrations in Groundwater (µ/L)",
+                "icon":"arsenic",
+                "containers":[{
+                    "color":"#d7191c",
+                    "label":"50+"
+                  },
+                  {
+                    "color":"#fdae61",
+                    "label":"10 to 50"
+                  },
+                  {
+                    "color":"#ffffbf",
+                    "label":"5 to 10"
+                  },
+                  {
+                    "color":"#abd9e9",
+                    "label":"3 to 5"
+                  },
+                  {
+                    "color":"#2c7bb6",
+                    "label":"Less than 3"
+                  },
+                  {
+                    "color":"#ffffff",
+                    "label":"0 or No Data"
+                  }],
+                "description":"Arsenic concentrations based on the 3rd Quartile of samples taken."
+            },
+            {
+                "id":1,
+                "type":"none",
+                "subtitle":"Data obtained from 2003 Trace Elements National Synthesis Project compiled by U.S Geological Survey."
+            }]
+      }],
+      "sources":{
+        "geographic":[{
+            "title":"303(d) Pollutant Listings:  ",
+            "linkText":"U.S Environmental Protection Data",
+            "linkUrl":"https://www.epa.gov/waterdata/waters-geospatial-data-downloads",
+            "description":"Data from 2015. Midpoints were calculated on each line segment and counted in each hex on the grid. Process repeated for different categories."
+        },
+        {
+          "title":"Nitrogen and Phosphorus Inputs: ",
+          "linkText":"USGS SPARROW Model",
+          "linkUrl":"https://water.usgs.gov/GIS/metadata/usgswrd/XML/mrb_e2rf1_nutrients.xml",
+          "description":"Total nitrogen and phosphorus inputs to water sources in KG/Yr. Data from 2003. Joined with catchments. Midpoints calculated and counted in each hex on the grid."
+        },
+        {
+          "title":"Catchment Areas: ",
+          "linkText":"USGS SPARROW Model",
+          "linkUrl":"https://water.usgs.gov/GIS/metadata/usgswrd/XML/mrb_e2rf1ws.xml",
+          "description":"Data from 2003. Joined with nitrogen and phosphorus inputs."
+        },
+        {
+          "title":"Arsenic points: ",
+          "linkText":"USGS National Water-Quality Assessment Program",
+          "linkUrl":"https://water.usgs.gov/nawqa/trace/pubs/geo_v46n11/index.html",
+          "description":"Data from 2001. Points were counted in each grid. 3rd Quartile value was calculated for each hexgrid."
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

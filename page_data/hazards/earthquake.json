@@ -1,0 +1,311 @@
+{
+    "title": "Earthquakes",
+    "URL":"earthquake_icon",
+    "chapter":"hazards",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "basemap":[{"title":"terrain","opacity":1},
+      {"title":"geoserver","layer":"pnw_outline2","opacity":0.3},
+      {"title":"label","opacity":1}],
+    "maps":[{
+        "id":0,
+        "fastFacts":[{
+          "facts":["&#9900 Between 2000 and 2017, there have been over 4500 earthquakes with a magnitude greater than 2.5.","&#9900 The largest earthquake between 2000 and 2017 occurred near Olympia, WA in 2001, and had a magnitude of 6.8."]
+        }],
+        "title":"Recent Earthquakes",
+        "border":{"include":true},
+        "tileLayers":[{"title":"pnw_urban_areas","pane":250,"opacity":0.8},{"title":"parks_total","pane":300,"opacity":0.8}],
+        "jsonLayers":[{
+            "pane":"overBorder",
+            "url":"map_data/hazards/recent_earthquakes.json",
+            "feature":"point",
+            "type":"graduated",
+            "attribute":"depth",
+            "values":[20,10],
+            "fillColors":["#fd8d3c","#d72a0f","#80001a"],
+            "colors":["#ffffff"],
+            "fillOpacity":0.8,
+            "weight":1.5,
+            "radiusType":"graduated",
+            "radiusAttribute":"mag",
+            "radiusValues":[4.5,4,3.5,3],
+            "radius":[12,10,8,6,4],
+            "tooltipVars":["date","mag","depth"],
+            "tooltipText":["<b style='display:inline;'>","</b><br/><p style='display:inline;'>Magnitude:&nbsp","</br>Depth:&nbsp","&nbspKm </p>"]                 
+          }],
+        "legend":[{
+            "id":0,
+            "type":"pointSizeColor",
+            "title":["Magnitude","Depth(km)"],
+            "titleMargin":45,
+            "containers":[{
+                  "size":22,
+                  "sizeLabel":"4.5+",
+                  "color": "#80001a",
+                  "colorLabel":"Less than 10"
+                },
+                {
+                  "size":18,
+                  "sizeLabel":"4 to 6.5",
+                  "color": "#d72a0f",
+                  "colorLabel":"10 to 20"
+                },
+                {
+                  "size":14,
+                  "sizeLabel":"3.5 to 4",
+                  "color": "#fd8d3c",
+                  "colorLabel":"20+"
+                },
+                {
+                  "size":10,
+                  "sizeLabel":"3 to 3.5"
+                },
+                {
+                  "size":6,
+                  "sizeLabel":"Less than 3  "
+                }
+              ],
+            "description":"Earthquake epicenters over 2.5 Richter Scale Magnitude between 2000 and 2017. Shallower earthquakes correspond with more damage, while deeper earthquakes affect larger areas."
+        }]
+      },
+      {
+        "id":1,
+        "fastFacts":[{
+          "facts":["&#9900 Between 1949 and 2017, there have been over 150 earthquakes with a magnitude greater than 4.5.","&#9900 The largest earthquake between 1949 and 2017 occurred near Central Idaho in 1983, and had a magnitude of 6.9."]
+        }],
+        "title":"Large Earthquakes",
+        "border":{"include":true},
+        "tileLayers":[{"title":"pnw_urban_areas","pane":250,"opacity":0.8},{"title":"parks_total","pane":300,"opacity":0.8}],
+        "jsonLayers":[{
+            "pane":"overBorder",
+            "url":"map_data/hazards/large_earthquakes.json",
+            "feature":"point",
+            "type":"graduated",
+            "attribute":"depth",
+            "values":[20,10],
+            "weight":1.5,
+            "fillColors":["#fd8d3c","#d72a0f","#80001a"],
+            "radiusType":"graduated",
+            "radiusAttribute":"mag",
+            "radiusValues":[6.5,6,5.5,5],
+            "radius":[12,10,8,6,4],
+            "tooltipVars":["date","mag","depth"],
+            "tooltipText":["<b style='display:inline;'>","</b><br/><p style='display:inline;'>Magnitude:&nbsp","</br>Depth:&nbsp","&nbspKm </p>"]                 
+          }],
+        "legend":[{
+            "id":0,
+            "type":"pointSizeColor",
+            "title":["Magnitude","Depth(km)"],
+            "titleMargin":45,
+            "containers":[{
+                  "size":22,
+                  "sizeLabel":"6.5+",
+                  "color": "#80001a",
+                  "colorLabel":"Less than 10"
+                },
+                {
+                  "size":18,
+                  "sizeLabel":"6 to 6.5",
+                  "color": "#d72a0f",
+                  "colorLabel":"10 to 20"
+                },
+                {
+                  "size":14,
+                  "sizeLabel":"5.5 to 6",
+                  "color": "#fd8d3c",
+                  "colorLabel":"20+"
+                },
+                {
+                  "size":10,
+                  "sizeLabel":"5 to 5.5"
+                },
+                {
+                  "size":6,
+                  "sizeLabel":"Less than 5"
+                }
+              ],
+            "description":"Earthquake epicenters over 4.5 magnitude between 1900 and 2017. Shallower earthquakes correspond with more damage, while deeper earthquakes affect larger areas."
+        }]
+      },
+      {
+        "id":2,
+        "title":"Earthquake Risk",
+        "border":{"include":true},
+        "jsonLayers":[{
+            "interactive":false,
+            "url":"map_data/hazards/earthquake_risk.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"ACC_VAL",
+            "values":["60","45","30","15"],
+            "fillColors":["#bd0026","#f03b20","#fd8d3c","#fecc5c","#ffffb2"],
+            "fillOpacity":0.7,
+            "weight":1.5,
+            "opacity":0.5
+          }],
+        "legend":[{
+            "id":0,
+            "title":"Peak Acceleration",
+            "subtitle":"As a fraction of standard gravity (g)",
+            "type":"polygon",
+            "containers":[{
+                "color":"#bd0026",
+                "label":"0.60+"
+                },
+                {
+                "color":"#f03b20",
+                "label":"0.45 to 0.6"
+                },
+                {
+                "color":"#fd8d3c",
+                "label":"0.30 to 0.45"
+                },
+                {
+                "color":"#fecc5c",
+                "label":"0.15 to 0.30"
+                },
+                {
+                "color":"#ffffb2",
+                "label":"Less than 0.15"
+                }],
+            "description":"Maximum ground acceleration is exceeded once every 2,500 years on average. There is a 2% risk that the peak acceleration will be exceeded by an earthquake in the next 50 years. Areas with higher peak acceleration are at risk of larger earthquakes."
+        }]
+      },
+      {
+        "id":3,
+        "title":"CSZ",
+        "border":{"include":true},
+        "fastFacts":[{
+            "facts":["&#9900 The most recent CSZ earthquake occurred in January, 1700.","&#9900 It is believed that a large CSZ earthquake occurs every 400 to 600 years."]
+          }],
+        "jsonLayers":[{
+            "interactive":false,
+            "url":"map_data/hazards/max_intensity.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"PARAMVALUE",
+            "values":["7","6","5","4"],
+            "fillColors":["#bd0026","#f03b20","#fd8d3c","#fecc5c","#ffffb2"],
+            "colors":["#bd0026","#f03b20","#fd8d3c","#fecc5c","#ffffb2"],
+            "fillOpacity":0.7,
+            "opacity":0.3
+          },
+          {
+            "interactive":false,
+            "pane":"overBorder",
+            "url":"map_data/hazards/noData_zone.json",
+            "feature":"polygon", 
+            "type":"pattern",
+            "colors":["#666666"],
+            "weight":1,
+            "opacity":1,
+            "fillOpacity":1,
+            "pattern":{
+                "weight": 1,
+                "spaceWeight": 9,
+                "height": 10,
+                "angle":45,
+                "color":"#666666",
+                "spaceColor":"#ffffff"
+            }
+          },
+          {
+            "interactive":false,
+            "url":"map_data/hazards/plate_boundaries.json",
+            "feature":"line",
+            "type":"single",
+            "colors":["#000000"],
+            "weightType":"single",
+            "lineWeight":[5]
+        }],
+        "legend":[{
+            "id":0,
+            "title":"Instrumental Intensity (damage)",
+            "type":"polygon",
+            "containers":[{
+                "color":"#bd0026",
+                "label":"7+ (heavy/very heavy)"
+                },
+                {
+                "color":"#f03b20",
+                "label":"6 to 7 (moderate)"
+                },
+                {
+                "color":"#fd8d3c",
+                "label":"5 to 6 (light)"
+                },
+                {
+                "color":"#fecc5c",
+                "label":"4 to 5 (very light)"
+                },
+                {
+                "color":"#ffffb2",
+                "label":"Less than 4 (none)"
+                },
+                {
+                "color":"repeating-linear-gradient(45deg, rgba(255,255,255,0), rgba(255,255,255,0) 10%, #666666 15%, #666666 15%)",
+                "label":"No Data"
+                }]        
+            },
+            {
+                "id":1,
+                "description":"Peak instrumental intensity predicted if 9.0 magnitude earthquake occurs in the Cascadia Subduction Zone. Instrumental intensity is a measure of peak acceleration, velocity and damage.",
+                "type":"line",
+                "containers":[{
+                    "color":"#000000",
+                    "height":5,
+                    "label":"Cascadia Subduction Zone"
+                    }]        
+                }]
+      }],
+      "sources":{
+        "geographic":[{
+            "title":"Earthquakes (Large and Small): ",
+            "linkText":"USGS",
+            "linkUrl":"https://earthquake.usgs.gov/earthquakes/search/",
+            "description":"Richter Scale magnitude. Small earthquakes search criteria: magnitude 2.5+, 1/1/2000 - 1/1/2018, PNW area, CSV export. Large earthquakes search criteria: magnitude 4.5+, 1/1/1900 - 1/1/2018, PNW area, CSV export."
+        },
+        {
+            "title":"Earthquake Risk: ",
+            "linkText":"USGS",
+            "linkUrl":"https://earthquake.usgs.gov/hazards/hazmaps/conterminous/index.php#2017",
+            "description":"Peak Ground Acceleration 2% in 50 yrs. Data from 2014."
+        },
+        {
+            "title":"Cascadia Subduction Zone Risk: ",
+            "linkText":"USGS",
+            "linkUrl":"https://earthquake.usgs.gov/scenarios/eventpage/uscasc9.0_expanded_peak_se#shakemap",
+            "description":"Predicted Instrumental Intensity from a Magnitude 9.0 Earthquake. Data from 2016."
+        },
+        {
+            "title":"Precipitation Anomaly: ",
+            "linkText":"Oregon State University PRISM Group",
+            "linkUrl":"http://prism.oregonstate.edu/recent/",
+            "description":"Percent differentiation from average precipitation. Annual precipitation datasets from 2012-2017 subtracted from 1980-2010 30-year normals."
+        }],
+        "text":[{
+            "title":"Cascadia Subduction Zone Facts: ",
+            "linkText":"Pacific Northwest Seismic Network",
+            "linkUrl":"https://pnsn.org/outreach/earthquakesources/csz"
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

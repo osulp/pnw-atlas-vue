@@ -1,0 +1,523 @@
+{
+    "title": "Renewable Energy",
+    "URL":"renewable_icon",
+    "chapter":"energy",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "basemap":[{"title":"terrain","opacity":1},
+      {"title":"geoserver","layer":"pnw_outline2","opacity":0.3},
+      {"title":"label","opacity":1}],
+    "maps":[{
+        "id":0,
+        "title":"Wind",
+        "border":{"title":"pnw_states_black","include":true,"opacity":0.8},
+        "tileLayers":[{"title":"wind_potential_raster","pane":250,"opacity":0.9}],
+        "jsonLayers":[{
+            "pane":"overBorder",
+            "url":"map_data/energy/pnw_power_plants.json",
+            "feature":"point",
+            "type":"single",
+            "fillColors":"#000000",
+            "colors":["#ffffff"],
+            "fillOpacity":1,
+            "opacity":1,
+            "weight":1.5,
+            "radiusType":"graduated",
+            "radiusAttribute":"Total_MW",
+            "radiusValues":[50,10],
+            "radius":[9,6,4],
+            "tooltipVars":["Plant_Name","Utility_Na","tech_desc","Total_MW"],
+            "tooltipText":["<h3 style='display:inline;'>","</h3><br/><p style='display:inline;'>Operator:&nbsp","&nbsp<br/>Type:&nbsp","<br/>Capacity:&nbsp"," MW</p>"],
+            "filterVariable":"PrimSource",
+            "filterValue":"wind"
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"Wind Energy Potential",
+                "icon":"wind",
+                "containers":[{
+                    "color":"#08519c",
+                    "label":"Class 7"
+                  },
+                  {
+                    "color":"#3182bd",
+                    "label":"Class 6"
+                  },
+                  {
+                    "color":"#6baed6",
+                    "label":"Class 5"
+                  },
+                  {
+                    "color":"#9ecae1",
+                    "label":"Class 4"
+                  },
+                  {
+                    "color":"#c6dbef",
+                    "label":"Class 3"
+                  },
+                  {
+                    "color":"#eff3ff",
+                    "label":"Class 2"
+                  }
+                ],
+                "description":"Wind energy potential class. Higher classes correspond with greater potential."
+            },
+            {
+                "id":1,
+                "type":"pointRow",
+                "title":"Wind Power Plants",
+                "description":"Power capacity in MW.",
+                "containers":[{
+                    "size":20,
+                    "label":"50+",
+                    "background":"rgba(0,0,0,1)",
+                    "color":"#ffffff",
+                    "fontSize":19,
+                    "border":2
+                    },
+                    {
+                    "size":13,
+                    "label":"10 to 50",
+                    "background":"rgba(0,0,0,1)",
+                    "color":"#ffffff",
+                    "fontSize":19,
+                    "border":2
+                    },
+                    {
+                    "size":7,
+                    "label":"Less than 10",
+                    "background":"rgba(0,0,0,1)",
+                    "color":"#ffffff",
+                    "fontSize":18,
+                    "border":2
+                    }
+                ]
+            }]
+      },
+      {
+        "id":1,
+        "title":"Solar",
+        "border":{"title":"pnw_states_black","include":true,"opacity":0.8},
+        "tileLayers":[{"title":"pnw_annual_solar_irradiance","pane":250,"opacity":0.7}],
+        "jsonLayers":[{
+            "pane":"overBorder",
+            "url":"map_data/energy/pnw_power_plants.json",
+            "feature":"point",
+            "type":"single",
+            "fillColors":"#000000",
+            "colors":["#ffffff"],
+            "fillOpacity":1,
+            "opacity":1,
+            "weight":1.5,
+            "radiusType":"graduated",
+            "radiusAttribute":"Total_MW",
+            "radiusValues":[50,10],
+            "radius":[9,6,4],
+            "tooltipVars":["Plant_Name","Utility_Na","tech_desc","Total_MW"],
+            "tooltipText":["<h3 style='display:inline;'>","</h3><br/><p style='display:inline;'>Operator:&nbsp","&nbsp<br/>Type:&nbsp","<br/>Capacity:&nbsp"," MW</p>"],
+            "filterVariable":"PrimSource",
+            "filterValue":"solar"
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"Solar Irradiance (kWh/m2/day)",
+                "icon":"solar",
+                "containers":[{
+                    "color":"#b30000",
+                    "label":"5.5+"
+                  },
+                  {
+                    "color":"#e34a33",
+                    "label":"5 to 5.5"
+                  },
+                  {
+                    "color":"#fc8d59",
+                    "label":"4.5 to 5"
+                  },
+                  {
+                    "color":"#fdcc8a",
+                    "label":"4 to 4.5"
+                  },
+                  {
+                    "color":"#fef0d9",
+                    "label":"Less than 4"
+                  }
+                ],
+                "description":"Average daily solar irradiance in kWh/m2/day. Higher values correspond with greater solar potential."
+            },
+            {
+                "id":1,
+                "type":"pointRow",
+                "title":"Solar Power Plants",
+                "description":"Power capacity in MW.",
+                "containers":[{
+                    "size":20,
+                    "label":"50+",
+                    "background":"rgba(0,0,0,1)",
+                    "color":"#ffffff",
+                    "fontSize":19,
+                    "border":2
+                    },
+                    {
+                    "size":13,
+                    "label":"10 to 50",
+                    "background":"rgba(0,0,0,1)",
+                    "color":"#ffffff",
+                    "fontSize":19,
+                    "border":2
+                    },
+                    {
+                    "size":7,
+                    "label":"Less than 10",
+                    "background":"rgba(0,0,0,1)",
+                    "color":"#ffffff",
+                    "fontSize":18,
+                    "border":2
+                    }
+                ]
+            }]
+      },
+      {
+        "id":2,
+        "title":"Geothermal",
+        "border":{"title":"pnw_states_black","include":true,"opacity":0.8},
+        "jsonLayers":[{
+            "pane":"overBorder",
+            "url":"map_data/energy/pnw_power_plants.json",
+            "feature":"point",
+            "type":"single",
+            "fillColors":"#000000",
+            "colors":["#ffffff"],
+            "fillOpacity":1,
+            "opacity":1,
+            "weight":1.5,
+            "radiusType":"graduated",
+            "radiusAttribute":"Total_MW",
+            "radiusValues":[50,10],
+            "radius":[9,6,4],
+            "tooltipVars":["Plant_Name","Utility_Na","tech_desc","Total_MW"],
+            "tooltipText":["<h3 style='display:inline;'>","</h3><br/><p style='display:inline;'>Operator:&nbsp","&nbsp<br/>Type:&nbsp","<br/>Capacity:&nbsp"," MW</p>"],
+            "filterVariable":"PrimSource",
+            "filterValue":"geothermal"
+          },
+          {
+            "interactive":false,
+            "url":"map_data/energy/geothermal_potential.json",
+            "feature":"polygon",
+            "type":"categorized",
+            "attribute":"CLASS",
+            "values":[1,2,3,4,5],
+            "fillColors":["#4b4b34","#787854","#abab87","#cbcbb4","#ebebe0","#ffffff"],
+            "colors":["#4b4b34","#787854","#abab87","#cbcbb4","#ebebe0","#ffffff"],
+            "fillOpacity":0.7,
+            "opacity":0.5,
+            "weight":1.5
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"Geothermal Potential",
+                "icon":"geothermal",
+                "containers":[{
+                    "color":"#4b4b34",
+                    "label":"Class 1"
+                  },
+                  {
+                    "color":"#787854",
+                    "label":"Class 2"
+                  },
+                  {
+                    "color":"#abab87",
+                    "label":"Class 3"
+                  },
+                  {
+                    "color":"#cbcbb4",
+                    "label":"Class 4"
+                  },
+                  {
+                    "color":"#ebebe0",
+                    "label":"Class 5"
+                  }
+                ],
+                "description":"Geothermal energy potential class. Lower classes correspond with greater potential."
+            },
+            {
+                "id":1,
+                "type":"pointRow",
+                "title":"Geothermal Power Plants",
+                "description":"Power capacity in MW.",
+                "containers":[{
+                    "size":20,
+                    "label":"50+",
+                    "background":"rgba(0,0,0,1)",
+                    "color":"#ffffff",
+                    "fontSize":19,
+                    "border":2
+                    },
+                    {
+                    "size":13,
+                    "label":"10 to 50",
+                    "background":"rgba(0,0,0,1)",
+                    "color":"#ffffff",
+                    "fontSize":19,
+                    "border":2
+                    },
+                    {
+                    "size":7,
+                    "label":"Less than 10",
+                    "background":"rgba(0,0,0,1)",
+                    "color":"#ffffff",
+                    "fontSize":18,
+                    "border":2
+                    }
+                ]
+            }]
+      },
+      {
+        "id":3,
+        "title":"Solid Biomass",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "jsonLayers":[{
+            "pane":"overBorder",
+            "url":"map_data/energy/pnw_power_plants.json",
+            "feature":"point",
+            "type":"single",
+            "fillColors":"#000000",
+            "colors":["#ffffff"],
+            "fillOpacity":1,
+            "opacity":1,
+            "weight":1.5,
+            "radiusType":"graduated",
+            "radiusAttribute":"Total_MW",
+            "radiusValues":[50,10],
+            "radius":[9,6,4],
+            "tooltipVars":["Plant_Name","Utility_Na","tech_desc","Total_MW"],
+            "tooltipText":["<h3 style='display:inline;'>","</h3><br/><p style='display:inline;'>Operator:&nbsp","&nbsp<br/>Type:&nbsp","<br/>Capacity:&nbsp"," MW</p>"],
+            "filterVariable":"bio",
+            "filterValue":"solid"
+          },
+          {
+            "url":"map_data/energy/biomass_counties.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"total_soli",
+            "values":[500000,300000,150000,50000],
+            "fillColors":["#006d2c","#31a354","#74c476","#bae4b3","#edf8e9"],
+            "colors":["#ffffff"],
+            "fillOpacity":0.7,
+            "opacity":1,
+            "weight":0.75,
+            "tooltipVars":["CNTY_NAME","ST","total_soli"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>"," County, ","</h2><br/><p3 style='display:inline; font-size:20px; font-weight:normal;'>"," tons/yr</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"Solid Biomass (1000s Metric Tons/Year)",
+                "icon":"biomass",
+                "containers":[{
+                    "color":"#006d2c",
+                    "label":"500+"
+                  },
+                  {
+                    "color":"#31a354",
+                    "label":"300 to 500"
+                  },
+                  {
+                    "color":"#74c476",
+                    "label":"150 to 300"
+                  },
+                  {
+                    "color":"#bae4b3",
+                    "label":"50 to 150"
+                  },
+                  {
+                    "color":"#edf8e9",
+                    "label":"Less than 50"
+                  }
+                ],
+                "description":"Biomass production by county in thousands of metric tons/year. Only a fraction of biomass produced is used for heat/electricity."
+            },
+            {
+                "id":1,
+                "type":"pointRow",
+                "title":"Solid Biomass Power Plants",
+                "description":"Power capacity in MW.",
+                "containers":[{
+                    "size":20,
+                    "label":"50+",
+                    "background":"rgba(0,0,0,1)",
+                    "color":"#ffffff",
+                    "fontSize":19,
+                    "border":2
+                    },
+                    {
+                    "size":13,
+                    "label":"10 to 50",
+                    "background":"rgba(0,0,0,1)",
+                    "color":"#ffffff",
+                    "fontSize":19,
+                    "border":2
+                    },
+                    {
+                    "size":7,
+                    "label":"Less than 10",
+                    "background":"rgba(0,0,0,1)",
+                    "color":"#ffffff",
+                    "fontSize":18,
+                    "border":2
+                    }
+                ]
+            }]
+      },
+      {
+        "id":4,
+        "title":"Biomethane",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "jsonLayers":[{
+            "pane":"overBorder",
+            "url":"map_data/energy/pnw_power_plants.json",
+            "feature":"point",
+            "type":"single",
+            "fillColors":"#000000",
+            "colors":["#ffffff"],
+            "fillOpacity":1,
+            "opacity":1,
+            "weight":1.5,
+            "radiusType":"graduated",
+            "radiusAttribute":"Total_MW",
+            "radiusValues":[50,10],
+            "radius":[9,6,4],
+            "tooltipVars":["Plant_Name","Utility_Na","tech_desc","Total_MW"],
+            "tooltipText":["<h3 style='display:inline;'>","</h3><br/><p style='display:inline;'>Operator:&nbsp","&nbsp<br/>Type:&nbsp","<br/>Capacity:&nbsp"," MW</p>"],
+            "filterVariable":"bio",
+            "filterValue":"gas"
+          },
+          {
+            "url":"map_data/energy/biomass_counties.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"total_ch4",
+            "values":[7000,5000,3000,1000],
+            "fillColors":["#006d2c","#31a354","#74c476","#bae4b3","#edf8e9"],
+            "colors":["#ffffff"],
+            "fillOpacity":0.7,
+            "opacity":1,
+            "weight":0.75,
+            "tooltipVars":["CNTY_NAME","ST","total_ch4"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>"," County, ","</h2><br/><p3 style='display:inline; font-size:20px; font-weight:normal;'>"," tons/yr</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"Biomethane (1000s Metric Tons/Year)",
+                "icon":"biomass",
+                "containers":[{
+                    "color":"#006d2c",
+                    "label":"7+"
+                  },
+                  {
+                    "color":"#31a354",
+                    "label":"5 to 7"
+                  },
+                  {
+                    "color":"#74c476",
+                    "label":"3 to 5"
+                  },
+                  {
+                    "color":"#bae4b3",
+                    "label":"1 to 3"
+                  },
+                  {
+                    "color":"#edf8e9",
+                    "label":"Less than 1"
+                  }
+                ],
+                "description":"Biomethane production by county in thousands of metric tons/year of methane. Only a fraction of biomethane is used for heat/electricity."
+            },
+            {
+                "id":1,
+                "type":"pointRow",
+                "title":"Biomethane Power Plants",
+                "description":"Power capacity in MW.",
+                "containers":[{
+                    "size":20,
+                    "label":"50+",
+                    "background":"rgba(0,0,0,1)",
+                    "color":"#ffffff",
+                    "fontSize":19,
+                    "border":2
+                    },
+                    {
+                    "size":13,
+                    "label":"10 to 50",
+                    "background":"rgba(0,0,0,1)",
+                    "color":"#ffffff",
+                    "fontSize":19,
+                    "border":2
+                    },
+                    {
+                    "size":7,
+                    "label":"Less than 10",
+                    "background":"rgba(0,0,0,1)",
+                    "color":"#ffffff",
+                    "fontSize":18,
+                    "border":2
+                    }
+                ]
+            }]
+      }],
+      "sources":{
+        "geographic":[{
+            "title":"Power Plants: ",
+            "linkText":"US Energy Information Administration",
+            "linkUrl":"https://www.eia.gov/maps/layer_info-m.php",
+            "description":"Data from 2017."
+        },
+        {
+            "title":"Wind Potential: ",
+            "linkText":"National Renewable Energy Laboratory",
+            "linkUrl":"https://www.nrel.gov/gis/data-wind.html",
+            "description":"Wind Power Classes based on wind speed at 50 meters. Data from 2012."
+        },
+        {
+            "title":"Solar Irriadiance: ",
+            "linkText":"National Renewable Energy Laboratory",
+            "linkUrl":"https://www.nrel.gov/gis/data-solar.html",
+            "description":"Average daily solar irradiance in kWh/m2/day. Data from 2012. Dataset: Lower 48 and Hawaii DNI 10-km Resolution 1998–2009."
+        },
+        {
+            "title":"Geothermal Potential: ",
+            "linkText":"National Renewable Energy Laboratory",
+            "linkUrl":"https://www.nrel.gov/gis/data-geothermal.html",
+            "description":"Geothermal potential using enhanced geothermal systems based on potential cost of electricity. Data from 2009."
+        },
+        {
+            "title":"Biomass by County: ",
+            "linkText":"National Renewable Energy Laboratory",
+            "linkUrl":"https://www.nrel.gov/gis/data-biomass.html",
+            "description":"Biomass production in metric tons per year. and Data from 2014."
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

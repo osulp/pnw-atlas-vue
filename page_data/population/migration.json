@@ -1,0 +1,577 @@
+{
+    "title": "Internal Migration",
+    "URL":"migration_icon",
+    "chapter":"population",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "basemap":[{"title":"terrain","opacity":1},
+      {"title":"uslabel","opacity":1}],
+    "zoom":5,
+    "maps":[{
+        "id":0,
+        "title":"Net Migration",
+        "tileLayers":[{"title":"states","pane":650,"opacity":0.5},{"title":"us_outline","pane":200,"opacity":0.3}],
+        "border":{"title":"pnw_states_black"},
+        "fastFacts":[{
+            "facts":["&#9900 Whitman County, WA has the highest net migration rate of all PNW counties, at a rate of 60 people per 1000.","&#9900 Lincoln County, ID has the lowest net migration rate of all PNW counties, at a rate of -96 people per 1000."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/population/pnw_migration_counties.json",
+            "pane":"underFlow",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"net_rate",
+            "values":[25,5,-5,-25],
+            "fillColors":["#99d6ff","#ccebff","#f2f2f2","#ffe6cc","#ffce99"],
+            "colors":["#b3b3b3"],
+            "radius": 4,
+            "weight": 0.35,
+            "opacity":0.9,
+            "tooltipVars":["name","ST","net_rate","inflow","outflow","net"],
+            "tooltipText":["<h2>" ," County, ","</h2><p3 style='display:inline; font-weight:normal;'>Migration Rate per 1000:&nbsp","<br/>Inflow (total):&nbsp","<br/>Outflow (total):&nbsp","<br/>Net Flow:&nbsp","</p3>"], 
+            "flow":{
+              "flow_id":"ID_1",
+              "flowURL":"map_data/population/net_migration.csv",
+              "sourceCoordinates":["source_lon", "source_lat"],
+              "targetCoordinates":["target_lon", "target_lat"],
+              "source":"source",
+              "target":"target",
+              "canvasBezierStyle": {
+                "type": "classBreaks",
+                "field": "flow",
+                "classBreakInfos": [
+                {
+                "classMinValue": -25,
+                "classMaxValue": 0,
+                "symbol": {
+                    "strokeStyle": "#ff9c33",
+                    "lineWidth": 0.25,
+                    "lineCap": "round",
+                    "shadowColor": "#e67700",
+                    "shadowBlur": 1.5
+                  }
+                },
+                {
+                "classMinValue": -100,
+                "classMaxValue": -25,
+                "symbol": {
+                    "strokeStyle": "#e67700",
+                    "lineWidth": 1,
+                    "lineCap": "round",
+                    "shadowColor": "#994f00",
+                    "shadowBlur": 1.5
+                  }
+                },
+                {
+                "classMinValue": -1000,
+                "classMaxValue": -100,
+                "symbol": {
+                    "strokeStyle": "#e67700",
+                    "lineWidth": 2,
+                    "lineCap": "round",
+                    "shadowColor": "#994f00",
+                    "shadowBlur": 1.5
+                  }
+                },
+                {
+                "classMinValue": 0,
+                "classMaxValue": 25,
+                "symbol": {
+                    "strokeStyle": "#4db8ff",
+                    "lineWidth": 0.25,
+                    "lineCap": "round",
+                    "shadowColor": "#008ae6",
+                    "shadowBlur": 1.5
+                  }
+                }, {
+                "classMinValue": 25,
+                "classMaxValue": 100,
+                "symbol": {
+                    "strokeStyle": "#0099ff",
+                    "lineWidth": 1,
+                    "lineCap": "round",
+                    "shadowColor": "#005c99",
+                    "shadowBlur": 1.5
+                  }
+                }, {
+                "classMinValue": 100,
+                "classMaxValue": 10000000,
+                "symbol": {
+                    "strokeStyle": "#006bb3",
+                    "lineWidth": 2,
+                    "lineCap": "round",
+                    "shadowColor": "#003d66",
+                    "shadowBlur": 1.5
+                  }
+                }],
+                "defaultSymbol": {
+                "strokeStyle": "#595959",
+                "lineWidth": 0.5,
+                "lineCap": "round",
+                "shadowColor": "#595959",
+                "shadowBlur": 1.5
+                }
+              }
+            }
+          },
+          {
+            "url":"map_data/population/us_migration_counties.json",
+            "pane":"underFlow",
+            "feature":"polygon",
+            "type":"single",
+            "fillColors":["#ffffff"],
+            "colors":["#b3b3b3"],
+            "radius": 4,
+                "weight": 0.35,
+                "opacity":0.9,
+            "tooltipVars":["name","ST","inflow","outflow"],
+            "tooltipText":["<h2>" ," County, ","</h2><p3 style='display:inline; font-weight:normal;'>Inflow (total):&nbsp","<br/>Outflow (total):&nbsp","</p3>"]
+          }],
+        "legend":[{
+            "id":0,
+            "type":"selection",
+            "title":"Select a County"
+        },
+        {
+            "id":1,
+            "type":"polygon",
+            "title":"Net Migration per 1000 People",
+            "icon":"migration_icon2",
+            "containers":[{
+                  "color":"#99d6ff",
+                  "label":"25+"
+                },
+                {
+                  "color":"#ccebff",
+                  "label":"5 to 25"
+                },
+                {
+                  "color":"#f2f2f2",
+                  "label":"-5 to 5"
+                },
+                {
+                  "color":"#ffe6cc",
+                  "label":"-25 to -5"
+                },
+                {
+                  "color":"#ffce99",
+                  "label":"Less than -25"
+                }
+              ],
+            "description":"Net migration (inflow - outflow) per 1000 people per county. Estimates from 2011-2015."
+        },
+        {
+            "id":2,
+            "type":"doubleLine",
+            "legendDisplay":"selected",
+            "title":"Net Migration Flow",
+            "containers":[{
+                  "color":"#4db8ff",
+                  "label":"0 to 25",
+                  "height":1,
+                  "color2":"#ff9c33",
+                  "label2":"0 to -25",
+                  "height2":1
+                },
+                {
+                  "color":"#0099ff",
+                  "label":"25 to 100",
+                  "height":2,
+                  "color2":"#e67700",
+                  "label2":"-25 to -100",
+                  "height2":2
+                },
+                {
+                  "color":"#006bb3",
+                  "label":"100+",
+                  "height":4,
+                  "color2":"#e67700",
+                  "label2":"-100+",
+                  "height2":4
+                }
+              ],
+            "description":"Net migration (inflow - outflow) into/from selected county."
+        }]
+      },
+      {
+        "id":1,
+        "title":"Inflow",
+        "tileLayers":[{"title":"states","pane":650,"opacity":0.5},{"title":"us_outline","pane":200,"opacity":0.3}],
+        "border":{"title":"pnw_states_black"},
+        "fastFacts":[{
+            "facts":["&#9900 Whitman County, WA has the highest net migration rate of all PNW counties, at a rate of 60 people per 1000.","&#9900 Lincoln County, ID has the lowest net migration rate of all PNW counties, at a rate of -96 people per 1000."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/population/pnw_migration_counties.json",
+            "pane":"underFlow",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"net_rate",
+            "values":[25,5,-5,-25],
+            "fillColors":["#99d6ff","#ccebff","#f2f2f2","#ffe6cc","#ffce99"],
+            "colors":["#b3b3b3"],
+            "radius": 4,
+            "weight": 0.35,
+            "opacity":0.9,
+            "tooltipVars":["name","ST","net_rate","inflow","outflow","net"],
+            "tooltipText":["<h2>" ," County, ","</h2><p3 style='display:inline; font-weight:normal;'>Migration Rate per 1000:&nbsp","<br/>Inflow (total):&nbsp","<br/>Outflow (total):&nbsp","<br/>Net Flow:&nbsp","</p3>"], 
+            "flow":{
+              "flow_id":"ID_1",
+              "flowURL":"map_data/population/inflow.csv",
+              "sourceCoordinates":["source_lon", "source_lat"],
+              "targetCoordinates":["target_lon", "target_lat"],
+              "source":"source",
+              "target":"target",
+              "canvasBezierStyle": {
+                "type": "classBreaks",
+                "field": "flow",
+                "classBreakInfos": [
+                {
+                "classMinValue": -25,
+                "classMaxValue": 0,
+                "symbol": {
+                    "strokeStyle": "#ff9c33",
+                    "lineWidth": 0.25,
+                    "lineCap": "round",
+                    "shadowColor": "#e67700",
+                    "shadowBlur": 1.5
+                  }
+                },
+                {
+                "classMinValue": -100,
+                "classMaxValue": -25,
+                "symbol": {
+                    "strokeStyle": "#e67700",
+                    "lineWidth": 1,
+                    "lineCap": "round",
+                    "shadowColor": "#994f00",
+                    "shadowBlur": 1.5
+                  }
+                },
+                {
+                "classMinValue": -1000,
+                "classMaxValue": -100,
+                "symbol": {
+                    "strokeStyle": "#e67700",
+                    "lineWidth": 2,
+                    "lineCap": "round",
+                    "shadowColor": "#994f00",
+                    "shadowBlur": 1.5
+                  }
+                },
+                {
+                "classMinValue": 0,
+                "classMaxValue": 25,
+                "symbol": {
+                    "strokeStyle": "#4db8ff",
+                    "lineWidth": 0.25,
+                    "lineCap": "round",
+                    "shadowColor": "#008ae6",
+                    "shadowBlur": 1.5
+                  }
+                }, {
+                "classMinValue": 25,
+                "classMaxValue": 100,
+                "symbol": {
+                    "strokeStyle": "#0099ff",
+                    "lineWidth": 1,
+                    "lineCap": "round",
+                    "shadowColor": "#005c99",
+                    "shadowBlur": 1.5
+                  }
+                }, {
+                "classMinValue": 100,
+                "classMaxValue": 10000000,
+                "symbol": {
+                    "strokeStyle": "#006bb3",
+                    "lineWidth": 2,
+                    "lineCap": "round",
+                    "shadowColor": "#003d66",
+                    "shadowBlur": 1.5
+                  }
+                }],
+                "defaultSymbol": {
+                "strokeStyle": "#595959",
+                "lineWidth": 0.5,
+                "lineCap": "round",
+                "shadowColor": "#595959",
+                "shadowBlur": 1.5
+                }
+              }
+            }
+          },
+          {
+            "url":"map_data/population/us_migration_counties.json",
+            "pane":"underFlow",
+            "feature":"polygon",
+            "type":"single",
+            "fillColors":["#ffffff"],
+            "colors":["#b3b3b3"],
+            "radius": 4,
+                "weight": 0.35,
+                "opacity":0.9,
+            "tooltipVars":["name","ST","inflow","outflow"],
+            "tooltipText":["<h2>" ," County, ","</h2><p3 style='display:inline; font-weight:normal;'>Inflow (total):&nbsp","<br/>Outflow (total):&nbsp","</p3>"]
+          }],
+        "legend":[{
+            "id":0,
+            "type":"selection",
+            "title":"Select a County"
+        },
+        {
+            "id":1,
+            "type":"polygon",
+            "title":"Net Migration per 1000 People",
+            "icon":"migration_icon2",
+            "containers":[{
+                  "color":"#99d6ff",
+                  "label":"25+"
+                },
+                {
+                  "color":"#ccebff",
+                  "label":"5 to 25"
+                },
+                {
+                  "color":"#f2f2f2",
+                  "label":"-5 to 5"
+                },
+                {
+                  "color":"#ffe6cc",
+                  "label":"-25 to -5"
+                },
+                {
+                  "color":"#ffce99",
+                  "label":"Less than -25"
+                }
+              ],
+            "description":"Net migration (inflow - outflow) per 1000 people per county. Estimates from 2011-2015."
+        },
+        {
+            "id":2,
+            "type":"line",
+            "legendDisplay":"selected",
+            "title":"Migration Inflow",
+            "containers":[{
+                  "color":"#4db8ff",
+                  "label":"0 to 25",
+                  "height":1
+                },
+                {
+                  "color":"#0099ff",
+                  "label":"25 to 100",
+                  "height":2
+                },
+                {
+                  "color":"#006bb3",
+                  "label":"100+",
+                  "height":4
+                }
+              ],
+            "description":"Inflow into selected county."
+        }]
+      },
+      {
+        "id":2,
+        "title":"Outflow",
+        "tileLayers":[{"title":"states","pane":650,"opacity":0.5},{"title":"us_outline","pane":200,"opacity":0.3}],
+        "border":{"title":"pnw_states_black"},
+        "fastFacts":[{
+            "facts":["&#9900 Whitman County, WA has the highest net migration rate of all PNW counties, at a rate of 60 people per 1000.","&#9900 Lincoln County, ID has the lowest net migration rate of all PNW counties, at a rate of -96 people per 1000."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/population/pnw_migration_counties.json",
+            "pane":"underFlow",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"net_rate",
+            "values":[25,5,-5,-25],
+            "fillColors":["#99d6ff","#ccebff","#f2f2f2","#ffe6cc","#ffce99"],
+            "colors":["#b3b3b3"],
+            "radius": 4,
+            "weight": 0.35,
+            "opacity":0.9,
+            "tooltipVars":["name","ST","net_rate","inflow","outflow","net"],
+            "tooltipText":["<h2>" ," County, ","</h2><p3 style='display:inline; font-weight:normal;'>Migration Rate per 1000:&nbsp","<br/>Inflow (total):&nbsp","<br/>Outflow (total):&nbsp","<br/>Net Flow:&nbsp","</p3>"], 
+            "flow":{
+              "flow_id":"ID_1",
+              "flowURL":"map_data/population/outflow.csv",
+              "sourceCoordinates":["source_lon", "source_lat"],
+              "targetCoordinates":["target_lon", "target_lat"],
+              "source":"source",
+              "target":"target",
+              "canvasBezierStyle": {
+                "type": "classBreaks",
+                "field": "flow",
+                "classBreakInfos": [
+                {
+                "classMinValue": -25,
+                "classMaxValue": 0,
+                "symbol": {
+                    "strokeStyle": "#ff9c33",
+                    "lineWidth": 0.25,
+                    "lineCap": "round",
+                    "shadowColor": "#e67700",
+                    "shadowBlur": 1.5
+                  }
+                },
+                {
+                "classMinValue": -100,
+                "classMaxValue": -25,
+                "symbol": {
+                    "strokeStyle": "#e67700",
+                    "lineWidth": 1,
+                    "lineCap": "round",
+                    "shadowColor": "#994f00",
+                    "shadowBlur": 1.5
+                  }
+                },
+                {
+                "classMinValue": -1000,
+                "classMaxValue": -100,
+                "symbol": {
+                    "strokeStyle": "#e67700",
+                    "lineWidth": 2,
+                    "lineCap": "round",
+                    "shadowColor": "#994f00",
+                    "shadowBlur": 1.5
+                  }
+                },
+                {
+                "classMinValue": 0,
+                "classMaxValue": 25,
+                "symbol": {
+                    "strokeStyle": "#4db8ff",
+                    "lineWidth": 0.25,
+                    "lineCap": "round",
+                    "shadowColor": "#008ae6",
+                    "shadowBlur": 1.5
+                  }
+                }, {
+                "classMinValue": 25,
+                "classMaxValue": 100,
+                "symbol": {
+                    "strokeStyle": "#0099ff",
+                    "lineWidth": 1,
+                    "lineCap": "round",
+                    "shadowColor": "#005c99",
+                    "shadowBlur": 1.5
+                  }
+                }, {
+                "classMinValue": 100,
+                "classMaxValue": 10000000,
+                "symbol": {
+                    "strokeStyle": "#006bb3",
+                    "lineWidth": 2,
+                    "lineCap": "round",
+                    "shadowColor": "#003d66",
+                    "shadowBlur": 1.5
+                  }
+                }],
+                "defaultSymbol": {
+                "strokeStyle": "#595959",
+                "lineWidth": 0.5,
+                "lineCap": "round",
+                "shadowColor": "#595959",
+                "shadowBlur": 1.5
+                }
+              }
+            }
+          },
+          {
+            "url":"map_data/population/us_migration_counties.json",
+            "pane":"underFlow",
+            "feature":"polygon",
+            "type":"single",
+            "fillColors":["#ffffff"],
+            "colors":["#b3b3b3"],
+            "radius": 4,
+                "weight": 0.35,
+                "opacity":0.9,
+            "tooltipVars":["name","ST","inflow","outflow"],
+            "tooltipText":["<h2>" ," County, ","</h2><p3 style='display:inline; font-weight:normal;'>Inflow (total):&nbsp","<br/>Outflow (total):&nbsp","</p3>"]
+          }],
+        "legend":[{
+            "id":0,
+            "type":"selection",
+            "title":"Select a County"
+        },
+        {
+            "id":1,
+            "type":"polygon",
+            "title":"Net Migration per 1000 People",
+            "icon":"migration_icon2",
+            "containers":[{
+                  "color":"#99d6ff",
+                  "label":"25+"
+                },
+                {
+                  "color":"#ccebff",
+                  "label":"5 to 25"
+                },
+                {
+                  "color":"#f2f2f2",
+                  "label":"-5 to 5"
+                },
+                {
+                  "color":"#ffe6cc",
+                  "label":"-25 to -5"
+                },
+                {
+                  "color":"#ffce99",
+                  "label":"Less than -25"
+                }
+              ],
+            "description":"Net migration (inflow - outflow) per 1000 people per county. Estimates from 2011-2015."
+        },
+        {
+            "id":2,
+            "type":"line",
+            "legendDisplay":"selected",
+            "title":"Migration Outflow",
+            "containers":[{
+                  "color":"#ff9c33",
+                  "label":"0 to 25",
+                  "height":1
+                },
+                {
+                  "color":"#e67700",
+                  "label":"25 to 100",
+                  "height":2
+                },
+                {
+                  "color":"#e67700",
+                  "label":"100+",
+                  "height":4
+                }
+              ],
+            "description":"Outflow from selected county."
+        }]
+      }],
+      "sources":{
+        "geographic":[{
+            "title":"County-to-County Migration: ",
+            "linkText":"United States Census",
+            "linkUrl":"https://www.census.gov/topics/population/migration/guidance/county-to-county-migration-flows.html",
+            "description":"ACS data from 2011-2015."
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://github.com/sarahbellum/Canvas-Flowmap-Layer","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","Canvas Flowmap Layer","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

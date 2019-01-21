@@ -1,0 +1,331 @@
+{
+    "title": "Indigenous History",
+    "URL":"history_icon",
+    "basemapType":"mapbox",
+    "chapter":"history",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "maps":[{
+        "id":0,
+        "title":"Tribal Groups",
+        "featureSelected":false, 
+        "tileLayers":[{"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjl42fute4l6l2slp422hba6v/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":300,"opacity":1,"type":"mapbox"}],
+        "border":{"title":"pnw_borders_black","opacity":0.6},
+        "jsonLayers":[
+        {
+            "url":"map_data/history/indigenous_territory.json",
+            "pane":"overBorder",
+            "feature":"point",
+            "type":"selection",
+            "fillColors":"#ffffff",
+            "colors":"#000000",
+            "fillOpacity":0,
+            "opacity":1,
+            "weight":2.5,
+            "radius":3,
+            "hoverRadius":7,
+            "hoverWeight":4,
+            "hoverOpacity":1,
+            "tooltipVars":["own_name","name"],
+            "tooltipText":["<h2 style='margin:0;'>","</h2><p3>","</p3>"],
+            "selection":{
+                "titleVar":"own_name",
+                "selectionOpacity":1,
+                "selectionHover":1,
+                "listWeight":"normal",
+                "varList":["name","lang_grp","confd_res"],
+                "varLabel":["Enlish Name: ","Language Group: ","Reservation(s)/Confederation(s): "]
+            }
+        }],
+        "legend":[{
+            "id":0,
+            "description":"Each point on the map represents the relative location of an indigenous tribal group.",
+            "bottomLine":true
+        },
+        {
+            "id":1,
+            "listWeight":"normal",
+            "type":"selection",
+            "title":"Select a Point"
+        }]
+      },
+      {
+        "id":1,
+        "title":"Language",
+        "featureSelected":false, 
+        "tileLayers":[{"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjl42fute4l6l2slp422hba6v/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":300,"opacity":1,"type":"mapbox"}],
+        "border":{"title":"pnw_borders_black","opacity":0.6},
+        "jsonLayers":[
+        {
+            "url":"map_data/history/indigenous_territory.json",
+            "pane":"overBorder",
+            "feature":"point",
+            "type":"selection",
+            "fillColors":"#ffffff",
+            "colors":"#000000",
+            "fillOpacity":0,
+            "opacity":1,
+            "weight":2.5,
+            "radius":3,
+            "hoverRadius":7,
+            "hoverWeight":4,
+            "hoverOpacity":1,
+            "tooltipVars":["own_name","name"],
+            "tooltipText":["<h2 style='margin:0;'>","</h2><p3>","</p3>"],
+            "selection":{
+                "titleVar":"own_name",
+                "selectionOpacity":1,
+                "selectionHover":1,
+                "listWeight":"normal",
+                "varList":["name","lang_grp","confd_res"],
+                "varLabel":["Enlish Name: ","Language Group: ","Reservation(s)/Confederation(s): "]
+            },
+            "flow":{
+                "flow_id":"id",
+                "flowURL":"map_data/history/language.csv",
+                "sourceCoordinates":["long", "lat"],
+                "targetCoordinates":["long_2", "lat_2"],
+                "source":"id",
+                "target":"id_2",
+                "canvasBezierStyle": {
+                    "type": "simple",
+                    "symbol": {
+                      "strokeStyle": "#ff0000",
+                      "lineWidth": 0.75,
+                      "lineCap": "round",
+                      "shadowColor": "#b30000",
+                      "shadowBlur": 1.5
+                    }
+                  }
+                }
+        }],
+        "legend":[{
+            "id":0,
+            "description":"Each point on the map represents the relative location of an indigenous tribal group.",
+            "bottomLine":true
+        },
+        {
+            "id":1,
+            "description":"Selecting a point will reveal tribal groups with the same language group."
+        },
+        {
+            "id":2,
+            "type":"line",
+            "containers":[{
+                "color":"#ff0000",
+                "height":3,
+                "label":"Common Language Group"
+                }]
+        },
+        {
+            "id":3,
+            "topLine":true,
+            "listWeight":"normal",
+            "type":"selection",
+            "title":"Select a Point"
+        }]
+      },
+      {
+        "id":2,
+        "title":"Confederation",
+        "tileLayers":[{"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjl42fute4l6l2slp422hba6v/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":300,"opacity":1,"type":"mapbox"}],
+        "featureSelected":false, 
+        "border":{"title":"pnw_borders_black","opacity":0.6},
+        "jsonLayers":[
+        {
+            "url":"map_data/history/indigenous_territory.json",
+            "pane":"overBorder",
+            "feature":"point",
+            "type":"selection",
+            "fillColors":"#ffffff",
+            "colors":"#000000",
+            "fillOpacity":0,
+            "opacity":1,
+            "weight":2.5,
+            "radius":3,
+            "hoverRadius":7,
+            "hoverWeight":4,
+            "hoverOpacity":1,
+            "tooltipVars":["own_name","name"],
+            "tooltipText":["<h2 style='margin:0;'>","</h2><p3>","</p3>"],
+            "selection":{
+                "titleVar":"own_name",
+                "selectionOpacity":1,
+                "selectionHover":1,
+                "listWeight":"normal",
+                "varList":["name","lang_grp","confd_res"],
+                "varLabel":["Enlish Name: ","Language Group: ","Reservation(s)/Confederation(s): "]
+            },
+            "flow":{
+                "flow_id":"id",
+                "flowURL":"map_data/history/confederation.csv",
+                "sourceCoordinates":["long", "lat"],
+                "targetCoordinates":["long_2", "lat_2"],
+                "source":"id",
+                "target":"id_2",
+                "canvasBezierStyle": {
+                    "type": "simple",
+                    "symbol": {
+                      "strokeStyle": "#3366ff",
+                      "lineWidth": 0.75,
+                      "lineCap": "round",
+                      "shadowColor": "#002699",
+                      "shadowBlur": 1.5
+                    }
+                  }
+                }
+        }],
+        "legend":[{
+            "id":0,
+            "description":"Each point on the map represents the relative location of an indigenous tribal group.",
+            "bottomLine":true
+        },
+        {
+            "id":1,
+            "description":"Selecting a point will reveal tribal groups in the same confederation(s)/reservation(s)."
+        },
+        {
+            "id":2,
+            "type":"line",
+            "containers":[{
+                "color":"#3366ff",
+                "height":3,
+                "label":"Confederation(s)"
+                }]
+        },
+        {
+            "id":3,
+            "topLine":true,
+            "listWeight":"normal",
+            "type":"selection",
+            "title":"Select a Point"
+        }]
+      },
+      {
+        "id":3,
+        "title":"Combined View",
+        "tileLayers":[{"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjl42fute4l6l2slp422hba6v/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":300,"opacity":1,"type":"mapbox"}],
+        "featureSelected":false, 
+        "border":{"title":"pnw_borders_black","opacity":0.6},
+        "jsonLayers":[
+        {
+            "url":"map_data/history/indigenous_territory.json",
+            "pane":"overBorder",
+            "feature":"point",
+            "type":"selection",
+            "fillColors":"#ffffff",
+            "colors":"#000000",
+            "fillOpacity":0,
+            "opacity":1,
+            "weight":2.5,
+            "radius":3,
+            "hoverRadius":7,
+            "hoverWeight":4,
+            "hoverOpacity":1,
+            "tooltipVars":["own_name","name"],
+            "tooltipText":["<h2 style='margin:0;'>","</h2><p3>","</p3>"],
+            "selection":{
+                "titleVar":"own_name",
+                "selectionOpacity":1,
+                "selectionHover":1,
+                "listWeight":"normal",
+                "varList":["name","lang_grp","confd_res"],
+                "varLabel":["Enlish Name: ","Language Group: ","Reservation(s)/Confederation(s): "]
+            },
+            "flow":{
+                "flow_id":"id",
+                "flowURL":"map_data/history/combined.csv",
+                "sourceCoordinates":["long", "lat"],
+                "targetCoordinates":["long_2", "lat_2"],
+                "source":"id",
+                "target":"id_2",
+                "canvasBezierStyle": {
+                    "type": "uniqueValue",
+                    "field":"type",
+                    "uniqueValueInfos":[
+                    {
+                        "value": 3,
+                        "symbol": {
+                          "strokeStyle": "#000000",
+                          "lineWidth": 1,
+                          "lineCap": "round",
+                          "shadowColor": "#000000",
+                          "shadowBlur": 1.5
+                        }
+                    },
+                    {
+                        "value": 2,
+                        "symbol": {
+                          "strokeStyle": "#ff0000",
+                          "lineWidth": 0.75,
+                          "lineCap": "round",
+                          "shadowColor": "#b30000",
+                          "shadowBlur": 1.5
+                        }
+                    },
+                    {
+                        "value": 1,
+                        "symbol": {
+                          "strokeStyle": "#3366ff",
+                          "lineWidth": 0.75,
+                          "lineCap": "round",
+                          "shadowColor": "#002699",
+                          "shadowBlur": 1.5
+                        }
+                    }
+                  ]}
+                }
+        }],
+        "legend":[{
+            "id":0,
+            "description":"Each point on the map represents the relative location of an indigenous tribal group.",
+            "bottomLine":true
+        },
+        {
+            "id":1,
+            "description":"Selecting a point will reveal tribal groups with the same language group, as well as tribes in the same confederation(s), reservation(s), or both."
+        },
+        {
+            "id":2,
+            "type":"line",
+            "containers":[{
+                "color":"#ff0000",
+                "height":3,
+                "label":"Common Language Group"
+                },
+                {
+                "color":"#3366ff",
+                "height":3,
+                "label":"Confederation(s)"
+                },
+                {
+                "color":"#000000",
+                "height":3,
+                "label":"Both"
+                }]
+        },
+        {
+            "id":3,
+            "topLine":true,
+            "listWeight":"normal",
+            "type":"selection",
+            "title":"Select a Point"
+        }]
+      }],
+      "sources":{
+        "contentNote":"We have done our best to be thorough and accurate, but due to the nature of Euro-American colonization and settlement, certain information has been lost to history. We acknowledge that strict geographic boundaries and Euro-American notions of land ownership were generally not part of Indigenous cultures in what became the Pacific Northwest, and therefore this map is designed to show general relationships between those indigenous cultures, as opposed to their absolute locations. Please let us know of any corrections or improvements you may have. ",
+        "geographic":[{
+            "title":"Tribal Locations/Information: ",
+            "linkText":"Hidden History",
+            "linkUrl":"http://www.hiddenhistory.com/PAGE3/Wherwhn1.htm",
+            "description":"Notes: Data obtained from this site are sourced to a 1952 book by Reed Swanton, entitled 'The Indian Tribes of North America'. While some of the book's content is certainly outdated, the maps included provided a fairly complete picture of Indigenous homelands. The maps from Swanton's book (and presented on the linked website) were used to digitize the points on this Indigenous History map. Points were placed at the relative center of the territory outlined by Swanton. Point locations are not supposed to be exact, and do not correspond with any actual geographic feature. Rather, their placement correspond to the general location of that tribe prior to Euro-American contact."
+        }],
+        "basemap":[{
+            "title":"Created with Mapbox Studio"
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","Chart.js","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

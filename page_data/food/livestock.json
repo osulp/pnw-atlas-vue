@@ -1,0 +1,123 @@
+{
+    "title": "Livestock",
+    "URL":"livestock_icon",
+    "chapter":"food",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "basemap":[{"title":"terrain","opacity":1},
+      {"title":"geoserver","layer":"pnw_outline2","opacity":0.3},
+      {"title":"label","opacity":1}],
+    "maps":[{
+        "id":7,
+        "title":"Livestock",            
+        "fastFacts":[{
+          "facts":["&#9900 Livestock comprises 39.55% of Pacific Northwest agricultural sales.","&#9900 Cow products (beef and dairy) comprise 89.16% of all agricultural sales.","&#9900 Other livestock products include poultry (5.09% of livestock sales), and aquaculture (3.04% of livestock sales)."]
+        }],
+        "border":{"title":"pnw_states_black","opacity":0.5},
+        "jsonLayers":[{
+            "url":"map_data/food/livestock_counties.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"total_per",
+            "values":[80,60,40,20,0],
+            "fillColors":["#a63603","#e6550d","#fd8d3c","#fdbe85","#feedde","#ffffff"],
+            "colors":["#ffffff"],
+            "tooltipVars":["NAME","ST"],
+            "tooltipText":["<h2 style='margin:0;'>"," County, ","</h2><p3 id='chartDescription' style='font-size:16px; display:inline-block; margin-top:5px; font-weight:bold;'>Livestock Types</p3><br/><canvas id='livestockChart' style='margin-left:-5px;' width='280' height='140'></canvas><p3 style='display:inline-block; font-weight:normal; font-size:16px; margin-top:5px;'>% of Total Agricultural Output (of available data)</p3>"]                 
+          }],
+        "legend":[{
+                "id":0,
+                "type":"polygon",
+                "icon":"animal_icon",
+                "chartID":"livestockChart",
+                "title":"Livestock (% of Total Ag. Sales)",
+                "containers":[{
+                    "color":"#a63603",
+                    "label":"80+"
+                  },
+                  {
+                    "color":"#e6550d",
+                    "label":"60 to 80"
+                  },
+                  {
+                    "color":"#fd8d3c",
+                    "label":"40 to 60"
+                  },
+                  {
+                    "color":"#fdbe85",
+                    "label":"20 to 40"
+                  },
+                  {
+                    "color":"#feedde",
+                    "label":"Less than 20"
+                  },
+                  {
+                    "color":"#ffffff",
+                    "label":"No Data"
+                  }
+                ],
+                "description":"Livestock sales as a percent of total agriculture sales."
+            }],
+        "chart":[{
+            "id":0,
+            "chartLoc":"info",
+            "chartType":"horizontalBar",
+            "labels":["Milk", "Cattle","Poultry","Aquaculture","Other/No Data"],
+            "data":["milk","cattle","poultry","aqua","other"],
+            "colors":["#fdbe85","#fdbe85","#fdbe85","#fdbe85","#fdbe85"],
+            "options": {
+                "responsive": true,
+                "scales": {
+                  "yAxes": [{
+                    "ticks": {
+                      "fontSize":14,
+                      "fontColor":"#000000",    
+                      "fontFamily":"GoudyOld"
+                    }
+                  }],
+                  "xAxes": [{
+                    "ticks": {
+                      "fontSize":14,
+                      "fontColor":"#000000",    
+                      "fontFamily":"GoudyOld",
+                      "min": 0
+                    }
+                  }]
+                },
+                "legend": {
+                  "display":false
+                },
+                "tooltips":{
+                  "enabled":false
+                }
+            }
+        }]
+     }],
+      "sources":{
+        "geographic":[{
+            "title":"Livestock Sales Data: ",
+            "linkText":"USDA Census of Agriculture",
+            "linkUrl":"https://www.agcensus.usda.gov/Publications/2012/Online_Resources/Ag_Census_Web_Maps/Data_download/index.php",
+            "description":"Percent of agricultural sales, total and by source. Data from 2012. Data table was downloaded from 'Data Download' link. Table columns used in maps are: y12_M026. Table columns used in tables are: y12_M028, y12_M029, y12_M027, y12_M032."
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://d3js.org/topojson.v1.min.js","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","Chart.js","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/livestock.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Livestock%0Ahttp%3A//pnwatlas.oregonstate.edu/food/livestock.html"
+    }
+  }

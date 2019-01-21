@@ -1,0 +1,393 @@
+{
+    "title": "Invasive Species",
+    "URL":"invasive_icon",
+    "chapter":"wildlife",
+    "initial":0,
+    "dropdownText":"Select Species",
+    "dropdownLabel":{"type":"breaks","labels":["Flora","Fauna"],"breaks":[0,8]},
+    "basemap":[{"title":"streets","opacity":1},
+      {"title":"imagery","opacity":0.3},
+      {"title":"terrain","opacity":0.2},
+      {"title":"geoserver","layer":"pnw_outline2","opacity":0.3},
+      {"title":"label","opacity":1}],
+    "maps":[{
+        "id":0,
+        "fastFacts":[{
+          "facts":["&#9900 Native to Europe.","&#9900 Introduced for dune control and as a highway ornamental.","&#9900 Costly to contain due to prolific seed production (up to 10,000 a year).","&#9900 Estimated annual costs to contain Scotch Broom in Oregon exceed $47 million."]
+        }],
+        "title":"Scotch Broom",
+        "border":{"title":"pnw_borders","include":true,"opacity":1,"pane":300 },
+        "jsonLayers":[{
+            "pane":"overBorder",
+            "jsUrl":"map_data/wildlife/scotch_broom.js",
+            "heatName":"scotch_broom",
+            "interactive":false,
+            "feature":"heat", 
+            "csvUrl":"map_data/wildlife/scotch_broom.csv",
+            "blur":30,
+            "gradient":{"0.2": "#8a8a5c", "0.4": "#ffff66", "0.6": "#b3b300", "0.8": "#99cc00","1": "#558000"},
+            "info":false
+          }],
+        "legend":[{
+            "id":0,
+            "bottomIcon":"scotch_broom",
+            "type":"gradient",
+            "title":"Scotch Broom Observations",
+            "gradient":"linear-gradient(to right, #ffffff 0%, #ffff66 30%, #b3b300 50%, #99cc00 70%, #558000 90%)",
+            "gradientLabels":["Low","High"],
+            "gradientMargin":200,
+            "description":"Concentration of Scotch Broom observations from 2005 to present. Areas with no observations do not necessarily lack species occurances.",
+            "bottomIconWidth":250
+        }]
+      },
+      {
+        "id":1,
+        "fastFacts":[{
+          "facts":["&#9900 Native to Europe and Asia.","&#9900 Probably introduced to Canada as a crop contaminant.","&#9900 Grows in circular patches and replaces native plants as it spreads.","&#9900 Can result in crop reduction up to 25%."]
+        }],
+        "title":"Canada Thistle",
+        "border":{"title":"pnw_borders","include":true,"opacity":1,"pane":300},
+        "jsonLayers":[{
+            "interactive":false,
+            "jsUrl":"map_data/wildlife/canada_thistle.js",
+            "heatName":"canada_thistle",
+            "feature":"heat", 
+            "blur":30,
+            "gradient":{"0.2": "#8a8a5c", "0.4": "#ffff66", "0.6": "#b3b300", "0.8": "#99cc00","1": "#558000"},
+            "info":false
+          }],
+        "legend":[{
+            "id":0,
+            "bottomIcon":"canada_thistle",
+            "type":"gradient",
+            "title":"Canada Thistle Observations",
+            "gradient":"linear-gradient(to right, #ffffff 0%, #ffff66 30%, #b3b300 50%, #99cc00 70%, #558000 90%)",
+            "gradientLabels":["Low","High"],
+            "gradientMargin":200,
+            "description":"Concentration of Canada Thistle observations from 2005 to present. Areas with no observations do not necessarily lack species occurances.",
+            "bottomIconWidth":250
+        }]
+      },
+      {
+        "id":2,
+        "fastFacts":[{
+          "facts":["&#9900 Native to Europe and Asia.","&#9900 Probably introduced as a contaminant in imported grain.","&#9900 Disrupts the health of pastures and rangeland.","&#9900 Secretes a milky sap that is irritating to human skin, and may cause hair loss on horses."]
+        }],
+        "title":"Leafy Spurge",
+        "border":{"title":"pnw_borders","include":true,"opacity":1,"pane":300},
+        "jsonLayers":[{
+            "interactive":false,
+            "jsUrl":"map_data/wildlife/leafy_spurge.js",
+            "heatName":"leafy_spurge",
+            "feature":"heat", 
+            "blur":30,
+            "gradient":{"0.2": "#8a8a5c", "0.4": "#ffff66", "0.6": "#b3b300", "0.8": "#99cc00","1": "#558000"},
+            "info":false
+          }],
+        "legend":[{
+            "id":0,
+            "bottomIcon":"leafy_spurge",
+            "type":"gradient",
+            "title":"Leafy Spurge Observations",
+            "gradient":"linear-gradient(to right, #ffffff 0%, #ffff66 30%, #b3b300 50%, #99cc00 70%, #558000 90%)",
+            "gradientLabels":["Low","High"],
+            "gradientMargin":200,
+            "description":"Concentration of Leafy Spurge observations from 2005 to present. Areas with no observations do not necessarily lack species occurances.",
+            "bottomIconWidth":250
+        }]
+      },
+      {
+        "id":3,
+        "fastFacts":[{
+          "facts":["&#9900 Native to Europe and Eastern Asia.","&#9900 Probably an escaped ornamental.","&#9900 Primarily invades rangeland and pine woodland, seriously diminishing native crop production."]
+        }],
+        "title":"Scotch Thistle",
+        "border":{"title":"pnw_borders","include":true,"opacity":1,"pane":300},
+        "jsonLayers":[{
+            "interactive":false,
+            "jsUrl":"map_data/wildlife/scotch_thistle.js",
+            "heatName":"scotch_thistle",
+            "feature":"heat", 
+            "blur":30,
+            "gradient":{"0.2": "#8a8a5c", "0.4": "#ffff66", "0.6": "#b3b300", "0.8": "#99cc00","1": "#558000"},
+            "info":false
+          }],
+        "legend":[{
+            "id":0,
+            "bottomIcon":"scotch_thistle",
+            "type":"gradient",
+            "title":"Scotch Thistle Observations",
+            "gradient":"linear-gradient(to right, #ffffff 0%, #ffff66 30%, #b3b300 50%, #99cc00 70%, #558000 90%)",
+            "gradientLabels":["Low","High"],
+            "gradientMargin":200,
+            "description":"Concentration of Scotch Thistle observations from 2005 to present. Areas with no observations do not necessarily lack species occurances.",
+            "bottomIconWidth":250
+        }]
+      },
+      {
+        "id":4,
+        "fastFacts":[{
+          "facts":["&#9900 Native to Europe.","&#9900 Probably introduced as a contaminant in seeds and livestock.","&#9900 Forms dense strands, completely excluding native plants.","&#9900 Costs for control often exceed the potential economic benefits from grazing."]
+        }],
+        "title":"Spotted Knapweed",
+        "border":{"title":"pnw_borders","include":true,"opacity":1,"pane":300},
+        "jsonLayers":[{
+            "interactive":false,
+            "jsUrl":"map_data/wildlife/spotted_knapweed.js",
+            "heatName":"spotted_knapweed",
+            "feature":"heat", 
+            "blur":30,
+            "gradient":{"0.2": "#8a8a5c", "0.4": "#ffff66", "0.6": "#b3b300", "0.8": "#99cc00","1": "#558000"},
+            "info":false
+          }],
+        "legend":[{
+            "id":0,
+            "bottomIcon":"spotted_knapweed",
+            "type":"gradient",
+            "title":"Spotted Knapweed Observations",
+            "gradient":"linear-gradient(to right, #ffffff 0%, #ffff66 30%, #b3b300 50%, #99cc00 70%, #558000 90%)",
+            "gradientLabels":["Low","High"],
+            "gradientMargin":200,
+            "description":"Concentration of Spotted Knapweed observations from 2005 to present. Areas with no observations do not necessarily lack species occurances.",
+            "bottomIconWidth":250
+        }]
+      },
+      {
+        "id":5,
+        "fastFacts":[{
+          "facts":["&#9900 Native to Europe.","&#9900 Originally cultivated for food and medecine.","&#9900 Displaces vegetation in the forest understory, which decreases forage availability for deer."]
+        }],
+        "title":"Garlic Mustard",
+        "border":{"title":"pnw_borders","include":true,"opacity":1,"pane":300},
+        "jsonLayers":[{
+            "interactive":false,
+            "jsUrl":"map_data/wildlife/garlic_mustard.js",
+            "heatName":"garlic_mustard",
+            "feature":"heat", 
+            "blur":30,
+            "gradient":{"0.2": "#8a8a5c", "0.4": "#ffff66", "0.6": "#b3b300", "0.8": "#99cc00","1": "#558000"},
+            "info":false
+          }],
+        "legend":[{
+            "id":0,
+            "bottomIcon":"garlic_mustard",
+            "type":"gradient",
+            "title":"Garlic Mustard Observations",
+            "gradient":"linear-gradient(to right, #ffffff 0%, #ffff66 30%, #b3b300 50%, #99cc00 70%, #558000 90%)",
+            "gradientLabels":["Low","High"],
+            "gradientMargin":200,
+            "description":"Concentration of Garlic Mustard observations from 2005 to present. Areas with no observations do not necessarily lack species occurances.",
+            "bottomIconWidth":250
+        }]
+      },
+      {
+        "id":6,
+        "fastFacts":[{
+          "facts":["&#9900 Native to the Himalayas.","&#9900 Introduced for berry production.","&#9900 One of the most economically disruptive of all noxious weeds in the PNW.","&#9900 Displaces native plant species and dominates many riparian habitats."]
+        }],
+        "title":"Blackberry",
+        "border":{"title":"pnw_borders","include":true,"opacity":1,"pane":300},
+        "jsonLayers":[{
+            "interactive":false,
+            "jsUrl":"map_data/wildlife/blackberry.js",
+            "heatName":"blackberry",
+            "feature":"heat", 
+            "blur":30,
+            "gradient":{"0.2": "#8a8a5c", "0.4": "#ffff66", "0.6": "#b3b300", "0.8": "#99cc00","1": "#558000"},
+            "info":false
+          }],
+        "legend":[{
+            "id":0,
+            "bottomIcon":"blackberry",
+            "type":"gradient",
+            "title":"Himalayan Blackberry Observations",
+            "gradient":"linear-gradient(to right, #ffffff 0%, #ffff66 30%, #b3b300 50%, #99cc00 70%, #558000 90%)",
+            "gradientLabels":["Low","High"],
+            "gradientMargin":200,
+            "description":"Concentration of Himalayan Blackberry observations from 2005 to present. Areas with no observations do not necessarily lack species occurances.",
+            "bottomIconWidth":250
+        }]
+      },
+      {
+        "id":7,
+        "fastFacts":[{
+          "facts":["&#9900 Native to Europe and Asia.","&#9900 Introduced as a contaminant in imported grain and straw packing material.","&#9900 Can quickly overwhelm native plants.","&#9900 Cheatgrass strands dry out earlier than most native plants, increasing risk for an earlier fire season."]
+        }],
+        "title":"Cheatgrass",
+        "border":{"title":"pnw_borders","include":true,"opacity":1,"pane":300},
+        "jsonLayers":[{
+            "interactive":false,
+            "jsUrl":"map_data/wildlife/cheatgrass.js",
+            "heatName":"cheatgrass",
+            "feature":"heat", 
+            "blur":30,
+            "gradient":{"0.2": "#8a8a5c", "0.4": "#ffff66", "0.6": "#b3b300", "0.8": "#99cc00","1": "#558000"},
+            "info":false
+          }],
+        "legend":[{
+            "id":0,
+            "bottomIcon":"cheatgrass",
+            "type":"gradient",
+            "title":"Cheatgrass Observations",
+            "gradient":"linear-gradient(to right, #ffffff 0%, #ffff66 30%, #b3b300 50%, #99cc00 70%, #558000 90%)",
+            "gradientLabels":["Low","High"],
+            "gradientMargin":200,
+            "description":"Concentration of Cheatgrass observations from 2005 to present. Areas with no observations do not necessarily lack species occurances.",
+            "bottomIconWidth":250
+        }]
+      },
+      {
+        "id":8,
+        "fastFacts":[{
+          "facts":["&#9900 Native to South America.","&#9900 Introduced for fur farming in the early 1900s.","&#9900 Construct burrows in wetlands, which can cause considerable erosion.","&#9900 They have nearly eliminated populations of native muskrat."]
+        }],
+        "title":"Nutria",
+        "border":{"title":"pnw_borders","include":true,"opacity":1,"pane":300},
+        "jsonLayers":[{
+            "interactive":false,
+            "jsUrl":"map_data/wildlife/nutria.js",
+            "heatName":"nutria",
+            "feature":"heat", 
+            "blur":30,
+            "gradient":{"0.2": "#808080", "0.4": "#ffe699", "0.6": "#cc9900", "0.8": "#ac7339","1": "#604020"},
+            "info":false
+          }],
+        "legend":[{
+            "id":0,
+            "bottomIcon":"nutria",
+            "type":"gradient",
+            "title":"Nutria Observations",
+            "gradient":"linear-gradient(to right, #ffffff 0%, #ffe699 30%, #cc9900 50%, #ac7339 70%, #604020 90%)",
+            "gradientLabels":["Low","High"],
+            "gradientMargin":200,
+            "description":"Concentration of Nutria observations from 2005 to present. Areas with no observations do not necessarily lack species occurances.",
+            "bottomIconWidth":300
+        }]
+      },
+      {
+        "id":9,
+        "fastFacts":[{
+          "facts":["&#9900 Native to the Eastern United States.","&#9900 Introduced as a food item.","&#9900 Can lay up to 20,000 eggs annually, often 2-4 times as much as native frog species.","&#9900 Aggressive predators, known to decimate populations of native turtles and frogs."]
+        }],
+        "title":"Bullfrog",
+        "border":{"title":"pnw_borders","include":true,"opacity":1,"pane":300},
+        "jsonLayers":[{
+            "interactive":false,
+            "jsUrl":"map_data/wildlife/bullfrog.js",
+            "heatName":"bullfrog",
+            "feature":"heat", 
+            "blur":30,
+            "gradient":{"0.2": "#808080", "0.4": "#ffe699", "0.6": "#cc9900", "0.8": "#ac7339","1": "#604020"},
+            "info":false
+          }],
+        "legend":[{
+            "id":0,
+            "bottomIcon":"bullfrog",
+            "type":"gradient",
+            "title":"Bullfrog Observations",
+            "gradient":"linear-gradient(to right, #ffffff 0%, #ffe699 30%, #cc9900 50%, #ac7339 70%, #604020 90%)",
+            "gradientLabels":["Low","High"],
+            "gradientMargin":200,
+            "description":"Concentration of Bullfrog observations from 2005 to present. Areas with no observations do not necessarily lack species occurances.",
+            "bottomIconWidth":200
+        }]
+      },
+      {
+        "id":10,
+        "fastFacts":[{
+          "facts":["&#9900 Native to Europe.","&#9900 First introduced to New York in 1890, and spread across the continental United States.","&#9900 Thrive in urban areas, where they are known to outcompete native songbirds."]
+        }],
+        "title":"Starling",
+        "border":{"title":"pnw_borders","include":true,"opacity":1,"pane":300},
+        "jsonLayers":[{
+            "interactive":false,
+            "jsUrl":"map_data/wildlife/starling.js",
+            "heatName":"starling",
+            "feature":"heat", 
+            "blur":30,
+            "gradient":{"0.2": "#808080", "0.4": "#ffe699", "0.6": "#cc9900", "0.8": "#ac7339","1": "#604020"},
+            "info":false
+          }],
+        "legend":[{
+            "id":0,
+            "bottomIcon":"starling",
+            "type":"gradient",
+            "title":"European Starling Observations",
+            "gradient":"linear-gradient(to right, #ffffff 0%, #ffe699 30%, #cc9900 50%, #ac7339 70%, #604020 90%)",
+            "gradientLabels":["Low","High"],
+            "gradientMargin":200,
+            "description":"Concentration of European Starling observations from 2005 to present. Areas with no observations do not necessarily lack species occurances.",
+            "bottomIconWidth":200
+        }]
+      },
+      {
+        "id":11,
+        "fastFacts":[{
+          "facts":["&#9900 There are four invasive crayfish species in the Pacific Northwest: Rusty Crayfish, Red Swamp Crayfish, Ringed Crayfish, and Virile Crayfish.","&#9900 All invasive crayfish present are native to the Eastern United States.","&#9900 Compete with the native Signal Crayfish.","&#9900 Specific introduction paths are unknown, but it is likely that invasive crayfish were introduced as live bait or as released pets."]
+        }],
+        "title":"Crayfish",
+        "border":{"title":"pnw_borders","include":true,"opacity":1,"pane":300},
+        "jsonLayers":[{
+            "interactive":false,
+            "jsUrl":"map_data/wildlife/crayfish.js",
+            "heatName":"crayfish",
+            "feature":"heat", 
+            "blur":30,
+            "minOpacity":0.5,
+            "gradient":{"0.2": "#808080", "0.4": "#ffe699", "0.6": "#cc9900", "0.8": "#ac7339","1": "#604020"},
+            "info":false
+          }],
+        "legend":[{
+            "id":0,
+            "bottomIcon":"crayfish",
+            "type":"gradient",
+            "title":"Invasive Crayfish Observations",
+            "gradient":"linear-gradient(to right, #ffffff 0%, #ffe699 30%, #cc9900 50%, #ac7339 70%, #604020 90%)",
+            "gradientLabels":["Low","High"],
+            "gradientMargin":200,
+            "description":"Concentration of Invasive Crayfish observations from 2005 to present. Areas with no observations do not necessarily lack species occurances.",
+            "bottomIconWidth":200
+        }]
+      }],
+      "sources":{
+        "geographic":[{
+            "title":"Washington and Idaho Invasive Species Sightings",
+            "linkText":"EDD Maps",
+            "linkUrl":"https://www.eddmaps.org/distribution/",
+            "description":"Data current as of July, 2018. Used for all included species."
+        },
+        {
+            "title":"Oregon Invasive Species Sightings",
+            "linkText":"iMapInvasives",
+            "linkUrl":"https://www.imapinvasives.org/",
+            "description":"Since 2010, Oregon has made a concerted effort to centralize invasive species data from many sources into the Oregon iMapInvasives database. These efforts result in a denser coverage of invasive species observations in Oregon as compared to neighboring states. Lack of data for a specific location does not mean that invasive species are absent from that location."
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Satellite Imagery: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldImagery",
+            "description":"ESRI World Imagery; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","Chart.js","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

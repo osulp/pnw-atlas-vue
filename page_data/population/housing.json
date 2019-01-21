@@ -1,0 +1,559 @@
+{
+    "title": "Housing",
+    "URL":"housing_icon",
+    "chapter":"population",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "basemap":[{"title":"terrain","opacity":1},
+        {"title":"geoserver","layer":"pnw_outline2","opacity":0.3},
+        {"title":"label","opacity":1}],
+    "maps":[{
+        "id":0,
+        "title":"Occupation",
+        "border":{"title":"pnw_borders_black","opacity":0.7},
+        "jsonLayers":[{
+            "url":"map_data/population/housing_group_demographics.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"per_occu",
+            "values":[95,90,80,70],
+            "fillColors":["#54278f","#756bb1","#9e9ac8","#cbc9e2","#f2f0f7"],
+            "colors":["#54278f","#756bb1","#9e9ac8","#cbc9e2","#f2f0f7"],
+            "fillOpacity":0.6,
+            "opacity":1,
+            "weight":0.5,
+            "titleVariable":"title",
+            "hoverText":["","% Occupied"],
+            "hoverVar":"per_occu"
+          }],
+          "legend":[{
+                "id":1,
+                "title":"Percent Occupied",
+                "type":"polygon",
+                "icon":"occupation",
+                "containers":[{
+                    "color":"#54278f",
+                    "label":"95+"
+                  },
+                  {
+                    "color":"#756bb1",
+                    "label":"90 to 95"
+                  },
+                  {
+                    "color":"#9e9ac8",
+                    "label":"80 to 90"
+                  },
+                  {
+                    "color":"#cbc9e2",
+                    "label":"70 to 80"
+                  },
+                  {
+                    "color":"#f2f0f7",
+                    "label":"Less than 70"
+                  }],
+                "description":"Percent of housing units occupied within a census block group. Data from 2011-2015."
+            },
+            {
+                "id":1,
+                "type":"chart",
+                "title":"Hover Over Map for Details",
+                "hoverContainer":true,
+                "chartID":"occupationChart",
+                "description":"Housing units by occupancy status."
+            }],
+        "chart":[{
+            "id":1,
+            "chartLoc":"legend",
+            "chartType":"pie",
+            "labels":["Vacant","Occupied"],
+            "data":["vacant","occupied"],
+            "colors":["#f2f0f7","#756bb1"],
+            "options": {
+                "responsive": true,
+                "legend": {
+                    "position": "left",
+                    "labels": {
+                        "fontColor":"#000000",
+                        "fontFamily":"GoudyOld",
+                        "fontSize":14
+                    }
+                },
+                "plugins":{
+                    "labels":{
+                        "render": "value",
+                        "fontColor":"#000000",    
+                        "fontFamily":"GoudyOld",
+                        "fontSize":14,
+                        "overlap":false
+                    }
+                },   
+                "tooltips":{
+                    "enabled":false
+                }
+            }
+        }]
+      },
+      {
+        "id":1,
+        "title":"Tenure",
+        "border":{"title":"pnw_borders_black","opacity":0.4},
+        "jsonLayers":[{
+            "url":"map_data/population/housing_group_demographics.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"per_owned",
+            "values":[90,70,50,30],
+            "fillColors":["#008837","#a6dba0","#f7f7f7","#c2a5cf","#7b3294"],
+            "colors":["#008837","#a6dba0","#f7f7f7","#c2a5cf","#7b3294"],
+            "fillOpacity":0.6,
+            "opacity":1,
+            "weight":0.5,
+            "titleVariable":"title",
+            "hoverText":["","% Units Owned"],
+            "hoverVar":"per_owned"
+          }],
+          "legend":[{
+                "id":1,
+                "title":"Percent Owned",
+                "type":"polygon",
+                "icon":"tenure",
+                "containers":[{
+                    "color":"#008837",
+                    "label":"90+"
+                  },
+                  {
+                    "color":"#a6dba0",
+                    "label":"70 to 90"
+                  },
+                  {
+                    "color":"#f7f7f7",
+                    "label":"50 to 70"
+                  },
+                  {
+                    "color":"#c2a5cf",
+                    "label":"30 to 50"
+                  },
+                  {
+                    "color":"#7b3294",
+                    "label":"Less than 30"
+                  }],
+                "description":"Percent of occupied housing units that are owned. Lower percentages indicate more rental units. Data from 2011-2015."
+            },
+            {
+                "id":1,
+                "type":"chart",
+                "title":"Hover Over Map for Details",
+                "hoverContainer":true,
+                "chartID":"tenureChart",
+                "description":"Housing units by tenure."
+            }],
+        "chart":[{
+            "id":1,
+            "chartLoc":"legend",
+            "chartType":"pie",
+            "labels":["Owned","Rented"],
+            "data":["owned","rented"],
+            "colors":["#a6dba0","#c2a5cf"],
+            "options": {
+                "responsive": true,
+                "legend": {
+                    "position": "left",
+                    "labels": {
+                        "fontColor":"#000000",
+                        "fontFamily":"GoudyOld",
+                        "fontSize":14
+                    }
+                },
+                "plugins":{
+                    "labels":{
+                        "render": "value",
+                        "fontColor":"#000000",    
+                        "fontFamily":"GoudyOld",
+                        "fontSize":14,
+                        "overlap":false
+                    }
+                },   
+                "tooltips":{
+                    "enabled":false
+                }
+            }
+        }]
+      },
+      {
+        "id":2,
+        "title":"Median Home Age",
+        "border":{"title":"pnw_borders_black","opacity":0.4},
+        "jsonLayers":[{
+            "url":"map_data/population/housing_group_demographics.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"med_year",
+            "values":[1990,1980,1970,1960],
+            "fillColors":["#993404","#d95f0e","#fe9929","#fed98e","#ffffd4"],
+            "colors":["#993404","#d95f0e","#fe9929","#fed98e","#ffffd4"],
+            "fillOpacity":0.6,
+            "opacity":1,
+            "weight":0.5,
+            "titleVariable":"title",
+            "hoverText":["Median Age of Home: ",""],
+            "hoverVar":"med_year"
+          }],
+          "legend":[{
+                "id":1,
+                "title":"Median Home Age",
+                "icon":"age",
+                "type":"polygon",
+                "containers":[{
+                    "color":"#993404",
+                    "label":"1990 to Pres."
+                  },
+                  {
+                    "color":"#d95f0e",
+                    "label":"1980 to 1990"
+                  },
+                  {
+                    "color":"#fe9929",
+                    "label":"1970 to 1980"
+                  },
+                  {
+                    "color":"#fed98e",
+                    "label":"1960 to 1970"
+                  },
+                  {
+                    "color":"#ffffd4",
+                    "label":"Before 1960"
+                  }],
+                "description":"Median home age within census block group. Data from 2011-2015."
+            },
+            {
+                "id":1,
+                "type":"chart",
+                "title":"Hover Over Map for Details",
+                "hoverContainer":true,
+                "chartID":"medianAgeChart",
+                "description":"Housing units by age category."
+            }],
+        "chart":[{
+            "id":1,
+            "chartLoc":"legend",
+            "chartType":"pie",
+            "labels":["1990 - Pres.","1980 - 1990","1970 - 1980","1960 - 1970","Before 1960"],
+            "data":["pres1990","d1980_1989","d1970_1979","d1960_1969","before1960"],
+            "colors":["#993404","#d95f0e","#fe9929","#fed98e","#ffffd4"],
+            "options": {
+                "responsive": true,
+                "legend": {
+                    "position": "left",
+                    "labels": {
+                        "fontColor":"#000000",
+                        "fontFamily":"GoudyOld",
+                        "fontSize":14
+                    }
+                },
+                "plugins":{
+                    "labels":{
+                        "render": "value",
+                        "fontColor":"#000000",    
+                        "fontFamily":"GoudyOld",
+                        "fontSize":14,
+                        "overlap":false
+                    }
+                },   
+                "tooltips":{
+                    "enabled":false
+                }
+            }
+        }]
+      },
+      {
+        "id":3,
+        "title":"Median Value",
+        "border":{"title":"pnw_borders_black","opacity":0.4},
+        "jsonLayers":[{
+            "url":"map_data/population/housing_group_demographics.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"med_value",
+            "values":[500000,400000,250000,100000],
+            "fillColors":["#006d2c","#31a354","#74c476","#bae4b3","#edf8e9"],
+            "colors":["#006d2c","#31a354","#74c476","#bae4b3","#edf8e9"],
+            "fillOpacity":0.6,
+            "opacity":1,
+            "weight":0.5,
+            "titleVariable":"title",
+            "hoverText":["Median Home Value: $",""],
+            "hoverVar":"med_value"
+          }],
+          "legend":[{
+                "id":1,
+                "title":"Median Home Value",
+                "type":"polygon",
+                "icon":"value",
+                "containers":[{
+                    "color":"#006d2c",
+                    "label":"500+"
+                  },
+                  {
+                    "color":"#31a354",
+                    "label":"400 to 500"
+                  },
+                  {
+                    "color":"#74c476",
+                    "label":"250 to 400"
+                  },
+                  {
+                    "color":"#bae4b3",
+                    "label":"100 to 250"
+                  },
+                  {
+                    "color":"#edf8e9",
+                    "label":"Less than 100"
+                  }],
+                "description":"Median value of owned housing units in thousands of dollars. Data from 2011-2015."
+            },
+            {
+                "id":1,
+                "type":"chart",
+                "title":"Hover Over Map for Details",
+                "hoverContainer":true,
+                "chartID":"medianValueChart",
+                "description":"Housing units by value category in thousands of dollars."
+            }],
+        "chart":[{
+            "id":1,
+            "chartLoc":"legend",
+            "chartType":"pie",
+            "labels":["$500","$400 - $500","$250 - $400","$100 - $250","Less than $100"],
+            "data":["v500","v400_500","v250_400","v100_250","v0_100"],
+            "colors":["#006d2c","#31a354","#74c476","#bae4b3","#edf8e9"],
+            "options": {
+                "responsive": true,
+                "legend": {
+                    "position": "left",
+                    "labels": {
+                        "fontColor":"#000000",
+                        "fontFamily":"GoudyOld",
+                        "fontSize":14
+                    }
+                },
+                "plugins":{
+                    "labels":{
+                        "render": "value",
+                        "fontColor":"#000000",    
+                        "fontFamily":"GoudyOld",
+                        "fontSize":14,
+                        "overlap":false
+                    }
+                },   
+                "tooltips":{
+                    "enabled":false
+                }
+            }
+        }]
+      },
+      {
+        "id":4,
+        "title":"Median Rent",
+        "border":{"title":"pnw_borders_black","opacity":0.4},
+        "jsonLayers":[{
+            "url":"map_data/population/housing_group_demographics.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"med_rent",
+            "values":[2000,1500,1000,500],
+            "fillColors":["#08519c","#3182bd","#6baed6","#bdd7e7","#eff3ff"],
+            "colors":["#08519c","#3182bd","#6baed6","#bdd7e7","#eff3ff"],
+            "fillOpacity":0.6,
+            "opacity":1,
+            "weight":0.5,
+            "titleVariable":"title",
+            "hoverText":["Median Rent: $",""],
+            "hoverVar":"med_rent"
+          }],
+          "legend":[{
+                "id":1,
+                "title":"Median Rent",
+                "type":"polygon",
+                "icon":"rent",
+                "containers":[{
+                    "color":"#08519c",
+                    "label":"2000+"
+                  },
+                  {
+                    "color":"#3182bd",
+                    "label":"1500 to 2000"
+                  },
+                  {
+                    "color":"#6baed6",
+                    "label":"1000 to 1500"
+                  },
+                  {
+                    "color":"#bdd7e7",
+                    "label":"500 to 1000"
+                  },
+                  {
+                    "color":"#eff3ff",
+                    "label":"Less than 500"
+                  }],
+                "description":"Median rent of rental units in dollars. Data from 2011-2015."
+            },
+            {
+                "id":1,
+                "type":"chart",
+                "title":"Hover Over Map for Details",
+                "hoverContainer":true,
+                "chartID":"rentChart",
+                "description":"Housing units by rent category."
+            }],
+        "chart":[{
+            "id":1,
+            "chartLoc":"legend",
+            "chartType":"pie",
+            "labels":["$2000","$1500 - $2000","$1000 - $1500","$500 - $1000","Less than $500"],
+            "data":["r2000","r1500_2000","r1000_1500","r500_1000","r0_500"],
+            "colors":["#08519c","#3182bd","#6baed6","#bdd7e7","#eff3ff"],
+            "options": {
+                "responsive": true,
+                "legend": {
+                    "position": "left",
+                    "labels": {
+                        "fontColor":"#000000",
+                        "fontFamily":"GoudyOld",
+                        "fontSize":13
+                    }
+                },
+                "plugins":{
+                    "labels":{
+                        "render": "value",
+                        "fontColor":"#000000",    
+                        "fontFamily":"GoudyOld",
+                        "fontSize":14,
+                        "overlap":false
+                    }
+                },   
+                "tooltips":{
+                    "enabled":false
+                }
+            }
+        }]
+      },
+      {
+        "id":5,
+        "title":"Housing Type",
+        "border":{"title":"pnw_borders_black","opacity":0.4},
+        "jsonLayers":[{
+            "url":"map_data/population/housing_group_demographics.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"per_single",
+            "values":[80,60,40,20],
+            "fillColors":["#0571b0","#92c5de","#f7f7f7","#f4a582","#ca0020"],
+            "colors":["#0571b0","#92c5de","#f7f7f7","#f4a582","#ca0020"],
+            "fillOpacity":0.6,
+            "opacity":1,
+            "weight":0.5,
+            "titleVariable":"title",
+            "hoverText":["","% Single Family Homes"],
+            "hoverVar":"per_single"
+          }],
+          "legend":[{
+                "id":1,
+                "title":"Percent Single Family Homes",
+                "type":"polygon",
+                "icon":"single_multi",
+                "containers":[{
+                    "color":"#0571b0",
+                    "label":"80+"
+                  },
+                  {
+                    "color":"#92c5de",
+                    "label":"60 to 80"
+                  },
+                  {
+                    "color":"#f7f7f7",
+                    "label":"40 to 60"
+                  },
+                  {
+                    "color":"#f4a582",
+                    "label":"20 to 40"
+                  },
+                  {
+                    "color":"#ca0020",
+                    "label":"Less than 20"
+                  }],
+                "description":"Percent of housing units classified as Single Family Homes. Low percentages indicates more multi-family housing units. Data from 2011-2015."
+            },
+            {
+                "id":1,
+                "type":"chart",
+                "title":"Hover Over Map for Details",
+                "hoverContainer":true,
+                "chartID":"rentChart",
+                "description":"Housing units by classification."
+            }],
+        "chart":[{
+            "id":1,
+            "chartLoc":"legend",
+            "chartType":"pie",
+            "labels":["Single Family","Multi-Family"],
+            "data":["single_fam","multi_fam"],
+            "colors":["#92c5de","#f4a582"],
+            "options": {
+                "responsive": true,
+                "legend": {
+                    "position": "left",
+                    "labels": {
+                        "fontColor":"#000000",
+                        "fontFamily":"GoudyOld",
+                        "fontSize":13
+                    }
+                },
+                "plugins":{
+                    "labels":{
+                        "render": "value",
+                        "fontColor":"#000000",    
+                        "fontFamily":"GoudyOld",
+                        "fontSize":14,
+                        "overlap":false
+                    }
+                },   
+                "tooltips":{
+                    "enabled":false
+                }
+            }
+        }]
+      }],
+      "sources":{
+        "geographic":[{
+            "title":"Census Block Groups: ",
+            "linkText":"IPUMS NHGIS, University of Minnesota",
+            "linkUrl":"https://data2.nhgis.org/main",
+            "description":"IPUMS Data selected from ACS 2011-2015. Geographic Level: Census Block Group GIS Data."
+        },
+        {
+          "title":"Housing Data: ",
+          "linkText":"IPUMS NHGIS, University of Minnesota",
+          "linkUrl":"https://data2.nhgis.org/main",
+          "description":"IPUMS Data selected from ACS 2011-2015. Geographic Level: Census Block Group. Datasets: Occupancy Status, Tenure, Median Year Structure Built, Median Gross Rent, Median Value, Units in Structure."
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

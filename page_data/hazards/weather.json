@@ -1,0 +1,139 @@
+{
+    "title": "Extreme Weather",
+    "URL":"storm_icon",
+    "chapter":"hazards",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "basemap":[{"title":"imagery","opacity":1},
+      {"title":"terrain","opacity":0.8},
+      {"title":"geoserver","layer":"pnw_outline2","opacity":0.3},
+      {"title":"label","opacity":1}],
+    "maps":[{
+        "id":9,
+        "title":"Extreme Weather",
+        "border":{"title":"pnw_borders","include":true,"opacity":0.9},
+        "fastFacts":[{
+            "facts":["&#9900 Since 2000, there have been over 4500 recorded extreme weather events in the PNW. Of these, over 140 caused greater than $1 million worth of damage.","&#9900 A hailstorm near Buena, WA in 2001 was the most damaging extreme weather event since 2000, causing over $70 million worth of damage, primarily to crops.","&#9900 A debris flow near Oso, WA in 2014 had the highest death toll of any recorded extreme weather event since 2000, killing 43 people.","&#9900 2006 had the largest number of extreme weather events of any year since 2000, with over 480 recorded events."]
+        }],
+        "jsonLayers":[{
+            "spiderfy":true,
+            "pane":"overBorder",
+            "url":"map_data/hazards/total_storm_events.json",
+            "feature":"point",
+            "type":"pointDivCat",
+            "attribute":"category",
+            "values":["flood","rain","thunderstorm","debris","other"],
+            "fillColors":["#1a6699","#66b3ff","#a31aff","#33a02c","#8c8c8c"],
+            "colors":["#ffffff"],
+            "tooltipVars":["start_date","location","event_type","damage"],
+            "tooltipText":["<b style='display:inline;'>","</b><br/><p style='display:inline;'>","</br>Category:&nbsp","</br>Damage:&nbsp$","</p>"],   
+            "radiusType":"graduated",
+            "radiusAttribute":"damage",
+            "radiusValues":[1000000,100000],
+            "radius":[21,14,7],      
+            "filterVariable":"year",
+            "divIcon":"border-radius:50%; border:1px solid white; opacity:0.7"
+          }],
+        "slider":{
+              "title":"storms",
+              "min":2000,
+              "max":2017,
+              "step":1,
+              "default":2017                   
+          },
+        "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"Storm Event Categories",
+                "icon":"weather_icon",
+                "containers":[{
+                    "color":"#1a6699",
+                    "label":"Flood"
+                  },
+                  {
+                    "color":"#66b3ff",
+                    "label":"Rain/Hail"
+                  },
+                  {
+                    "color":"#a31aff",
+                    "label":"Thunderstorm"
+                  },
+                  {
+                    "color":"#33a02c",
+                    "label":"Debris Flow"
+                  },
+                  {
+                    "color":"#8c8c8c",
+                    "label":"Other"
+                  }
+                ],
+                "description":"Storm events are localized weather events that may be part of larger regional patterns."
+        },
+        {
+            "id":1,
+            "type":"pointRow",
+            "title":"Damage ($1,000s)",
+            "subDescription":"Select Point Clusters to Expand",
+            "containers":[{
+                  "size":22,
+                  "label":"6.5+",
+                  "background":"rgba(0,0,0,0)",
+                  "color":"#000000",
+                  "fontSize":19,
+                  "border":2
+                },
+                {
+                  "size":14,
+                  "label":"5.5 to 6.5",
+                  "background":"rgba(0,0,0,0)",
+                  "color":"#000000",
+                  "fontSize":19,
+                  "border":2
+                },
+                {
+                  "size":6,
+                  "label":"Under 5.5",
+                  "background":"rgba(0,0,0,0)",
+                  "color":"#000000",
+                  "fontSize":18,
+                  "border":2
+                }
+              ]
+        }]
+      }],
+      "sources":{
+        "geographic":[{
+            "title":"Storm Events: ",
+            "linkText":"NOAA",
+            "linkUrl":"https://www.ncdc.noaa.gov/stormevents/ftp.jsp",
+            "description":"Total damage, and storm classification."
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Satellite Imagery: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldImagery",
+            "description":"ESRI World Imagery; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://leafletjs.com/","https://github.com/jawj/OverlappingMarkerSpiderfier-Leaflet"],
+        "softwareText":["QGIS","Geoserver","D3 Topojson","Leaflet","Leaflet Overlapping Marker Spiderfier"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

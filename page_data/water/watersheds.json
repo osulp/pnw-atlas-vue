@@ -1,0 +1,647 @@
+{
+    "title": "Watersheds",
+    "URL":"water_icon",
+    "chapter":"water",
+    "initial":0,
+    "dropdownText":"Select Scale",
+    "basemap":[{"title":"terrain","opacity":1},
+        {"title":"geoserver","layer":"watershed_outline","opacity":0.3},
+        {"title":"label","opacity":1}],
+    "center":[47.15, -120.15],
+    "bounds":[[14.172626315855425, -175.58519708215204],[76.10396253416393, -50.34035998361294]],
+    "zoom":5,
+    "maps":[{
+        "id":0,
+        "title":"Regional",
+        "featureSelected":false, 
+        "border":{"title":"watershed_borders","opacity":1},
+        "jsonLayers":[{
+            "url":"map_data/water/watershed_HU4.json",
+            "pane":"underFlow",
+            "feature":"polygon",
+            "type":"selection",
+            "fillColors":["#cce0ff"],
+            "fillOpacity":0.4,
+            "opacity":0.5,
+            "dashArray":4,
+            "colors":["#1a75ff"],
+            "hoverOpacity":0.7,     
+            "selection":{
+              "titleVar":"Name",
+              "filterVar":"HUC4",
+              "varList":["area_sqmi","dams_major","POPULATION","States","counties","cities_001"],
+              "varLabel":["Area: ", "Large Dams: ", "Population: ", "States/Provinces: ", "Counties: ", "Cities: "],
+              "selectionOpacity":0.7,
+              "selectionLayers":[{
+                  "url":"map_data/water/total_dams.json",
+                  "pane":"overBorder",
+                  "feature":"point",
+                  "type":"single",
+                  "fillColors":["#000000"],
+                  "fillOpacity":1,
+                  "colors":["#ffffff"],
+                  "opacity":1,
+                  "weight":1.5,
+                  "filterVariable":"HUC4",
+                  "secondFilterVariable":"large_dam",
+                  "secondFilterValue":1,
+                  "radiusType":"graduated",
+                  "radiusAttribute":"HEIGHT",
+                  "radiusValues":[300,100],
+                  "radius":[8,5,3],
+                  "tooltipOffset":[10,0],
+                  "tooltipVars":["NAME","HEIGHT","STORAGE","YEAR","HAZ"],
+                  "tooltipText":["<h3 style='display:inline;'>","</h3><br/><p style='display:inline;'>Height:&nbsp","&nbspft.<br/>Storage:&nbsp","&nbspacre ft.<br/>Year Completed:&nbsp","<br/>Hazard Rating: ","</p>"]    
+              },
+              {
+                  "url":"map_data/water/watershed_lakes.json",
+                  "pane":"overJson",
+                  "feature":"polygon",
+                  "type":"categorized",
+                  "attribute":"FEATURE",
+                  "values":["Lake Intermittent","other"],
+                  "fillColors":["#b3daff","#000000","#3399ff"],
+                  "fillOpacity":0.6,
+                  "colors":["#b3daff","#000000","#80bfff"],
+                  "opacity":1,
+                  "weight":0.8,
+                  "filterVariable":"HUC4",
+                  "tooltipVars":["NAME"],
+                  "tooltip":"tooltip",
+                  "tooltipText":["<h3 style='margin:0; display:inline-block;'>","</h3>"]    
+              },
+              {
+                  "url":"map_data/water/watershed_rivers.json",
+                  "pane":"overJson",
+                  "feature":"line",
+                  "type":"single",
+                  "colors":"#3399ff",
+                  "weightType":"categorized",
+                  "weightAttribute":"level",
+                  "weightValues":[1,2,3,4],
+                  "weight":[2.25,1.75,1.25,0.75,0.5],
+                  "dashArray":[4,null,null],
+                  "dashAttribute":"FEATURE",
+                  "dashValues":["Stream Intermittent","other"],
+                  "dashType":"categorized",
+                  "filterVariable":"HUC4",
+                  "sticky":true,
+                  "tooltipVars":["NAME"],
+                  "tooltipText":["<h3 style='margin:0; display:inline-block;'>","</h3>"]    
+              },
+              {
+                "interactive":false,
+                "url":"map_data/water/watershed_city_area.json",
+                "feature":"polygon",
+                "type":"single",
+                "fillColors":"#d9d9d9",
+                "colors":"#d9d9d9",
+                "fillOpacity":0.8,
+                "opacity":0.8,
+                "weight":1,
+                "filterVariable":"HUC4"
+            },
+            {
+                "interactive":false,
+                "url":"map_data/water/watershed_reservations.json",
+                "feature":"polygon",
+                "type":"single",
+                "fillColors":"#ededdc",
+                "colors":"#ededdc",
+                "fillOpacity":0.5,
+                "opacity":0.5,
+                "weight":1,
+                "filterVariable":"HUC4"
+            }]
+            }     
+          }],
+        "legend":[{
+            "id":0,
+            "type":"selection",
+            "title":"Select a Watershed"
+        },
+        {
+            "id":1,
+            "topLine":true,
+            "legendDisplay":"selected",
+            "type":"pointRow",
+            "title":"Dam Height in Feet",
+            "containers":[{
+                "size":16,
+                "label":"300+",
+                "background":"rgba(0,0,0,1)",
+                "color":"#ffffff",
+                "fontSize":19,
+                "border":2
+              },
+              {
+                "size":10,
+                "label":"100 to 300",
+                "background":"rgba(0,0,0,1)",
+                "color":"#ffffff",
+                "fontSize":19,
+                "border":2
+              },
+              {
+                "size":6,
+                "label":"0 to 100",
+                "background":"rgba(0,0,0,1)",
+                "color":"#ffffff",
+                "fontSize":18,
+                "border":2
+              }]
+        },
+        {
+            "id":2,
+            "topLine":true,
+            "legendDisplay":"selected",
+            "type":"polyLine",
+            "title":["Lakes","Rivers"],
+            "titleMargin":145,
+            "containers":[{
+                "label":"Year-Round",
+                "color":"#3399ff",
+                "height":3,
+                "color2":"#3399ff"
+              },
+              {
+                "label":"Seasonal",
+                "color":"#b3daff",
+                "height":0,
+                "color2":"rgba(255,255,255,0)",
+                "borderTop":"3px dashed #3399ff"
+              }]
+        },
+        {
+            "id":3,
+            "topLine":true,
+            "legendDisplay":"selected",
+            "type":"polygon",
+            "title":"Other Features",
+            "containers":[{
+                "label":"Urban Area",
+                "color":"#d9d9d9"
+              },
+              {
+                "label":"Tribal Land",
+                "color":"#ededdc"
+              }]
+        }]
+      },
+      {
+        "id":1,
+        "title":"Subregional",
+        "featureSelected":false, 
+        "border":{"title":"watershed_borders","opacity":1},
+        "jsonLayers":[{
+            "url":"map_data/water/watershed_HU6.json",
+            "pane":"underFlow",
+            "feature":"polygon",
+            "type":"selection",
+            "fillColors":["#cce0ff"],
+            "fillOpacity":0.4,
+            "opacity":0.5,
+            "dashArray":4,
+            "colors":["#1a75ff"],
+            "hoverOpacity":0.7,     
+            "selection":{
+              "titleVar":"Name",
+              "filterVar":"HUC6",
+              "varList":["area_sqmi","dams_major","POPULATION","States","counties","cities_001"],
+              "varLabel":["Area: ", "Large Dams: ", "Population: ", "States/Provinces: ", "Counties: ", "Cities: "],
+              "selectionOpacity":0.7,
+              "selectionLayers":[{
+                  "url":"map_data/water/total_dams.json",
+                  "pane":"overBorder",
+                  "feature":"point",
+                  "type":"single",
+                  "fillColors":["#000000"],
+                  "fillOpacity":1,
+                  "colors":["#ffffff"],
+                  "opacity":1,
+                  "weight":1.5,
+                  "filterVariable":"HUC6",
+                  "secondFilterVariable":"large_dam",
+                  "secondFilterValue":1,
+                  "radiusType":"graduated",
+                  "radiusAttribute":"HEIGHT",
+                  "radiusValues":[300,100],
+                  "radius":[8,5,3],
+                  "tooltipOffset":[10,0],
+                  "tooltipVars":["NAME","HEIGHT","STORAGE","YEAR","HAZ"],
+                  "tooltipText":["<h3 style='display:inline;'>","</h3><br/><p style='display:inline;'>Height:&nbsp","&nbspft.<br/>Storage:&nbsp","&nbspacre ft.<br/>Year Completed:&nbsp","<br/>Hazard Rating: ","</p>"]    
+              },
+              {
+                  "url":"map_data/water/watershed_lakes.json",
+                  "pane":"overJson",
+                  "feature":"polygon",
+                  "type":"categorized",
+                  "attribute":"FEATURE",
+                  "values":["Lake Intermittent","other"],
+                  "fillColors":["#b3daff","#000000","#3399ff"],
+                  "fillOpacity":0.6,
+                  "colors":["#b3daff","#000000","#80bfff"],
+                  "opacity":1,
+                  "weight":0.8,
+                  "filterVariable":"HUC6",
+                  "tooltipVars":["NAME"],
+                  "tooltip":"tooltip",
+                  "tooltipText":["<h3 style='margin:0; display:inline-block;'>","</h3>"]    
+              },
+              {
+                  "url":"map_data/water/watershed_rivers.json",
+                  "pane":"overJson",
+                  "feature":"line",
+                  "type":"single",
+                  "colors":"#3399ff",
+                  "weightType":"categorized",
+                  "weightAttribute":"level",
+                  "weightValues":[1,2,3,4],
+                  "weight":[2.25,1.75,1.25,0.75,0.5],
+                  "dashArray":[4,null,null],
+                  "dashAttribute":"FEATURE",
+                  "dashValues":["Stream Intermittent","other"],
+                  "dashType":"categorized",
+                  "filterVariable":"HUC6",
+                  "sticky":true,
+                  "tooltipVars":["NAME"],
+                  "tooltipText":["<h3 style='margin:0; display:inline-block;'>","</h3>"]    
+              },
+              {
+                "interactive":false,
+                "url":"map_data/water/watershed_city_area.json",
+                "feature":"polygon",
+                "type":"single",
+                "fillColors":"#d9d9d9",
+                "colors":"#d9d9d9",
+                "fillOpacity":0.8,
+                "opacity":0.8,
+                "weight":1,
+                "filterVariable":"HUC6"
+            },
+            {
+                "interactive":false,
+                "url":"map_data/water/watershed_reservations.json",
+                "feature":"polygon",
+                "type":"single",
+                "fillColors":"#ededdc",
+                "colors":"#ededdc",
+                "fillOpacity":0.5,
+                "opacity":0.5,
+                "weight":1,
+                "filterVariable":"HUC6"
+            }]
+            }     
+          }],
+        "legend":[{
+            "id":0,
+            "type":"selection",
+            "title":"Select a Watershed"
+        },
+        {
+            "id":1,
+            "topLine":true,
+            "legendDisplay":"selected",
+            "type":"pointRow",
+            "title":"Dam Height in Feet",
+            "containers":[{
+                "size":16,
+                "label":"300+",
+                "background":"rgba(0,0,0,1)",
+                "color":"#ffffff",
+                "fontSize":19,
+                "border":2
+              },
+              {
+                "size":10,
+                "label":"100 to 300",
+                "background":"rgba(0,0,0,1)",
+                "color":"#ffffff",
+                "fontSize":19,
+                "border":2
+              },
+              {
+                "size":6,
+                "label":"0 to 100",
+                "background":"rgba(0,0,0,1)",
+                "color":"#ffffff",
+                "fontSize":18,
+                "border":2
+              }]
+        },
+        {
+            "id":2,
+            "topLine":true,
+            "legendDisplay":"selected",
+            "type":"polyLine",
+            "title":["Lakes","Rivers"],
+            "titleMargin":145,
+            "containers":[{
+                "label":"Year-Round",
+                "color":"#3399ff",
+                "height":3,
+                "color2":"#3399ff"
+              },
+              {
+                "label":"Seasonal",
+                "color":"#b3daff",
+                "height":0,
+                "color2":"rgba(255,255,255,0)",
+                "borderTop":"3px dashed #3399ff"
+              }]
+        },
+        {
+            "id":3,
+            "topLine":true,
+            "legendDisplay":"selected",
+            "type":"polygon",
+            "title":"Other Features",
+            "containers":[{
+                "label":"Urban Area",
+                "color":"#d9d9d9"
+              },
+              {
+                "label":"Tribal Land",
+                "color":"#ededdc"
+              }]
+        }]
+      },
+      {
+        "id":2,
+        "title":"Local",
+        "featureSelected":false, 
+        "border":{"title":"watershed_borders","opacity":1},
+        "jsonLayers":[{
+            "url":"map_data/water/watershed_HU8.json",
+            "pane":"underFlow",
+            "feature":"polygon",
+            "type":"selection",
+            "fillColors":["#cce0ff"],
+            "fillOpacity":0.4,
+            "opacity":0.5,
+            "dashArray":4,
+            "colors":["#1a75ff"],
+            "hoverOpacity":0.7,     
+            "selection":{
+              "titleVar":"Name",
+              "filterVar":"HUC8",
+              "varList":["area_sqmi","dams_total","POPULATION","States","counties","cities_001"],
+              "varLabel":["Area: ", "Dams: ", "Population: ", "States/Provinces: ", "Counties: ", "Cities: "],
+              "selectionOpacity":0.7,
+              "selectionLayers":[{
+                  "url":"map_data/water/total_dams.json",
+                  "pane":"overBorder",
+                  "feature":"point",
+                  "type":"single",
+                  "fillColors":["#000000"],
+                  "fillOpacity":1,
+                  "colors":["#ffffff"],
+                  "opacity":1,
+                  "weight":1.5,
+                  "filterVariable":"HUC8",
+                  "radiusType":"graduated",
+                  "radiusAttribute":"HEIGHT",
+                  "radiusValues":[300,100],
+                  "radius":[8,5,3],
+                  "tooltipOffset":[10,0],
+                  "tooltipVars":["NAME","HEIGHT","STORAGE","YEAR","HAZ"],
+                  "tooltipText":["<h3 style='display:inline;'>","</h3><br/><p style='display:inline;'>Height:&nbsp","&nbspft.<br/>Storage:&nbsp","&nbspacre ft.<br/>Year Completed:&nbsp","<br/>Hazard Rating: ","</p>"]    
+              },
+              {
+                  "url":"map_data/water/watershed_lakes_HUC8.json",
+                  "pane":"overJson",
+                  "feature":"polygon",
+                  "type":"categorized",
+                  "attribute":"FEATURE",
+                  "values":["Lake Intermittent","other"],
+                  "fillColors":["#b3daff","#000000","#3399ff"],
+                  "fillOpacity":0.6,
+                  "colors":["#b3daff","#000000","#80bfff"],
+                  "opacity":1,
+                  "weight":0.8,
+                  "filterVariable":"HUC8",
+                  "tooltipVars":["NAME"],
+                  "tooltip":"tooltip",
+                  "tooltipText":["<h3 style='margin:0; display:inline-block;'>","</h3>"]    
+              },
+              {
+                  "url":"map_data/water/watershed_rivers_HUC8.json",
+                  "pane":"overJson",
+                  "feature":"line",
+                  "type":"single",
+                  "colors":"#3399ff",
+                  "weightType":"categorized",
+                  "weightAttribute":"level",
+                  "weightValues":[1,2,3,4],
+                  "weight":[2.25,1.75,1.25,0.75,0.5],
+                  "dashArray":[4,null,null],
+                  "dashAttribute":"FEATURE",
+                  "dashValues":["Stream Intermittent","other"],
+                  "dashType":"categorized",
+                  "filterVariable":"HUC8",
+                  "sticky":true,
+                  "tooltipVars":["NAME"],
+                  "tooltipText":["<h3 style='margin:0; display:inline-block;'>","</h3>"]    
+              },
+              {
+                "interactive":false,
+                "url":"map_data/water/watershed_city_area.json",
+                "feature":"polygon",
+                "type":"single",
+                "fillColors":"#d9d9d9",
+                "colors":"#d9d9d9",
+                "fillOpacity":0.8,
+                "opacity":0.8,
+                "weight":1,
+                "filterVariable":"HUC8"
+            },
+            {
+                "interactive":false,
+                "url":"map_data/water/watershed_reservations.json",
+                "feature":"polygon",
+                "type":"single",
+                "fillColors":"#ededdc",
+                "colors":"#ededdc",
+                "fillOpacity":0.5,
+                "opacity":0.5,
+                "weight":1,
+                "filterVariable":"HUC8"
+            }]
+            }     
+          }],
+        "legend":[{
+            "id":0,
+            "type":"selection",
+            "title":"Select a Watershed"
+        },
+        {
+            "id":1,
+            "topLine":true,
+            "legendDisplay":"selected",
+            "type":"pointRow",
+            "title":"Dam Height in Feet",
+            "containers":[{
+                "size":16,
+                "label":"300+",
+                "background":"rgba(0,0,0,1)",
+                "color":"#ffffff",
+                "fontSize":19,
+                "border":2
+              },
+              {
+                "size":10,
+                "label":"100 to 300",
+                "background":"rgba(0,0,0,1)",
+                "color":"#ffffff",
+                "fontSize":19,
+                "border":2
+              },
+              {
+                "size":6,
+                "label":"0 to 100",
+                "background":"rgba(0,0,0,1)",
+                "color":"#ffffff",
+                "fontSize":18,
+                "border":2
+              }]
+        },
+        {
+            "id":2,
+            "topLine":true,
+            "legendDisplay":"selected",
+            "type":"polyLine",
+            "title":["Lakes","Rivers"],
+            "titleMargin":145,
+            "containers":[{
+                "label":"Year-Round",
+                "color":"#3399ff",
+                "height":3,
+                "color2":"#3399ff"
+              },
+              {
+                "label":"Seasonal",
+                "color":"#b3daff",
+                "height":0,
+                "color2":"rgba(255,255,255,0)",
+                "borderTop":"3px dashed #3399ff"
+              }]
+        },
+        {
+            "id":3,
+            "topLine":true,
+            "legendDisplay":"selected",
+            "type":"polygon",
+            "title":"Other Features",
+            "containers":[{
+                "label":"Urban Area",
+                "color":"#d9d9d9"
+              },
+              {
+                "label":"Tribal Land",
+                "color":"#ededdc"
+              }]
+        }]
+      }],
+      "sources":{
+        "geographic":[{
+            "title":"Watershed Boundaries: ",
+            "linkText":"USGS",
+            "linkUrl":"https://nhd.usgs.gov/wbd.html",
+            "description":"Data edited/generalized for readability. Watersheds were joined at each scale."
+        },
+        {
+          "title":"National Dams: ",
+          "linkText":"USGS",
+          "linkUrl":"https://www.sciencebase.gov/catalog/item/581d051ee4b08da350d523db",
+          "description":"Data from 2006."
+        },
+        {
+          "title":"Idaho Dams: ",
+          "linkText":"Idaho Department of Water Resources",
+          "linkUrl":"https://research.idwr.idaho.gov/gis/GISScripts/metadata.aspx?md=Spatial/DamSafety/dam.shp.xml",
+          "description":"Data from 2010."
+        },
+        {
+          "title":"Oregon Dams: ",
+          "linkText":"Oregon Water Resources Department",
+          "linkUrl":"http://spatialdata.oregonexplorer.info/geoportal/details;id=523fed781b444e278e86fd0c63fd7c53",
+          "description":"Data from 2014."
+        },
+        {
+            "title":"Washington Dams: ",
+            "linkText":"Washington State Department of Ecology",
+            "linkUrl":"https://fortress.wa.gov/ecy/publications/documents/94016.pdf",
+            "description":"Data from 2018. Data had must be requested for use."
+        },
+        {
+            "title":"Canadian Dams: ",
+            "linkText":"Natural Resources Canada",
+            "linkUrl":"https://catalogue.data.gov.bc.ca/dataset/b-c-dams",
+            "description":"Data from 2017."
+        },
+        {
+            "title":"American Rivers: ",
+            "linkText":"USGS",
+            "linkUrl":"https://www.sciencebase.gov/catalog/item/4fb55df0e4b04cb937751e02",
+            "description":"Data from 2011."
+        },
+        {
+            "title":"Canadian Rivers: ",
+            "linkText":"British Columbia Ministry of Energy, Mines and Petroleum Resources",
+            "linkUrl":"http://www.empr.gov.bc.ca/Mining/Geoscience/MapPlace/geoData/Pages/default.aspx",
+            "description":"Data from 2006."
+        },
+        {
+            "title":"American Lakes: ",
+            "linkText":"USGS",
+            "linkUrl":"https://www.sciencebase.gov/catalog/item/4fb55df0e4b04cb937751e02",
+            "description":"Data from 2011."
+        },
+        {
+            "title":"Canadian Lakes: ",
+            "linkText":"British Columbia Ministry of Energy, Mines and Petroleum Resources",
+            "linkUrl":"http://www.empr.gov.bc.ca/Mining/Geoscience/MapPlace/geoData/Pages/default.aspx",
+            "description":"Data from 2006."
+        },
+        {
+            "title":"American Cities: ",
+            "linkText":"USGS",
+            "linkUrl":"https://catalog.data.gov/dataset/usgs-small-scale-dataset-cities-and-towns-of-the-united-states-201403-shapefile"
+        },
+        {
+            "title":"Canadian Cities: ",
+            "linkText":"British Columbia Ministry of Energy, Mines and Petroleum Resources",
+            "linkUrl":"http://www.empr.gov.bc.ca/Mining/Geoscience/MapPlace/geoData/Pages/default.aspx"
+        },
+        {
+            "title":"Tribal Lands: ",
+            "linkText":"US Census Bureau",
+            "linkUrl":"https://www.census.gov/geo/maps-data/data/cbf/cbf_aiannh.html"
+        },
+        {
+            "title":"Population Data: ",
+            "linkText":"IPUMS NHGIS, University of Minnesota",
+            "linkUrl":"https://data2.nhgis.org/main",
+            "description":"Data from 2010 census. Total population by US Census Block retrieved from IPUMS."
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

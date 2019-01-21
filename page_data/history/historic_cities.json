@@ -1,0 +1,471 @@
+{
+    "title": "Historic Cities & Borders",
+    "URL":"historical_cities",
+    "basemapType":"mapbox",
+    "chapter":"history",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "maps":[{
+        "id":0,
+        "title":"Cities & Borders",
+        "border":{"title":"pnw_borders_black","opacity":0.6},
+        "tileSlider":true,
+        "tileLayers":[{"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjlqxguqa199w2rt4hyqjkzsb/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":300,"opacity":1,"type":"mapbox","value":[2000,2010]},
+            {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjlqxglgb92qa2rpssmyfxgb5/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":300,"opacity":1,"type":"mapbox","value":[1960,1990]},
+            {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjlqxfifq89e12rludunbpu8s/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":300,"opacity":1,"type":"mapbox","value":[1900,1950]},
+            {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjlqxbsh320vn2sp54iwreqlb/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":300,"opacity":1,"type":"mapbox","value":[1860,1890]},
+            {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjlqxg70q9iyc2tnvk8riihwa/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":300,"opacity":1,"type":"mapbox","value":[1810,1850]}
+        ],
+        "jsonLayers":[{
+            "interactive":false,
+            "info":true,
+            "url":"map_data/history/pnw_outline.json",
+            "feature":"polygon",
+            "type":"single",
+            "fillColors":"#000000",
+            "fillOpacity":0.3,
+            "opacity":0,
+            "weight":1,
+            "filterType":"greaterLesser",
+            "filterVariable":"id",
+            "secondFilterVariable":"end"
+        },
+        {
+            "url":"map_data/history/cities_total.json",
+            "pane":"overBorder",
+            "feature":"point",
+            "type":"single",
+            "fillColors":"#000000",
+            "colors":"#ffffff",
+            "sliderAttribute":[{"sliderValue":2010,"attribute":"p2010","nullText":"Less than 2,500","values":[250000,50000,10000]},{"sliderValue":2000,"attribute":"p2000","nullText":"Less than 2,500","values":[250000,50000,10000]},{"sliderValue":1990,"attribute":"p1990","nullText":"Less than 2,500","values":[250000,50000,10000]},{"sliderValue":1980,"attribute":"p1980","nullText":"Less than 2,500","values":[250000,50000,10000]},{"sliderValue":1970,"attribute":"p1970","nullText":"Less than 2,500","values":[250000,50000,10000]},{"sliderValue":1960,"attribute":"p1960","nullText":"Less than 2,500","values":[100000,25000,5000]},{"sliderValue":1950,"attribute":"p1950","nullText":"Less than 2,500","values":[100000,25000,5000]},{"sliderValue":1940,"attribute":"p1940","nullText":"Less than 2,500","values":[100000,15000,5000]},{"sliderValue":1930,"attribute":"p1930","nullText":"Less than 2,500","values":[100000,10000,2500]},{"sliderValue":1920,"attribute":"p1920","nullText":"Less than 2,500","values":[100000,10000,2500]},{"sliderValue":1910,"attribute":"p1910","nullText":"Less than 500","values":[50000,5000,1000]},{"sliderValue":1900,"attribute":"p1900","nullText":"Less than 500","values":[10000,5000,1000]},{"sliderValue":1890,"attribute":"p1890","nullText":"Less than 500","values":[10000,2500,500]},{"sliderValue":1880,"attribute":"p1880","nullText":"Less than 500","values":[2500,1000,500]},{"sliderValue":1870,"attribute":"p1870","nullText":"Less than 500","values":[10000,1000,500]},{"sliderValue":1860,"attribute":"p1860","nullText":"Less than 500","values":[5000,500]},{"sliderValue":1850,"attribute":"p1850","nullText":"Less than 500","values":[500]},{"sliderValue":1840,"attribute":"p1840","nullText":"Less than 500","values":[500]},{"sliderValue":1830,"attribute":"p1830","nullText":"Less than 500","values":[500]},{"sliderValue":1820,"attribute":"p1820","nullText":"Less than 500","values":[500]},{"sliderValue":1810,"attribute":"p1810","nullText":"Less than 500","values":[500]}],
+            "radiusType":"graduated",
+            "radius":[8.5,6.5,4.5,3],
+            "fillOpacity":1,
+            "opacity":1,
+            "weight":1,
+            "hoverFill":"invert",
+            "tooltipVars":["NAME","sliderText","sliderAttribute","min_decade","max_decade"],
+            "tooltipText":["<h3 style='display:inline;'>","</h3><br/><p style='display:inline;'>", " Population: ","<br/>Decade Founded: ","<br/>Last Recorded: ","</p>"],
+            "filterType":"greaterLesser",
+            "filterVariable":"min_date",
+            "secondFilterVariable":"max_date"
+        },
+        {
+            "url":"map_data/history/county_territories_pnw.json",
+            "feature":"polygon",
+            "type":"single",
+            "fillColors":"#ffffff",
+            "colors":"#989898",
+            "fillOpacity":0,
+            "opacity":1,
+            "weight":1,
+            "hoverDash":4,
+            "hoverOpacity":0,
+            "hoverColor":"#000000",
+            "tooltipVars":["NAME","STATE_TERR","start_d","AREA_SQMI"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block; line-height:28px;'>","</br>","</h2><br/><p3 style='font-weight:normal;'>Date Established: ","<br/>Area: "," Sq. Mi.</p3>"],
+            "filterType":"greaterLesser",
+            "filterVariable":"start",
+            "secondFilterVariable":"end"
+        }],
+        "slider":{
+            "title":"cities",
+            "min":1810,
+            "max":2010,
+            "step":10,
+            "default":2010                   
+        },
+        "legend":[{
+            "id":0,
+            "sliderValue":[1970,2010],
+            "type":"point",
+            "title":"City Population",
+            "containers":[{
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":17,
+                "label":"Greater than 250,000"
+                },
+                {
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":13,
+                "label":"50,000 to 250,000"
+                },
+                {
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":9,
+                "label":"10,000 to 50,000"
+                },
+                {
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":5,
+                "label":"Less than 10,000"
+                }]
+        },
+        {
+            "id":0,
+            "type":"point",
+            "sliderValue":[1950,1960],
+            "title":"City Population",
+            "containers":[{
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":17,
+                "label":"Greater than 100,000"
+                },
+                {
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":13,
+                "label":"25,000 to 100,000"
+                },
+                {
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":9,
+                "label":"5,000 to 25,000"
+                },
+                {
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":5,
+                "label":"Less than 5,000"
+                }]
+        },
+        {
+            "id":0,
+            "type":"point",
+            "sliderValue":[1940,1940],
+            "title":"City Population",
+            "containers":[{
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":17,
+                "label":"Greater than 100,000"
+                },
+                {
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":13,
+                "label":"15,000 to 100,000"
+                },
+                {
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":9,
+                "label":"5,000 to 15,000"
+                },
+                {
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":5,
+                "label":"Less than 5,000"
+                }]
+        },
+        {
+            "id":0,
+            "type":"point",
+            "title":"City Population",
+            "sliderValue":[1920,1930],
+            "containers":[{
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":17,
+                "label":"Greater than 100,000"
+                },
+                {
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":13,
+                "label":"10,000 to 100,000"
+                },
+                {
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":9,
+                "label":"2,500 to 10,000"
+                },
+                {
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":5,
+                "label":"Less than 2,500"
+                }]
+        },
+        {
+            "id":0,
+            "type":"point",
+            "sliderValue":[1910,1910],
+            "title":"City Population",
+            "containers":[{
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":17,
+                "label":"Greater than 50,000"
+                },
+                {
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":13,
+                "label":"5,000 to 50,000"
+                },
+                {
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":9,
+                "label":"1,000 to 5,000"
+                },
+                {
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":5,
+                "label":"Less than 1,000"
+                }]
+        },
+        {
+            "id":0,
+            "type":"point",
+            "sliderValue":[1900,1900],
+            "title":"City Population",
+            "containers":[{
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":17,
+                "label":"Greater than 10,000"
+                },
+                {
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":13,
+                "label":"2,500 to 10,000"
+                },
+                {
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":9,
+                "label":"1,000 to 2,500"
+                },
+                {
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":5,
+                "label":"Less than 1,000"
+                }]
+        },
+        {
+            "id":0,
+            "type":"point",
+            "sliderValue":[1890,1890],
+            "title":"City Population",
+            "containers":[{
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":17,
+                "label":"Greater than 10,000"
+                },
+                {
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":13,
+                "label":"2,500 to 10,000"
+                },
+                {
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":9,
+                "label":"500 to 2,500"
+                },
+                {
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":5,
+                "label":"Less than 500"
+                }]
+        },
+        {
+        "id":0,
+        "type":"point",
+        "sliderValue":[1880,1880],
+        "title":"City Population",
+        "containers":[{
+            "color":"#ffffff",
+            "background":"#000000",
+            "size":17,
+            "label":"Greater than 2,500"
+            },
+            {
+            "color":"#ffffff",
+            "background":"#000000",
+            "size":13,
+            "label":"1,000 to 2,500"
+            },
+            {
+            "color":"#ffffff",
+            "background":"#000000",
+            "size":9,
+            "label":"500 to 1,000"
+            },
+            {
+            "color":"#ffffff",
+            "background":"#000000",
+            "size":5,
+            "label":"Less than 500"
+            }]
+        },
+        {
+            "id":0,
+            "sliderValue":[1870,1870],
+            "type":"point",
+            "title":"City Population",
+            "containers":[
+                {
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":13,
+                "label":"Greater than 1,000"
+                },
+                {
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":9,
+                "label":"500 to 1,000"
+                },
+                {
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":5,
+                "label":"Less than 500"
+                }]
+        },
+        {
+            "id":0,
+            "type":"point",
+            "sliderValue":[1860,1860],
+            "title":"City Population",
+            "containers":[
+                {
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":13,
+                "label":"Greater than 500"
+                },
+                {
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":5,
+                "label":"Less than 500"
+                }]
+        },
+        {
+            "id":0,
+            "type":"point",
+            "sliderValue":[1810,1850],
+            "title":"City Population",
+            "containers":[
+                {
+                "color":"#ffffff",
+                "background":"#000000",
+                "size":5,
+                "label":"Less than 500"
+                }]
+        },
+        {
+            "id":1,
+            "type":"line",
+            "containers":[{
+                "color":"#989898",
+                "height":3,
+                "label":"Borders"
+                }]
+        },
+        {
+            "id":2,
+            "type":"none",
+            "description":"Data based on census records and available European settlement history. The 'decade founded' represents the first approximate decade a settlement was recorded on maps and/or the census, and the 'last recorded' decade represents the most recent decade it was recorded on maps and/or the census."
+        }]
+      }],
+      "sources":{
+        "geographic":[{
+            "title":"City Points 1900-2010: ",
+            "linkText":"IPUMS/US Census",
+            "linkUrl":"https://data2.nhgis.org/main",
+            "description":"Point shapefile datasets downloaded for each decennial census year (1900-2010)."
+        },
+        {
+            "title":"City Points 1830 and Earlier: ",
+            "linkText":"Map of the United States Of North America, 1839",
+            "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~1614~140001:Map-of-the-United-States-Of-North-A?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:1839%20united%20states%20david%20burr;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=1&trs=18",
+            "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+        },
+        {
+            "title":"City Points 1840: ",
+            "linkText":"Map of the Oregon Territory, 1841",
+            "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~224023~5506306:Map-Of-The-Oregon-Territory?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:1841%20wilkes;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=0&trs=183",
+            "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+        },
+        {
+            "title":"City Points 1850: ",
+            "linkText":"California, Oregon, Utah, New Mexico, 1852",
+            "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~23815~910003:California,-Oregon,-Utah,-New-Mexic?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No",
+            "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+        },
+        {
+            "title":"City Points 1860: ",
+            "linkText":"Map Of Oregon, Washington, And Part Of British Columbia, 1860",
+            "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~2065~120063:Map-Of-Oregon,-Washington,-And-Part?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:1860%20oregon;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=5&trs=85",
+            "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+        },
+        {
+            "title":"City Points 1870: ",
+            "linkText":"Bancroft's Map Of Oregon, Washington, Idaho, Montana And British Columbia, 1872",
+            "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~1467~130123:Bancroft-s-Map-Of-Oregon,-Washingto?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:1872%20oregon;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=3&trs=11",
+            "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+        },
+        {
+            "title":"City Points 1870/1880: ",
+            "linkText":"Oregon, Washington and Idaho, 1876",
+            "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~307530~90077413:Oregon,-Washington-and-Idaho-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:1876%20oregon;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=14&trs=19",
+            "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+        },
+        {
+            "title":"City Points 1880: ",
+            "linkText":"Map of Oregon, Washington, Idaho, and part of Montana, 1880",
+            "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~30520~1140047:Ore-,-Wash-,-Ida-,-Mont-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:1880%20oregon;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=0&trs=11",
+            "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+        },
+        {
+            "title":"City Points 1890: ",
+            "linkText":"Sectional map of Washington, Oregon, Idaho, and western Montana, 1891",
+            "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~30520~1140047:Ore-,-Wash-,-Ida-,-Mont-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:1880%20oregon;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=0&trs=11",
+            "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+        },
+        {
+            "title":"City Population 1860-1960: ",
+            "linkText":"Stanford",
+            "linkUrl":"https://github.com/cestastanford/historical-us-city-populations",
+            "description":"Population data only included for cities that reached a population of greater than 2,500. Data from earlier decades is incomplete."
+        },
+        {
+            "title":"City Population 1970-2010: ",
+            "linkText":"IPUMS NHGIS, University of Minnesota",
+            "linkUrl":"https://data2.nhgis.org/main",
+            "description":"Total place population data downloaded for each decade."
+        },
+        {
+            "title":"Historical County/Territory Boundaries: ",
+            "linkText":"Atlas of Historical County Boundaries",
+            "linkUrl":"https://publications.newberry.org/ahcbp/downloads/united_states.html",
+            "description":"Data downloaded with generalized with 0.01 deg. tolerance."
+        }],
+        "basemap":[{
+            "title":"Created with Mapbox Studio"
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","Chart.js","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

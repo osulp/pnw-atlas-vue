@@ -1,0 +1,24 @@
+{
+    "chapterTitle":"Energy Resources",
+    "chapterLink":"/energy",
+    "maps":[{ 
+        "id":0,
+        "text":"Electric Utilities",
+        "description":"Utility areas, power plants, power consumption",
+        "imageURL":"energy_icon",
+        "chapter":"energy",
+        "link":"energy/utilities",
+        "mapLink":"utilities",
+        "active":false,
+        "backgroundURL":"utilities_background"},
+        { 
+        "id":1,
+        "text": "Renewable Energy" ,
+        "description":"Wind, solar, biomass, geothermal",
+        "imageURL":"renewable_icon",
+        "link":"energy/renewable",
+        "mapLink":"renewable",
+        "chapter":"energy",
+        "active":false,
+        "backgroundURL":"renewable_background"}]
+}

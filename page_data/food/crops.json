@@ -1,0 +1,424 @@
+{
+    "title": "Crops",
+    "URL":"crop_icon",
+    "chapter":"food",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "basemap":[{"title":"terrain","opacity":1},
+      {"title":"geoserver","layer":"pnw_outline2","opacity":0.3},
+      {"title":"label","opacity":1}],
+    "maps":[{
+            "id":0,
+            "title":"Field Crops",
+            "border":{"title":"pnw_states_black","opacity":0.5},
+            "tileLayers":[{"title":"grain_raster","pane":500,"opacity":0.7}],
+            "jsonLayers":[{
+                "url":"map_data/food/county_crops.json",
+                "feature":"polygon",
+                "type":"graduated",
+                "attribute":"grain",
+                "values":[70,50,30,10,0],
+                "fillColors":["#997a00","#cca300","#ffd633","#ffeb99","#fffae6","#ffffff"],
+                "colors":["#ffffff"],
+                "tooltipVars":["NAME","ST"],
+                "tooltipText":["<h2 style='margin:0;'>"," County, ","</h2><p3 id='chartDescription' style='font-size:16px; display:inline-block; margin-top:5px; font-weight:bold;'>Field Crop Types</p3><br/><canvas id='fieldChart' style='margin-left:-5px;' width='280' height='140'></canvas><p3 style='display:inline-block; font-weight:normal; font-size:16px; margin-top:5px;'>% of Total Area Harvested (of available data)</p3>"]                 
+              }],
+            "fastFacts":[{
+                "facts":["&#9900 Field Crops comprise 26.49% of Pacific Northwest crop sales.","&#9900 In Idaho, field crops comprise 42.06% of total crop sales."]
+            }],
+            "legend":[{
+                    "id":0,
+                    "icon":"grain_icon",
+                    "type":"polygon",
+                    "chartID":"fieldChart",
+                    "title":"Grain/Field Crops (% of Total Ag. Sales)",
+                    "containers":[{
+                        "color":"#997a00",
+                        "label":"70+"
+                      },
+                      {
+                        "color":"#cca300",
+                        "label":"50 to 70"
+                      },
+                      {
+                        "color":"#ffd633",
+                        "label":"30 to 50"
+                      },
+                      {
+                        "color":"#ffeb99",
+                        "label":"10 to 30"
+                      },
+                      {
+                        "color":"#fffae6",
+                        "label":"Less than 10"
+                      },
+                      {
+                        "color":"#ffffff",
+                        "label":"No Data"
+                      }
+                    ],
+                    "description":"Grain/Field Crop sales as a percent of total agriculture sales."
+                },
+                {
+                  "id":1,
+                  "type":"polygon",
+                  "containers":[{
+                      "color":"#404040",
+                      "label":"Field Crop Area"
+                    }]
+              }],
+            "chart":[{
+                "id":0,
+                "chartLoc":"info",
+                "chartType":"horizontalBar",
+                "labels":["Corn", "Wheat","Barley","Sugarbeets","Other"],
+                "data":["corn_per","wheat_per","barley_per","beet_per","grain_oth"],
+                "colors":["#ffd633","#ffd633","#ffd633","#ffd633","#ffd633"],
+                "options": {
+                    "responsive": true,
+                    "scales": {
+                      "yAxes": [{
+                        "ticks": {
+                          "fontSize":14,
+                          "fontColor":"#000000",    
+                          "fontFamily":"GoudyOld"
+                        }
+                      }],
+                      "xAxes": [{
+                        "ticks": {
+                          "fontSize":14,
+                          "fontColor":"#000000",    
+                          "fontFamily":"GoudyOld",
+                          "min": 0
+                        }
+                      }]
+                    },
+                    "legend": {
+                      "display":false
+                    },
+                    "tooltips":{
+                      "enabled":false
+                    }
+                }
+            }]
+          },
+          {
+            "id":1,
+            "title":"Seed/Hay/Herb",
+            "border":{"title":"pnw_states_black","opacity":0.5},
+            "tileLayers":[{"title":"seed_hay_raster","pane":500,"opacity":0.7}],
+            "fastFacts":[{
+              "facts":["&#9900 Seed/Hay/Herb Crops comprise 18.39% of Pacific Northwest crop sales","&#9900 In Idaho, Seed/Hay/Herb Crops crops comprise 27.60% of total crop sales."]
+            }],
+            "jsonLayers":[{
+                "url":"map_data/food/county_crops.json",
+                "feature":"polygon",
+                "type":"graduated",
+                "attribute":"other",
+                "values":[50,35,20,5,0],
+                "fillColors":["#287128","#3caa3c","#68ca68","#a0dea0","#d9f2d9","#ffffff"],
+                "colors":["#ffffff"],
+                "tooltipVars":["NAME","ST"],
+                "tooltipText":["<h2 style='margin:0;'>"," County, ","</h2><p3 id='chartDescription' style='font-size:16px; display:inline-block; margin-top:5px; font-weight:bold;'>Seed/Hay/Herb Types</p3><br/><canvas id='seedChart' style='margin-left:-5px;' width='280' height='140'></canvas><p3 style='display:inline-block; font-weight:normal; font-size:16px; margin-top:5px;'>% of Total Area Harvested (of available data)</p3>"]                 
+              }],
+            "legend":[{
+                    "id":0,
+                    "type":"polygon",
+                    "icon":"seed_icon",
+                    "chartID":"seedChart",
+                    "title":"Grain/Field Crops (% of Total Ag. Sales)",
+                    "containers":[{
+                        "color":"#287128",
+                        "label":"50+"
+                      },
+                      {
+                        "color":"#3caa3c",
+                        "label":"35 to 50"
+                      },
+                      {
+                        "color":"#68ca68",
+                        "label":"20 to 35"
+                      },
+                      {
+                        "color":"#a0dea0",
+                        "label":"5 to 20"
+                      },
+                      {
+                        "color":"#d9f2d9",
+                        "label":"Less than 5"
+                      },
+                      {
+                        "color":"#ffffff",
+                        "label":"No Data"
+                      }
+                    ],
+                    "description":"Seed/Hay/Herb sales as a percent of total agriculture sales."
+                },
+                {
+                  "id":1,
+                  "type":"polygon",
+                  "containers":[{
+                      "color":"#404040",
+                      "label":"Seed/Hay/Herb Area"
+                    }]
+              }],
+            "chart":[{
+                "id":0,  
+                "chartLoc":"info",
+                "chartType":"horizontalBar",
+                "labels":["Hay", "Grass","Mint","Hops"],
+                "data":["hay_per","grass_per","mint_per","hops_per"],
+                "colors":["#a0dea0","#a0dea0","#a0dea0","#a0dea0"],
+                "options": {
+                    "responsive": true,
+                    "scales": {
+                      "yAxes": [{
+                        "ticks": {
+                          "fontSize":14,
+                          "fontColor":"#000000",    
+                          "fontFamily":"GoudyOld"
+                        }
+                      }],
+                      "xAxes": [{
+                        "ticks": {
+                          "fontSize":14,
+                          "fontColor":"#000000",    
+                          "fontFamily":"GoudyOld",
+                          "min": 0
+                        }
+                      }]
+                    },
+                    "legend": {
+                      "display":false
+                    },
+                    "tooltips":{
+                      "enabled":false
+                    }
+                }
+            }]
+          },
+          {
+            "id":2,
+            "title":"Fruit",            
+            "border":{"title":"pnw_states_black","opacity":0.5},
+            "tileLayers":[{"title":"fruit_raster","pane":500,"opacity":0.7}],
+            "fastFacts":[{
+              "facts":["&#9900 Fruit/Berry/Nut comprise 26.19% of Pacific Northwest crop sales.","&#9900 In Washington, Fruit/Berry/Nut crops comprise 45.15% of total crop sales."]
+            }],
+            "jsonLayers":[{
+                "url":"map_data/food/county_crops.json",
+                "feature":"polygon",
+                "type":"graduated",
+                "attribute":"fruit",
+                "values":[50,35,20,5,0],
+                "fillColors":["#a50f15","#de2d26","#fb6a4a","#fcae91","#fee5d9","#ffffff"],
+                "colors":["#ffffff"],
+                "tooltipVars":["NAME","ST"],
+                "tooltipText":["<h2 style='margin:0;'>"," County, ","</h2><p3 id='chartDescription' style='font-size:16px; display:inline-block; margin-top:5px; font-weight:bold;'>Fruit/Nut/Berry Types</p3><br/><canvas id='fruitChart' style='margin-left:-5px;' width='280' height='140'></canvas><p3 style='display:inline-block; font-weight:normal; font-size:16px; margin-top:5px;'>% of Fruit/Nut Orchard Acreage Harvested (of available data)</p3>"]                 
+              }],
+            "legend":[{
+                    "id":0,
+                    "type":"polygon",
+                    "icon":"fruit_icon",
+                    "chartID":"fruitChart",
+                    "title":"Fruit/Nuts/Berries (% of Total Ag. Sales)",
+                    "containers":[{
+                        "color":"#a50f15",
+                        "label":"50+"
+                      },
+                      {
+                        "color":"#de2d26",
+                        "label":"35 to 50"
+                      },
+                      {
+                        "color":"#fb6a4a",
+                        "label":"20 to 35"
+                      },
+                      {
+                        "color":"#fcae91",
+                        "label":"5 to 20"
+                      },
+                      {
+                        "color":"#fee5d9",
+                        "label":"Less than 5"
+                      },
+                      {
+                        "color":"#ffffff",
+                        "label":"No Data"
+                      }
+                    ],
+                    "description":"Fruit/Nuts/Berries sales as a percent of total agriculture sales."
+                },
+                {
+                  "id":1,
+                  "type":"polygon",
+                  "containers":[{
+                      "color":"#404040",
+                      "label":"Fruit/Nut/Berry Area"
+                    }]
+              }],
+            "chart":[{
+                "id":0,  
+                "chartLoc":"info",
+                "chartType":"horizontalBar",
+                "labels":["Apples", "Pears","Cherries","Grapes","Hazelnuts","Other"],
+                "data":["apple_orch","pear_orch","cher_orch","grape_orch","haz_orch","fruit_oth"],
+                "colors":["#de2d26","#de2d26","#de2d26","#de2d26","#de2d26","#de2d26"],
+                "options": {
+                    "responsive": true,
+                    "scales": {
+                      "yAxes": [{
+                        "ticks": {
+                          "fontSize":14,
+                          "fontColor":"#000000",    
+                          "fontFamily":"GoudyOld"
+                        }
+                      }],
+                      "xAxes": [{
+                        "ticks": {
+                          "fontSize":14,
+                          "fontColor":"#000000",    
+                          "fontFamily":"GoudyOld",
+                          "min": 0
+                        }
+                      }]
+                    },
+                    "legend": {
+                      "display":false
+                    },
+                    "tooltips":{
+                      "enabled":false
+                    }
+                }
+            }]
+          },
+          {
+            "id":3,
+            "title":"Vegetables",            
+            "border":{"title":"pnw_states_black","opacity":0.5},
+            "tileLayers":[{"title":"veg_raster","pane":500,"opacity":0.7}],
+            "fastFacts":[{
+              "facts":["&#9900 Vegetable Crops comprise 19.14% of Pacific Northwest crop sales.","&#9900 In Idaho, Vegetable crops comprise 28.10% of total crop sales."]
+            }],
+            "jsonLayers":[{
+                "url":"map_data/food/county_crops.json",
+                "feature":"polygon",
+                "type":"graduated",
+                "attribute":"vegetable",
+                "values":[35,25,15,5,0],
+                "fillColors":["#603e20","#996333","#c68853","#d9b08c","#ecd8c6","#ffffff"],
+                "colors":["#ffffff"],
+                "tooltipVars":["NAME","ST"],
+                "tooltipText":["<h2 style='margin:0;'>"," County, ","</h2><p3 id='chartDescription' style='font-size:16px; display:inline-block; margin-top:5px; font-weight:bold;'>Vegetable Types</p3><br/><canvas id='vegChart' style='margin-left:-5px;' width='280' height='140'></canvas><p3 style='display:inline-block; font-weight:normal; font-size:16px; margin-top:5px;'>% of Vegetable Crop Acreage Harvested (of available data)</p3>"]                 
+              }],
+            "legend":[{
+                    "id":0,
+                    "type":"polygon",
+                    "icon":"veg_icon",
+                    "chartID":"vegChart",
+                    "title":"Vegetables (% of Total Ag. Sales)",
+                    "containers":[{
+                        "color":"#603e20",
+                        "label":"35+"
+                      },
+                      {
+                        "color":"#996333",
+                        "label":"25 to 35"
+                      },
+                      {
+                        "color":"#c68853",
+                        "label":"15 to 25"
+                      },
+                      {
+                        "color":"#d9b08c",
+                        "label":"5 to 15"
+                      },
+                      {
+                        "color":"#ecd8c6",
+                        "label":"Less than 5"
+                      },
+                      {
+                        "color":"#ffffff",
+                        "label":"No Data"
+                      }
+                    ],
+                    "description":"Vegetable sales as a percent of total agriculture sales."
+                },
+                {
+                  "id":1,
+                  "type":"polygon",
+                  "containers":[{
+                      "color":"#404040",
+                      "label":"Vegetable Area"
+                    }]
+              }],
+            "chart":[{
+                "id":0,  
+                "chartLoc":"info",
+                "chartType":"horizontalBar",
+                "labels":["Potato", "Onion","Sweet Corn","Green Pea","Other"],
+                "data":["potato_veg","onion_veg","swcorn_veg","grpea_veg","other_veg"],
+                "colors":["#d9b08c","#d9b08c","#d9b08c","#d9b08c","#d9b08c"],
+                "options": {
+                    "responsive": true,
+                    "scales": {
+                      "yAxes": [{
+                        "ticks": {
+                          "fontSize":14,
+                          "fontColor":"#000000",    
+                          "fontFamily":"GoudyOld"
+                        }
+                      }],
+                      "xAxes": [{
+                        "ticks": {
+                          "fontSize":14,
+                          "fontColor":"#000000",    
+                          "fontFamily":"GoudyOld",
+                          "min": 0
+                        }
+                      }]
+                    },
+                    "legend": {
+                      "display":false
+                    },
+                    "tooltips":{
+                      "enabled":false
+                    }
+                }
+            }]
+          }          
+      ],
+      "sources":{
+        "geographic":[{
+            "title":"Agricultural Sales/Area Data: ",
+            "linkText":"USDA Census of Agriculture",
+            "linkUrl":"https://www.agcensus.usda.gov/Publications/2012/Online_Resources/Ag_Census_Web_Maps/Data_download/index.php",
+            "description":"Percent of agricultural sales (map), or percent of acreage harvested (table). Data from 2012. Data table was downloaded from 'Data Download' link. Table columns used in maps are: y12_M017, y12_M020, y12_M022, and y12_M021. See full documentation for full listing of columns used in tables."
+        },
+        {
+            "title":"Crop Area: ",
+            "linkText":"USDA National Agricultural Statistics Service",
+            "linkUrl":"https://nassgeodata.gmu.edu/CropScape/",
+            "description":"Data from 2017. Filtered based on appropriate crop types for each category."
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://d3js.org/topojson.v1.min.js","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","Chart.js","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+  }

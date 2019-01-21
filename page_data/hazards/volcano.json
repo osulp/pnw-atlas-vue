@@ -1,0 +1,298 @@
+{
+    "title": "Volcanoes",
+    "URL":"volcano_icon",
+    "chapter":"hazards",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "basemap":[{"title":"terrain","opacity":1},
+        {"title":"geoserver","layer":"pnw_outline2","opacity":0.3},
+        {"title":"label","opacity":1}],
+    "maps":[{
+        "id":0,
+        "fastFacts":[{
+          "facts":["&#9900 Mount St. Helens, Mount Hood, Mount Rainier, and Newberry are considered the most active volcanoes in the PNW.","&#9900 Portland, Oregon is one of few cities in the U.S. to have an inactive volcano within city limits."]
+        }],
+        "title":"Volcanic Hazards",
+        "border":{"title":"pnw_states_black","include":true,"opacity":0.3},
+        "tileLayers":[{"title":"pnw_urban_areas","pane":250,"opacity":0.8},{"title":"pnw_water","pane":250,"opacity":0.8}],
+        "jsonLayers":[{
+            "interactive":false,
+            "url":"map_data/hazards/total_hazard_zones.json",
+            "feature":"polygon",
+            "type":"categorized",
+            "attribute":"hazard",
+            "values":["v","l","r","A","B"],
+            "fillColors":["#c71f38","#e8897c","#e2b183","#f2d8c0","#fbf2ea","#ffffff"],
+            "fillOpacity":0.7,
+            "opacity":0
+          },
+          {
+            "pane":"overBorder",
+            "url":"map_data/hazards/volcanoes.json",
+            "feature":"point",
+            "type":"pointDivGrad",
+            "fillColors":"#ffffff",
+            "tooltipVars":["NAME","THREAT","ERUPTION"],
+            "tooltipText":["<b style='display:inline; font-size:20px;'>","</b><br/><p style='display:inline;'>Eruption Risk:&nbsp","<br/>Last Volcanic Activity:&nbsp","</p>"],   
+            "radiusType":"graduated",
+            "radiusAttribute":"ELEV",
+            "radiusValues":[3000,2000],
+            "radius":[11,8,6],      
+            "divIcon":"border-radius:50%; border: 1.5px solid black; opacity:1; -webkit-box-shadow: 1px 1px 2px black; box-shadow: 1px 1px 2px black; -moz-box-shadow: 1px 1px 2px black;"
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"Volcanic Hazard Risk",
+                "containers":[{
+                    "color":"#c71f38",
+                    "label":"Near-Volcano Zone",
+                    "tooltip":"Lava, pyroclastic flows, lahars, ejecta, tephra, rock fall"
+                  },
+                  {
+                    "color":"#e8897c",
+                    "label":"Volcanic Mudflows",
+                    "tooltip":"Lahars and other other volcanic mudflows"
+                  },
+                  {
+                    "color":"#e2b183",
+                    "label":"Regional Lava Flows",
+                    "tooltip":"Lava flows from vents between volcanoes. Data not available for every volcano"
+                  },
+                  {
+                    "color":"#f2d8c0",
+                    "label":"High Ashfall Risk"
+                  },
+                  {
+                    "color":"#fbf2ea",
+                    "label":"Low Ashfall Risk"
+                  }
+                ],
+                "description":"Potential hazard zones modeled to the event of a volcanic eruption."
+            },
+            {
+                "id":1,
+                "type":"pointRow",
+                "title":"Volcano Height in Meters",
+                "containers":[{
+                    "size":12,
+                    "label":"3000+",
+                    "background":"rgba(255,255,255,1)",
+                    "color":"#000000",
+                    "border":2,
+                    "fontSize":16
+                    },
+                    {
+                    "size":8,
+                    "label":"2000 to 3000",
+                    "background":"rgba(255,255,255,1)",
+                    "color":"#000000",
+                    "border":2,
+                    "fontSize":16
+                    },
+                    {
+                    "size":5,
+                    "label":"Under 2000",
+                    "background":"rgba(255,255,255,1)",
+                    "color":"#000000",
+                    "border":2,
+                    "fontSize":15
+                    }
+                ]
+            }]
+      },
+      {
+        "id":1,
+        "fastFacts":[{
+          "facts":["&#9900 Mount St. Helens, Mount Hood, Mount Rainier, and Newberry are considered the most active volcanoes in the PNW.","&#9900 Portland, Oregon is one of few cities in the U.S. to have an inactive volcano within city limits."]
+        }],
+        "title":"Volcanic Geology",
+        "border":{"title":"pnw_states_black","include":true,"opacity":0.3},
+        "tileLayers":[{"title":"pnw_urban_areas","pane":250,"opacity":0.8},{"title":"pnw_water","pane":250,"opacity":0.8}],
+        "jsonLayers":[{
+            "url":"map_data/hazards/volcanic_geology.json",
+            "feature":"polygon",
+            "type":"categorized",
+            "attribute":"age_number",
+            "values":[1,2,3,4,5,6,7],
+            "fillColors":["#6e111f","#c11d37","#d4625e","#e19b84","#eccbac","#efeca9","#f7f5d4","#f7f5d4"],
+            "colors":["#6e111f","#c11d37","#d4625e","#e19b84","#eccbac","#efeca9","#f7f5d4","#f7f5d4"],
+            "fillOpacity":0.6,
+            "opacity":0.8,
+            "tooltipVars":["FORMATION","age"],
+            "tooltipText":["<h2>","</h2><p3 id='displayType' style='display:inline; font-weight:normal;'>Age: ","</p3>"]
+          },
+          {
+            "pane":"overBorder",
+            "url":"map_data/hazards/volcanoes.json",
+            "feature":"point",
+            "type":"pointDivGrad",
+            "fillColors":"#ffffff",
+            "tooltipVars":["NAME","THREAT","ERUPTION"],
+            "tooltipText":["<b style='display:inline; font-size:20px;'>","</b><br/><p style='display:inline;'>Eruption Risk:&nbsp","<br/>Last Volcanic Activity:&nbsp","</p>"],   
+            "radiusType":"graduated",
+            "radiusAttribute":"ELEV",
+            "radiusValues":[3000,2000],
+            "radius":[11,8,6],      
+            "divIcon":"border-radius:50%; border: 1.5px solid black; opacity:1; -webkit-box-shadow: 1px 1px 2px black; box-shadow: 1px 1px 2px black; -moz-box-shadow: 1px 1px 2px black;"
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"Volcanic Geology at Surface",
+                "subtitle":"Age in Millions of Years",
+                "containers":[{
+                    "color":"#6e111f",
+                    "label":"Within 0.01 (Recent)"
+                  },
+                  {
+                    "color":"#c11d37",
+                    "label":"0.01 - 2.6 (Pleistocene)"
+                  },
+                  {
+                    "color":"#d4625e",
+                    "label":"2.6 - 5.3 (Pliocene)"
+                  },
+                  {
+                    "color":"#e19b84",
+                    "label":"5.3 - 23 (Miocene)"
+                  },
+                  {
+                    "color":"#eccbac",
+                    "label":"23 - 34 (Oligocene)"
+                  },
+                  {
+                    "color":"#efeca9",
+                    "label":"34 - 56 (Eocene)"
+                  },
+                  {
+                    "color":"#f7f5d4",
+                    "label":"Older than 56"
+                  }
+                ],
+                "description":"Surface geology caused directly by volcanic activity. In some cases, other rock types have overlaid volcanic rock, and are not shown on the map."
+            },
+            {
+                "id":1,
+                "type":"pointRow",
+                "title":"Volcano Height in Meters",
+                "containers":[{
+                    "size":12,
+                    "label":"3000+",
+                    "background":"rgba(255,255,255,1)",
+                    "color":"#000000",
+                    "border":2,
+                    "fontSize":16
+                    },
+                    {
+                    "size":8,
+                    "label":"2000 to 3000",
+                    "background":"rgba(255,255,255,1)",
+                    "color":"#000000",
+                    "border":2,
+                    "fontSize":16
+                    },
+                    {
+                    "size":5,
+                    "label":"Under 2000",
+                    "background":"rgba(255,255,255,1)",
+                    "color":"#000000",
+                    "border":2,
+                    "fontSize":15
+                    }
+                ]
+            }]
+      }],
+      "sources":{
+        "geographic":[{
+            "title":"Volcanoes: ",
+            "linkText":"Stanford Earth Works",
+            "linkUrl":"https://earthworks.stanford.edu/catalog/harvard-glb-volc",
+            "description":"Data from 2003."
+        },
+        {
+            "title":"Washington Volcano Hazard Zones: ",
+            "linkText":"Washington State Department of Natural Resources",
+            "linkUrl":"https://www.dnr.wa.gov/programs-and-services/geology/publications-and-data/gis-data-and-databases",
+            "description":"Data from 2007."
+        },
+        {
+            "title":"Mount Hood Hazard Zones: ",
+            "linkText":"USGS Volcano Hazards Program",
+            "linkUrl":"https://pubs.usgs.gov/of/2007/1222/data.html",
+            "description":"Data from 2007."
+        },
+        {
+            "title":"Mount Jefferson Hazard Zones: ",
+            "linkText":"USGS Volcano Hazards Program",
+            "linkUrl":"https://pubs.usgs.gov/of/2007/1224/data.html",
+            "description":"Data from 2007."
+        },
+        {
+            "title":"Newberry Hazard Hazard Zones: ",
+            "linkText":"USGS Volcano Hazards Program",
+            "linkUrl":"https://pubs.usgs.gov/of/2007/1225/data.html",
+            "description":"Data from 2007."
+        },
+        {
+            "title":"Three Sisters Hazard Zones: ",
+            "linkText":"USGS Volcano Hazards Program",
+            "linkUrl":"https://pubs.usgs.gov/of/2007/1221/data.html",
+            "description":"Data from 2007."
+        },
+        {
+            "title":"Crater Lake Hazard Zones: ",
+            "linkText":"USGS Volcano Hazards Program",
+            "linkUrl":"https://pubs.usgs.gov/of/2007/1223/data.html",
+            "description":"Data from 2007."
+        },
+        {
+            "title":"Ashfall Risk: ",
+            "linkText":"American Red Cross",
+            "linkUrl":"http://maps.redcross.org/website/Maps/Images/NationalLevel/volcano_hires.jpg",
+            "description":"Map date unknown. Data digitized from static map."
+        },
+        {
+            "title":"Idaho Geologic Zones: ",
+            "linkText":"USGS",
+            "linkUrl":"https://mrdata.usgs.gov/geology/state/state.php?state=ID",
+            "description":"Data from 2006."
+        },
+        {
+            "title":"Oregon Geologic Zones: ",
+            "linkText":"Oregon Department of Geology and Mineral Industries",
+            "linkUrl":"http://www.oregongeology.org/pubs/dds/p-OGDC-6.htm",
+            "description":"Data from 2006."
+        },
+        {
+            "title":"Washington Geologic Zones: ",
+            "linkText":"Washington State Department of Natural Resources",
+            "linkUrl":"https://www.dnr.wa.gov/programs-and-services/geology/publications-and-data/gis-data-and-databases",
+            "description":"Data from 2006."
+        }],
+        "text":[{
+            "title":"Volcano Quick Facts: ",
+            "linkText":"Pacific Northwest Seismic Network",
+            "linkUrl":"https://pnsn.org/volcanoes"
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

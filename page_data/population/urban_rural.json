@@ -1,0 +1,256 @@
+{
+    "title": "Urban & Rural",
+    "URL":"urban_rural_icon",
+    "chapter":"population",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "basemap":[{"title":"terrain","opacity":1},
+      {"title":"geoserver","layer":"pnw_outline2","opacity":0.3},
+      {"title":"label","opacity":1}],
+    "secondDropdown":{"title":"Select Class", "buttons":[{"filter":null, "label":"Total"},{"filter":"urban","label":"Urban"},{"filter":"rural","label":"Rural"}]},
+    "maps":[{
+        "id":0,
+        "title":"Classification",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "fastTitle":"none",
+            "facts":["Urbanized Areas: Areas with at least 50,000 people.","Urbanized Clusters: Areas between 2,500 and 50,000 people.","Rural Areas: All population, housing, and territory not included within an urban area or cluster."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/population/urban_rural.json",
+            "feature":"polygon",
+            "type":"categorized",
+            "attribute":"type_class",
+            "values":["u","c"],
+            "fillColors":["#80bfff","#ffff80","#9fdf9f"],
+            "colors":["#80bfff","#ffff80","#9fdf9f"],
+            "fillOpacity":0.6,
+            "opacity":1,
+            "weight":0.5,
+            "tooltipVars":["NAME","ST","text_class"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ,", ","</h2><br/><p3 style='display:inline; font-weight:normal;'>","</p3>"],
+            "filterVariable":"filter",
+            "filterValue":null
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"Urban/Rural Classification",
+                "icon":"class_icon",
+                "containers":[{
+                    "color":"#80bfff",
+                    "label":"Urban Area"
+                  },
+                  {
+                    "color":"#ffff80",
+                    "label":"Urban Cluster"
+                  },
+                  {
+                    "color":"#9fdf9f",
+                    "label":"Rural Area"
+                  }],
+                "description":"Urbanized Area/Urban Cluster classifications determined by U.S Census Bureau."
+            }]
+      },
+      {
+        "id":1,
+        "title":"Income",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "fastTitle":"none",
+            "facts":["Urbanized Areas: Areas with at least 50,000 people.","Urbanized Clusters: Areas between 2,500 and 50,000 people.","Rural Areas: All population, housing, and territory not included within an urban area or cluster."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/population/urban_rural.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"income_cap",
+            "values":[45000,35000,25000,15000],
+            "fillColors":["#006837","#31a354","#78c679","#c2e699","#ffffcc"],
+            "colors":["#006837","#31a354","#78c679","#c2e699","#ffffcc"],
+            "fillOpacity":0.6,
+            "opacity":1,
+            "weight":0.5,
+            "tooltipVars":["NAME","ST","text_class","income_cap"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ,", ","</h2><br/><p3 style='display:inline; font-weight:normal;'>","</br></p3><p3 style='display:inline;'>$", "</p3><p3 style='display:inline; font-weight:normal;'> Income per Cap.</p3>"],
+            "filterVariable":"filter",
+            "filterValue":null
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"Per Capita Annual Income",
+                "icon":"income_icon",
+                "containers":[{
+                    "color":"#006837",
+                    "label":"$45+"
+                  },
+                  {
+                    "color":"#31a354",
+                    "label":"$35 to $45"
+                  },
+                  {
+                    "color":"#78c679",
+                    "label":"$25 to $35"
+                  },
+                  {
+                    "color":"#c2e699",
+                    "label":"$15 to $25"
+                  },
+                  {
+                    "color":"#ffffcc",
+                    "label":"Less than $25"
+                  }],
+                "description":"Average annual per capita income in thousands of dollars. Data from 2011-2015."
+            }]
+      },
+      {
+        "id":2,
+        "title":"Education",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "fastTitle":"none",
+            "facts":["Urbanized Areas: Areas with at least 50,000 people.","Urbanized Clusters: Areas between 2,500 and 50,000 people.","Rural Areas: All population, housing, and territory not included within an urban area or cluster."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/population/urban_rural.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"per_bach",
+            "values":[45,35,25,15],
+            "fillColors":["#b30000","#e34a33","#fc8d59","#fdcc8a","#fef0d9"],
+            "colors":["#b30000","#e34a33","#fc8d59","#fdcc8a","#fef0d9"],
+            "fillOpacity":0.6,
+            "opacity":1,
+            "weight":0.5,
+            "tooltipVars":["NAME","ST","text_class","per_bach"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ,", ","</h2><br/><p3 style='display:inline; font-weight:normal;'>","</br></p3><p3 style='display:inline;'>", "%</p3><p3 style='display:inline; font-weight:normal;'> w/Bachelor's</p3>"],
+            "filterVariable":"filter",
+            "filterValue":null
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"% With Bachelor's Degree",
+                "icon":"education_icon",
+                "containers":[{
+                    "color":"#b30000",
+                    "label":"45+"
+                  },
+                  {
+                    "color":"#e34a33",
+                    "label":"35 to 45"
+                  },
+                  {
+                    "color":"#fc8d59",
+                    "label":"25 to 35"
+                  },
+                  {
+                    "color":"#fdcc8a",
+                    "label":"15 to 25"
+                  },
+                  {
+                    "color":"#fef0d9",
+                    "label":"Less than 25"
+                  }],
+                "description":"Percent of population over 25 with a bachelor's degree. Data from 2011-2015."
+            }]
+      },
+      {
+        "id":3,
+        "title":"Employment",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "fastTitle":"none",
+            "facts":["Urbanized Areas: Areas with at least 50,000 people.","Urbanized Clusters: Areas between 2,500 and 50,000 people.","Rural Areas: All population, housing, and territory not included within an urban area or cluster."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/population/urban_rural.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"per_unem",
+            "values":[12.5,10,7.5,5],
+            "fillColors":["#810f7c","#8856a7","#8c96c6","#b3cde3","#edf8fb"],
+            "colors":["#810f7c","#8856a7","#8c96c6","#b3cde3","#edf8fb"],
+            "fillOpacity":0.6,
+            "opacity":1,
+            "weight":0.5,
+            "tooltipVars":["NAME","ST","text_class","per_unem"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ,", ","</h2><br/><p3 style='display:inline; font-weight:normal;'>","</br></p3><p3 style='display:inline;'>", "%</p3><p3 style='display:inline; font-weight:normal;'> Unemployed</p3>"],
+            "filterVariable":"filter",
+            "filterValue":null
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"% Unemployment",
+                "icon":"employment_icon",
+                "containers":[{
+                    "color":"#810f7c",
+                    "label":"12.5+"
+                  },
+                  {
+                    "color":"#8856a7",
+                    "label":"10 to 12.5"
+                  },
+                  {
+                    "color":"#8c96c6",
+                    "label":"7.5 to 10"
+                  },
+                  {
+                    "color":"#b3cde3",
+                    "label":"5 to 7.5"
+                  },
+                  {
+                    "color":"#edf8fb",
+                    "label":"Less than 5"
+                  }],
+                "description":"Percent of unemployed workforce. Data from 2011-2015."
+            }]
+      }],
+      "sources":{
+        "geographic":[{
+            "title":"Urban Areas: ",
+            "linkText":"United States Census Bureau",
+            "linkUrl":"https://www.census.gov/geo/maps-data/data/cbf/cbf_ua.html",
+            "description":"Combined with place area data."
+        },
+        {
+          "title":"Places: ",
+          "linkText":"United States Census Bureau",
+          "linkUrl":"https://www.census.gov/geo/maps-data/data/cbf/cbf_place.html",
+          "description":"Combined with urban area data."
+        },
+        {
+          "title":"County-Level Education, Income and Employment Data: ",
+          "linkText":"IPUMS NHGIS, University of Minnesota",
+          "linkUrl":"https://data2.nhgis.org/main",
+          "description":"IPUMS Data selected from ACS 2011-2015. Geographic Level: County. Datasets: Educational Attainment for the Population 25 Years and Over, Employment Status for the Population 16 Years and Over, Per Capita Income in the Past 12 Months (in 2015 Inflation-Adjusted Dollars)."
+        },
+        {
+          "title":"Place-Level Education, Income and Employment Data: ",
+          "linkText":"IPUMS NHGIS, University of Minnesota",
+          "linkUrl":"https://data2.nhgis.org/main",
+          "description":"IPUMS Data selected from ACS 2011-2015. Geographic Level: County By State--Place. Datasets: Educational Attainment for the Population 25 Years and Over, Employment Status for the Population 16 Years and Over, Per Capita Income in the Past 12 Months (in 2015 Inflation-Adjusted Dollars)."
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

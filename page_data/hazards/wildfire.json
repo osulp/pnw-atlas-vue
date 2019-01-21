@@ -1,0 +1,216 @@
+{
+    "title": "Wildfires",
+    "URL":"fire_icon",
+    "chapter":"hazards",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "basemap":[{"title":"terrain","opacity":1},
+        {"title":"geoserver","layer":"pnw_outline2","opacity":0.3},
+        {"title":"label","opacity":1}],
+    "maps":[{
+        "id":0,
+        "title":"Modern Fires",
+        "fastFacts":[{
+            "fastTitle":"Five Largest PNW Wildfires:",
+            "facts":[" (ID, WA, MT, 1910): 945,374 Acres"," (ID, 2000): 681,701 Acres"," (ID, NV, 2007): 610,823 Acres"," (OR, 2012): 582,284 Acres"," (OR, 2002): 500,020 Acres"],
+            "factHeader":["&#9900 Big Burn","&#9900 Wilderness Complex","&#9900 Murphy Complex","&#9900 Long Draw","&#9900 Biscuit Complex"]
+        }],
+        "border":{"include":true},
+        "tileLayers":[{"title":"pnw_urban_areas","pane":250,"opacity":0.8},{"title":"parks_total","pane":300,"opacity":0.8}],
+        "jsonLayers":[{
+            "url":"map_data/hazards/wildfires_modern.json",
+            "feature":"polygon",
+            "type":"single",
+            "fillColors":["#e62e00"],
+            "fillOpacity":0.7,
+            "opacity":0,
+            "tooltip":"tooltip",
+            "tooltipVars":["firename","acres","c_date"],
+            "tooltipText":["<h3 style='display:inline;'>" ,"</h3><br/><p style='display:inline;'>","&nbspAcres<br/>","</p>"], 
+            "filterVariable":"year"       
+          }],
+        "slider":{
+                "title":"modern",
+                "min":2000,
+                "max":2017,
+                "step":1,
+                "default":2017
+            },
+        "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"Modern Wildfires",
+                "containers":[{
+                    "color":"#e62e00",
+                    "label":"Wildfire"
+                  }]
+        },
+        {
+            "id":1,
+                "type":"polygon",
+                "containers":[{
+                    "color":"#aed0bf",
+                    "label":"Public Land"
+                  },
+                  {
+                    "color":"#bfbfbf",
+                    "label":"Urban Area"
+                  }],
+                "description":"Wildfire area data are collected via processed satellite imagery."
+        }]
+      },
+      {
+        "id":1,
+        "title":"Historical Fires",
+        "fastFacts":[{
+            "fastTitle":"Five Largest PNW Wildfires:",
+            "facts":[" (ID, WA, MT, 1910): 945,374 Acres"," (ID, 2000): 681,701 Acres"," (ID, NV, 2007): 610,823 Acres"," (OR, 2012): 582,284 Acres"," (OR, 2002): 500,020 Acres"],
+            "factHeader":["&#9900 Big Burn","&#9900 Wilderness Complex","&#9900 Murphy Complex","&#9900 Long Draw","&#9900 Biscuit Complex"]
+        }],
+        "border":{"include":true},
+        "tileLayers":[{"title":"pnw_urban_areas","pane":250,"opacity":0.8},{"title":"parks_total","pane":300,"opacity":0.8}],
+        "jsonLayers":[{
+            "url":"map_data/hazards/wildfires_historical.json",
+            "feature":"polygon",
+            "type":"single",
+            "fillColors":["#e62e00"],
+            "fillOpacity":0.7,
+            "opacity":0,
+            "tooltip":"tooltip",
+            "tooltipVars":["firename","acres","date"],
+            "tooltipText":["<h3 style='display:inline;'>" ,"</h3><br/><p style='display:inline;'>","&nbspAcres<br/>","</p>"], 
+            "filterVariable":"decade"       
+          }],
+        "slider":{
+                "title":"historical",
+                "min":1890,
+                "max":1990,
+                "step":10,
+                "default":1990,
+                "suffix":"s"
+            },
+        "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"Historical Wildfires",
+                "containers":[{
+                    "color":"#e62e00",
+                    "label":"Wildfire"
+                  }]
+        },
+        {
+            "id":1,
+                "type":"polygon",
+                "containers":[{
+                    "color":"#aed0bf",
+                    "label":"Public Land"
+                  },
+                  {
+                    "color":"#bfbfbf",
+                    "label":"Urban Area"
+                  }],
+                "description":"Historical wildfire data are collected via satellite, paper map, and reconstruction."
+        }]
+      },
+      {
+        "id":2,
+        "title":"Wildfire Risk",
+        "fastFacts":[{
+            "fastTitle":"Five Largest PNW Wildfires:",
+            "facts":[" (ID, WA, MT, 1910): 945,374 Acres"," (ID, 2000): 681,701 Acres"," (ID, NV, 2007): 610,823 Acres"," (OR, 2012): 582,284 Acres"," (OR, 2002): 500,020 Acres"],
+            "factHeader":["&#9900 Big Burn","&#9900 Wilderness Complex","&#9900 Murphy Complex","&#9900 Long Draw","&#9900 Biscuit Complex"]
+        }],
+        "border":{"include":true},
+        "tileLayers":[{"title":"fire_risk","pane":250,"opacity":0.7}],
+        "legend":[{
+            "id":0,
+            "title":"Wildfire Risk",
+            "icon":"tree",
+            "type":"polygon",
+            "containers":[{
+                "color":"#e3350c",
+                "label":"Very High"
+                },
+                {
+                "color":"#d16f49",
+                "label":"High"
+                },
+                {
+                "color":"#bc9e81",
+                "label":"Moderate"
+                },
+                {
+                "color":"#9dcc9b",
+                "label":"Low"
+                }
+                ,{
+                "color":"#7dbf7d",
+                "label":"Very Low"
+                }],
+            "description":"Wildfire hazard potential modeled from the USFS Large Fire Simulation system, vegetation data, and observed fire locations. Assessment from 2014."
+        }]
+      }],
+      "sources":{
+        "geographic":[{
+            "title":"Modern Wildfires by Year: ",
+            "linkText":"USGS GeoMAC",
+            "linkUrl":"https://rmgsc.cr.usgs.gov/outgoing/GeoMAC/historic_fire_data/",
+            "description":"Data from 2000-2017. [year]_perimiters_dd83 files were downloaded for each year. Used in Modern Fires layer."
+        },
+        {
+            "title":"BLM OR/WA Historical Wildfires: ",
+            "linkText":"United States Bureau of Land Management",
+            "linkUrl":"https://www.blm.gov/or/gis/data-details.php?id=463",
+            "description":"Data from 2018. Used in Historical Fires layer. Only includes fires of over 10 acres."
+        },
+        {
+            "title":"Historic Idaho Fire Perimeters: ",
+            "linkText":"United States Bureau of Land Management",
+            "linkUrl":"https://catalog.data.gov/dataset/historic-fire-perimeters-bureau-of-land-management-idaho",
+            "description":"Data from 2018, current through 2015. Doesn't include national forest land. Used in Historical Fires layer."
+        },
+        {
+            "title":"Idaho Panhandle Historic Wildfires: ",
+            "linkText":"United States Forest Service: Idaho Panhandle National Forest",
+            "linkUrl":"https://www.fs.usda.gov/main/ipnf/landmanagement/gis#fire",
+            "description":"Data from 1885 to 2011. Coverage varies. Used in Historical Fires layer."
+        },
+        {
+            "title":"Fire History Polygons for Region 1: ",
+            "linkText":"United States Forest Service: Northern Region",
+            "linkUrl":"https://www.fs.usda.gov/detailfull/r1/landmanagement/gis/?cid=stelprd3804172&width=full",
+            "description":"Data from 1985 to 2015. Used in Historical Fires layer."
+        },
+        {
+            "title":"Ochoco National Forest Fire History: ",
+            "linkText":"United States Forest Service: Ochoco National Forest",
+            "linkUrl":"https://www.fs.fed.us/r6/data-library/gis/ochoco/index.shtml",
+            "description":"Data from 1850 to 2013. Coverage varies. Used in Historical Fires layer."
+        },
+        {
+            "title":"Wildfire Risk",
+            "linkText":"United States Forest Service",
+            "linkUrl":"https://www.fs.usda.gov/rds/archive/Product/RDS-2015-0046",
+            "description":"Modeled from the USFS Large Fire Simulation system, vegetation data, and observed fire locations. Data from 2015."
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

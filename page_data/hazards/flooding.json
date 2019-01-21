@@ -1,0 +1,161 @@
+{
+    "title": "Flooding",
+    "URL":"flood_icon",
+    "chapter":"hazards",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "basemap":[{"title":"streets","opacity":1},
+        {"title":"imagery","opacity":0.2},
+        {"title":"terrain","opacity":0.2},
+        {"title":"geoserver","layer":"pnw_outline2","opacity":0.3},
+        {"title":"label","opacity":1}],
+    "maps":[{
+        "id":0,
+        "title":"Risk",
+        "featureSelected":false, 
+        "fastFacts":[{
+            "facts":["&#9900 The Christmas Flood of 1964 was the most recent PNW flood to be considered a 100-Year Flood, although flooding in 1996 nearly reached 100-year levels."]
+        }],
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "jsonLayers":[{
+            "url":"map_data/hazards/flood_counties.json",
+            "feature":"polygon",
+            "type":"selection",
+            "fillColors":["#94b8b8"],
+            "colors":["#94b8b8"],
+            "weight":1,
+            "fillOpacity":0.5,
+            "opacity":1,
+            "tooltipVars":["NAME"],
+            "tooltipText":["<h2 style='margin: 0px 0px;'>" ," County</h2>"],
+            "selection":{
+                "titleVar":"NAME",
+                "titleSuffix":" County",
+                "filterVar":"county_cod",
+                "selectionOpacity":0,
+                "selectionHover":0,
+                "selectionLayers":[{
+                    "interactive":false,
+                    "url":"map_data/hazards/total_flood_zones.json",
+                    "feature":"polygon",
+                    "type":"categorized",
+                    "attribute":"FLD_ZONE",
+                    "values":["A","AE","AO","AH"],
+                    "fillColors":["#d27979","#d27979","#cfb0b0","#cfb0b0","#7a5757"],
+                    "fillOpacity":0.5,
+                    "colors":["#d27979","#d27979","#cfb0b0","#cfb0b0","#7a5757"],
+                    "opacity":0.7,
+                    "filterVariable":"county_cod"
+                }]
+            }
+          },
+          {
+            "interactive":false,
+            "url":"map_data/hazards/flood_nodata.json",
+            "feature":"polygon",
+            "type":"pattern",
+            "colors":["#75a3a3"],
+            "weight":1,
+            "opacity":1,
+            "pattern":{
+                "weight": 1.5,
+                "spaceWeight": 5,
+                "height": 6,
+                "angle":45,
+                "color":"#75a3a3",
+                "spaceColor":"#ffffff"
+            }
+          }],
+        "legend":[{
+                "id":0,
+                "type":"selection",
+                "title":"Select a County"
+            },
+            {
+                "id":1,
+                "legendDisplay":"unselected",
+                "type":"polygon",
+                "containers":[{
+                    "color":"#94b8b8",
+                    "label":"Floodplain Data Available"
+                    },
+                    {
+                    "color":"repeating-linear-gradient(45deg, rgba(255,255,255,0), rgba(255,255,255,0) 10%, #75a3a3 15%, #75a3a3 15%)",
+                    "label":"No Data Available"
+                    }],
+                "description":"Select a county to view 100 year floodplain and flood hazard zones."
+            },
+            {
+                "id":2,
+                "legendDisplay":"selected",
+                "type":"polygon",
+                "title":"100 Year Floodplain",
+                "containers":[{
+                    "color":"#d27979",
+                    "label":"Flood Hazard Zone"
+                    },
+                    {
+                    "color":"#cfb0b0",
+                    "label":"Shallow Flooding Zone"
+                    },
+                    {
+                    "color":"#7a5757",
+                    "label":"Coastal Flood Zone"
+                    }],
+                "description":"100 year floodplain zones as defined by FEMA. Homeowners within flood hazards zones are required to purchase flood insurance."
+            }]
+      }],
+      "sources":{
+        "geographic":[{
+            "title":"Flood Insurance Zones: ",
+            "linkText":"FEMA",
+            "linkUrl":"https://data.femadata.com/FIMA/Risk_MAP/NFHL/",
+            "description":"Data from 2017. Includes some PNW counties. Dataset was clipped to PNW counties and combined with below county-level datasets."
+        },
+        {
+            "title":"King County Flood Insurance Zones: ",
+            "linkText":"King County",
+            "linkUrl":"https://gis-kingcounty.opendata.arcgis.com/datasets/23e700bb05204fd28d19195043386780_2485",
+            "description":"Data from 2015."
+        },
+        {
+            "title":"Chelan County Flood Insurance Zones: ",
+            "linkText":"Chelan County",
+            "linkUrl":"ftp://ponyexpress.co.chelan.wa.us/gis/",
+            "description":"Data from 2006."
+        },
+        {
+            "title":"Kittias County Flood Insurance Zones: ",
+            "linkText":"Kittias County",
+            "linkUrl":"http://data-kitcogis.opendata.arcgis.com/datasets/firm-floodplains",
+            "description":"Data from 2018."
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Satellite Imagery: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldImagery",
+            "description":"ESRI World Imagery; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

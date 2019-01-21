@@ -1,0 +1,270 @@
+{
+    "title": "Historical Maps",
+    "URL":"spyglass_icon",
+    "chapter":"history",
+    "initial":0,
+    "dropdownText":"Background",
+    "basemap":[{"title":"imagery","opacity":1},
+        {"title":"terrain","opacity":0.4},
+        {"title":"geoserver","layer":"pnw_outline2","opacity":0.8}],
+    "spyglass":true,
+    "secondDropdown":{"title":"Spyglass", "type":"spyglass"},
+    "maps":[{
+        "id":0,
+        "title":"Satellite",
+        "border":{"title":"pnw_borders","opacity":0.6,"include":true},
+        "legend":[{
+            "id":0
+        }]
+      },
+      {
+        "id":1,
+        "title":"1841",
+        "tileLayers":[{"title":"https://maps.georeferencer.com/georeferences/808302692016/2018-08-09T21:00:06.737184Z/map/{z}/{x}/{y}.png?key=eTjfmpcpLHUWFSMk8Xxy","pane":200,"type":"rumsey"}],
+        "border":{"title":"pnw_borders","opacity":0.6,"include":false},
+        "legend":[{
+            "id":0,
+            "mainTitle":"Background Layer",
+            "bottomMargin":10
+        },
+        {
+            "id":1,
+            "type":"list",
+            "title":"Map Of The Oregon Territory",
+            "containers":[{
+                "labelTitle":"",
+                "label":"Compiled in the Bureau of Topological Engineering Chiefly for Military Purposes"
+                },
+                {
+                "labelTitle":"Year: ",
+                "label":"1841"
+                },
+                {
+                "labelTitle":"Cartographer: ",
+                "label":"Charles Wilkes"
+                },
+                {
+                "labelTitle":"Printing Details: ",
+                "label":"Most likely a proof copy due to the unusually light impression on a type of paper not used in the rest of Wilkes' atlas."
+                }]
+        }]
+      },
+      {
+        "id":2,
+        "title":"1859",
+        "tileLayers":[{"title":"https://maps.georeferencer.com/georeferences/760230126507/2016-10-03T15:18:40.934950Z/map/{z}/{x}/{y}.png?key=B5mpIg1lGTZrOKWLFUdU","pane":200,"type":"rumsey"}],
+        "border":{"title":"pnw_borders","opacity":0.6,"include":false},
+        "legend":[
+        {
+            "id":0,
+            "mainTitle":"Background Layer",
+            "title":"Map of the State of Oregon and Washington Territory",
+            "bottomMargin":10
+        },
+        {
+            "id":1,
+            "type":"list",
+            "containers":[{
+                "labelTitle":"",
+                "label":"Compiled in the Bureau of Topological Engineering Chiefly for Military Purposes"
+                },
+                {
+                "labelTitle":"Year: ",
+                "label":"1859"
+                },
+                {
+                "labelTitle":"Printing Details: ",
+                "label":"Printed without color"
+                },
+                {
+                "labelTitle":"Publisher: ",
+                "label":"The War Department"
+                },
+                {
+                "labelTitle":"Notes: ",
+                "label":"Political borders absent from map"
+                }]
+        }]
+      },
+      {
+        "id":3,
+        "title":"1868",
+        "tileLayers":[{"title":"https://maps.georeferencer.com/georeferences/301159882562/2016-02-18T09:33:30.454980Z/map/{z}/{x}/{y}.png?key=eTjfmpcpLHUWFSMk8Xxy","pane":200,"type":"rumsey"}],
+        "border":{"title":"pnw_borders","opacity":0.6,"include":false},
+        "legend":[
+        {
+            "id":0,
+            "mainTitle":"Background Layer",
+            "title":"Map of Oregon, Washington, Idaho, and part of Montana",
+            "bottomMargin":10
+        },
+        {
+            "id":1,
+            "type":"list",
+            "containers":[{
+                "labelTitle":"Year: ",
+                "label":"1868"
+                },
+                {
+                "labelTitle":"Publisher: ",
+                "label":"S.A. Mitchell Jr., Mitchell's New General Atlas"
+                },
+                {
+                "labelTitle":"Notes: ",
+                "label":"Color map by state and county. Relief shown by hachures. Prime meridians are Greenwich and Washington, D.C."
+                }]
+        }]
+      },
+      {
+        "id":4,
+        "title":"1891",
+        "tileLayers":[{"title":"https://maps.georeferencer.com/georeferences/252751129031/2018-04-12T16:46:46.373192Z/map/{z}/{x}/{y}.png?key=B5mpIg1lGTZrOKWLFUdU","pane":200,"type":"rumsey"}],
+        "border":{"title":"pnw_borders","opacity":0.6,"include":false},
+        "legend":[
+        {
+            "id":0,
+            "mainTitle":"Background Layer",
+            "title":"C.H Amerine's Sectional Map of Washington, Oregon, Idaho, and Western Montana",
+            "bottomMargin":10
+        },
+        {
+            "id":1,
+            "type":"list",
+            "containers":[{
+                "labelTitle":"",
+                "label":"Compiled and Published by C.H Amerine, 1891, Tacoma, WA"
+                },
+                {
+                "labelTitle":"Year: ",
+                "label":"1891"
+                },
+                {
+                "labelTitle":"Printing Details: ",
+                "label":"Full color printed on linen"
+                },
+                {
+                "labelTitle":"Publisher: ",
+                "label":"Schmidt Lable & Lith Co."
+                }]
+        }]
+      },
+      {
+        "id":5,
+        "title":"1929",
+        "tileLayers":[{"title":"https://maps.georeferencer.com/georeferences/681297029105/2018-07-31T20:59:58.501307Z/map/{z}/{x}/{y}.png?key=eTjfmpcpLHUWFSMk8Xxy","pane":200,"type":"rumsey"}],
+        "border":{"title":"pnw_borders","opacity":0.6,"include":false},
+        "legend":[
+        {
+            "id":0,
+            "mainTitle":"Background Layer",
+            "title":"Stati Uniti (United States of America), Washington, Oregon, Idaho",
+            "bottomMargin":10
+        },
+        {
+            "id":1,
+            "type":"list",
+            "containers":[{
+                "labelTitle":"Year: ",
+                "label":"1929"
+                },
+                {
+                "labelTitle":"Publisher: ",
+                "label":"Touring Club Italiano"
+                },
+                {
+                "labelTitle":"Printing Details: ",
+                "label":"Published in Italian by an Italian travel club"
+                },
+                {
+                "labelTitle":"Notes: ",
+                "label":"Relief shown by hachures and spot heights; depths by isolines"
+                }]
+        }]
+      },
+      {
+        "id":6,
+        "title":"1956",
+        "tileLayers":[{"title":"https://maps.georeferencer.com/georeferences/158800470183/2018-07-31T20:59:58.501307Z/map/{z}/{x}/{y}.png?key=eTjfmpcpLHUWFSMk8Xxy","pane":200,"type":"rumsey"}],
+        "border":{"title":"pnw_borders","opacity":0.6,"include":false},
+        "legend":[
+        {
+            "id":0,
+            "mainTitle":"Background Layer",
+            "title":"Shell Sectional Map No. 11: Pacific Northwest States",
+            "bottomMargin":10
+        },
+        {
+            "id":1,
+            "type":"list",
+            "containers":[{
+                "labelTitle":"Year: ",
+                "label":"1956"
+                },
+                {
+                "labelTitle":"Publisher: ",
+                "label":"Shell Oil Company., Shell Atlas"
+                },
+                {
+                "labelTitle":"Notes: ",
+                "label":"Color map by state and county. Relief shown by hachures. Prime meridians are Greenwich and Washington, D.C."
+                }]
+        }]
+      }],
+      "sources":{
+        "geographic":[{
+            "title":"1841 Map: ",
+            "linkText":"David Rumsey Map Collection",
+            "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~224023~5506306:Map-Of-The-Oregon-Territory?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:1841%20wilkes;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=0&trs=183"
+        },
+        {
+            "title":"1859 Map: ",
+            "linkText":"David Rumsey Map Collection",
+            "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~240028~5512098:Department-of-Oregon--Map-of-the-st?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:Oregon%2C%2BWashington%2Band%2BIdaho;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=2&trs=238"
+        },
+        {
+            "title":"1868 Map: ",
+            "linkText":"David Rumsey Map Collection",
+            "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~249757~5516651:Map-of-Oregon,-Washington,-Idaho,-a?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:1868%20oregon;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=1&trs=10"
+        },
+        {
+            "title":"1891 Map: ",
+            "linkText":"David Rumsey Map Collection",
+            "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~254839~5519497:Sectional-map-of-Washington,-Oregon?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:Oregon%2C%2BWashington%2Band%2BIdaho;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=1&trs=238"
+        },
+        {
+            "title":"1929 Map: ",
+            "linkText":"David Rumsey Map Collection",
+            "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~31906~1151223:138-39--Wash-,-Ore-,-Ida-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:1929%20oregon;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=1&trs=5"
+        },
+        {
+            "title":"1956 Map: ",
+            "linkText":"David Rumsey Map Collection",
+            "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~212200~5500282:Shell-Sectional-Map-No--11--Pacific?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No"
+        },
+        {
+            "title":"All David Rumsey maps licensed under: ",
+            "linkText":"Creative Commons",
+            "linkUrl":"https://creativecommons.org/licenses/by-nc-sa/3.0/"
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Satellite Imagery: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldImagery",
+            "description":"ESRI World Imagery; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","Chart.js","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

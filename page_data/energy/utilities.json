@@ -1,0 +1,1216 @@
+{
+    "title": "Electric Utilities",
+    "URL":"energy_icon",
+    "chapter":"energy",
+    "initial":0,
+    "dropdownText":"Select Power Type",
+    "basemap":[{"title":"terrain","opacity":1},
+        {"title":"geoserver","layer":"pnw_outline2","opacity":0.3},
+        {"title":"label","opacity":1}],
+    "maps":[{
+        "id":0,
+        "title":"Total",
+        "featureSelected":false, 
+        "border":{"title":"pnw_states_black","include":true,"opacity":0.8},
+        "jsonLayers":[
+        {
+            "url":"map_data/energy/utility_areas.json",
+            "feature":"polygon",
+            "type":"selectionCat",
+            "attribute":"color",
+            "values":[1,2,3,4,5,6,7,8],
+            "fillColors":["#003333","#330a00","#001a4d","#003300","#330033","#333300","#4d2600","#0f1f3d","#260d1a"],
+            "colors":["#666666"],
+            "fillOpacity":0.2,
+            "opacity":0.5,
+            "weight":1,
+            "dashArray":4,
+            "hoverOpacity":0.5,
+            "tooltipVars":["NAME"],
+            "tooltipText":["<h2>","</h2>"],
+            "selection":{
+                "clearLayer":1,
+                "titleVar":"NAME",
+                "selectionOpacity":0.5,
+                "selectionHover":0.5,
+                "varList":["LOCATION","tot_cust","own_plants"],
+                "varLabel":["", "Customers: ", "Owned Power Plants (in PNW): "],
+                "chartDescription":["2015 Net Power Supply in MWH "],
+                "filterVar":"ID",
+                "selectionLayers":[{
+                    "pane":"overBorder",
+                    "url":"map_data/energy/pnw_power_plants.json",
+                    "feature":"point",
+                    "type":"single",
+                    "fillColors":"#000000",
+                    "colors":["#ffffff"],
+                    "fillOpacity":1,
+                    "opacity":1,
+                    "weight":1.5,
+                    "radiusType":"graduated",
+                    "radiusAttribute":"Total_MW",
+                    "radiusValues":[1000,500,250,50],
+                    "radius":[12,10,8,6,4],
+                    "tooltipVars":["Plant_Name","Utility_Na","tech_desc","Total_MW"],
+                    "tooltipText":["<h3 style='display:inline;'>","</h3><br/><p style='display:inline;'>Operator:&nbsp","&nbsp<br/>Type:&nbsp","<br/>Capacity:&nbsp"," MW</p>"],
+                    "filterVariable":"id"
+                }]
+            }
+        },
+        {
+            "pane":"overBorder",
+            "url":"map_data/energy/pnw_power_plants.json",
+            "feature":"point",
+            "type":"single",
+            "fillColors":"#000000",
+            "colors":["#ffffff"],
+            "fillOpacity":1,
+            "opacity":1,
+            "weight":1.5,
+            "radiusType":"graduated",
+            "radiusAttribute":"Total_MW",
+            "radiusValues":[1000,500,250,50],
+            "radius":[12,10,8,6,4],
+            "tooltipVars":["Plant_Name","Utility_Na","tech_desc","Total_MW"],
+            "tooltipText":["<h3 style='display:inline;'>","</h3><br/><p style='display:inline;'>Operator:&nbsp","&nbsp<br/>Type:&nbsp","<br/>Capacity:&nbsp"," MW</p>"]
+        }],
+        "chart":[{
+            "chartLoc":"legendClick",
+            "chartType":"pie",
+            "labels":["Purchased", "Generated"],
+            "data":["prch_powe","gn_power"],
+            "colors":["#ffffff","#000000"],
+            "options": {
+                "responsive": true,
+                "tooltips":{
+                  "enabled":false
+                },
+                "legend": {
+                    "position": "left",
+                    "labels": {
+                        "fontColor":"#000000",
+                        "fontFamily":"GoudyOld",
+                        "fontSize":16
+                    }
+                },
+                "plugins":{
+                    "labels":{
+                        "render": "value",
+                        "fontColor":"#b3b3b3",    
+                        "fontFamily":"GoudyOld",
+                        "fontSize":14,
+                        "overlap":false
+                    }
+                }  
+            }
+        }],
+        "legend":[{
+            "id":0,
+            "type":"selectionChart",
+            "title":"SELECT UTILITY AREA",
+            "chartID":"chartContainer",
+            "bottomLine":true
+        },
+        {
+            "id":1,
+            "type":"point",
+            "title":"Power Plants",
+            "icon":"total",
+            "containers":[{
+                "size":25,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"1000+"
+                },
+                {
+                "size":21,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"500 to 1000"
+                },
+                {
+                "size":17,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"250 to 500"
+                },
+                {
+                "size":14,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"50 to 250"
+                },
+                {
+                "size":9,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"Less than 50"
+                }
+            ],
+            "description":"Power Capacity (MW)."
+        }]
+      },
+      {
+        "id":1,
+        "title":"Hydroelectric",
+        "featureSelected":false, 
+        "border":{"title":"pnw_states_black","include":true,"opacity":0.8},
+        "jsonLayers":[
+        {
+            "url":"map_data/energy/utility_areas.json",
+            "feature":"polygon",
+            "type":"selectionCat",
+            "attribute":"color",
+            "values":[1,2,3,4,5,6,7,8],
+            "fillColors":["#003333","#330a00","#001a4d","#003300","#330033","#333300","#4d2600","#0f1f3d","#260d1a"],
+            "colors":["#666666"],
+            "fillOpacity":0.2,
+            "opacity":0.5,
+            "weight":1,
+            "dashArray":4,
+            "hoverOpacity":0.5,
+            "tooltipVars":["NAME"],
+            "tooltipText":["<h2>","</h2>"],
+            "selection":{
+                "clearLayer":1,
+                "titleVar":"NAME",
+                "selectionOpacity":0.5,
+                "selectionHover":0.5,
+                "varList":["LOCATION","tot_cust","own_plants"],
+                "varLabel":["", "Customers: ", "Owned Power Plants (in PNW): "],
+                "chartDescription":["2015 Net Power Supply in MWH "],
+                "filterVar":"ID",
+                "selectionLayers":[{
+                    "pane":"overBorder",
+                    "url":"map_data/energy/pnw_power_plants.json",
+                    "feature":"point",
+                    "type":"single",
+                    "fillColors":"#000000",
+                    "colors":["#ffffff"],
+                    "fillOpacity":1,
+                    "opacity":1,
+                    "weight":1.5,
+                    "radiusType":"graduated",
+                    "radiusAttribute":"Total_MW",
+                    "radiusValues":[1000,500,250,50],
+                    "radius":[12,10,8,6,4],
+                    "tooltipVars":["Plant_Name","Utility_Na","tech_desc","Total_MW"],
+                    "tooltipText":["<h3 style='display:inline;'>","</h3><br/><p style='display:inline;'>Operator:&nbsp","&nbsp<br/>Type:&nbsp","<br/>Capacity:&nbsp"," MW</p>"],
+                    "filterVariable":"id",
+                    "secondFilterVariable":"source_1",
+                    "secondFilterValue":"hydroelectric"
+                }]
+            }
+        },
+        {
+            "pane":"overBorder",
+            "url":"map_data/energy/pnw_power_plants.json",
+            "feature":"point",
+            "type":"single",
+            "fillColors":"#000000",
+            "colors":["#ffffff"],
+            "fillOpacity":1,
+            "opacity":1,
+            "weight":1.5,
+            "radiusType":"graduated",
+            "radiusAttribute":"Total_MW",
+            "radiusValues":[1000,500,250,50],
+            "radius":[12,10,8,6,4],
+            "tooltipVars":["Plant_Name","Utility_Na","tech_desc","Total_MW"],
+            "tooltipText":["<h3 style='display:inline;'>","</h3><br/><p style='display:inline;'>Operator:&nbsp","&nbsp<br/>Type:&nbsp","<br/>Capacity:&nbsp"," MW</p>"],
+            "filterVariable":"source_1",
+            "filterValue":"hydroelectric"
+        }],
+        "chart":[{
+            "chartLoc":"legendClick",
+            "chartType":"pie",
+            "labels":["Purchased", "Generated"],
+            "data":["prch_powe","gn_power"],
+            "colors":["#ffffff","#000000"],
+            "options": {
+                "responsive": true,
+                "tooltips":{
+                  "enabled":false
+                },
+                "legend": {
+                    "position": "left",
+                    "labels": {
+                        "fontColor":"#000000",
+                        "fontFamily":"GoudyOld",
+                        "fontSize":16
+                    }
+                },
+                "plugins":{
+                    "labels":{
+                        "render": "value",
+                        "fontColor":"#b3b3b3",    
+                        "fontFamily":"GoudyOld",
+                        "fontSize":14,
+                        "overlap":false
+                    }
+                }  
+            }
+        }],
+        "legend":[{
+            "id":0,
+            "type":"selectionChart",
+            "title":"SELECT UTILITY AREA",
+            "chartID":"chartContainer",
+            "bottomLine":true
+        },
+        {
+            "id":1,
+            "type":"point",
+            "title":"Hydroelectric Power Plants",
+            "icon":"dam",
+            "containers":[{
+                "size":25,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"1000+"
+                },
+                {
+                "size":21,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"500 to 1000"
+                },
+                {
+                "size":17,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"250 to 500"
+                },
+                {
+                "size":14,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"50 to 250"
+                },
+                {
+                "size":9,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"Less than 50"
+                }
+            ],
+            "description":"Power Capacity (MW)."
+        }]
+      },
+      {
+        "id":2,
+        "title":"Fossil Fuels",
+        "featureSelected":false, 
+        "border":{"title":"pnw_states_black","include":true,"opacity":0.8},
+        "jsonLayers":[
+        {
+            "url":"map_data/energy/utility_areas.json",
+            "feature":"polygon",
+            "type":"selectionCat",
+            "attribute":"color",
+            "values":[1,2,3,4,5,6,7,8],
+            "fillColors":["#003333","#330a00","#001a4d","#003300","#330033","#333300","#4d2600","#0f1f3d","#260d1a"],
+            "colors":["#666666"],
+            "fillOpacity":0.2,
+            "opacity":0.5,
+            "weight":1,
+            "dashArray":4,
+            "hoverOpacity":0.5,
+            "tooltipVars":["NAME"],
+            "tooltipText":["<h2>","</h2>"],
+            "selection":{
+                "clearLayer":1,
+                "titleVar":"NAME",
+                "selectionOpacity":0.5,
+                "selectionHover":0.5,
+                "varList":["LOCATION","tot_cust","own_plants"],
+                "varLabel":["", "Customers: ", "Owned Power Plants (in PNW): "],
+                "chartDescription":["2015 Net Power Supply in MWH "],
+                "filterVar":"ID",
+                "selectionLayers":[{
+                    "pane":"overBorder",
+                    "url":"map_data/energy/pnw_power_plants.json",
+                    "feature":"point",
+                    "type":"single",
+                    "fillColors":"#000000",
+                    "colors":["#ffffff"],
+                    "fillOpacity":1,
+                    "opacity":1,
+                    "weight":1.5,
+                    "radiusType":"graduated",
+                    "radiusAttribute":"Total_MW",
+                    "radiusValues":[1000,500,250,50],
+                    "radius":[12,10,8,6,4],
+                    "tooltipVars":["Plant_Name","Utility_Na","tech_desc","Total_MW"],
+                    "tooltipText":["<h3 style='display:inline;'>","</h3><br/><p style='display:inline;'>Operator:&nbsp","&nbsp<br/>Type:&nbsp","<br/>Capacity:&nbsp"," MW</p>"],
+                    "filterVariable":"id",
+                    "secondFilterVariable":"source_1",
+                    "secondFilterValue":"fossil"
+                }]
+            }
+        },
+        {
+            "pane":"overBorder",
+            "url":"map_data/energy/pnw_power_plants.json",
+            "feature":"point",
+            "type":"single",
+            "fillColors":"#000000",
+            "colors":["#ffffff"],
+            "fillOpacity":1,
+            "opacity":1,
+            "weight":1.5,
+            "radiusType":"graduated",
+            "radiusAttribute":"Total_MW",
+            "radiusValues":[1000,500,250,50],
+            "radius":[12,10,8,6,4],
+            "tooltipVars":["Plant_Name","Utility_Na","tech_desc","Total_MW"],
+            "tooltipText":["<h3 style='display:inline;'>","</h3><br/><p style='display:inline;'>Operator:&nbsp","&nbsp<br/>Type:&nbsp","<br/>Capacity:&nbsp"," MW</p>"],
+            "filterVariable":"source_1",
+            "filterValue":"fossil"
+        }],
+        "chart":[{
+            "chartLoc":"legendClick",
+            "chartType":"pie",
+            "labels":["Purchased", "Generated"],
+            "data":["prch_powe","gn_power"],
+            "colors":["#ffffff","#000000"],
+            "options": {
+                "responsive": true,
+                "tooltips":{
+                  "enabled":false
+                },
+                "legend": {
+                    "position": "left",
+                    "labels": {
+                        "fontColor":"#000000",
+                        "fontFamily":"GoudyOld",
+                        "fontSize":16
+                    }
+                },
+                "plugins":{
+                    "labels":{
+                        "render": "value",
+                        "fontColor":"#b3b3b3",    
+                        "fontFamily":"GoudyOld",
+                        "fontSize":14,
+                        "overlap":false
+                    }
+                }  
+            }
+        }],
+        "legend":[{
+            "id":0,
+            "type":"selectionChart",
+            "title":"SELECT UTILITY AREA",
+            "chartID":"chartContainer",
+            "bottomLine":true
+        },
+        {
+            "id":1,
+            "type":"point",
+            "title":"Fossil Fuel Power Plants",
+            "icon":"fossil",
+            "containers":[{
+                "size":25,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"1000+"
+                },
+                {
+                "size":21,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"500 to 1000"
+                },
+                {
+                "size":17,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"250 to 500"
+                },
+                {
+                "size":14,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"50 to 250"
+                },
+                {
+                "size":9,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"Less than 50"
+                }
+            ],
+            "description":"Power Capacity (MW)."
+        }]
+      },
+      {
+        "id":3,
+        "title":"Wind",
+        "featureSelected":false, 
+        "border":{"title":"pnw_states_black","include":true,"opacity":0.8},
+        "jsonLayers":[
+        {
+            "url":"map_data/energy/utility_areas.json",
+            "feature":"polygon",
+            "type":"selectionCat",
+            "attribute":"color",
+            "values":[1,2,3,4,5,6,7,8],
+            "fillColors":["#003333","#330a00","#001a4d","#003300","#330033","#333300","#4d2600","#0f1f3d","#260d1a"],
+            "colors":["#666666"],
+            "fillOpacity":0.2,
+            "opacity":0.5,
+            "weight":1,
+            "dashArray":4,
+            "hoverOpacity":0.5,
+            "tooltipVars":["NAME"],
+            "tooltipText":["<h2>","</h2>"],
+            "selection":{
+                "clearLayer":1,
+                "titleVar":"NAME",
+                "selectionOpacity":0.5,
+                "selectionHover":0.5,
+                "varList":["LOCATION","tot_cust","own_plants"],
+                "varLabel":["", "Customers: ", "Owned Power Plants (in PNW): "],
+                "chartDescription":["2015 Net Power Supply in MWH "],
+                "filterVar":"ID",
+                "selectionLayers":[{
+                    "pane":"overBorder",
+                    "url":"map_data/energy/pnw_power_plants.json",
+                    "feature":"point",
+                    "type":"single",
+                    "fillColors":"#000000",
+                    "colors":["#ffffff"],
+                    "fillOpacity":1,
+                    "opacity":1,
+                    "weight":1.5,
+                    "radiusType":"graduated",
+                    "radiusAttribute":"Total_MW",
+                    "radiusValues":[1000,500,250,50],
+                    "radius":[12,10,8,6,4],
+                    "tooltipVars":["Plant_Name","Utility_Na","tech_desc","Total_MW"],
+                    "tooltipText":["<h3 style='display:inline;'>","</h3><br/><p style='display:inline;'>Operator:&nbsp","&nbsp<br/>Type:&nbsp","<br/>Capacity:&nbsp"," MW</p>"],
+                    "filterVariable":"id",
+                    "secondFilterVariable":"source_1",
+                    "secondFilterValue":"wind"
+                }]
+            }
+        },
+        {
+            "pane":"overBorder",
+            "url":"map_data/energy/pnw_power_plants.json",
+            "feature":"point",
+            "type":"single",
+            "fillColors":"#000000",
+            "colors":["#ffffff"],
+            "fillOpacity":1,
+            "opacity":1,
+            "weight":1.5,
+            "radiusType":"graduated",
+            "radiusAttribute":"Total_MW",
+            "radiusValues":[1000,500,250,50],
+            "radius":[12,10,8,6,4],
+            "tooltipVars":["Plant_Name","Utility_Na","tech_desc","Total_MW"],
+            "tooltipText":["<h3 style='display:inline;'>","</h3><br/><p style='display:inline;'>Operator:&nbsp","&nbsp<br/>Type:&nbsp","<br/>Capacity:&nbsp"," MW</p>"],
+            "filterVariable":"source_1",
+            "filterValue":"wind"
+        }],
+        "chart":[{
+            "chartLoc":"legendClick",
+            "chartType":"pie",
+            "labels":["Purchased", "Generated"],
+            "data":["prch_powe","gn_power"],
+            "colors":["#ffffff","#000000"],
+            "options": {
+                "responsive": true,
+                "tooltips":{
+                  "enabled":false
+                },
+                "legend": {
+                    "position": "left",
+                    "labels": {
+                        "fontColor":"#000000",
+                        "fontFamily":"GoudyOld",
+                        "fontSize":16
+                    }
+                },
+                "plugins":{
+                    "labels":{
+                        "render": "value",
+                        "fontColor":"#b3b3b3",    
+                        "fontFamily":"GoudyOld",
+                        "fontSize":14,
+                        "overlap":false
+                    }
+                }  
+            }
+        }],
+        "legend":[{
+            "id":0,
+            "type":"selectionChart",
+            "title":"SELECT UTILITY AREA",
+            "chartID":"chartContainer",
+            "bottomLine":true
+        },
+        {
+            "id":1,
+            "type":"point",
+            "title":"Wind Power Plants",
+            "icon":"wind",
+            "containers":[{
+                "size":25,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"1000+"
+                },
+                {
+                "size":21,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"500 to 1000"
+                },
+                {
+                "size":17,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"250 to 500"
+                },
+                {
+                "size":14,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"50 to 250"
+                },
+                {
+                "size":9,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"Less than 50"
+                }
+            ],
+            "description":"Power Capacity (MW)."
+        }]
+      },
+      {
+        "id":4,
+        "title":"Solar",
+        "featureSelected":false, 
+        "border":{"title":"pnw_states_black","include":true,"opacity":0.8},
+        "jsonLayers":[
+        {
+            "url":"map_data/energy/utility_areas.json",
+            "feature":"polygon",
+            "type":"selectionCat",
+            "attribute":"color",
+            "values":[1,2,3,4,5,6,7,8],
+            "fillColors":["#003333","#330a00","#001a4d","#003300","#330033","#333300","#4d2600","#0f1f3d","#260d1a"],
+            "colors":["#666666"],
+            "fillOpacity":0.2,
+            "opacity":0.5,
+            "weight":1,
+            "dashArray":4,
+            "hoverOpacity":0.5,
+            "tooltipVars":["NAME"],
+            "tooltipText":["<h2>","</h2>"],
+            "selection":{
+                "clearLayer":1,
+                "titleVar":"NAME",
+                "selectionOpacity":0.5,
+                "selectionHover":0.5,
+                "varList":["LOCATION","tot_cust","own_plants"],
+                "varLabel":["", "Customers: ", "Owned Power Plants (in PNW): "],
+                "chartDescription":["2015 Net Power Supply in MWH "],
+                "filterVar":"ID",
+                "selectionLayers":[{
+                    "pane":"overBorder",
+                    "url":"map_data/energy/pnw_power_plants.json",
+                    "feature":"point",
+                    "type":"single",
+                    "fillColors":"#000000",
+                    "colors":["#ffffff"],
+                    "fillOpacity":1,
+                    "opacity":1,
+                    "weight":1.5,
+                    "radiusType":"graduated",
+                    "radiusAttribute":"Total_MW",
+                    "radiusValues":[1000,500,250,50],
+                    "radius":[12,10,8,6,4],
+                    "tooltipVars":["Plant_Name","Utility_Na","tech_desc","Total_MW"],
+                    "tooltipText":["<h3 style='display:inline;'>","</h3><br/><p style='display:inline;'>Operator:&nbsp","&nbsp<br/>Type:&nbsp","<br/>Capacity:&nbsp"," MW</p>"],
+                    "filterVariable":"id",
+                    "secondFilterVariable":"source_1",
+                    "secondFilterValue":"solar"
+                }]
+            }
+        },
+        {
+            "pane":"overBorder",
+            "url":"map_data/energy/pnw_power_plants.json",
+            "feature":"point",
+            "type":"single",
+            "fillColors":"#000000",
+            "colors":["#ffffff"],
+            "fillOpacity":1,
+            "opacity":1,
+            "weight":1.5,
+            "radiusType":"graduated",
+            "radiusAttribute":"Total_MW",
+            "radiusValues":[1000,500,250,50],
+            "radius":[12,10,8,6,4],
+            "tooltipVars":["Plant_Name","Utility_Na","tech_desc","Total_MW"],
+            "tooltipText":["<h3 style='display:inline;'>","</h3><br/><p style='display:inline;'>Operator:&nbsp","&nbsp<br/>Type:&nbsp","<br/>Capacity:&nbsp"," MW</p>"],
+            "filterVariable":"source_1",
+            "filterValue":"solar"
+        }],
+        "chart":[{
+            "chartLoc":"legendClick",
+            "chartType":"pie",
+            "labels":["Purchased", "Generated"],
+            "data":["prch_powe","gn_power"],
+            "colors":["#ffffff","#000000"],
+            "options": {
+                "responsive": true,
+                "tooltips":{
+                  "enabled":false
+                },
+                "legend": {
+                    "position": "left",
+                    "labels": {
+                        "fontColor":"#000000",
+                        "fontFamily":"GoudyOld",
+                        "fontSize":16
+                    }
+                },
+                "plugins":{
+                    "labels":{
+                        "render": "value",
+                        "fontColor":"#b3b3b3",    
+                        "fontFamily":"GoudyOld",
+                        "fontSize":14,
+                        "overlap":false
+                    }
+                }  
+            }
+        }],
+        "legend":[{
+            "id":0,
+            "type":"selectionChart",
+            "title":"SELECT UTILITY AREA",
+            "chartID":"chartContainer",
+            "bottomLine":true
+        },
+        {
+            "id":1,
+            "type":"point",
+            "title":"Solar Power Plants",
+            "icon":"solar",
+            "containers":[{
+                "size":25,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"1000+"
+                },
+                {
+                "size":21,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"500 to 1000"
+                },
+                {
+                "size":17,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"250 to 500"
+                },
+                {
+                "size":14,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"50 to 250"
+                },
+                {
+                "size":9,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"Less than 50"
+                }
+            ],
+            "description":"Power Capacity (MW)."
+        }]
+      },
+      {
+        "id":5,
+        "title":"Biomass",
+        "featureSelected":false, 
+        "border":{"title":"pnw_states_black","include":true,"opacity":0.8},
+        "jsonLayers":[
+        {
+            "url":"map_data/energy/utility_areas.json",
+            "feature":"polygon",
+            "type":"selectionCat",
+            "attribute":"color",
+            "values":[1,2,3,4,5,6,7,8],
+            "fillColors":["#003333","#330a00","#001a4d","#003300","#330033","#333300","#4d2600","#0f1f3d","#260d1a"],
+            "colors":["#666666"],
+            "fillOpacity":0.2,
+            "opacity":0.5,
+            "weight":1,
+            "dashArray":4,
+            "hoverOpacity":0.5,
+            "tooltipVars":["NAME"],
+            "tooltipText":["<h2>","</h2>"],
+            "selection":{
+                "clearLayer":1,
+                "titleVar":"NAME",
+                "selectionOpacity":0.5,
+                "selectionHover":0.5,
+                "varList":["LOCATION","tot_cust","own_plants"],
+                "varLabel":["", "Customers: ", "Owned Power Plants (in PNW): "],
+                "chartDescription":["2015 Net Power Supply in MWH "],
+                "filterVar":"ID",
+                "selectionLayers":[{
+                    "pane":"overBorder",
+                    "url":"map_data/energy/pnw_power_plants.json",
+                    "feature":"point",
+                    "type":"single",
+                    "fillColors":"#000000",
+                    "colors":["#ffffff"],
+                    "fillOpacity":1,
+                    "opacity":1,
+                    "weight":1.5,
+                    "radiusType":"graduated",
+                    "radiusAttribute":"Total_MW",
+                    "radiusValues":[1000,500,250,50],
+                    "radius":[12,10,8,6,4],
+                    "tooltipVars":["Plant_Name","Utility_Na","tech_desc","Total_MW"],
+                    "tooltipText":["<h3 style='display:inline;'>","</h3><br/><p style='display:inline;'>Operator:&nbsp","&nbsp<br/>Type:&nbsp","<br/>Capacity:&nbsp"," MW</p>"],
+                    "filterVariable":"id",
+                    "secondFilterVariable":"source_1",
+                    "secondFilterValue":"biomass"
+                }]
+            }
+        },
+        {
+            "pane":"overBorder",
+            "url":"map_data/energy/pnw_power_plants.json",
+            "feature":"point",
+            "type":"single",
+            "fillColors":"#000000",
+            "colors":["#ffffff"],
+            "fillOpacity":1,
+            "opacity":1,
+            "weight":1.5,
+            "radiusType":"graduated",
+            "radiusAttribute":"Total_MW",
+            "radiusValues":[1000,500,250,50],
+            "radius":[12,10,8,6,4],
+            "tooltipVars":["Plant_Name","Utility_Na","tech_desc","Total_MW"],
+            "tooltipText":["<h3 style='display:inline;'>","</h3><br/><p style='display:inline;'>Operator:&nbsp","&nbsp<br/>Type:&nbsp","<br/>Capacity:&nbsp"," MW</p>"],
+            "filterVariable":"source_1",
+            "filterValue":"biomass"
+        }],
+        "chart":[{
+            "chartLoc":"legendClick",
+            "chartType":"pie",
+            "labels":["Purchased", "Generated"],
+            "data":["prch_powe","gn_power"],
+            "colors":["#ffffff","#000000"],
+            "options": {
+                "responsive": true,
+                "tooltips":{
+                  "enabled":false
+                },
+                "legend": {
+                    "position": "left",
+                    "labels": {
+                        "fontColor":"#000000",
+                        "fontFamily":"GoudyOld",
+                        "fontSize":16
+                    }
+                },
+                "plugins":{
+                    "labels":{
+                        "render": "value",
+                        "fontColor":"#b3b3b3",    
+                        "fontFamily":"GoudyOld",
+                        "fontSize":14,
+                        "overlap":false
+                    }
+                }  
+            }
+        }],
+        "legend":[{
+            "id":0,
+            "type":"selectionChart",
+            "title":"SELECT UTILITY AREA",
+            "chartID":"chartContainer",
+            "bottomLine":true
+        },
+        {
+            "id":1,
+            "type":"point",
+            "title":"Biomass Power Plants",
+            "icon":"biomass",
+            "containers":[{
+                "size":25,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"1000+"
+                },
+                {
+                "size":21,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"500 to 1000"
+                },
+                {
+                "size":17,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"250 to 500"
+                },
+                {
+                "size":14,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"50 to 250"
+                },
+                {
+                "size":9,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"Less than 50"
+                }
+            ],
+            "description":"Power Capacity (MW)."
+        }]
+      },
+      {
+        "id":6,
+        "title":"Geothermal",
+        "featureSelected":false, 
+        "border":{"title":"pnw_states_black","include":true,"opacity":0.8},
+        "jsonLayers":[
+        {
+            "url":"map_data/energy/utility_areas.json",
+            "feature":"polygon",
+            "type":"selectionCat",
+            "attribute":"color",
+            "values":[1,2,3,4,5,6,7,8],
+            "fillColors":["#003333","#330a00","#001a4d","#003300","#330033","#333300","#4d2600","#0f1f3d","#260d1a"],
+            "colors":["#666666"],
+            "fillOpacity":0.2,
+            "opacity":0.5,
+            "weight":1,
+            "dashArray":4,
+            "hoverOpacity":0.5,
+            "tooltipVars":["NAME"],
+            "tooltipText":["<h2>","</h2>"],
+            "selection":{
+                "clearLayer":1,
+                "titleVar":"NAME",
+                "selectionOpacity":0.5,
+                "selectionHover":0.5,
+                "varList":["LOCATION","tot_cust","own_plants"],
+                "varLabel":["", "Customers: ", "Owned Power Plants (in PNW): "],
+                "chartDescription":["2015 Net Power Supply in MWH "],
+                "filterVar":"ID",
+                "selectionLayers":[{
+                    "pane":"overBorder",
+                    "url":"map_data/energy/pnw_power_plants.json",
+                    "feature":"point",
+                    "type":"single",
+                    "fillColors":"#000000",
+                    "colors":["#ffffff"],
+                    "fillOpacity":1,
+                    "opacity":1,
+                    "weight":1.5,
+                    "radiusType":"graduated",
+                    "radiusAttribute":"Total_MW",
+                    "radiusValues":[1000,500,250,50],
+                    "radius":[12,10,8,6,4],
+                    "tooltipVars":["Plant_Name","Utility_Na","tech_desc","Total_MW"],
+                    "tooltipText":["<h3 style='display:inline;'>","</h3><br/><p style='display:inline;'>Operator:&nbsp","&nbsp<br/>Type:&nbsp","<br/>Capacity:&nbsp"," MW</p>"],
+                    "filterVariable":"id",
+                    "secondFilterVariable":"source_1",
+                    "secondFilterValue":"geothermal"
+                }]
+            }
+        },
+        {
+            "pane":"overBorder",
+            "url":"map_data/energy/pnw_power_plants.json",
+            "feature":"point",
+            "type":"single",
+            "fillColors":"#000000",
+            "colors":["#ffffff"],
+            "fillOpacity":1,
+            "opacity":1,
+            "weight":1.5,
+            "radiusType":"graduated",
+            "radiusAttribute":"Total_MW",
+            "radiusValues":[1000,500,250,50],
+            "radius":[12,10,8,6,4],
+            "tooltipVars":["Plant_Name","Utility_Na","tech_desc","Total_MW"],
+            "tooltipText":["<h3 style='display:inline;'>","</h3><br/><p style='display:inline;'>Operator:&nbsp","&nbsp<br/>Type:&nbsp","<br/>Capacity:&nbsp"," MW</p>"],
+            "filterVariable":"source_1",
+            "filterValue":"geothermal"
+        }],
+        "chart":[{
+            "chartLoc":"legendClick",
+            "chartType":"pie",
+            "labels":["Purchased", "Generated"],
+            "data":["prch_powe","gn_power"],
+            "colors":["#ffffff","#000000"],
+            "options": {
+                "responsive": true,
+                "tooltips":{
+                  "enabled":false
+                },
+                "legend": {
+                    "position": "left",
+                    "labels": {
+                        "fontColor":"#000000",
+                        "fontFamily":"GoudyOld",
+                        "fontSize":16
+                    }
+                },
+                "plugins":{
+                    "labels":{
+                        "render": "value",
+                        "fontColor":"#b3b3b3",    
+                        "fontFamily":"GoudyOld",
+                        "fontSize":14,
+                        "overlap":false
+                    }
+                }  
+            }
+        }],
+        "legend":[{
+            "id":0,
+            "type":"selectionChart",
+            "title":"SELECT UTILITY AREA",
+            "chartID":"chartContainer",
+            "bottomLine":true
+        },
+        {
+            "id":1,
+            "type":"point",
+            "title":"Geothermal Power Plants",
+            "icon":"geothermal",
+            "containers":[{
+                "size":25,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"1000+"
+                },
+                {
+                "size":21,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"500 to 1000"
+                },
+                {
+                "size":17,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"250 to 500"
+                },
+                {
+                "size":14,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"50 to 250"
+                },
+                {
+                "size":9,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"Less than 50"
+                }
+            ],
+            "description":"Power Capacity (MW)."
+        }]
+      },
+      {
+        "id":7,
+        "title":"Other",
+        "featureSelected":false, 
+        "border":{"title":"pnw_states_black","include":true,"opacity":0.8},
+        "jsonLayers":[
+        {
+            "url":"map_data/energy/utility_areas.json",
+            "feature":"polygon",
+            "type":"selectionCat",
+            "attribute":"color",
+            "values":[1,2,3,4,5,6,7,8],
+            "fillColors":["#003333","#330a00","#001a4d","#003300","#330033","#333300","#4d2600","#0f1f3d","#260d1a"],
+            "colors":["#666666"],
+            "fillOpacity":0.2,
+            "opacity":0.5,
+            "weight":1,
+            "dashArray":4,
+            "hoverOpacity":0.5,
+            "tooltipVars":["NAME"],
+            "tooltipText":["<h2>","</h2>"],
+            "selection":{
+                "clearLayer":1,
+                "titleVar":"NAME",
+                "selectionOpacity":0.5,
+                "selectionHover":0.5,
+                "varList":["LOCATION","tot_cust","own_plants"],
+                "varLabel":["", "Customers: ", "Owned Power Plants (in PNW): "],
+                "chartDescription":["2015 Net Power Supply in MWH "],
+                "filterVar":"ID",
+                "selectionLayers":[{
+                    "pane":"overBorder",
+                    "url":"map_data/energy/pnw_power_plants.json",
+                    "feature":"point",
+                    "type":"single",
+                    "fillColors":"#000000",
+                    "colors":["#ffffff"],
+                    "fillOpacity":1,
+                    "opacity":1,
+                    "weight":1.5,
+                    "radiusType":"graduated",
+                    "radiusAttribute":"Total_MW",
+                    "radiusValues":[1000,500,250,50],
+                    "radius":[12,10,8,6,4],
+                    "tooltipVars":["Plant_Name","Utility_Na","tech_desc","Total_MW"],
+                    "tooltipText":["<h3 style='display:inline;'>","</h3><br/><p style='display:inline;'>Operator:&nbsp","&nbsp<br/>Type:&nbsp","<br/>Capacity:&nbsp"," MW</p>"],
+                    "filterVariable":"id",
+                    "secondFilterVariable":"source_1",
+                    "secondFilterValue":"other"
+                }]
+            }
+        },
+        {
+            "pane":"overBorder",
+            "url":"map_data/energy/pnw_power_plants.json",
+            "feature":"point",
+            "type":"single",
+            "fillColors":"#000000",
+            "colors":["#ffffff"],
+            "fillOpacity":1,
+            "opacity":1,
+            "weight":1.5,
+            "radiusType":"graduated",
+            "radiusAttribute":"Total_MW",
+            "radiusValues":[1000,500,250,50],
+            "radius":[12,10,8,6,4],
+            "tooltipVars":["Plant_Name","Utility_Na","tech_desc","Total_MW"],
+            "tooltipText":["<h3 style='display:inline;'>","</h3><br/><p style='display:inline;'>Operator:&nbsp","&nbsp<br/>Type:&nbsp","<br/>Capacity:&nbsp"," MW</p>"],
+            "filterVariable":"source_1",
+            "filterValue":"other"
+        }],
+        "chart":[{
+            "id":0,
+            "chartLoc":"legendClick",
+            "chartType":"pie",
+            "labels":["Purchased", "Generated"],
+            "data":["prch_powe","gn_power"],
+            "colors":["#ffffff","#000000"],
+            "options": {
+                "responsive": true,
+                "tooltips":{
+                  "enabled":false
+                },
+                "legend": {
+                    "position": "left",
+                    "labels": {
+                        "fontColor":"#000000",
+                        "fontFamily":"GoudyOld",
+                        "fontSize":16
+                    }
+                },
+                "plugins":{
+                    "labels":{
+                        "render": "value",
+                        "fontColor":"#b3b3b3",    
+                        "fontFamily":"GoudyOld",
+                        "fontSize":14,
+                        "overlap":false
+                    }
+                }  
+            }
+        }],
+        "legend":[{
+            "id":0,
+            "type":"selectionChart",
+            "title":"SELECT UTILITY AREA",
+            "chartID":"chartContainer",
+            "bottomLine":true
+        },
+        {
+            "id":1,
+            "type":"point",
+            "title":"Power Plants",
+            "icon":"nuclear",
+            "containers":[{
+                "size":25,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"1000+"
+                },
+                {
+                "size":21,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"500 to 1000"
+                },
+                {
+                "size":17,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"250 to 500"
+                },
+                {
+                "size":14,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"50 to 250"
+                },
+                {
+                "size":9,
+                "color":"#ffffff",
+                "background":"#000000",
+                "label":"Less than 50"
+                }
+            ],
+            "description":"Power Capacity (MW)."
+        }]
+      }],
+      "sources":{
+        "geographic":[{
+            "title":"Power Plants: ",
+            "linkText":"US Energy Information Administration",
+            "linkUrl":"https://www.eia.gov/maps/layer_info-m.php",
+            "description":"Data from 2017."
+        },
+        {
+            "title":"Electric Utility Areas: ",
+            "linkText":"Homeland Infrastructure Foundation-Level Data",
+            "linkUrl":"https://hifld-geoplatform.opendata.arcgis.com/datasets/c4fd0b01c2544a2f83440dab292f0980_0",
+            "description":"Data from 2017. Statistical data combined with power plant data."
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","Chart.js","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

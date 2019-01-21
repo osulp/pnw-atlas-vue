@@ -1,0 +1,276 @@
+{
+    "title": "Farms",
+    "URL":"farm_icon",
+    "chapter":"food",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "basemap":[{"title":"terrain","opacity":1},
+      {"title":"geoserver","layer":"pnw_outline2","opacity":0.3},
+      {"title":"label","opacity":1}],
+    "maps":[{
+            "id":0,
+            "title":"Farm Value",
+            "fastFacts":[{
+              "facts":["&#9900 The average value of agricultural output farm an individual farm in the PNW in 2012 was $215,000.","&#9900 Gooding County, Idaho had the highest average agricultural output in 2012 at $1,581,904."]
+            }],
+            "border":{"title":"pnw_states_black"},
+              "infoWidth":"250px",
+            "jsonLayers":[{
+                "url":"map_data/food/farm_counties.json",
+                "feature":"polygon",
+                "type":"graduated",
+                "attribute":"ag_value",
+                "values":[500000,250000,100000,50000,0],
+                "fillColors":["#006837","#31a354","#78c679","#c2e699","#ffffcc","#ffffff"],
+                "colors":["#ffffff"],
+                "tooltipVars":["NAME","ST","ag_value"],
+                "tooltipText":["<h2 style='margin:0;'>"," County, ","</h2><p3 style='display:inline-block; font-weight:normal;'>Avg. Value of Ag. Projects per Farm (2012): $","</p3>"]                 
+              }],
+            "legend":[{
+                    "id":0,
+                    "icon":"value_icon",
+                    "type":"polygon",
+                    "title":"Average Product Value per Farm ($1000s)",
+                    "containers":[{
+                        "color":"#006837",
+                        "label":"500+"
+                      },
+                      {
+                        "color":"#31a354",
+                        "label":"250 to 500"
+                      },
+                      {
+                        "color":"#78c679",
+                        "label":"100 to 250"
+                      },
+                      {
+                        "color":"#c2e699",
+                        "label":"50 to 100"
+                      },
+                      {
+                        "color":"#ffffcc",
+                        "label":"Less than 50"
+                      }
+                    ],
+                    "description":"Average value of agricultural products per farm in thousands of dollars in 2012."
+                }]
+            },
+          {
+            "id":1,
+            "title":"Ownership",
+            "border":{"title":"pnw_states_black"},
+            "infoWidth":"300px",
+            "fastFacts":[{
+              "facts":["&#9900 Approximately 8% of farms in the PNW are owned by corporations.","&#9900 Lincoln County, Idaho had the highest percentage of farms operated by corporations in 2012 at 28.43%.","&#9900 Shoshone County, Idaho had the highest percentage of farms operated by families/individuals in 2012 at 94.44%."]
+            }],
+            "jsonLayers":[{
+                "url":"map_data/food/farm_counties.json",
+                "feature":"polygon",
+                "type":"graduated",
+                "attribute":"corp_farms",
+                "values":[20,15,10,5,0],
+                "fillColors":["#54278f","#756bb1","#9e9ac8","#cbc9e2","#f2f0f7","#ffffff"],
+                "colors":["#ffffff"],
+                "tooltipVars":["NAME","ST","tot_farms"],
+                "tooltipText":["<h2 style='margin:0;'>"," County, ","</h2><p3 id='chartDescription' style='display:inline-block; margin-top:5px; font-weight:bold;'>% Farm Ownership</p3><canvas id='farmChart' style='margin-left:-5px;'></canvas><p3 id='chartDescription' style='display:inline-block; margin-top:5px;'><br/>Total Farms: ", "</p3>"]                 
+              }],
+            "legend":[{
+                    "id":0,
+                    "type":"polygon",
+                    "icon":"corporate_icon",
+                    "chartID":"farmChart",
+                    "title":"% Corporate Farms",
+                    "containers":[{
+                        "color":"#54278f",
+                        "label":"20+"
+                      },
+                      {
+                        "color":"#756bb1",
+                        "label":"15 to 20"
+                      },
+                      {
+                        "color":"#9e9ac8",
+                        "label":"10 to 15"
+                      },
+                      {
+                        "color":"#cbc9e2",
+                        "label":"5 to 10"
+                      },
+                      {
+                        "color":"#f2f0f7",
+                        "label":"Less than 5"
+                      }
+                    ],
+                    "description":"Percent of all farms operated by corporations. Other farms are owned by individuals, families, or partnerships."
+                }],
+                "chart":[{
+                    "id":0,
+                    "chartLoc":"info",
+                    "chartType":"pie",
+                    "labels":["Family", "Parternship","Corporation"],
+                    "data":["farm_farms","part_farms","corp_farms"],
+                    "colors":["#cbc9e2","#7d7ab8","#54278f"],
+                    "options": {
+                        "responsive": true,
+                        "legend": {
+                          "position": "left",
+                          "labels": {
+                              "fontColor":"#000000",
+                              "fontFamily":"GoudyOld",
+                              "fontSize":14
+                          }
+                      },
+                      "plugins":{
+                          "labels":{
+                              "render": "percentage",
+                              "fontColor":"#000000",    
+                              "fontFamily":"GoudyOld",
+                              "fontSize":14,
+                              "overlap":false
+                          }
+                      },  
+                        "tooltips":{
+                            "enabled":false
+                        }
+                    }
+                }]
+          },
+          {
+            "id":2,
+            "title":"Irrigation",            
+            "fastFacts":[{
+              "facts":["&#9900 Minidoka County, Idaho had the highest percentage of irrigated farmland in 2012 at 83.79%."]
+            }],
+            "border":{"title":"pnw_states_black"},
+            "infoWidth":"250px",
+            "jsonLayers":[{
+                "url":"map_data/food/farm_counties.json",
+                "feature":"polygon",
+                "type":"graduated",
+                "attribute":"irrigated",
+                "values":[50,25,10,5,0],
+                "fillColors":["#08519c","#3182bd","#6baed6","#bdd7e7","#eff3ff","#ffffff"],
+                "colors":["#ffffff"],
+                "tooltipVars":["NAME","ST","irrigated"],
+                "tooltipText":["<h2 style='margin:0;'>"," County, ","</h2><p3 style='display:inline-block; font-weight:normal;'>","% Farmland Irrigated</p3>"]                 
+              }],
+            "legend":[{
+                    "id":0,
+                    "type":"polygon",
+                    "icon":"irrigation_icon",
+                    "title":"% Farmland Irrigated",
+                    "containers":[{
+                        "color":"#08519c",
+                        "label":"50+"
+                      },
+                      {
+                        "color":"#3182bd",
+                        "label":"25 to 50"
+                      },
+                      {
+                        "color":"#6baed6",
+                        "label":"10 to 25"
+                      },
+                      {
+                        "color":"#bdd7e7",
+                        "label":"5 to 10"
+                      },
+                      {
+                        "color":"#eff3ff",
+                        "label":"Less than 5"
+                      },
+                      {
+                        "color":"#ffffff",
+                        "label":"No Data"
+                      }
+                    ],
+                    "description":"Percent of total farmland irrigated."
+                }]
+          },
+          {
+            "id":3,
+            "title":"Prime Farmland",            
+            "fastFacts":[{
+              "fastTitle":"Prime Farmland:",
+              "facts":["Prime Farmland is defined by the USDA as land with 'the best combination of physical and chemical characteristics for producing food, feed, forage, fiber, and oilseed crops and is available for these uses.' Modern land use practices have caused areas of prime farmland to be lost as land is developed. As a result, pressure is applied to more marginal land, which is more difficult to manage and cultivate."]
+            }],
+            "border":{"include":true},
+            "tileLayers":[{"title":"pnw_urban_areas","pane":300,"opacity":0.8},{"title":"prime_farmland","pane":350,"opacity":0.8}],
+            "jsonLayers":[{
+                "interactive":false,
+                "url":"map_data/food/prime_nodata.json",
+                "feature":"polygon",
+                "type":"pattern",
+                "info":false,
+                "pattern":{
+                    "weight": 1,
+                    "spaceWeight": 5,
+                    "height": 6,
+                    "angle":45,
+                    "color":"#666666",
+                    "spaceColor":"#ffffff"
+                }
+              }],
+            "legend":[{
+                    "id":0,
+                    "type":"polygon",
+                    "title":"Prime Farmland",
+                    "containers":[{
+                        "color":"rgba(64,128,0,0.8)",
+                        "label":"Used for Farming"
+                      },
+                      {
+                        "color":"rgba(230,138,0,0.8)",
+                        "label":"Unused"
+                      },
+                      {
+                        "color":"repeating-linear-gradient(45deg, rgba(255,255,255,0), rgba(255,255,255,0) 10%, #595959 15%, #595959 15%)",
+                        "label":"No Data Available"
+                      }
+                    ]
+                },
+                {
+                  "id":1,
+                  "type":"polygon",
+                  "containers":[{
+                      "color":"#bfbfbf",
+                      "label":"Urban Area"
+                    }],
+                  "description":"Unused prime farmland includes both undeveloped and developed land."
+              }]
+          }        
+      ],
+      "sources":{
+        "geographic":[{
+            "title":"Farm Value, Ownership, and Irrigation: ",
+            "linkText":"USDA Census of Agriculture",
+            "linkUrl":"https://www.agcensus.usda.gov/Publications/2012/Online_Resources/Ag_Census_Web_Maps/Data_download/index.php",
+            "description":"Average agricultural products per farm (in $1000s), percent farm ownership, and percent of farmland irrigated. Data from 2012. Data table was downloaded from 'Data Download' link. Table columns used in maps are: y12_M017, y12_M020, y12_M022, and y12_M021. See full documentation for full listing of columns used in tables."
+        },
+        {
+            "title":"Prime Farmland: ",
+            "linkText":"USDA Natural Resources Conservation Service",
+            "linkUrl":"https://datagateway.nrcs.usda.gov/GDGOrder.aspx?order=QuickState",
+            "description":"Data from 2016. gSSURGO datasets were downloaded for ID, OR, and WA, and joined with mapunit tables for each state."
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://d3js.org/topojson.v1.min.js","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","Chart.js","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+  }

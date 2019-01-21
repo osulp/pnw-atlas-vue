@@ -1,0 +1,351 @@
+{
+    "title": "Food Access",
+    "URL":"access_icon",
+    "chapter":"food",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "basemap":[{"title":"streets","opacity":1},
+        {"title":"imagery","opacity":0.3},
+        {"title":"terrain","opacity":0.2},
+        {"title":"geoserver","layer":"pnw_outline2","opacity":0.5},
+        {"title":"label","opacity":1}],
+    "maps":[{
+            "id":0,
+            "title":"Food Deserts",
+            "border":{"opacity":0.4},
+            "fastFacts":[{
+                "facts":["Low income census tract where at least 500 people, or 33% of the urban population, is more than 1/2 mile away from the nearest grocery store or supermarket, or the same amount of rural population is more than 10 miles away."],
+                "fastTitle":"1/2 Mile Food Desert:"
+            },
+            {
+                "facts":["Low income census tract where at least 500 people, or 33% of the urban population, is more than 1 mile away from the nearest grocery store or supermarket, or the same amount of rural population is more than 10 miles away."],
+                "fastTitle":"1 Mile Food Desert:"
+            }],
+            "jsonLayers":[{
+                "interactive":false,
+                "url":"map_data/food/grocery_stores.json",
+                "feature":"point",
+                "type":"single",
+                "fillColors":["#000000"],
+                "colors":["#000000"],
+                "radius":[0.75],
+                "weight":0,
+                "opacity":1,
+                "fillOpacity":1
+              },
+              {
+                "url":"map_data/food/food_deserts.json",
+                "pane":"underFlow",
+                "feature":"polygon",
+                "type":"categorized",
+                "attribute":"FD_COMBO",
+                "values":[0,1,2],
+                "fillColors":["#ffffff","#e65c00","#ffa366"],
+                "colors":["#ffffff","#e65c00","#ffa366"],
+                "opacity":0.4,
+                "fillOpacity":[0.1,0.3,0.4],
+                "hoverOpacity":0.6,
+                "weight":1,
+                "info":false
+              }],
+            "legend":[{
+                "id":0,
+                "type":"point",
+                "containers":[{
+                      "size":1,
+                      "label":"Grocery Store/Supermarket",
+                      "background":"#000000",
+                      "color":"#000000",
+                      "margin":20
+                    }]
+                },
+                {
+                "id":1,
+                "type":"polygon",
+                "title":"Food Desert Status",
+                "containers":[{
+                        "color":"rgba(230,92,0,0.6)",
+                        "label":"1 Mile Food Desert"
+                    },
+                    {
+                        "color":"rgba(255,163,102,0.5)",
+                        "label":"1/2 Mile Food Desert"
+                    },
+                    {
+                        "color":"rgba(255,255,255,0.2)",
+                        "label":"No Food Desert"
+                    }
+                ]                
+                }]
+          },
+          {
+            "id":1,
+            "title":"Farmers Markets/SNAP",
+            "infoWidth":"220px",
+            "fastFacts":[{
+                "facts":["&#9900 The Supplemental Nutrition Assistance Program (SNAP), formerly known as the food stamp program, provides eligible, low-income families with monthly supplements used to purchase food.","&#9900 48.37% of PNW farmers markets accept SNAP benefits."]
+            }],
+            "border":{"opacity":0.4},
+            "jsonLayers":[{
+                "pane":"overBorder",
+                "url":"map_data/food/farmers_markets.json",
+                "feature":"point",
+                "type":"categorized",
+                "attribute":"SNAP",
+                "values":["Y","N"],
+                "fillColors":["#194d33","#8cd9b3"],
+                "colors":["#666666"],
+                "radius":[2.5],
+                "weight":0.75,
+                "opacity":1,
+                "fillOpacity":0.8,
+                "tooltipVars":["MarketName"],
+                "tooltipText":["<b style='display:inline;'>","</b>"]                 
+              },
+              {
+                "url":"map_data/food/food_deserts.json",
+                "pane":"underFlow",
+                "feature":"polygon",
+                "type":"graduated",
+                "attribute":"SNAP_per",
+                "values":[25,10],
+                "fillColors":["#463e75","#a29bca","#efedf5"],
+                "colors":["#463e75","#a29bca","#efedf5"],
+                "opacity":0.4,
+                "fillOpacity":0.3,
+                "hoverOpacity":0.6,
+                "weight":1,
+                "tooltipVars":["COUNTY_NAM","NAME","SNAP_per"],
+                "tooltipText":["<h2>"," County</h2><p3 style='font-weight:normal'>Tract ","<br/>","% Receiving SNAP</p3>"]  
+              }],
+            "legend":[{
+                "id":0,
+                "type":"point",
+                "title":"Farmers Markets",
+                "containers":[{
+                      "size":6,
+                      "label":"Accepts SNAP Benefits",
+                      "background":"#194d33",
+                      "color":"#666666",
+                      "margin":25,
+                      "border":1
+                    },
+                    {
+                        "size":6,
+                        "label":"No SNAP Benefits",
+                        "background":"#8cd9b3",
+                        "color":"#666666",
+                        "margin":25,
+                        "border":1
+                      }]
+                },
+                {
+                    "id":1,
+                    "type":"polygon",
+                    "title":"% Households Receiving SNAP",
+                    "description":"Percent of households within census tract receiving SNAP benefits.",
+                    "containers":[{
+                            "color":"rgba(70,62,117,0.6)",
+                            "label":"25+"
+                        },
+                        {
+                            "color":"rgba(162,155,202,0.5)",
+                            "label":"10 to 25"
+                        },
+                        {
+                            "color":"rgba(239,237,245,0.2)",
+                            "label":"Less than 10"
+                        }
+                    ]                
+                }]
+          },
+          {
+            "id":2,
+            "title":"Fast Food/Poverty",
+            "infoWidth":"220px",
+            "fastFacts":[{
+                "facts":["&#9900 Federal poverty rate was 12.7% in 2016.","&#9900 Census tracts with high poverty rate (>25%) have 225% more fast food restaurants than tracts with low poverty rate (<10%)."]
+            }],
+            "border":{"opacity":0.4},
+            "jsonLayers":[{
+                "interactive":false,
+                "url":"map_data/food/fast_food.json",
+                "feature":"point",
+                "type":"single",
+                "fillColors":["#000000"],
+                "colors":["#000000"],
+                "radius":[0.75],
+                "weight":0,
+                "opacity":1,
+                "fillOpacity":1           
+              },
+              {
+                "url":"map_data/food/food_deserts.json",
+                "pane":"underFlow",
+                "feature":"polygon",
+                "type":"graduated",
+                "attribute":"pov_rate",
+                "values":[25,10],
+                "fillColors":["#ac3939","#e6b3b3","#ffffff"],
+                "colors":["#ac3939","#e6b3b3","#ffffff"],
+                "opacity":0.4,
+                "fillOpacity":0.4,
+                "hoverOpacity":0.6,
+                "weight":1,
+                "tooltipVars":["COUNTY_NAM","NAME","pov_rate"],
+                "tooltipText":["<h2>"," County</h2><p3 style='font-weight:normal'>Tract ","<br/>","% Poverty Rate</p3>"]  
+              }],
+            "legend":[{
+                "id":0,
+                "type":"point",
+                "containers":[{
+                      "size":1,
+                      "label":"Fast Food Restaurants",
+                      "background":"#000000",
+                      "color":"#000000",
+                      "margin":20
+                    }]
+                },
+                {
+                    "id":1,
+                    "type":"polygon",
+                    "title":"Poverty Rate",
+                    "description":"Percent of population under the federal poverty line.",
+                    "containers":[{
+                            "color":"rgba(172,57,57,0.6)",
+                            "label":"25+"
+                        },
+                        {
+                            "color":"rgba(230,179,179,0.5)",
+                            "label":"10 to 25"
+                        },
+                        {
+                            "color":"rgba(255,255,255,0.3)",
+                            "label":"Less than 10"
+                        }
+                    ]                
+                }]
+          },
+          {
+            "id":3,
+            "title":"Food Insecurity",
+            "infoWidth":"260px",
+            "fastFacts":[{
+                "facts":["&#9900 The regional food insecurity rate in the Pacific Northwest is 12.8%.","&#9900 At 19.8%, Madison County, Idaho has the highest overall food insecurity rate of all PNW counties."]
+            }],
+            "border":{"opacity":0.4},
+            "jsonLayers":[{
+                "url":"map_data/food/food_insecure_counties.json",
+                "feature":"polygon",
+                "type":"graduated",
+                "attribute":"per_ins",
+                "values":[0.16,0.14,0.12,0.1],
+                "fillColors":["#08519c","#3182bd","#6baed6","#bdd7e7","#eff3ff"],
+                "colors":["#08519c","#3182bd","#6baed6","#bdd7e7","#eff3ff"],
+                "opacity":1,
+                "fillOpacity":0.6,
+                "weight":1,
+                "tooltipVars":["NAME","ST","per_ins","per_ch_ins"],
+                "tooltipText":["<h2>","  County, ","</h2><p3 style='font-weight:normal'>","% Food Insecure Pop.<br/>","% Food Insecure Children</p3>"]  
+              }],
+            "legend":[{
+                    "id":0,
+                    "type":"polygon",
+                    "title":"% Food Insecure Individuals",
+                    "description":"Percent of the population classified as food insecure according to the Feeding America and the U.S Census.",
+                    "containers":[{
+                            "color":"rgba(8, 81, 156,0.7)",
+                            "label":"16+"
+                        },
+                        {
+                            "color":"rgba(49, 130, 189,0.7)",
+                            "label":"14 to 16"
+                        },
+                        {
+                            "color":"rgba(107, 174, 214,0.7)",
+                            "label":"12 to 14"
+                        },
+                        {
+                            "color":"rgba(189, 215, 231,0.7)",
+                            "label":"10 to 12"
+                        },
+                        {
+                            "color":"rgba(239, 243, 255,0.7)",
+                            "label":"Less than 10"
+                        }
+                    ]                
+                }]
+          }       
+      ],
+      "sources":{
+        "geographic":[{
+            "title":"Grocery Stores: ",
+            "linkText":"Open Street Map",
+            "linkUrl":"https://www.openstreetmap.org/",
+            "description":"Imported using QuickOSM QGIS plugin in 2017. Tags for import were: shop=supermarket and shop=greengrocer."
+        },
+        {
+            "title":"Grocery Deserts: ",
+            "linkText":"USDA Food Access Research Atlas",
+            "linkUrl":"https://www.ers.usda.gov/data-products/food-access-research-atlas/download-the-data/#Current%20Version",
+            "description":"Census tracts classified as food deserts. Data from 2015. Included fields: LILATracts_1And10 and LILATracts_halfAnd10."
+        },
+        {
+            "title":"Farmers Markets: ",
+            "linkText":"USDA Agricultural Marketing Service",
+            "linkUrl":"https://catalog.data.gov/dataset/farmers-markets-geographic-data",
+            "description":"Data from 2018."
+        },
+        {
+            "title":"% SNAP Households: ",
+            "linkText":"USDA Food Access Research Atlas",
+            "linkUrl":"https://www.ers.usda.gov/data-products/food-access-research-atlas/download-the-data/#Current%20Version",
+            "description":"Percent of households receiving SNAP benefits. Data from 2015. Included Fields: OHU2010 and TractSNAP."
+        },
+        {
+            "title":"Fast Food Restaurants: ",
+            "linkText":"POI Factory",
+            "linkUrl":"http://www.poi-factory.com/",
+            "description":"Data from various dates. Files downloaded for the following fast food restaurants: Arby's, Burger King, Burgerville, Carl's Jr., Del Taco, Dominos, Dairy Queen, Five Guys, Godfather's, Jack in the Box, Jimmy Johns, KFC, Little Caesars, Long John Silver, McDonalds, Papa John's, Papa Murphy's, Pizza Hut, Popeyes, Quiznos, Sonic, Subway, Taco Bell, Taco Time, Wendy's."
+        },
+        {
+            "title":"Poverty Rate: ",
+            "linkText":"USDA Food Access Research Atlas",
+            "linkUrl":"https://www.ers.usda.gov/data-products/food-access-research-atlas/download-the-data/#Current%20Version",
+            "description":"Percent poverty rate. Data from 2015. Included Field: PovertyRate."
+        },
+        {
+            "title":"Food Insecure Population: ",
+            "linkText":"Feeding America",
+            "linkUrl":"http://www.feedingamerica.org/research/map-the-meal-gap/by-county.html",
+            "description":"Percent food insecure population. Data from 2016."
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Satellite Imagery: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldImagery",
+            "description":"ESRI World Imagery; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://d3js.org/topojson.v1.min.js","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+  }

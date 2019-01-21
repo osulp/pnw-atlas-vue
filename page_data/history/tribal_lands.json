@@ -1,0 +1,215 @@
+{
+    "title": "Tribal Lands",
+    "URL":"mountain_icon",
+    "chapter":"history",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "basemap":[{"title":"terrain","opacity":1},
+                {"title":"geoserver","layer":"pnw_outline2","opacity":0.3},
+                {"title":"label","opacity":1}],
+    "maps":[{
+        "id":0,
+        "title":"Reservations",
+        "featureSelected":false, 
+        "border":{"title":"pnw_borders_black","include":true,"opacity":0.4},
+        "tileLayers":[{"title":"parks_total","pane":300,"opacity":1},{"title":"pnw_urban_areas","pane":300,"opacity":0.8},{"title":"pnw_water","pane":300,"opacity":0.6}],
+        "fastFacts":[{
+            "facts":["&#9900 Approximately 18.7% of the population on tribal lands lives below the poverty line (PNW average is 14%).","&#9900 Approximately 23.9% of the population on tribal lands has a bachelor's degree or higher (PNW average is 32%).","&#9900 Approximately 9.7% of the population on tribal lands is unemployed (PNW average is 7.1%).","&#9900 Approximately 16.3% of the population on tribal lands lacks health insurance (PNW average is 10.5%).","&#9900 Note: These data account for all ethnicities present on tribal land."]
+          }],
+        "jsonLayers":[
+        {
+            "url":"map_data/history/reservations.json",
+            "pane":"overBorder",
+            "feature":"polygon",
+            "type":"selection",
+            "fillColors":"#ffb366",
+            "colors":"#e67300",
+            "fillOpacity":0.6,
+            "opacity":0.8,
+            "weight":1,
+            "sticky":true,
+            "tooltipVars":["NAME"],
+            "tooltipText":["<h3 style='margin:0;'>","</h3>"],
+            "tooltip":"tooltip",
+            "selection":{
+                "clearLayer":1,
+                "titleVar":"full_name",
+                "selectionOpacity":0.2,
+                "selectionHover":0.2,
+                "varList":["total_pop"],
+                "varLabel":["Population: "],
+                "chartDescription":["Pov. % Poverty Rate Edu.","Edu. % with Bachelor's Degree","Emp. % Unemployed","Ins. % without Health Insurance","Data based on 2012-2016 ACS Estimates"]
+            }
+        }],
+        "chart":[{
+            "chartLoc":"legendClick",
+            "chartType":"radar",
+            "labels": ["Pov.","Edu.","Emp.","Ins."],
+            "data":["pov_rate","per_bach","per_unem","per_unin"],
+            "data2":[14,32,7.1,10.5],
+            "borderColor":"#ffffff",
+            "colors":["#ff8000","#0073e6"],
+            "backgroundColor":["rgba(255,166,77,0.5)","rgba(77, 166, 255,0.5)"],
+            "datasetLabel":["Tribal Stats","PNW Average"],
+            "options": {
+                "responsive": true,
+                "legend": {
+                    "position": "top",
+                    "display":true,
+                    "labels": {
+                        "fontColor":"#000000",
+                        "fontFamily":"GoudyOld",
+                        "fontSize":16
+                    }
+                },
+                "tooltips":{
+                    "enabled":true,
+                    "backgroundColor":"rgba(255,255,255,1)",
+                    "titleFontColor":"#000000",
+                    "titleFontFamily":"GoudyOld",
+                    "titleFontSize":14,
+                    "bodyFontColor":"#000000",
+                    "borderWidth":1,
+                    "borderColor":"#4d4d4d",
+                    "bodyFontFamily":"GoudyOld",
+                    "bodyFontSize":14
+                },
+                "scale":{
+                    "ticks":{
+                        "stepSize":10,
+                        "showLabelBackdrop":false,
+                        "fontColor":"#000000",
+                        "fontFamily":"GoudyOld"
+                    },
+                    "pointLabels":{
+                        "fontColor":"#000000",
+                        "fontFamily":"GoudyOld",
+                        "fontSize":16
+                    },
+                    "scaleLabel":{
+                        "padding":5
+                    }
+                }
+            }
+        }],
+        "legend":[{
+            "id":0,
+            "type":"selectionChart",
+            "chartID":"chartContainer",
+            "chartHeight":280,
+            "chartMargin":0,
+            "title":"Select Tribal Area"
+        },
+        {
+            "id":1,
+            "type":"polygon",
+            "containers":[{
+                "color":"#ffb366",
+                "label":"Tribal Land"
+                }
+            ]
+        }]
+      },
+      {
+        "id":1,
+        "title":"Land Seizure",
+        "featureSelected":false, 
+        "border":{"title":"pnw_borders_black","include":true,"opacity":0.4},
+        "fastFacts":[{
+            "facts":["&#9900 Beginning in the early 1800s, the US Government began aggressively seizing land from indigenous populations. These seizures were legitimized through written treaties, and the official language of the government declared the land as 'ceded'. Indigenous people were confined to declared reservations."]
+          }],
+        "jsonLayers":[
+        {
+            "url":"map_data/history/land_seizure.json",
+            "pane":"overBorder",
+            "feature":"polygon",
+            "type":"categorized",
+            "attribute":"res",
+            "values":[1,-1],
+            "fillColors":["#99ccff","#99ccff","#ffb366"],
+            "colors":"#ffffff",
+            "fillOpacity":[0,0,0.6],
+            "opacityAttribute":"top",
+            "opacity":0.8,
+            "weight":1,
+            "tooltipVars":["date_text","TribalCe12"],
+            "tooltipText":["<h3 style='display:inline;'>Date Established: ","<br/>Tribes Named in Treaty:</h3><br/><p style='display:inline;'>","</p>"],
+            "tooltip":"tooltip",
+            "filterType":"greaterLesser",
+            "filterVariable":"date_num",
+            "secondFilterVariable":"end_date",
+            "filterValueSuffix":"0101"
+        }],
+        "slider":{
+            "title":"seizure",
+            "min":1850,
+            "max":1900,
+            "step":5,
+            "default":1855                   
+        },
+        "legend":[{
+            "id":0,
+            "type":"polygon",
+            "title":"Land Type",
+            "description":"Land 'ownership' as declared by the United States Government.",
+            "containers":[{
+                "color":"#ffffff",
+                "label":"Indigenous Homeland"
+                },
+                {
+                "color":"#99ccff",
+                "label":"Seized Land"
+                },
+                {
+                "color":"#ffb366",
+                "label":"Reservation"
+                }
+            ]
+        }]
+      }],
+      "sources":{
+        "geographic":[{
+            "title":"Tribal Lands: ",
+            "linkText":"US Census Bureau",
+            "linkUrl":"https://www.census.gov/geo/maps-data/data/cbf/cbf_aiannh.html",
+            "description":"Data from 2017."
+        },
+        {
+            "title":"Land Seizure: ",
+            "linkText":"U.S Forest Service",
+            "linkUrl":"https://enterprisecontent-usfs.opendata.arcgis.com/datasets/e4e788be8cfc4d1f8ff280a81ffaa69c_0",
+            "description":"Data range from 1850 to 1900."
+        },
+        {
+            "title":"Tribal Area Statistics: ",
+            "linkText":"IPUMS NHGIS, University of Minnesota",
+            "linkUrl":"https://enterprisecontent-usfs.opendata.arcgis.com/datasets/e4e788be8cfc4d1f8ff280a81ffaa69c_0",
+            "description":"Data selected for AMERICAN INDIAN AREA/ALASKA NATIVE AREA/HAWAIIAN HOME LAND, from ACS 2012-2016. Topics included: Total Population, Educational Attainment for the Population 25 Years and Over, Ratio of Income to Poverty Level in the Past 12 Months, Employment Status for the Population 16 Years and Over, Types of Health Insurance Coverage by Age."
+        },
+        {
+            "title":"PNW Average Statistics: ",
+            "linkText":"IPUMS NHGIS, University of Minnesota",
+            "linkUrl":"https://data2.nhgis.org/main",
+            "description":"Data selected for STATES, from ACS 2012-2016. Topics included: Educational Attainment for the Population 25 Years and Over, Ratio of Income to Poverty Level in the Past 12 Months, Employment Status for the Population 16 Years and Over, Types of Health Insurance Coverage by Age."
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","Chart.js","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

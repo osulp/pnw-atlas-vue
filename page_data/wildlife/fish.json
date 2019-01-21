@@ -1,0 +1,455 @@
+{
+    "title": "Fish",
+    "URL":"fish_icon",
+    "chapter":"wildlife",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "basemap":[{"title":"terrain","opacity":1},
+        {"title":"geoserver","layer":"pnw_outline2","opacity":0.5},
+        {"title":"label","opacity":1}],
+    "maps":[{
+        "id":0,
+        "title":"Chinook",
+        "featureSelected":false, 
+        "border":{"title":"pnw_borders_black","include":true,"opacity":0.4},
+        "tileLayers":[{"title":"fall_chinook","pane":300,"opacity":1}],
+        "switchLayers":[{"title":"spring_chinook","pane":300,"opacity":1}],
+        "fastFacts":[{
+            "facts":["&#9900 Also known as King Salmon.","&#9900 Chinook are the largest Pacific Salmon. The largest ever recorded weighed 126 pounds.","&#9900 Individuals over 30 pounds are known as Tyee Salmon.","&#9900 Oregon state fish."]
+          }],
+        "legend":[{
+            "id":0,
+            "title":"Chinook Salmon",
+            "toggleSwitch":{
+                "color":"#287164",
+                "labels":["Fall","Spring"]
+            },
+            "type":"polygon",
+            "containers":[{
+                "color":"#215e53",
+                "label":"Least Concern"
+                },
+                {
+                "color":"#3caa96",
+                "label":"Threatened"
+                },
+                {
+                "color":"#ff9999",
+                "label":"Endangered"
+                },
+                {
+                "color":"#cc0000",
+                "label":"Historical Habitat"
+                }],
+            "description":"Current population status and historical distribution of Chinook Salmon.",
+            "bottomIcon":"chinook",
+            "bottomIconWidth":300
+        }]
+      },
+      {
+        "id":1,
+        "title":"Steelhead",
+        "featureSelected":false, 
+        "border":{"title":"pnw_borders_black","include":true,"opacity":0.4},
+        "tileLayers":[{"title":"summer_steelhead","pane":300,"opacity":1}],
+        "switchLayers":[{"title":"winter_steelhead","pane":300,"opacity":1}],
+        "fastFacts":[{
+            "facts":["&#9900 Anadromous (ocean-going) version of rainbow trout.","&#9900 Maximum size 40 pounds.","&#9900 Unlike salmon, Steelhead, may survive spawning, and can therefore spawn more than once in their lifetime.","&#9900 Washington state fish."]
+          }],
+        "legend":[{
+            "id":0,
+            "toggleSwitch":{
+                "color":"#287164",
+                "labels":["Summer","Winter"]
+            },
+            "title":"Steelhead",
+            "type":"polygon",
+            "containers":[{
+                "color":"#215e53",
+                "label":"Least Concern"
+                },
+                {
+                "color":"#3caa96",
+                "label":"Threatened"
+                },
+                {
+                "color":"#cc0000",
+                "label":"Historical Habitat"
+                }],
+            "description":"Current population status and historical distribution of Steelhead.",
+            "bottomIcon":"steelhead",
+            "bottomIconWidth":300
+        }]
+      },
+      {
+        "id":2,
+        "title":"Coho",
+        "featureSelected":false, 
+        "border":{"title":"pnw_borders_black","include":true,"opacity":0.4},
+        "tileLayers":[{"title":"coho","pane":300,"opacity":1}],
+        "fastFacts":[{
+            "facts":["&#9900 Maximum size 30 pounds.","&#9900 Juvenile Coho are highly territorial.","&#9900 Coho can be found in urban streams if water quality needs are met."]
+          }],
+        "legend":[{
+            "id":0,
+            "title":"Coho Salmon",
+            "type":"polygon",
+            "containers":[{
+                "color":"#215e53",
+                "label":"Least Concern"
+                },
+                {
+                "color":"#3caa96",
+                "label":"Threatened"
+                },
+                {
+                "color":"#cc0000",
+                "label":"Historical Habitat"
+                }],
+            "description":"Current population status and historical distribution of Coho Salmon.",
+            "bottomIcon":"soho",
+            "bottomIconWidth":300
+        }]
+      },
+      {
+        "id":3,
+        "title":"Chum",
+        "featureSelected":false, 
+        "border":{"title":"pnw_borders_black","include":true,"opacity":0.4},
+        "tileLayers":[{"title":"fall_chum","pane":300,"opacity":1}],
+        "switchLayers":[{"title":"summer_chum","pane":300,"opacity":1}],
+        "fastFacts":[{
+            "facts":["&#9900 Maximum size 30 pounds.","&#9900 Also known as Dog Salmon due to canine-like teeth in spawning males.","&#9900 “Calico” coloration during spawning."]
+          }],
+        "legend":[{
+            "id":0,
+            "toggleSwitch":{
+                "color":"#287164",
+                "labels":["Fall","Summer"]
+            },
+            "title":"Chum Salmon",
+            "type":"polygon",
+            "containers":[{
+                "color":"#215e53",
+                "label":"Least Concern"
+                },
+                {
+                "color":"#3caa96",
+                "label":"Threatened"
+                },
+                {
+                "color":"#cc0000",
+                "label":"Historical Habitat"
+                }],
+            "description":"Current population status and historical distribution of Chum Salmon.",
+            "bottomIcon":"chum",
+            "bottomIconWidth":300
+        }]
+      },
+      {
+        "id":4,
+        "title":"Pink",
+        "featureSelected":false, 
+        "border":{"title":"pnw_borders_black","include":true,"opacity":0.4},
+        "tileLayers":[{"title":"odd_pink","pane":300,"opacity":1}],
+        "switchLayers":[{"title":"even_pink","pane":300,"opacity":1}],
+        "fastFacts":[{
+            "facts":["&#9900 Also known as humpback salmon.","&#9900 Maximum size 12 pounds.","&#9900 Consistent two-year life cycle."]
+          }],
+        "legend":[{
+            "id":0,
+            "toggleSwitch":{
+                "color":"#287164",
+                "labels":["Odd Year","Even Year"]
+            },
+            "title":"Pink Salmon",
+            "type":"polygon",
+            "containers":[{
+                "color":"#215e53",
+                "label":"Least Concern"
+                },
+                {
+                "color":"#cc0000",
+                "label":"Historical Habitat"
+                }],
+            "description":"Current population status and historical distribution of Pink Salmon.",
+            "bottomIcon":"pink",
+            "bottomIconWidth":300
+        }]
+      },
+      {
+        "id":5,
+        "title":"Sockeye",
+        "featureSelected":false, 
+        "border":{"title":"pnw_borders_black","include":true,"opacity":0.4},
+        "tileLayers":[{"title":"sockeye","pane":300,"opacity":1}],
+        "fastFacts":[{
+            "facts":["&#9900 Sockeye are known as the most flavorful Pacific Salmon.","&#9900 Maximum size 15 pounds.","&#9900 Only spawn in lake-fed water systems."]
+          }],
+        "legend":[{
+            "id":0,
+            "title":"Sockeye Salmon",
+            "type":"polygon",
+            "containers":[{
+                "color":"#215e53",
+                "label":"Least Concern"
+                },
+                {
+                "color":"#3caa96",
+                "label":"Threatened"
+                },
+                {
+                "color":"#ff9999",
+                "label":"Endangered"
+                },
+                {
+                "color":"#cc0000",
+                "label":"Historical Habitat"
+                }],
+            "description":"Current population status and historical distribution of Sockeye Salmon.",
+            "bottomIcon":"sockeye",
+            "bottomIconWidth":300
+        }]
+      },
+      {
+        "id":6,
+        "title":"Bull Trout",
+        "featureSelected":false, 
+        "border":{"title":"pnw_borders_black","include":true,"opacity":0.4},
+        "tileLayers":[{"title":"bull_trout","pane":300,"opacity":1}],
+        "fastFacts":[{
+            "facts":["&#9900 Listed as 'vulnerable' on IUCN Red List.","&#9900 Require cold water, generally under 55℉.","&#9900 Formerly believed to the same species as the Dolly Varden Trout."]
+          }],
+        "legend":[{
+            "id":0,
+            "title":"Bull Trout",
+            "type":"polygon",
+            "containers":[{
+                "color":"#3caa96",
+                "label":"Threatened"
+                },
+                {
+                "color":"#cc0000",
+                "label":"Historical Habitat"
+                }],
+            "description":"Current population status and historical distribution of Bull Trout. Historical habitat data for Idaho not available.",
+            "bottomIcon":"bull",
+            "bottomIconWidth":300
+        }]
+      },
+      {
+        "id":7,
+        "title":"Cutthroat Trout",
+        "featureSelected":false, 
+        "border":{"title":"pnw_borders_black","include":true,"opacity":0.4},
+        "tileLayers":[{"title":"cutthroat","pane":500,"opacity":1}],
+        "fastFacts":[{
+            "facts":["&#9900 Listed as 'vulnerable' on IUCN Red List.","&#9900 Require cold water, generally under 55℉.","&#9900 Formerly believed to the same species as the Dolly Varden Trout."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/wildlife/cutthroat_trout_range.json",
+            "feature":"polygon",
+            "type":"single",
+            "fillOpacity":0,
+            "opacity":1,
+            "weight":1.5,
+            "hoverOpacity":0.5,
+            "colors":"#404040",
+            "fillColors":"#bfbfbf",
+            "tooltipVars":["type"],
+            "tooltipText":["<h2 style='font-size:24px;'>","</h2>"]
+        }],
+        "legend":[{
+            "id":0,
+            "title":"Cutthroat Trout",
+            "type":"polygon",
+            "containers":[{
+                "color":"#215e53",
+                "label":"Least Concern"
+                },
+                {
+                "color":"#3caa96",
+                "label":"Threatened"
+                },
+                {
+                "color":"#cc0000",
+                "label":"Historical Habitat"
+                }]
+            },
+            {
+            "type":"line",
+            "description":"Current population status and historical range of Cutthroat Trout subspecies. Cutthroat trout are not listed in the Endangered Species Act.",
+            "bottomIcon":"bull",
+            "containers":[{
+                "color":"#000000",
+                "label":"Subspecies Boundary",
+                "height":3
+                }],
+            "bottomIconWidth":300
+        }]
+      },
+      {
+        "id":8,
+        "title":"White Sturgeon",
+        "featureSelected":false, 
+        "border":{"title":"pnw_borders_black","include":true,"opacity":0.4},
+        "tileLayers":[{"title":"sturgeon","pane":300,"opacity":1}],
+        "fastFacts":[{
+            "facts":["&#9900 White sturgeon are the largest freshwater fish in North America.","&#9900 Normally anadromous, the construction of impassible dams in the Columbia Basin has resulted in landlocked sturgeon populations.","&#9900 Maximum length 20 feet."]
+          }],
+        "legend":[{
+            "id":0,
+            "title":"White Sturgeon",
+            "type":"polygon",
+            "containers":[{
+                "color":"#215e53",
+                "label":"Abundant/Breeding"
+                },
+                {
+                "color":"#3caa96",
+                "label":"Abundant/Some Breeding"
+                },
+                {
+                "color":"#ff9999",
+                "label":"Extant/Limited Breeding"
+                },
+                {
+                "color":"#cc0000",
+                "label":"Historical Habitat"
+                }],
+            "description":"Current population/breeding status and historical range of White Sturgeon. White Sturgeon aren't listed in the Endangered Species Act, but certain populations are threatened due to damming.",
+            "bottomIcon":"sturgeon",
+            "bottomIconWidth":300
+        }]
+      },
+      {
+        "id":9,
+        "title":"Biodiversity",
+        "featureSelected":false, 
+        "border":{"title":"pnw_borders_black","include":true,"opacity":0.4},
+        "fastFacts":[{
+            "facts":["&#9900 The North Umpqua Watershed in Southern Oregon has the greatest diversity of freshwater fish species in the PNW.","&#9900 The San Juan Islands in Puget Sound has the least diversity of freshwater fish species in the PNW."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/wildlife/fish_total.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"Join_Count",
+            "values":[38,32,26,20],
+            "fillColors":["#1b4b43","#2f8375","#44bba7","#8fd6ca","#daf1ed"],
+            "fillOpacity":0.7,
+            "opacity":0.7,
+            "weight":1,
+            "colors":"#ffffff",
+            "tooltipVars":["Join_Count"],
+            "tooltipText":["<h2 style='font-size:24px;'>"," Total Species</h2>"]
+        }],
+        "legend":[{
+            "id":0,
+            "title":"# of Fish Species",
+            "type":"polygon",
+            "containers":[{
+                "color":"#1b4b43",
+                "label":"38+"
+                },
+                {
+                "color":"#2f8375",
+                "label":"32 to 38"
+                },
+                {
+                "color":"#44bba7",
+                "label":"26 to 32"
+                },
+                {
+                "color":"#8fd6ca",
+                "label":"20 to 26"
+                },
+                {
+                "color":"#daf1ed",
+                "label":"Less than 20"
+                }],
+                "description":"Total number of fish species per HUC8 watershed."
+            }]
+      }],
+      "sources":{
+        "geographic":[{
+            "title":"Idaho Fish Distribution: ",
+            "linkText":"StreamNet",
+            "linkUrl":"https://www.streamnet.org/data/interactive-maps-and-gis-data/",
+            "description":"Data from 2012. Fish datasets downloaded and clipped to Idaho, with the exception of Lahontan Trout."
+        },
+        {
+            "title":"Oregon Fish Distribution: ",
+            "linkText":"Oregon Department Fish and Wildlife",
+            "linkUrl":"https://nrimp.dfw.state.or.us/DataClearinghouse/default.aspx?p=202&XMLname=1167.xml",
+            "description":"Data from 2018."
+        },
+        {
+            "title":"Washington Fish Distribution: ",
+            "linkText":"Washington Department of Fish and Wildlife",
+            "linkUrl":"https://data-wdfw.opendata.arcgis.com/datasets/statewide-washington-integrated-fish-distribution",
+            "description":"Data from 2018."
+        },
+        {
+            "title":"Salmon and Steelhead DPS/ESU Boundaries: ",
+            "linkText":"National Oceanic and Atmospheric Administration Fisheries Department",
+            "linkUrl":"http://www.westcoast.fisheries.noaa.gov/maps_data/Species_Maps_Data.html",
+            "description":"Data from 2013. Combined with salmonoid line datasets."
+        },
+        {
+            "title":"Yellowstone Trout Historical Range: ",
+            "linkText":"National Parks Service",
+            "linkUrl":"https://www.nps.gov/subjects/yellowstonescience/images/Figure-1AL-C.jpg?maxwidth=1200&autorotate=false",
+            "description":"Date not provided. Static map digitized. Only major rivers were digitized."
+        },
+        {
+            "title":"Bonneville Trout Historical Range: ",
+            "linkText":"Idaho Department of Fish and Game",
+            "linkUrl":"https://idfg.idaho.gov/old-web/docs/fish/planBonCutthroat.pdf",
+            "description":"Data from 2007. Map on page 3 of document used as reference."
+        },
+        {
+            "title":"Westslope Trout Historical Range: ",
+            "linkText":"Idaho Department of Fish and Game",
+            "linkUrl":"http://www.westernnativetrout.org/media/trout/westslope-cutthroat-assessment.pdf",
+            "description":"Data from 2007. Map on page 1 of document used as reference."
+        },
+        {
+            "title":"White Sturgeon Population Data: ",
+            "linkText":"Northwest Power and Conservation Council",
+            "linkUrl":"https://www.nwcouncil.org/sites/default/files/White_Sturgeon_Framework_review_draft_Feb2013.pdf",
+            "description":"Data from 2013. Map on page 53 of document used as reference."
+        },
+        {
+            "title":"Supplemental Stream Data: ",
+            "linkText":"StreamNet",
+            "linkUrl":"https://www.streamnet.org/data/interactive-maps-and-gis-data/",
+            "description":"'Routed Streams' layer downloaded."
+        },
+        {
+            "title":"Fish Biodiversity: ",
+            "linkText":"Natureserve",
+            "linkUrl":"http://www.natureserve.org/library/stateofunions.pdf",
+            "description":"Number of fish species per watershed. Data from 2002."
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","Chart.js","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

@@ -1,0 +1,1148 @@
+{
+    "title": "Water Use",
+    "URL":"water_use_icon",
+    "chapter":"water",
+    "initial":0,
+    "dropdownText":"Select Use",
+    "basemap":[{"title":"terrain","opacity":1},
+      {"title":"geoserver","layer":"pnw_outline2","opacity":0.3},
+      {"title":"label","opacity":1}],
+    "secondDropdown":{"title":"Select Type", "buttons":[{"filter":"total", "label":"Total","values":[1000,500,250,100,0,50,25,10,5,0,10,5,2.5,1,0,25,10,5,2.5,0,20,10,5,1,0,2.5,1,0.5,0.25,0,2.5,1,0.5,0.25,0,1000,500,250,100,0,100,50,25,10,0]},{"filter":"surface","label":"Surface Water","values":[500,250,100,50,0,25,10,5,2.5,0,0.5,0.25,0.1,0.05,0,25,10,5,2.5,0,20,10,5,1,0,1,0.5,0.25,0.1,0,1,0.5,0.25,0.1,0,500,250,100,50,0,100,50,25,10,0]},{"filter":"ground","label":"Groundwater","values":[250,100,50,10,0,25,10,5,2.5,0,10,5,2.5,1,0,5,2.5,1,0.5,0,1,0.75,0.5,0.25,0,1,0.5,0.25,0.1,0,2.5,1,0.25,0.1,0,250,100,50,10,0,10,5,2.5,1,0]}]},
+    "maps":[{
+        "id":0,
+        "title":"Total",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "facts":["&#9900 Total water use in Pacific Northwest is 28,920 Mgal/day (2010 data). 20,939 Mgal/day for surface water, and 7,982 Mgal/day for groundwater.","&#9900 Idaho uses more water than Oregon and Washington Combined.","&#9900 Irrigation comprises 77.6% of total water use."]
+          }],
+        "jsonLayers":[{
+            "secondDropdownValues":true,
+            "url":"map_data/water/water_use_total.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"use",
+            "values":[0,1,2,3,4],
+            "fillColors":["#045a8d","#2b8cbe","#74a9cf","#bdc9e1","#f1eef6","#ffffff"],
+            "colors":"#ffffff",
+            "fillOpacity":0.7,
+            "opacity":1,
+            "weight":1,
+            "tooltipVars":["NAME","ST","use"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ," County, ","</h2><br/><p3 style='display:inline; font-weight:normal;'>"," Mgal/day</p3>"],
+            "filterVariable":"type",
+            "filterValue":"total",
+            "hoverDash":4
+          }],
+        "legend":[{
+            "id":0,
+              "type":"polygon",
+              "secondDropdownLegend":true,
+              "title":"Total Water Use (Mgal/day)",
+              "icon":"total",
+              "containers":[{
+                  "color":"#045a8d",
+                  "label":"1,000+"
+                },
+                {
+                  "color":"#2b8cbe",
+                  "label":"500 to 1,000"
+                },
+                {
+                  "color":"#74a9cf",
+                  "label":"250 to 500"
+                },
+                {
+                  "color":"#bdc9e1",
+                  "label":"100 to 250"
+                },
+                {
+                  "color":"#f1eef6",
+                  "label":"Less than 100"
+                },
+                {
+                  "color":"#ffffff",
+                  "label":"0 or No Data"
+                }],
+              "description":"Water use in millions of gallons of water per day."
+          },
+          {
+            "id":1,
+              "type":"polygon",
+              "secondDropdownLegend":true,
+              "title":"Total Surface Water Use (Mgal/day)",
+              "icon":"total",
+              "containers":[{
+                  "color":"#045a8d",
+                  "label":"500+"
+                },
+                {
+                  "color":"#2b8cbe",
+                  "label":"250 to 500"
+                },
+                {
+                  "color":"#74a9cf",
+                  "label":"100 to 250"
+                },
+                {
+                  "color":"#bdc9e1",
+                  "label":"50 to 100"
+                },
+                {
+                  "color":"#f1eef6",
+                  "label":"Less than 50"
+                },
+                {
+                  "color":"#ffffff",
+                  "label":"0 or No Data"
+                }],
+              "description":"Water use in millions of gallons of water per day."
+          },
+          {
+            "id":2,
+              "type":"polygon",
+              "secondDropdownLegend":true,
+              "title":"Total Groundwater Water Use (Mgal/day)",
+              "icon":"total",
+              "containers":[{
+                  "color":"#045a8d",
+                  "label":"250+"
+                },
+                {
+                  "color":"#2b8cbe",
+                  "label":"100 to 250"
+                },
+                {
+                  "color":"#74a9cf",
+                  "label":"50 to 100"
+                },
+                {
+                  "color":"#bdc9e1",
+                  "label":"10 to 50"
+                },
+                {
+                  "color":"#f1eef6",
+                  "label":"Less than 10"
+                },
+                {
+                  "color":"#ffffff",
+                  "label":"0 or No Data"
+                }],
+              "description":"Water use in millions of gallons of water per day."
+          }]
+      },
+      {
+        "id":1,
+        "title":"Public",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "facts":["&#9900 Total public water use in Pacific Northwest is 1,682 Mgal/day (2010 data). 886 Mgal/day for surface water, and 796 Mgal/day for groundwater.","&#9900 Of the three PNW states, Washington has the highest daily public water use."]
+          }],
+        "jsonLayers":[{
+            "secondDropdownValues":true,
+            "url":"map_data/water/water_use_total.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"pub",
+            "values":[5,6,7,8,9],
+            "fillColors":["#a50f15","#de2d26","#fb6a4a","#fcae91","#fee5d9","#ffffff"],
+            "colors":"#ffffff",
+            "fillOpacity":0.7,
+            "opacity":1,
+            "weight":1,
+            "tooltipVars":["NAME","ST","pub"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ," County, ","</h2><br/><p3 style='display:inline; font-weight:normal;'>"," Mgal/day</p3>"],
+            "filterVariable":"type",
+            "filterValue":"total",
+            "hoverDash":4
+          }],
+        "legend":[{
+            "id":0,
+              "type":"polygon",
+              "secondDropdownLegend":true,
+              "title":"Public Water Use (Mgal/day)",
+              "icon":"public",
+              "containers":[{
+                  "color":"#a50f15",
+                  "label":"50+"
+                },
+                {
+                  "color":"#de2d26",
+                  "label":"25 to 50"
+                },
+                {
+                  "color":"#fb6a4a",
+                  "label":"10 to 25"
+                },
+                {
+                  "color":"#fcae91",
+                  "label":"5 to 10"
+                },
+                {
+                  "color":"#fee5d9",
+                  "label":"Less than 5"
+                },
+                {
+                  "color":"#ffffff",
+                  "label":"0 or No Data"
+                }],
+              "description":"Public self-supplied water use in millions of gallons of water per day. Includes deliveries to domestic users."
+          },
+          {
+            "id":1,
+              "type":"polygon",
+              "secondDropdownLegend":true,
+              "title":"Public Surface Water Use (Mgal/day)",
+              "icon":"public",
+              "containers":[{
+                "color":"#a50f15",
+                "label":"25+"
+                },
+                {
+                "color":"#de2d26",
+                "label":"10 to 25"
+                },
+                {
+                "color":"#fb6a4a",
+                "label":"5 to 10"
+                },
+                {
+                "color":"#fcae91",
+                "label":"2.5 to 5"
+                },
+                {
+                "color":"#fee5d9",
+                "label":"Less than 2.5"
+                },
+                {
+                "color":"#ffffff",
+                "label":"0 or No Data"
+              }],
+              "description":"Public self-supplied water use in millions of gallons of water per day. Includes deliveries to domestic users."
+          },
+          {
+            "id":2,
+              "type":"polygon",
+              "secondDropdownLegend":true,
+              "title":"Public Groundwater Water Use (Mgal/day)",
+              "icon":"public",
+              "containers":[{
+                "color":"#a50f15",
+                "label":"25+"
+                },
+                {
+                "color":"#de2d26",
+                "label":"10 to 25"
+                },
+                {
+                "color":"#fb6a4a",
+                "label":"5 to 10"
+                },
+                {
+                "color":"#fcae91",
+                "label":"2.5 to 5"
+                },
+                {
+                "color":"#fee5d9",
+                "label":"Less than 2.5"
+                },
+                {
+                "color":"#ffffff",
+                "label":"0 or No Data"
+              }],
+              "description":"Public self-supplied water use in millions of gallons of water per day. Includes deliveries to domestic users."
+          }]
+      },
+      {
+        "id":2,
+        "title":"Domestic",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "facts":["&#9900 Total domestic water use in Pacific Northwest is 259 Mgal/day (2010 data). 7 Mgal/day for surface water, and 252 Mgal/day for groundwater.","&#9900 Of the three PNW states, Washington has the highest daily domestic water use."]
+          }],
+        "jsonLayers":[{
+            "secondDropdownValues":true,
+            "url":"map_data/water/water_use_total.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"dom",
+            "values":[10,11,12,13,14],
+            "fillColors":["#006837","#31a354","#78c679","#c2e699","#ffffcc","#ffffff"],
+            "colors":"#ffffff",
+            "fillOpacity":0.7,
+            "opacity":1,
+            "weight":1,
+            "tooltipVars":["NAME","ST","dom"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ," County, ","</h2><br/><p3 style='display:inline; font-weight:normal;'>"," Mgal/day</p3>"],
+            "filterVariable":"type",
+            "filterValue":"total",
+            "hoverDash":4
+          }],
+        "legend":[{
+            "id":0,
+              "type":"polygon",
+              "secondDropdownLegend":true,
+              "title":"Domestic Water Use (Mgal/day)",
+              "icon":"domestic",
+              "containers":[{
+                  "color":"#006837",
+                  "label":"10+"
+                },
+                {
+                  "color":"#31a354",
+                  "label":"5 to 10"
+                },
+                {
+                  "color":"#78c679",
+                  "label":"2.5 to 5"
+                },
+                {
+                  "color":"#c2e699",
+                  "label":"1 to 2.5"
+                },
+                {
+                  "color":"#ffffcc",
+                  "label":"Less than 1"
+                },
+                {
+                  "color":"#ffffff",
+                  "label":"0 or No Data"
+                }],
+              "description":"Domestic self-supplied water use in millions of gallons of water per day. Does not include deliveries from public water providers."
+          },
+          {
+            "id":1,
+              "type":"polygon",
+              "secondDropdownLegend":true,
+              "title":"Domestic Surface Water Use (Mgal/day)",
+              "icon":"domestic",
+              "containers":[{
+                "color":"#006837",
+                "label":"0.5+"
+              },
+              {
+                "color":"#31a354",
+                "label":"0.25 to 0.5"
+              },
+              {
+                "color":"#78c679",
+                "label":"0.1 to 0.25"
+              },
+              {
+                "color":"#c2e699",
+                "label":"0.05 to 0.1"
+              },
+              {
+                "color":"#ffffcc",
+                "label":"Less than 0.05"
+              },
+              {
+                "color":"#ffffff",
+                "label":"0 or No Data"
+              }],
+              "description":"Domestic self-supplied water use in millions of gallons of water per day. Does not include deliveries from public water providers."
+          },
+          {
+            "id":2,
+              "type":"polygon",
+              "secondDropdownLegend":true,
+              "title":"Domestic Groundwater Water Use (Mgal/day)",
+              "icon":"domestic",
+              "containers":[{
+                "color":"#006837",
+                "label":"10+"
+              },
+              {
+                "color":"#31a354",
+                "label":"5 to 10"
+              },
+              {
+                "color":"#78c679",
+                "label":"2.5 to 5"
+              },
+              {
+                "color":"#c2e699",
+                "label":"1 to 2.5"
+              },
+              {
+                "color":"#ffffcc",
+                "label":"Less than 1"
+              },
+              {
+                "color":"#ffffff",
+                "label":"0 or No Data"
+              }],
+              "description":"Domestic self-supplied water use in millions of gallons of water per day. Does not include deliveries from public water providers."
+          }]
+      },
+      {
+        "id":3,
+        "title":"Industrial",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "facts":["&#9900 Total industrial water use in Pacific Northwest is 666 Mgal/day (2010 data). 532 Mgal/day for surface water, and 135 Mgal/day for groundwater.","&#9900 Of the three PNW states, Washington has the highest daily industrial water use."]
+          }],
+        "jsonLayers":[{
+            "secondDropdownValues":true,
+            "url":"map_data/water/water_use_total.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"ind",
+            "values":[15,16,17,18,19],
+            "fillColors":["#993404","#d95f0e","#fe9929","#fed98e","#fdedce","#ffffff"],
+            "colors":"#ffffff",
+            "fillOpacity":0.7,
+            "opacity":1,
+            "weight":1,
+            "tooltipVars":["NAME","ST","ind"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ," County, ","</h2><br/><p3 style='display:inline; font-weight:normal;'>"," Mgal/day</p3>"],
+            "filterVariable":"type",
+            "filterValue":"total",
+            "hoverDash":4
+          }],
+        "legend":[{
+            "id":0,
+              "type":"polygon",
+              "secondDropdownLegend":true,
+              "title":"Industrial Water Use (Mgal/day)",
+              "icon":"industry",
+              "containers":[{
+                  "color":"#993404",
+                  "label":"25+"
+                },
+                {
+                  "color":"#d95f0e",
+                  "label":"10 to 25"
+                },
+                {
+                  "color":"#fe9929",
+                  "label":"5 to 10"
+                },
+                {
+                  "color":"#fed98e",
+                  "label":"2.5 to 5"
+                },
+                {
+                  "color":"#fdedce",
+                  "label":"Less than 2.5"
+                },
+                {
+                  "color":"#ffffff",
+                  "label":"0 or No Data"
+                }],
+              "description":"Industrial self-supplied water use in millions of gallons of water per day."
+          },
+          {
+            "id":1,
+              "type":"polygon",
+              "secondDropdownLegend":true,
+              "title":"Industrial Surface Water Use (Mgal/day)",
+              "icon":"industry",
+              "containers":[{
+                "color":"#993404",
+                "label":"25+"
+              },
+              {
+                "color":"#d95f0e",
+                "label":"10 to 25"
+              },
+              {
+                "color":"#fe9929",
+                "label":"5 to 10"
+              },
+              {
+                "color":"#fed98e",
+                "label":"2.5 to 5"
+              },
+              {
+                "color":"#fdedce",
+                "label":"Less than 2.5"
+              },
+              {
+                "color":"#ffffff",
+                "label":"0 or No Data"
+              }],
+              "description":"Industrial self-supplied water use in millions of gallons of water per day."
+          },
+          {
+            "id":2,
+              "type":"polygon",
+              "secondDropdownLegend":true,
+              "title":"Industrial Groundwater Water Use (Mgal/day)",
+              "icon":"industry",
+              "containers":[{
+                "color":"#993404",
+                "label":"5+"
+              },
+              {
+                "color":"#d95f0e",
+                "label":"2.5 to 5"
+              },
+              {
+                "color":"#fe9929",
+                "label":"1 to 2.5"
+              },
+              {
+                "color":"#fed98e",
+                "label":"0.5 to 1"
+              },
+              {
+                "color":"#fdedce",
+                "label":"Less than 0.5"
+              },
+              {
+                "color":"#ffffff",
+                "label":"0 or No Data"
+              }],
+              "description":"Industrial self-supplied water use in millions of gallons of water per day."
+          }]
+      },
+      {
+        "id":4,
+        "title":"Thermo",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "facts":["&#9900 Total thermoelectric water use in Pacific Northwest is 51 Mgal/day (2010 data). 47 Mgal/day for surface water, and 4 Mgal/day for groundwater.","&#9900 Of the three PNW states, Washington has the highest daily thermoelectric water use."]
+          }],
+        "jsonLayers":[{
+            "secondDropdownValues":true,
+            "url":"map_data/water/water_use_total.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"therm",
+            "values":[20,21,22,23,24],
+            "fillColors":["#810f7c","#8856a7","#8c96c6","#b3cde3","#edf8fb","#ffffff"],
+            "colors":"#ffffff",
+            "fillOpacity":0.7,
+            "opacity":1,
+            "weight":1,
+            "tooltipVars":["NAME","ST","therm"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ," County, ","</h2><br/><p3 style='display:inline; font-weight:normal;'>"," Mgal/day</p3>"],
+            "filterVariable":"type",
+            "filterValue":"total",
+            "hoverDash":4
+          }],
+        "legend":[{
+            "id":0,
+              "type":"polygon",
+              "secondDropdownLegend":true,
+              "title":"Thermoelectric Water Use (Mgal/day)",
+              "icon":"thermo",
+              "containers":[{
+                  "color":"#810f7c",
+                  "label":"20+"
+                },
+                {
+                  "color":"#8856a7",
+                  "label":"10 to 20"
+                },
+                {
+                  "color":"#8c96c6",
+                  "label":"5 to 10"
+                },
+                {
+                  "color":"#b3cde3",
+                  "label":"1 to 5"
+                },
+                {
+                  "color":"#edf8fb",
+                  "label":"Less than 1"
+                },
+                {
+                  "color":"#ffffff",
+                  "label":"0 or No Data"
+                }],
+              "description":"Self-supplied water use for thermoelectricity in millions of gallons of water per day."
+          },
+          {
+            "id":1,
+              "type":"polygon",
+              "secondDropdownLegend":true,
+              "title":"Thermoelectric Surface Water Use (Mgal/day)",
+              "icon":"thermo",
+              "containers":[{
+                "color":"#810f7c",
+                "label":"20+"
+              },
+              {
+                "color":"#8856a7",
+                "label":"10 to 20"
+              },
+              {
+                "color":"#8c96c6",
+                "label":"5 to 10"
+              },
+              {
+                "color":"#b3cde3",
+                "label":"1 to 5"
+              },
+              {
+                "color":"#edf8fb",
+                "label":"Less than 1"
+              },
+              {
+                "color":"#ffffff",
+                "label":"0 or No Data"
+              }],
+              "description":"Self-supplied water use for thermoelectricity in millions of gallons of water per day."
+          },
+          {
+            "id":2,
+              "type":"polygon",
+              "secondDropdownLegend":true,
+              "title":"Thermoelectric Groundwater Water Use (Mgal/day)",
+              "icon":"thermo",
+              "containers":[{
+                "color":"#810f7c",
+                "label":"1+"
+              },
+              {
+                "color":"#8856a7",
+                "label":"0.75 to 1"
+              },
+              {
+                "color":"#8c96c6",
+                "label":"0.5 to 0.75"
+              },
+              {
+                "color":"#b3cde3",
+                "label":"0.25 to 0.75"
+              },
+              {
+                "color":"#edf8fb",
+                "label":"Less than 0.5"
+              },
+              {
+                "color":"#ffffff",
+                "label":"0 or No Data"
+              }],
+              "description":"Self-supplied water use for thermoelectricity in millions of gallons of water per day."
+          }]
+      },
+      {
+        "id":5,
+        "title":"Mining",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "facts":["&#9900 Total mining water use in Pacific Northwest is 46 Mgal/day (2010 data). 24 Mgal/day for surface water, and 22 Mgal/day for groundwater.","&#9900 Of the three PNW states, Idaho has the highest daily mining water use."]
+          }],
+        "jsonLayers":[{
+            "secondDropdownValues":true,
+            "url":"map_data/water/water_use_total.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"mine",
+            "values":[25,26,27,28,29],
+            "fillColors":["#734d26","#9e6934","#c48a4e","#d8b18a","#ecd9c6","#ffffff"],
+            "colors":"#ffffff",
+            "fillOpacity":0.7,
+            "opacity":1,
+            "weight":1,
+            "tooltipVars":["NAME","ST","mine"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ," County, ","</h2><br/><p3 style='display:inline; font-weight:normal;'>"," Mgal/day</p3>"],
+            "filterVariable":"type",
+            "filterValue":"total",
+            "hoverDash":4
+          }],
+        "legend":[{
+            "id":0,
+              "type":"polygon",
+              "secondDropdownLegend":true,
+              "title":"Mining Water Use (Mgal/day)",
+              "icon":"mines",
+              "containers":[{
+                  "color":"#734d26",
+                  "label":"2.5+"
+                },
+                {
+                  "color":"#9e6934",
+                  "label":"1 to 2.5"
+                },
+                {
+                  "color":"#c48a4e",
+                  "label":"0.5 to 1"
+                },
+                {
+                  "color":"#d8b18a",
+                  "label":"0.25 to 0.5"
+                },
+                {
+                  "color":"#ecd9c6",
+                  "label":"Less than 0.25"
+                },
+                {
+                  "color":"#ffffff",
+                  "label":"0 or No Data"
+                }],
+              "description":"Self-supplied water use for mining in millions of gallons of water per day."
+          },
+          {
+            "id":1,
+              "type":"polygon",
+              "secondDropdownLegend":true,
+              "title":"Mining Surface Water Use (Mgal/day)",
+              "icon":"mines",
+              "containers":[{
+                "color":"#734d26",
+                "label":"1+"
+              },
+              {
+                "color":"#9e6934",
+                "label":"0.5 to 1"
+              },
+              {
+                "color":"#c48a4e",
+                "label":"0.25 to 0.5"
+              },
+              {
+                "color":"#d8b18a",
+                "label":"0.1 to 0.25"
+              },
+              {
+                "color":"#ecd9c6",
+                "label":"Less than 0.1"
+              },
+              {
+                "color":"#ffffff",
+                "label":"0 or No Data"
+              }],
+              "description":"Self-supplied water use for mining in millions of gallons of water per day."
+          },
+          {
+            "id":2,
+              "type":"polygon",
+              "secondDropdownLegend":true,
+              "title":"Mining Groundwater Water Use (Mgal/day)",
+              "icon":"mines",
+              "containers":[{
+                "color":"#734d26",
+                "label":"1+"
+              },
+              {
+                "color":"#9e6934",
+                "label":"0.5 to 1"
+              },
+              {
+                "color":"#c48a4e",
+                "label":"0.25 to 0.5"
+              },
+              {
+                "color":"#d8b18a",
+                "label":"0.1 to 0.25"
+              },
+              {
+                "color":"#ecd9c6",
+                "label":"Less than 0.1"
+              },
+              {
+                "color":"#ffffff",
+                "label":"0 or No Data"
+              }],
+              "description":"Self-supplied water use for mining in millions of gallons of water per day."
+          }]
+      },
+      {
+        "id":6,
+        "title":"Livestock",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "facts":["&#9900 Total livestock water use in Pacific Northwest is 92 Mgal/day (2010 data). 32 Mgal/day for surface water, and 60 Mgal/day for groundwater.","&#9900 Of the three PNW states, Idaho has the highest daily livestock water use."]
+          }],
+        "jsonLayers":[{
+            "secondDropdownValues":true,
+            "url":"map_data/water/water_use_total.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"live",
+            "values":[30,31,32,33,34],
+            "fillColors":["#666600","#959735","#c5ca81","#d8e39c","#f0f4d7","#ffffff"],
+            "colors":"#ffffff",
+            "fillOpacity":0.7,
+            "opacity":1,
+            "weight":1,
+            "tooltipVars":["NAME","ST","live"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ," County, ","</h2><br/><p3 style='display:inline; font-weight:normal;'>"," Mgal/day</p3>"],
+            "filterVariable":"type",
+            "filterValue":"total",
+            "hoverDash":4
+          }],
+        "legend":[{
+            "id":0,
+              "type":"polygon",
+              "secondDropdownLegend":true,
+              "title":"Livestock Water Use (Mgal/day)",
+              "icon":"livestock",
+              "containers":[{
+                  "color":"#666600",
+                  "label":"2.5+"
+                },
+                {
+                  "color":"#959735",
+                  "label":"1 to 2.5"
+                },
+                {
+                  "color":"#c5ca81",
+                  "label":"0.5 to 1"
+                },
+                {
+                  "color":"#d8e39c",
+                  "label":"0.25 to 0.5"
+                },
+                {
+                  "color":"#f0f4d7",
+                  "label":"Less than 0.25"
+                },
+                {
+                  "color":"#ffffff",
+                  "label":"0 or No Data"
+                }],
+              "description":"Self-supplied water use for livestock in millions of gallons of water per day."
+          },
+          {
+            "id":1,
+              "type":"polygon",
+              "secondDropdownLegend":true,
+              "title":"Livestock Surface Water Use (Mgal/day)",
+              "icon":"livestock",
+              "containers":[{
+                "color":"#666600",
+                "label":"1+"
+              },
+              {
+                "color":"#959735",
+                "label":"0.5 to 1"
+              },
+              {
+                "color":"#c5ca81",
+                "label":"0.25 to 0.5"
+              },
+              {
+                "color":"#d8e39c",
+                "label":"0.1 to 0.25"
+              },
+              {
+                "color":"#f0f4d7",
+                "label":"Less than 0.1"
+              },
+              {
+                "color":"#ffffff",
+                "label":"0 or No Data"
+              }],
+              "description":"Self-supplied water use for livestock in millions of gallons of water per day."
+          },
+          {
+            "id":2,
+              "type":"polygon",
+              "secondDropdownLegend":true,
+              "title":"Livestock Groundwater Water Use (Mgal/day)",
+              "icon":"livestock",
+              "containers":[{
+                "color":"#666600",
+                "label":"2.5+"
+              },
+              {
+                "color":"#959735",
+                "label":"1 to 2.5"
+              },
+              {
+                "color":"#c5ca81",
+                "label":"0.25 to 1"
+              },
+              {
+                "color":"#d8e39c",
+                "label":"0.1 to 0.25"
+              },
+              {
+                "color":"#f0f4d7",
+                "label":"Less than 0.1"
+              },
+              {
+                "color":"#ffffff",
+                "label":"0 or No Data"
+              }],
+              "description":"Self-supplied water use for livestock in millions of gallons of water per day."
+          }]
+      },
+      {
+        "id":7,
+        "title":"Irrigation",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "facts":["&#9900 Total irrigation water use in Pacific Northwest is 22,444 Mgal/day (2010 data). 15,917 Mgal/day for surface water, and 6,527 Mgal/day for groundwater.","&#9900 Of the three PNW states, Idaho has the highest daily irrigation water use."]
+          }],
+        "jsonLayers":[{
+            "secondDropdownValues":true,
+            "url":"map_data/water/water_use_total.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"irr",
+            "values":[35,36,37,38,39],
+            "fillColors":["#006d2c","#31a354","#74c476","#bae4b3","#edf8e9","#ffffff"],
+            "colors":"#ffffff",
+            "fillOpacity":0.7,
+            "opacity":1,
+            "weight":1,
+            "tooltipVars":["NAME","ST","irr"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ," County, ","</h2><br/><p3 style='display:inline; font-weight:normal;'>"," Mgal/day</p3>"],
+            "filterVariable":"type",
+            "filterValue":"total",
+            "hoverDash":4
+          }],
+        "legend":[{
+            "id":0,
+              "type":"polygon",
+              "secondDropdownLegend":true,
+              "title":"Irrigation Water Use (Mgal/day)",
+              "icon":"irrigation",
+              "containers":[{
+                  "color":"#006d2c",
+                  "label":"1,000+"
+                },
+                {
+                  "color":"#31a354",
+                  "label":"500 to 1,000"
+                },
+                {
+                  "color":"#74c476",
+                  "label":"250 to 500"
+                },
+                {
+                  "color":"#bae4b3",
+                  "label":"100 to 250"
+                },
+                {
+                  "color":"#edf8e9",
+                  "label":"Less than 100"
+                },
+                {
+                  "color":"#ffffff",
+                  "label":"0 or No Data"
+                }],
+              "description":"Self-supplied water use for irrigation in millions of gallons of water per day."
+          },
+          {
+            "id":1,
+              "type":"polygon",
+              "secondDropdownLegend":true,
+              "title":"Irrigation Surface Water Use (Mgal/day)",
+              "icon":"irrigation",
+              "containers":[{
+                "color":"#006d2c",
+                "label":"500+"
+              },
+              {
+                "color":"#31a354",
+                "label":"250 to 500"
+              },
+              {
+                "color":"#74c476",
+                "label":"100 to 250"
+              },
+              {
+                "color":"#bae4b3",
+                "label":"50 to 100"
+              },
+              {
+                "color":"#edf8e9",
+                "label":"Less than 50"
+              },
+              {
+                "color":"#ffffff",
+                "label":"0 or No Data"
+              }],
+              "description":"Self-supplied water use for irrigation in millions of gallons of water per day."
+          },
+          {
+            "id":2,
+              "type":"polygon",
+              "secondDropdownLegend":true,
+              "title":"Irrigation Groundwater Water Use (Mgal/day)",
+              "icon":"irrigation",
+              "containers":[{
+                "color":"#006d2c",
+                "label":"250+"
+              },
+              {
+                "color":"#31a354",
+                "label":"100 to 250"
+              },
+              {
+                "color":"#74c476",
+                "label":"50 to 100"
+              },
+              {
+                "color":"#bae4b3",
+                "label":"10 to 50"
+              },
+              {
+                "color":"#edf8e9",
+                "label":"Less than 10"
+              },
+              {
+                "color":"#ffffff",
+                "label":"0 or No Data"
+              }],
+              "description":"Self-supplied water use for irrigation in millions of gallons of water per day."
+          }]
+      },
+      {
+        "id":8,
+        "title":"Aquaculture",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "facts":["&#9900 Total aquaculture water use in Pacific Northwest is 3,679 Mgal/day (2010 data). 3,494 Mgal/day for surface water, and 185 Mgal/day for groundwater.","&#9900 Of the three PNW states, Idaho has the highest daily aquaculture water use."]
+          }],
+        "jsonLayers":[{
+            "secondDropdownValues":true,
+            "url":"map_data/water/water_use_total.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"aqua",
+            "values":[40,41,42,43,44],
+            "fillColors":["#004d38","#009970","#00cc99","#66ffd9","#ccfff2","#ffffff"],
+            "colors":"#ffffff",
+            "fillOpacity":0.7,
+            "opacity":1,
+            "weight":1,
+            "tooltipVars":["NAME","ST","aqua"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ," County, ","</h2><br/><p3 style='display:inline; font-weight:normal;'>"," Mgal/day</p3>"],
+            "filterVariable":"type",
+            "filterValue":"total",
+            "hoverDash":4
+          }],
+        "legend":[{
+            "id":0,
+              "type":"polygon",
+              "secondDropdownLegend":true,
+              "title":"Aquaculture Water Use (Mgal/day)",
+              "icon":"aqua",
+              "containers":[{
+                  "color":"#004d38",
+                  "label":"100+"
+                },
+                {
+                  "color":"#009970",
+                  "label":"50 to 100"
+                },
+                {
+                  "color":"#00cc99",
+                  "label":"25 to 50"
+                },
+                {
+                  "color":"#66ffd9",
+                  "label":"10 to 25"
+                },
+                {
+                  "color":"#ccfff2",
+                  "label":"Less than 10"
+                },
+                {
+                  "color":"#ffffff",
+                  "label":"0 or No Data"
+                }],
+              "description":"Self-supplied water use for aquaculture in millions of gallons of water per day."
+          },
+          {
+            "id":1,
+              "type":"polygon",
+              "secondDropdownLegend":true,
+              "title":"Aquaculture Surface Water Use (Mgal/day)",
+              "icon":"aqua",
+              "containers":[{
+                "color":"#004d38",
+                "label":"100+"
+              },
+              {
+                "color":"#009970",
+                "label":"50 to 100"
+              },
+              {
+                "color":"#00cc99",
+                "label":"25 to 50"
+              },
+              {
+                "color":"#66ffd9",
+                "label":"10 to 25"
+              },
+              {
+                "color":"#ccfff2",
+                "label":"Less than 10"
+              },
+              {
+                "color":"#ffffff",
+                "label":"0 or No Data"
+              }],
+              "description":"Self-supplied water use for aquaculture in millions of gallons of water per day."
+          },
+          {
+            "id":2,
+              "type":"polygon",
+              "secondDropdownLegend":true,
+              "title":"Aquaculture Groundwater Water Use (Mgal/day)",
+              "icon":"aqua",
+              "containers":[{
+                "color":"#004d38",
+                "label":"10+"
+              },
+              {
+                "color":"#009970",
+                "label":"5 to 10"
+              },
+              {
+                "color":"#00cc99",
+                "label":"2.5 to 5"
+              },
+              {
+                "color":"#66ffd9",
+                "label":"1 to 2.5"
+              },
+              {
+                "color":"#ccfff2",
+                "label":"Less than 1"
+              },
+              {
+                "color":"#ffffff",
+                "label":"0 or No Data"
+              }],  
+              "description":"Self-supplied water use for aquaculture in millions of gallons of water per day."
+          }]
+      }],
+      "sources":{
+        "geographic":[{
+            "title":"Idaho Water Use: ",
+            "linkText":"USGS National Water Information System",
+            "linkUrl":"https://waterdata.usgs.gov/id/nwis/water_use?format=html_table&rdb_compression=file&wu_area=County&wu_year=2010&wu_county=ALL&wu_category=ALL&wu_county_nms=--ALL%2BCounties--&wu_category_nms=--ALL%2BCategories--",
+            "description":"Millions of gallons per day by usage. Data from 2010."
+        },
+        {
+            "title":"Oregon Water Use: ",
+            "linkText":"USGS National Water Information System",
+            "linkUrl":"https://waterdata.usgs.gov/or/nwis/water_use?format=html_table&rdb_compression=file&wu_area=County&wu_year=2010&wu_county=ALL&wu_category=ALL&wu_county_nms=--ALL%2BCounties--&wu_category_nms=--ALL%2BCategories--",
+            "description":"Millions of gallons per day by usage. Data from 2010."
+        },
+        {
+            "title":"Washington Water Use: ",
+            "linkText":"USGS National Water Information System",
+            "linkUrl":"https://waterdata.usgs.gov/wa/nwis/water_use?format=html_table&rdb_compression=file&wu_area=County&wu_year=2010&wu_county=ALL&wu_category=ALL&wu_county_nms=--ALL%2BCounties--&wu_category_nms=--ALL%2BCategories--",
+            "description":"Millions of gallons per day by usage. Data from 2010."
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

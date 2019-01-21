@@ -1,0 +1,175 @@
+{
+    "title": "Demographics",
+    "URL":"demographics_icon",
+    "chapter":"population",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "basemap":[{"title":"terrain","opacity":1},
+        {"title":"geoserver","layer":"pnw_outline2","opacity":0.3},
+        {"title":"label","opacity":1}],
+    "infoBackground":"rgba(255,255,255,1)",
+    "maps":[{
+        "id":0,
+        "title":"Race",
+        "border":{"title":"pnw_borders","include":true,"opacity":0.5},
+        "tileLayers":[{"title":"pnw_demographics","pane":250,"opacity":0.7}],
+        "jsonLayers":[{
+            "pane":"overBorder",
+            "url":"map_data/population/block_group_demographics.json",
+            "feature":"polygon",
+            "type":"single",
+            "fillColors":"#f2f2f2",
+            "colors":"#ffffff",
+            "fillOpacity":0,
+            "opacity":0,
+            "weight":0.5,
+            "hoverOpacity":0.25,
+            "hoverLineOpacity":1,
+            "titleVariable":"title"
+          }],
+          "legend":[{
+                "id":0,
+                "description":"Map colored based on a composite of racial population percentages. More intense colors suggest a greater percentage of a single race, while browns and grays suggest racial diversity. Data from 2011-2015."
+            },
+            {
+                "id":1,
+                "type":"chart",
+                "title":"Hover Over Map for Details",
+                "chartID":"raceChart",
+                "description":"Population of each racial group within one census block group. Data from 2011-2015."
+            }],
+        "chart":[{
+            "id":1,
+            "chartLoc":"legend",
+            "chartType":"pie",
+            "labels":["White","Black","Asian","Latinx/Hisp.","Indigenous","Other"],
+            "data":["white","black","asian","hisp_latin","ind_island","other_two"],
+            "colors":["#80b1d3","#9fdf9f","#bebada","#fb8072","#ffffb3","#fdb462"],
+            "options": {
+                "responsive": true,
+                "legend": {
+                    "position": "left",
+                    "labels": {
+                        "fontColor":"#000000",
+                        "fontFamily":"GoudyOld",
+                        "fontSize":14
+                    }
+                },
+                "plugins":{
+                    "labels":{
+                        "render": "value",
+                        "fontColor":"#000000",    
+                        "fontFamily":"GoudyOld",
+                        "fontSize":14,
+                        "overlap":false
+                    }
+                },   
+                "tooltips":{
+                    "enabled":false
+                }
+            }
+        }]
+      },
+      {
+        "id":1,
+        "title":"Age",
+        "border":{"title":"pnw_borders","include":true,"opacity":0.5},
+        "tileLayers":[{"title":"age_group_demographics","pane":300,"opacity":0.7}],
+        "jsonLayers":[{
+            "pane":"overBorder",
+            "url":"map_data/population/age_group_demographics.json",
+            "feature":"polygon",
+            "type":"single",
+            "fillColors":"#f2f2f2",
+            "colors":"#ffffff",
+            "fillOpacity":0,
+            "opacity":0,
+            "weight":0.5,
+            "hoverOpacity":0.25,
+            "hoverLineOpacity":1,
+            "titleVariable":"title",
+            "hoverText":["Median Age: ",""],
+            "hoverVar":"med_age"
+          }],
+          "legend":[{
+                "id":0,
+                "type":"gradient",
+                "title":"Median Age",
+                "gradient":"linear-gradient(to right, #fcfbfd, #dadaeb, #9e9ac8, #6a51a3, #3f007d)",
+                "gradientLabels":["25","35","45","55","65"],
+                "gradientMargin":42
+            },
+            {
+                "id":1,
+                "type":"chart",
+                "hoverContainer":true,
+                "chartHeight":260,
+                "title":"Hover Over Map for Details",
+                "chartID":"ageChart",
+                "description":"Population of each age group within a census block group."
+            }],
+        "chart":[{
+            "id":1,
+            "chartLoc":"legend",
+            "chartType":"horizontalBar",
+            "labels":["85+","80-84","75-79","70-74","65-69","60-64","55-59","50-54","45-49","40-44","35-39","30-34","25-29","20-24","14-19","10-14","5-9","Under 5"],
+            "data":["a85over","a80_84","a75_79","a70_74","a65_69","a60_64","a55_59","a50_54","a45_49","a40_44","a35_39","a30_34","a25_29","a20_24","a15_19","a10_14","a5_9","aunder5"],
+            "colors":["#261a32","#332343","#402c54","#4d3564","#593e75","#664686","#734f96","#8058a7","#8c69b0","#9979b9","#a68ac1","#b39bca","#bfabd3","#ccbcdc","#d9cde5","#e6deed","#f2eef6","#fcfbfd"],
+            "options": {
+                "responsive": true,
+                "scales": {
+                    "yAxes": [{
+                        "ticks": {
+                            "fontSize":10,
+                            "fontFamily":"GoudyOld"
+                        }
+                    }],
+                    "xAxes": [{
+                        "ticks": {
+                            "fontFamily":"GoudyOld"
+                        }
+                    }]
+                },
+                "legend": {
+                    "display":false
+                },
+                "tooltips":{
+                    "enabled":false
+                }                       
+            }
+        }]
+      }],
+      "sources":{
+        "geographic":[{
+            "title":"Census Block Groups: ",
+            "linkText":"IPUMS NHGIS, University of Minnesota",
+            "linkUrl":"https://data2.nhgis.org/main",
+            "description":"IPUMS Data selected from ACS 2011-2015. Geographic Level: Census Block Group GIS Data."
+        },
+        {
+            "title":"Demographic Data: ",
+            "linkText":"IPUMS NHGIS, University of Minnesota",
+            "linkUrl":"https://data2.nhgis.org/main",
+            "description":"IPUMS Data selected from ACS 2011-2015. Geographic Level: Census Block Group. Datasets: Sex by Age, Median Sex by Age, Hispanic or Latino Origin by Race."
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

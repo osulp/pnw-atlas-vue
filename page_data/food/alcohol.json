@@ -1,0 +1,206 @@
+{
+    "title": "Alcohol Production",
+    "URL":"alcohol_icon",
+    "chapter":"food",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "basemap":[{"title":"streets","opacity":1},
+        {"title":"imagery","opacity":0.3},
+        {"title":"terrain","opacity":0.3},
+        {"title":"geoserver","layer":"pnw_outline2","opacity":0.3},
+        {"title":"label","opacity":1}],
+    "maps":[{
+            "id":0,
+            "title":"Beer",
+            "border":{"include":true,"opacity":0.3},
+            "fastFacts":[{
+                "facts":["&#9900 Washington, Idaho, and Oregon are the three leading hop producers in the U.S.","&#9900 Washington produces over 78 million pounds of hops annually, Idaho produces over 13 million pounds, and Oregon produces over 11 million pounds."]
+            }],
+            "tileLayers":[{"title":"beer_crops","pane":300,"opacity":0.7}],
+            "jsonLayers":[{
+                "url":"map_data/food/beer_makers.json",
+                "feature":"point",
+                "type":"single",
+                "fillColors":["#247524"],
+                "colors":["#ffffff"],
+                "radius":[3.5],
+                "weight":1.75,
+                "opacity":1,
+                "fillOpacity":1,
+                "tooltipVars":["Name"],
+                "tooltipText":["<b style='display:inline;'>","</b>"]                 
+              }],
+            "legend":[{
+                "id":0,
+                "type":"point",
+                "containers":[{
+                      "size":7,
+                      "label":"Beer Producers",
+                      "background":"#247524",
+                      "color":"#ffffff",
+                      "margin":25
+                    }]
+                },
+                {
+                "id":1,
+                "type":"polygon",
+                "chartID":"fieldChart",
+                "title":"Beer Crop Growing Areas",
+                "containers":[{
+                        "color":"rgba(137, 176, 130,0.7)",
+                        "label":"Hops"
+                    },
+                    {
+                        "color":"rgba(128, 119, 60,0.7)",
+                        "label":"Barley"
+                    },
+                    {
+                        "color":"rgba(186, 173, 76,0.7)",
+                        "label":"Wheat"
+                    }
+                ]                
+                }]
+          },
+          {
+            "id":1,
+            "title":"Wine",
+            "infoWidth":"250px",
+            "fastFacts":[{
+                "fastTitle":"American Viticultural Areas (AVAs):",
+                "facts":["AVAs are delimited grape-growing areas that have specific growing conditions that wine producers can use to attribute certain characteristics to describe their product, such as quality or reputation."]
+            },
+            {
+                "facts":["&#9900 Pinot Noir is the most commonly grown grape in Oregon, while Cabernet Sauvignon is the most common in Washington and Idaho.","&#9900 In Idaho, wine is the fastest growing agricultural industry."]
+            }],
+            "border":{"include":true,"opacity":0.3},
+            "jsonLayers":[{
+                "interactive":false,
+                "pane":"overBorder",
+                "url":"map_data/food/wine_producers.json",
+                "feature":"point",
+                "type":"single",
+                "fillColors":["#cc6699"],
+                "colors":["#ffffff"],
+                "radius":[2.5],
+                "weight":1,
+                "opacity":1,
+                "fillOpacity":1,
+                "info":false
+              },
+              {
+                "url":"map_data/food/avas.json",
+                "pane":"underFlow",
+                "feature":"polygon",
+                "type":"categorized",
+                "attribute":"inside",
+                "values":[0,1,2],
+                "fillColors":["#9fdf9f","#79d279","#53c653","#53c653"],
+                "colors":["#2d862d"],
+                "opacity":1,
+                "fillOpacity":0.5,
+                "dashArray": 3,
+                "hoverPosition":"normal",
+                "hoverDash":3,
+                "hoverColor":"#ffffff",
+                "tooltipVars":["name","grapes"],
+                "tooltipText":["<h2>"," AVA</h2><p3 style='font-weight:normal'>Popular Grapes: <br/>","</p3>"]       
+              }],
+            "legend":[{
+                "id":0,
+                "type":"point",
+                "containers":[{
+                      "size":6,
+                      "label":"Wine Producers",
+                      "background":"#cc6699",
+                      "color":"#ffffff",
+                      "margin":25
+                    }]
+                },
+                {
+                "id":1,
+                "type":"narrowGradient",
+                "title":"American Viticultural Areas (AVAs)",
+                "description":"Darker shades indicated nested AVAs.",
+                "gradient":"linear-gradient(to right, rgba(159, 223, 159,0.8), rgba(159, 223, 159,0.8) 33%, rgba(121, 210, 121,0.8) 33%, rgba(121, 210, 121,0.8) 66%, rgba(83, 198, 83,0.8) 66%)",
+                "gradientMargin":200          
+                }]
+          }      
+      ],
+      "sources":{
+        "geographic":[{
+            "title":"Beer Producers: ",
+            "linkText":"Beer Mapping Project",
+            "linkUrl":"https://beermapping.com/about/",
+            "description":"Data from 2018. Free account is required to download data."
+        },
+        {
+            "title":"Beer Crop Growing Area: ",
+            "linkText":"USDA National Agricultural Statistics Service",
+            "linkUrl":"https://nassgeodata.gmu.edu/CropScape/",
+            "description":"Data from 2017. Data downloaded for OR, WA and ID. Filtered to include only wheat, barley, and hops crop area data."
+        },
+        {
+            "title":"Wine Producers: ",
+            "linkText":"Alcohol and Tobacco Tax and Trade Bureau",
+            "linkUrl":"https://www.ttb.gov/foia/frl.shtml",
+            "description":"Data from 2017. Wine Producer and Blender List. Raw data listed as addresses and was geocoded using Texas A&M's free online geocoding service."
+        },
+        {
+            "title":"American Viticultural Areas: ",
+            "linkText":"UC Davis Library",
+            "linkUrl":"https://github.com/UCDavisLibrary/ava",
+            "description":"Data from 2018. Dataset is incomplete. Gaps in data were filled in using digitized maps (see below)."
+        },
+        {
+            "title":"Oregon AVAs: ",
+            "linkText":"Linfield Library",
+            "linkUrl":"http://digitalcommons.linfield.edu/owha_owb_maps/7/",
+            "description":"Data from 2008. Used to digitize polygon data."
+        },
+        {
+            "title":"Washington AVAs: ",
+            "linkText":"Vineyards.com",
+            "linkUrl":"https://vineyards.com/photos/maps/Washington_EN.png",
+            "description":"Date unknown. Used to digitize polygon data."
+        },
+        {
+            "title":"Snake River AVA: ",
+            "linkText":"Wines Northwest",
+            "linkUrl":"http://www.winesnw.com/snakerivervalleyAVA.htm",
+            "description":"Map from 2015. Used to digitize polygon data."
+        },
+        {
+            "title":"Lewis Clark Valley AVA: ",
+            "linkText":"Town News",
+            "linkUrl":"https://bloximages.newyork1.vip.townnews.com/lmtribune.com/content/tncms/assets/v3/editorial/7/01/70106ce4-2567-11e6-97d2-fb4956650a7d/574a8db348675.image.jpg",
+            "description":"Date unknown. Used to digitize polygon data."
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Satellite Imagery: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldImagery",
+            "description":"ESRI World Imagery; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://d3js.org/topojson.v1.min.js","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+  }

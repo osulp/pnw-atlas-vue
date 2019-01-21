@@ -1,0 +1,219 @@
+{
+    "title": "Protected Lands",
+    "URL":"park_icon",
+    "chapter":"recreation",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "basemap":[{"title":"terrain","opacity":1},
+      {"title":"geoserver","layer":"pnw_outline2","opacity":0.3},
+      {"title":"label","opacity":1}],
+    "maps":[{
+        "id":0,
+        "title":"Parks",
+        "border":{"title":"pnw_borders_black","include":true,"opacity":0.5},
+        "fastFacts":[{
+            "facts":["&#9900 49% of land in the Pacific Northwest is federally owned.","&#9900 There are 451 total state parks in Oregon, Idaho, and Washington.","&#9900 Olympic National Park is the most visited park in the region, receiving an average of over three million annual visitors."]
+        }],
+        "jsonLayers":[{
+            "url":"map_data/recreation/parks_total.json",
+            "feature":"polygon",
+            "type":"categorized",
+            "attribute":"park_type",
+            "values":[1,2,3,4,5],
+            "fillColors":["#43765d","#95d964","#28bd98","#9dc8b4","#aab955","#ffffff"],
+            "colors":["#43765d","#95d964","#28bd98","#9dc8b4","#aab955","#ffffff"],
+            "fillOpacity":0.7,
+            "opacity":1,
+            "weight":1,
+            "tooltipVars":["Unit_Nm","d_Own_Name"],
+            "tooltipText":["<h2 style='margin:0;'>","</h2><p3 style='font-weight:normal;'>","</p3>"]
+          },
+          {
+            "interactive":false,
+            "url":"map_data/recreation/blm.json",
+            "feature":"polygon",
+            "type":"single",
+            "fillColors":"#d6d6c2",
+            "colors":"#ffffff",
+            "fillOpacity":0.7,
+            "opacity":0
+          },
+          {
+            "interactive":false,
+            "url":"map_data/recreation/wilderness.json",
+            "feature":"polygon",
+            "type":"pattern",
+            "colors":"#407259",
+            "fillOpacity":1,
+            "opacity":0,
+            "pattern":{
+                "weight": 1,
+                "spaceWeight": 1,
+                "height": 4,
+                "angle":45,
+                "color":"#407259"
+                }
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"Park Type",
+                "containers":[{
+                    "color":"#43765d",
+                    "label":"National Forest",
+                    "tooltip":"Federally protected and managed forest and woodland areas."
+                  },
+                  {
+                    "color":"#28bd98",
+                    "label":"National Wildlife",
+                    "tooltip":"Areas designated with the purpose of conserving fish, wildlife and plants."
+                  },
+                  {
+                    "color":"#95d964",
+                    "label":"National Park",
+                    "tooltip":"Includes National Parks, Monuments, Scenic Areas, Volcanic Areas, and Recreation Areas."
+                  },
+                  {
+                    "color":"#9dc8b4",
+                    "label":"State Forest",
+                    "tooltip":"Forested areas maintained by state forestry or national resources departments."
+                  },
+                  {
+                    "color":"#aab955",
+                    "label":"State Park",
+                    "tooltip":"Recreation areas managed by state parks and recreation bureaus."
+                  },
+                  {
+                    "color":"#d6d6c2",
+                    "label":"BLM Land",
+                    "tooltip":"Land owned by the Bureau of Land Management. Open to hunting, fishing, and other recreation activities, typically with less infrastructure."
+                  },
+                  {
+                    "color":"repeating-linear-gradient(45deg, rgba(255,255,255,0), rgba(255,255,255,0) 10%, #407259 15%, #407259 15%)",
+                    "label":"Wilderness Area",
+                    "tooltip":"Areas of federally protected wilderness. Human access is limited."
+                  }
+                ],
+                "description":"County/Municipal Parks are not represented in the map."
+            }]
+      },
+      {
+        "id":1,
+        "title":"Visitation",
+        "border":{"title":"pnw_borders_black","include":true,"opacity":0.5},
+        "fastFacts":[{
+            "facts":["&#9900 49% of land in the Pacific Northwest is federally owned.","&#9900 There are 451 total state parks in Oregon, Idaho, and Washington.","&#9900 Olympic National Park is the most visited park in the region, receiving an average of over three million annual visitors."]
+        }],
+        "jsonLayers":[{
+            "url":"map_data/recreation/park_points.json",
+            "feature":"point",
+            "type":"single",
+            "fillColors":"#004d00",
+            "colors":"#ffffff",
+            "fillOpacity":0.7,
+            "opacity":1,
+            "weight":1,
+            "radiusType":"graduated",
+            "radiusAttribute":"day_use_an",
+            "radiusValues":[1000000,500000,250000,100000],
+            "radius":[15,10,8,5,3],
+            "tooltipVars":["Unit_Nm","day_use_an"],
+            "tooltipText":["<h3 style='margin:0;'>","</h3><p3 style='font-weight:normal;'>"," Annual Day-Use Visitors</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"point",
+                "title":"Annual Visitation",
+                "containers":[{
+                    "background":"rgba(0,77,0,0.8)",
+                    "color":"#ffffff",
+                    "label":"1,000+",
+                    "size":28,
+                    "border":1,
+                    "margin":40
+                  },
+                  {
+                    "background":"rgba(0,77,0,0.8)",
+                    "color":"#ffffff",
+                    "label":"500 to 1,000",
+                    "size":19,
+                    "border":1,
+                    "margin":40
+                  },
+                  {
+                    "background":"rgba(0,77,0,0.8)",
+                    "color":"#ffffff",
+                    "label":"250 to 500",
+                    "size":15,
+                    "border":1,
+                    "margin":40
+                  },
+                  {
+                    "background":"rgba(0,77,0,0.8)",
+                    "color":"#ffffff",
+                    "label":"100 to 250",
+                    "size":10,
+                    "border":1,
+                    "margin":40
+                  },
+                  {
+                    "background":"rgba(0,77,0,0.8)",
+                    "color":"#ffffff",
+                    "label":"Less than 100",
+                    "size":5,
+                    "border":1,
+                    "margin":40
+                  }
+                ],
+                "description":"Annual visitation in thousands of day-use visitors."
+            }]
+      }],
+      "sources":{
+        "geographic":[{
+            "title":"Park Boundaries/Area: ",
+            "linkText":"United States Geological Survey Protected Areas Database of the United States",
+            "linkUrl":"https://gapanalysis.usgs.gov/padus/data/download/",
+            "description":"Certain protected land designations impertinent to outdoor recreation and not included in the final map."
+        },
+        {
+            "title":"National Park Visitation Statistics: ",
+            "linkText":"United States National Park Service",
+            "linkUrl":"https://irma.nps.gov/Stats/",
+            "description":"Annual day use visitation. Data from 2016."
+        },
+        {
+            "title":"Idaho State Park Visitation Statistics: ",
+            "linkText":"Idaho Parks and Recreation",
+            "linkUrl":"https://parksandrecreation.idaho.gov/sites/default/files/uploads/documents/Visitation%20Statistics/2013%20Day%20Use%20-%202014-01-15.pdf",
+            "description":"Annual day use visitation. Data from 2013."
+        },
+        {
+            "title":"Oregon State Park Visitation Statistics: ",
+            "linkText":"Oregon Parks and Recreation",
+            "linkUrl":"http://oregonstateparks.org/index.cfm?do=visit.dsp_find",
+            "description":"Annual day use visitation. Data date not available. Annual day use park visitation statistics obtained from the history/FAQ tab of each park page."
+        },
+        {
+            "description":"Note: The State of Washington does not publicly provide state park visitation data."
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

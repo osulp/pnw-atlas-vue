@@ -1,0 +1,233 @@
+{
+    "title": "Drought",
+    "URL":"drought_icon",
+    "chapter":"hazards",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "basemap":[{"title":"terrain","opacity":1},
+        {"title":"geoserver","layer":"pnw_outline2","opacity":0.3},
+        {"title":"label","opacity":1}],
+    "maps":[{
+        "id":0,
+        "title":"Drought Class",
+        "fastFacts":[{
+            "facts":["&#9900 In 2015, 92% of PNW Counties officially declared drought.","&#9900 Drought effects are expected to become more consistent and severe as climate change intensifies."]
+        }],
+        "border":{"include":true},
+        "jsonLayers":[{
+            "interactive":false,
+            "pane":"overBorder",
+            "url":"map_data/hazards/drought_total.json",
+            "feature":"polygon",
+            "type":"categorized",
+            "attribute":"Droughtcat",
+            "values":["d0","d1","d2","d3"],
+            "fillColors":["#d1d1bd","#c1ab9f","#ca7660","#c72800","#ffffff"],
+            "fillOpacity":0.7,
+            "opacity":0,
+            "filterVariable":"Year_Month"       
+          }],
+        "slider":{
+                "title":"droughtClass",
+                "min":2012,
+                "max":2017,
+                "step":1,
+                "default":2017,
+                "height":225
+            },
+        "legend":[{
+            "id":0,
+            "title":"Drought Class",
+            "subtitle":"July of Selected Year",
+            "type":"polygon",
+            "containers":[{
+                "color":"#c72800",
+                "label":"Extreme Drought"
+                },
+                {
+                "color":"#ca7660",
+                "label":"Severe Drought"
+                },
+                {
+                "color":"#c1ab9f",
+                "label":"Moderate Drought"
+                },
+                {
+                "color":"#d1d1bd",
+                "label":"Abnormally Dry"
+                }],
+            "description":"Drought Classification based on indices of soil moisture, precipitation, groundwater, as well as local observations."
+        }]
+      },
+      {
+        "id":1,
+        "title":"Drought Status",
+        "fastFacts":[{
+            "facts":["&#9900 In 2015, 92% of PNW Counties officially declared drought.","&#9900 Drought effects are expected to become more consistent and severe as climate change intensifies."]
+        }],
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "jsonLayers":[{
+            "url":"map_data/hazards/drought_counties.json",
+            "feature":"polygon",
+            "type":"categorized",
+            "attribute":"drought",
+            "values":["0","1","2"],
+            "fillColors":["#ffffff","#c72800","#c1ab9f","#ffffff"],
+            "colors":["#e6e6e6"],
+            "fillOpacity":0.7,
+            "opacity":1,
+            "filterVariable":"year",
+            "hoverDash":4,
+            "hoverColor":"#000000",
+            "tooltipVars":["NAME"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ," County</h2>"]   
+          }],
+        "slider":{
+                "title":"droughCounties",
+                "min":2012,
+                "max":2017,
+                "step":1,
+                "default":2017,
+                "height":225
+            },
+        "legend":[{
+            "id":0,
+            "title":"County Drought Status",
+            "type":"polygon",
+            "containers":[{
+                "color":"#c72800",
+                "label":"Primary Counties"
+                },
+                {
+                "color":"#c1ab9f",
+                "label":"Contiguous Counties"
+                },
+                {
+                "color":"#ffffff",
+                "label":"No Official Drought"
+                }],
+            "description":"Drought Status as approved by the US Secretary of Agriculture. Primary Counties indicate officially declared drought."
+        }]
+      },
+      {
+        "id":2,
+        "title":"Precipitation",
+        "fastFacts":[{
+            "facts":["&#9900 In 2015, 92% of PNW Counties officially declared drought.","&#9900 Drought effects are expected to become more consistent and severe as climate change intensifies."]
+        }],
+        "jsonLayers":[{
+            "interactive":false,
+            "url":"map_data/hazards/anomaly_total.json",
+            "feature":"polygon",
+            "type":"categorized",
+            "attribute":"class",
+            "values":["20","40","60","80","100","120","140","160","180","200","220","240"],
+            "fillColors":["#d7191c","#ee7245","#febe74","#fff0ad","#f3fab4","#e1f3a3","#cfeb91","#bde380","#abdb6e","#80c75f","#4daf50","#1a9641","#1a9641"],
+            "colors":["#d7191c","#ee7245","#febe74","#fff0ad","#f3fab4","#e1f3a3","#cfeb91","#bde380","#abdb6e","#80c75f","#4daf50","#1a9641","#1a9641"],
+            "fillOpacity":0.8,
+            "opacity":1,
+            "filterVariable":"year"       
+          }],
+        "slider":{
+                "title":"precipitation",
+                "min":2012,
+                "max":2017,
+                "step":1,
+                "default":2017,
+                "height":225
+            },
+        "legend":[{
+            "id":0,
+            "title":"Annual Precipitation Anomaly (% of average)",
+            "type":"polygon",
+            "containers":[{
+                "color":"#1a9641",
+                "label":"240+"
+                },
+                {
+                "color":"#4daf50",
+                "label":"220 to 240"
+                },
+                {
+                "color":"#80c75f",
+                "label":"200 to 220"
+                },
+                {
+                "color":"#abdb6e",
+                "label":"180 to 200"
+                },
+                {
+                "color":"#bde380",
+                "label":"160 to 180"
+                },
+                {
+                "color":"#cfeb91",
+                "label":"140 to 160"
+                },
+                {
+                "color":"#e1f3a3",
+                "label":"120 to 140"
+                },
+                {
+                "color":"#f3fab4",
+                "label":"100 to 120"
+                },
+                {
+                "color":"#fff0ad",
+                "label":"80 to 100"
+                },
+                {
+                "color":"#febe74",
+                "label":"60 to 80"
+                },
+                {
+                "color":"#ee7245",
+                "label":"40 to 60"
+                },
+                {
+                "color":"#d7191c",
+                "label":"Less than 40"
+                }],
+            "description":"Percent of average precipitation. Averages taken from 1980 to 2010."
+        }]
+      }],
+      "sources":{
+        "geographic":[{
+            "title":"Drought Classifications: ",
+            "linkText":"NOAA/University of Nebraska",
+            "linkUrl":"https://www1.ncdc.noaa.gov/pub/data/nidis/shapefiles/",
+            "description":"Level of Drought classification. Data downloaded for July 2012-2017."
+        },
+        {
+            "title":"Drought Counties: ",
+            "linkText":"United States Department of Agriculture",
+            "linkUrl":"https://www.fsa.usda.gov/programs-and-services/disaster-assistance-program/disaster-designation-information/index",
+            "description":"County drought status. Combined with PNW county dataset. Data downloaded for July 2012-2017."
+        },
+        {
+            "title":"Precipitation Anomaly: ",
+            "linkText":"Oregon State University PRISM Group",
+            "linkUrl":"http://prism.oregonstate.edu/recent/",
+            "description":"Percent differentiation from average precipitation. Annual precipitation datasets from 2012-2017 subtracted from 1980-2010 30-year normals."
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

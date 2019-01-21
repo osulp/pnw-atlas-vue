@@ -1,0 +1,398 @@
+{
+    "title": "Flora ",
+    "URL":"flora_icon",
+    "chapter":"wildlife",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "dropdownLabel":{"type":"breaks","labels":["Selected Species"],"breaks":[2]},
+    "basemap":[{"title":"terrain","opacity":1},
+        {"title":"geoserver","layer":"pnw_outline2","opacity":0.3},
+        {"title":"label","opacity":1}],
+    "maps":[{
+        "id":0,
+        "title":"Habitats",
+        "featureSelected":false, 
+        "border":{"title":"pnw_states_black"},
+        "tileLayers":[{"title":"flora","pane":300,"opacity":0.6}],
+        "jsonLayers":[{
+            "url":"map_data/wildlife/ecoregions_level3.json",
+            "feature":"polygon",
+            "type":"selection",
+            "fillColors":"#ffffff",
+            "fillOpacity":0,
+            "hoverOpacity":0.7,
+            "colors":"#ffffff",
+            "tooltipVars":["US_L3NAME"],
+            "tooltipText":["<b style='display:inline;'>","</b>"],  
+            "tooltip":"tooltip",  
+            "sticky":true,   
+            "selection":{
+                "titleVar":"US_L3NAME",
+                "unselectedOpacity":0.7,
+                "unselectedHover":0.3,
+                "selectionOpacity":0,
+                "selectionHover":0,
+                "varList":["trees"],
+                "varLabel":["Common Species: "],
+                "subtitleVar":"desc",
+                "imageLink":"link"
+            }           
+          }],
+        "legend":[{
+            "id":0,
+            "type":"selection",
+            "title":"Select an Ecoregion",
+            "varList":false
+        },
+        {
+            "id":1,
+            "type":"selection",
+            "varListFont":20
+        },
+        {
+            "id":2,
+            "title":"Vegetation Types",
+            "type":"polygon",
+            "containers":[{
+                "color":"#377e57",
+                "label":"Vancouverian Forest",
+                "tooltip":"Maritime forests dominated by conifer species. Varying precipitation. Fir, Hemlock and Spruce varieties are prominent."
+                },
+                {
+                "color":"#1b5335",
+                "label":"Rocky Mountain Forest",
+                "tooltip":"Inland forests where conifer species are common. Includes dry and alpine climate zones. Fir, Pine, Juniper, and Hemlock varieties are prominent."
+                },
+                {
+                "color":"#779d64",
+                "label":"Utah Pinyon Forest",
+                "tooltip":"Woodland/Scrubland characterized by the presence of Pinyon and Juniper varieties."
+                },
+                {
+                "color":"#416c34",
+                "label":"California Forest",
+                "tooltip":"Dry upland forests characterized by broad-leafed deciduous trees and conifers. Oak, Pine, Fir varieties are prominent."
+                },
+                {
+                "color":"#85bd97",
+                "label":"Harvested/Burned Forest",
+                "tooltip":"Forest land that has been affected by logging, wildfires, or other disturbances."
+                }]
+        },
+        {
+            "id":3,
+            "type":"polygon",
+            "containers":[{
+                "color":"#5ca79e",
+                "label":"Freshwater Marsh/Bog",
+                "tooltip":"Riparian and swamp shrublands with shallow water and a variety of herbaceous vegetation."
+                },
+                {
+                "color":"#afdfe9",
+                "label":"Salt Marsh",
+                "tooltip":"Wetlands with salinity of at least 0.5 ppt. Characterized by fluctuating water levels."
+                },
+                {
+                "color":"#409bd8",
+                "label":"Open Water",
+                "tooltip":"Rivers, lakes, and reservoirs."
+                }]
+        },
+        {
+            "id":4,
+            "type":"polygon",
+            "containers":[{
+                "color":"#d0ccb3",
+                "label":"Scrubland/Grassland",
+                "tooltip":"Includes both cool-temperate grassland and Mediterranean chaparral shrubland."
+                },
+                {
+                "color":"#e5dfbd",
+                "label":"Desert/Semi-Desert",
+                "tooltip":"Occurs in dry, cool-temperate climates, dominated by low shrubs. Sagebrush varieties are prominent."
+                }]
+        },
+        {
+            "id":5,
+            "type":"polygon",
+            "containers":[{
+                "color":"#d4cadd",
+                "label":"Alpine Tundra",
+                "tooltip":"Occurs at high elevations in mountain ranges."
+                },
+                {
+                "color":"#90839d",
+                "label":"Bare Rock",
+                "tooltip":"Exposed rock formation."
+                },
+                {
+                "color":"#ffffff",
+                "label":"Glacier/Ice Field",
+                "tooltip":"Area of ice cover."
+                }]
+        },
+        {
+            "id":6,
+            "type":"polygon",
+            "containers":[{
+                "color":"#e3efcc",
+                "label":"Agriculture/Introduced",
+                "tooltip":"Includes agricultural areas, as well as areas of non-agricultural introduced vegetation."
+                },
+                {
+                "color":"#d5d5d5",
+                "label":"Urban Area",
+                "tooltip":"Area of urban land cover."
+                }],
+            "description":"Vegetation type based on 2011 USGS GAP Analysis data."
+        }]
+      },
+      {
+        "id":1,
+        "title":"Forest Cover",
+        "border":{"title":"pnw_borders_black","opacity":0.5},
+        "tileLayers":[{"title":"tree_cover_total","pane":300,"opacity":0.5},{"title":"tree_loss_total","pane":320,"opacity":0.5},{"title":"tree_gain_total","pane":350,"opacity":0.5}],
+        "fastFacts":[{
+            "facts":["&#9900 As of 2011, the Douglas Fir was the most logged tree in the Pacific Northwest.","&#9900 In 2017, over 1.8 million acres of forest were affected by wildfires."]
+          }],
+        "legend":[{
+            "id":0,
+            "type":"polygon",
+            "title":"Change in Forest Cover",
+            "containers":[{
+                "color":"#41ab5d",
+                "label":"Forest Cover"
+                },
+                {
+                "color":"#ff3333",
+                "label":"Forest Loss"
+                },
+                {
+                "color":"#4d6dff",
+                "label":"Forest Gain"
+                }],
+            "icon":"white_oak",
+            "description":"Change in forest cover between. Total forest cover from 2000, forest gain from 2000 to 2012, and forest loss from 2000 to 2017. Forest loss includes both human and anthropogenic causes."
+        }]
+      },
+      {
+        "id":2,
+        "title":"Douglas Fir",
+        "border":{"title":"pnw_borders_black","opacity":0.5},
+        "tileLayers":[{"title":"douglas_fir","pane":300,"opacity":0.8}],
+        "fastFacts":[{
+            "facts":["&#9900 Scientific name: Pseudotsuga menziesii.","&#9900 Can grow between 70 and 330 ft. tall. Larger specimens are found in the Coast Range.","&#9900 State tree of Oregon.","&#9900 Not considered a true fir, such as Grand Fir or Subalpine Fir."]
+          }],
+        "legend":[{
+            "id":0,
+            "type":"gradient",
+            "title":"Douglas Fir Basal Area (Sq Ft./Acre)",
+            "gradient":"linear-gradient(to right, #f7fcf5 0%, #e5f5e0 10%, #c7e9c0 20%, #a1d99b 30%, #74c476 40%, #41ab5d 50%, #238b45 60%, #006d2c 70%, #005722 80%, #003514 90%)",
+            "gradientLabels":["0","160+"],
+            "gradientMargin":255,
+            "bottomIcon":"douglas_fir",
+            "bottomIconWidth":100,
+            "description":"Basal area represents the cross section (square footage) of tree trunks at the base over an acre."
+        }]
+      },
+      {
+        "id":3,
+        "title":"Western Hemlock",
+        "border":{"title":"pnw_borders_black","opacity":0.5},
+        "tileLayers":[{"title":"western_hemlock","pane":300,"opacity":0.8}],
+        "fastFacts":[{
+            "facts":["&#9900 Scientific name: Tsuga heterophylla.","&#9900  Can grow between 165 and 240 ft. tall.","&#9900 State tree of Washington.","&#9900 Extremely shade tolerant, and able grow under the canopies of larger trees, such as Douglas Fir or Sitka Spruce."]
+          }],
+        "legend":[{
+            "id":0,
+            "type":"gradient",
+            "title":"Western Hemlock Basal Area (Sq Ft./Acre)",
+            "gradient":"linear-gradient(to right, #f7fcf5 0%, #e5f5e0 10%, #c7e9c0 20%, #a1d99b 30%, #74c476 40%, #41ab5d 50%, #238b45 60%, #006d2c 70%, #005722 80%, #003514 90%)",
+            "gradientLabels":["0","130+"],
+            "gradientMargin":255,
+            "bottomIcon":"western_hemlock",
+            "bottomIconWidth":100,
+            "description":"Basal area represents the cross section (square footage) of tree trunks at the base over an acre."
+        }]
+      },
+      {
+        "id":4,
+        "title":"Ponderosa Pine",
+        "border":{"title":"pnw_borders_black","opacity":0.5},
+        "tileLayers":[{"title":"douglas_fir","pane":300,"opacity":0.8}],
+        "fastFacts":[{
+            "facts":["&#9900 Scientific name: Pinus ponderosa.","&#9900 Can grow over 200 ft. tall.","&#9900 Two subspecies of Ponderosa Pine are present within the PNW: Pacific Ponderosa and Columbia Ponderosa."]
+          }],
+        "legend":[{
+            "id":0,
+            "type":"gradient",
+            "title":"Ponderosa Pine Basal Area (Sq Ft./Acre)",
+            "gradient":"linear-gradient(to right, #f7fcf5 0%, #e5f5e0 10%, #c7e9c0 20%, #a1d99b 30%, #74c476 40%, #41ab5d 50%, #238b45 60%, #006d2c 70%, #005722 80%, #003514 90%)",
+            "gradientLabels":["0","80+"],
+            "gradientMargin":228,
+            "bottomIcon":"ponderosa_pine",
+            "bottomIconWidth":100,
+            "description":"Basal area represents the cross section (square footage) of tree trunks at the base over an acre."
+        }]
+      },
+      {
+        "id":5,
+        "title":"Grand Fir",
+        "border":{"title":"pnw_borders_black","opacity":0.5},
+        "tileLayers":[{"title":"grand_fir","pane":300,"opacity":0.8}],
+        "fastFacts":[{
+            "facts":["&#9900 Scientific name: Abies grandis.","&#9900 Can grow between 120 and 210 ft. tall.","&#9900 In the logging industry, Grand Fir is known as 'hem fir'.","&#9900 Commonly used as a Christmas tree."]
+          }],
+        "legend":[{
+            "id":0,
+            "type":"gradient",
+            "title":"Grand Fir Basal Area (Sq Ft./Acre)",
+            "gradient":"linear-gradient(to right, #f7fcf5 0%, #e5f5e0 10%, #c7e9c0 20%, #a1d99b 30%, #74c476 40%, #41ab5d 50%, #238b45 60%, #006d2c 70%, #005722 80%, #003514 90%)",
+            "gradientLabels":["0","65+"],
+            "gradientMargin":235,
+            "bottomIcon":"grand_fir",
+            "bottomIconWidth":100,
+            "description":"Basal area represents the cross section (square footage) of tree trunks at the base over an acre."
+        }]
+      },
+      {
+        "id":6,
+        "title":"Juniper",
+        "border":{"title":"pnw_borders_black","opacity":0.5},
+        "tileLayers":[{"title":"western_juniper","pane":300,"opacity":0.9},{"title":"utah_juniper","pane":300,"opacity":0.9},{"title":"rocky_mountain_juniper","pane":300,"opacity":0.5}],
+        "fastFacts":[{
+            "facts":["&#9900 Scientific name: Pseudotsuga menziesii.","&#9900 Can grow between 70 and 330 ft. tall. Larger specimens are found in the Coast Range.","&#9900 State tree of Oregon.","&#9900 Not considered a true fir, such as Grand Fir or Subalpine Fir."]
+          }],
+        "legend":[{
+            "id":0,
+            "type":"gradient",
+            "title":"Juniper Basal Area (Sq Ft./Acre)",
+            "gradient":"linear-gradient(to right, #f7fcf5 0%, #e5f5e0 10%, #c7e9c0 20%, #a1d99b 30%, #74c476 40%, #41ab5d 50%, #238b45 60%, #006d2c 70%, #005722 80%, #003514 90%)",
+            "gradientLabels":["0","16+"],
+            "gradientMargin":235,
+            "bottomIcon":"western_juniper",
+            "bottomIconWidth":100,
+            "description":"Includes basal area of Western Juniper, Utah Juniper, and Rocky Mountain Juniper. Basal area represents the cross section (square footage) of tree trunks at the base over an acre."
+        }]
+      },
+      {
+        "id":7,
+        "title":"Sagebrush",
+        "border":{"title":"pnw_borders_black","opacity":0.5},
+        "tileLayers":[{"title":"sagebrush","pane":300,"opacity":0.9}],
+        "fastFacts":[{
+            "facts":["&#9900 Scientific name: Artemisia.","&#9900 Big Sagebrush and its subspecies are the most widespread sagebrush varieties in the PNW.","&#9900 Important for a variety of native species, including Sage Grouse, Pronghorn, and Mule Deer."]
+          }],
+        "legend":[{
+            "id":0,
+            "type":"polygon",
+            "title":"Sagebrush Distribution",
+            "containers":[{
+                "color":"#d6d3bd",
+                "label":"Basin Big Sagebrush"
+                },
+                {
+                "color":"#adaa9a",
+                "label":"Mountain Big Sagebrush"
+                },
+                {
+                "color":"#6d6957",
+                "label":"Threetip Sagebrush"
+                },
+                {
+                "color":"#afc6aa",
+                "label":"Low Sagebrush"
+                },
+                {
+                "color":"#62835c",
+                "label":"Black Sagebrush"
+                }],
+            "bottomIcon":"sagebrush",
+            "bottomIconWidth":100,
+            "description":"Distribution of dominant sagebrush species and subspecies."
+        }]
+      }],
+      "sources":{
+        "geographic":[{
+            "title":"Level 3 Ecoregions: ",
+            "linkText":"US Environmental Protection Agency",
+            "linkUrl":"https://www.epa.gov/eco-research/level-iii-and-iv-ecoregions-continental-united-states"
+        },
+        {
+            "title":"Vegetation Type: ",
+            "linkText":"USGS Gap Analysis",
+            "linkUrl":"https://gapanalysis.usgs.gov/gaplandcover/data/download/",
+            "description":"Data from 2011. Raster data downloaded for each state and merged."
+        },
+        {
+            "title":"Forest Cover, Gain, and Loss: ",
+            "linkText":"Hansen/UMD/Google/USGS/NASA",
+            "linkUrl":"http://earthenginepartners.appspot.com/science-2013-global-forest/download_v1.5.html",
+            "description":"The following datasets were downloaded: Global forest cover gain 2000–2012, Year of gross forest cover loss event, Tree canopy cover for year 2000."
+        },
+        {
+            "title":"Tree Species: ",
+            "linkText":"US Forest Service",
+            "linkUrl":"https://www.fs.usda.gov/rds/archive/Product/RDS-2013-0013",
+            "description":"Species basal area, square feet/acre. RDS-2013-0013_RasterMaps_s10-s350.zip and RDS-2013-0013_RasterMaps_s601-s825.zip were downloaded. Datasets based on FIA species codes."
+        },
+        {
+            "title":"Sagebrush: ",
+            "linkText":"Data Basin",
+            "linkUrl":"https://databasin.org/datasets/d904c24857de45238508580e4cd818eb",
+            "description":"Sagebrush species distribution. Data from 2002. Original data source: NatureServe."
+        }],
+        "text":[{
+            "title":"Lumber Statistics: ",
+            "linkText":"USDA Census of Agriculture",
+            "linkUrl":"https://www.agcensus.usda.gov/Publications/2012/Online_Resources/Ag_Census_Web_Maps/Data_download/index.php"
+        },
+        {
+            "title":"Fire Acreage Stats: ",
+            "linkText":"US Forest Service",
+            "linkUrl":"https://www.fs.usda.gov/Internet/FSE_DOCUMENTS/fseprd572804.pdf"
+        },
+        {
+            "title":"Tree Silhouettes: ",
+            "linkText":"Natural Resources Canada",
+            "linkUrl":"https://tidcf.nrcan.gc.ca/en/trees/all/a"
+        },
+        {
+            "title":"Incense Cedar Photograph: ",
+            "linkText":"Victor R. Ruiz",
+            "linkUrl":"https://commons.wikimedia.org/wiki/File:Calocedrus_decurrens_Yosemite_NP.jpg",
+            "description":"Heavily modified."
+        },
+        {
+            "title":"Bluebunch Wheatgrass Drawing: ",
+            "linkText":"University of Montana",
+            "linkUrl":"https://www.flickr.com/photos/msulibrary/4464890183",
+            "description":"Heavily modified."
+        },
+        {
+            "title":"Sandberg Bluegrass, Needle-and-Thread Drawings: ",
+            "linkText":"US Natural Resources Conservation Service",
+            "linkUrl":"https://plants.usda.gov/java/usageGuidelines?imageID=posc_001_avd.tif",
+            "description":"USDA-NRCS PLANTS Database / Hitchcock, A.S. (rev. A. Chase). 1950. Manual of the grasses of the United States. USDA Miscellaneous Publication No. 200. Washington, DC."
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","Chart.js","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

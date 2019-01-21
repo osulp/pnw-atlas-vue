@@ -1,0 +1,204 @@
+{
+    "title": "Groundwater",
+    "URL":"groundwater_icon",
+    "chapter":"water",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "basemap":[{"title":"terrain","opacity":1},
+      {"title":"geoserver","layer":"pnw_outline2","opacity":0.3},
+      {"title":"label","opacity":1}],
+    "maps":[{
+        "id":0,
+        "title":"Aquifers",
+        "border":{"title":"pnw_borders_black","opacity":0.8},
+        "fastFacts":[{
+          "facts":["Unconsolidated sand and gravel aquifers are the most productive and easily accesible aquifers in the Pacific Northwest. They are typically shallow, and found in lowland basins. Sand and gravel aquifers commonly yield 20 - 2000 gallons per minute to wells."],
+          "titleColor":"#0033cc",
+          "fastTitle":"Sand and Gravel"
+        },
+        {
+          "facts":["Volcanic rock aquifers are more geologically complex than sand and gravel aquifers, resulting in more variable hydrologic productivity. Volcanic aquifers are often difficult to access, but can hold large volumes of water in rock fractures. Volcanic aquifers can yield 1 - 1000 gallons per minute to wells, but often yield less than 400."],
+          "titleColor":"#267326",
+          "fastTitle":"Volcanic"
+        },
+        {
+          "facts":["Aquifers categorized as 'other' are typically minor hydrologic units that are difficult to access, have poor yields, or both. Other rock yells yield 1 - 100 gallons per minute to wells."],
+          "titleColor":"#5c5c3d",
+          "fastTitle":"Other Rocks"
+        },
+        {
+          "facts":["In the southeastern corner of Idaho, a small area consists of carbonate rock aquifers. In these areas, aquifers are generally poor yielding, but can be very deep."],
+          "titleColor":"#8461af",
+          "fastTitle":"Carbonate"
+        }],
+        "jsonLayers":[{
+            "url":"map_data/water/aquifers.json",
+            "feature":"polygon",
+            "type":"categorized",
+            "attribute":"cat",
+            "values":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],
+            "fillColors":["#ebebe0","#ccccb3","#a3a375","#5c5c3d","#e6ecff","#99b3ff","#4d79ff","#0033cc","#ecf9ec","#b3e6b3","#66cc66","#267326","#c19cef","#8461af"],
+            "colors":["#ebebe0","#ccccb3","#a3a375","#5c5c3d","#e6ecff","#99b3ff","#4d79ff","#0033cc","#ecf9ec","#b3e6b3","#66cc66","#267326","#c19cef","#8461af"],
+            "fillOpacity":0.6,
+            "opacity":1,
+            "weight":0.5,
+            "tooltipVars":["nickname","recharge"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>","</h2><br/><p3 style='font-weight:normal;'>","</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polyGrid",
+                "title":["Recharge(mm/yr)","Type"],
+                "subtitle":["0","20","100","500+"],
+                "bottomMargin":22,
+                "titleMargin":50,
+                "containers":[{
+                  "gradient":"linear-gradient(to right, rgba(230, 236, 255, 0.8), rgba(230, 236, 255, 0.8) 25%, rgba(153, 179, 255, 0.8) 25%, rgba(153, 179, 255, 0.8) 50%, rgba(77, 121, 255, 0.8) 50%, rgba(77, 121, 255, 0.8) 75%, rgba(0, 51, 204, 0.8) 75%)",
+                  "label":"Sand"
+                },
+                {
+                  "gradient":"linear-gradient(to right, rgba(236, 249, 236,0.8), rgba(236, 249, 236,0.8) 25%, rgba(179, 230, 179, 0.8) 25%, rgba(179, 230, 179, 0.8) 50%, rgba(102, 204, 102, 0.8) 50%, rgba(102, 204, 102,0.8) 75%, rgba(38, 115, 38 ,0.8) 75%)",
+                  "label":"Volcano"
+                },
+                {
+                  "gradient":"linear-gradient(to right, rgba(235, 235, 224 ,0.8), rgba(235, 235, 224,0.8) 25%, rgba(204, 204, 179, 0.8) 25%, rgba(204, 204, 179,0.8) 50%, rgba(163, 163, 117 ,0.8) 50%, rgba(163, 163, 117 ,0.8) 75%, rgba(92, 92, 61 ,0.8) 75%)",
+                  "label":"Other"
+                },
+                {
+                  "gradient":"linear-gradient(to right, rgba(228, 221, 238, 0.8), rgba(228, 221, 238, 0.8) 25%, rgba(193, 156, 239 ,0.8) 25%, rgba(193, 156, 239, 0.8) 50%, rgba(132, 97, 175, 0.8) 50%, rgba(132, 97, 175, 0.8) 75%, rgba(86, 60, 119, 0.8) 75%)",
+                  "label":"Carbonate"
+                }]
+            }]
+      },
+      {
+        "id":1,
+        "title":"Conservation",
+        "border":{"title":"pnw_borders_black","include":true,"opacity":0.4},
+        "fastFacts":[{
+          "facts":["Critical Groundwater Areas (CGWAs) are where groundwater extraction exceeds groundwater supply, potentially long and short-run causing depletion."],
+          "titleColor":"#cc2900",
+          "fastTitle":"Critical Groundwater Area"
+          },
+          {
+            "facts":["Areas of Concern are where groundwater levels may be approaching CGWA conditions. In Oregon, these are called Groundwater Limited Areas (GMLAs). in Idaho, they are called Groundwater Management Areas (GWMAs). Washington has no such designations."],
+            "titleColor":"#ffa64d",
+            "fastTitle":"Area of Concern"
+          },
+          {
+            "facts":["Sole Source Aquifers provide at least 50% of drinking water in a region. In regions with sole source aquifers, there are no alternatives if the aquifer becomes contaminated or depleted."],
+            "titleColor":"#99b3ff",
+            "fastTitle":"Sole Source Aquifer"
+          }],
+        "jsonLayers":[{
+            "url":"map_data/water/groundwater_conservation_areas.json",
+            "feature":"polygon",
+            "type":"categorized",
+            "attribute":"type",
+            "values":["GWCA","GWLA","GWMA (ID)"],
+            "fillColors":["#cc2900","#ffa64d","#ffa64d","#ffffff"],
+            "colors":"#ffffff",
+            "fillOpacity":0.6,
+            "opacity":1,
+            "weight":1,
+            "tooltipVars":["NAME","type"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>","</h2><br/><p3 style='font-weight:normal;'>","</p3>"]
+          },
+          {
+            "interactive":false,
+            "pane":"overBorder",
+            "url":"map_data/water/SSA.json",
+            "feature":"polygon",
+            "type":"pattern",
+            "colors":["#99b3ff"],
+            "weight":0,
+            "opacity":1,
+            "fillOpacity":1,
+            "pattern":{
+                "weight": 1,
+                "spaceWeight": 2,
+                "height": 3,
+                "angle":45,
+                "color":"#99b3ff",
+                "spaceColor":"#ffffff"
+            }
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"Conservation Areas",
+                "containers":[{
+                    "color":"#cc2900",
+                    "label":"Critical Groundwater Area"
+                  },
+                  {
+                    "color":"#ffa64d",
+                    "label":"Area of Concern"
+                  }]
+            },
+            {
+            "id":1,
+                "type":"polygon",
+                "containers":[{
+                    "color":"repeating-linear-gradient(45deg, rgba(255,255,255,0), rgba(255,255,255,0) 10%, #99b3ff 15%, #99b3ff 15%)",
+                    "label":"Sole Source Aquifer"
+                  }]
+            }]
+      }],
+      "sources":{
+        "geographic":[{
+            "title":"Aquifers: ",
+            "linkText":"USGS",
+            "linkUrl":"https://water.usgs.gov/GIS/metadata/usgswrd/XML/aquifers_us.xmll",
+            "description":"Data from 2003. Joined with catchments and groundwater recharge datasets."
+        },
+        {
+          "title":"Catchment Areas:  ",
+          "linkText":"USGS SPARROW Model",
+          "linkUrl":"https://water.usgs.gov/GIS/metadata/usgswrd/XML/mrb_e2rf1ws.xml",
+          "description":"Data from 2002. Joined with catchments and groundwater recharge datasets."
+        },
+        {
+          "title":"Groundwater Recharge by Catchment Areas: ",
+          "linkText":"USGS SPARROW Model",
+          "linkUrl":"https://water.usgs.gov/GIS/metadata/usgswrd/XML/mrb_e2rf1_recharge.xml",
+          "description":"Recharge rate in mm/yr. Data from 2002. Notes: Joined with catchments and groundwater recharge datasets. Data from 2003."
+        },
+        {
+          "title":"Sole Source Aquifers: ",
+          "linkText":"US EPA",
+          "linkUrl":"https://catalog.data.gov/dataset/national-sole-source-aquifer-gis-layer",
+          "description":"Data from 2017."
+        },
+        {
+          "title":"Oregon Groundwater Restricted Areas: ",
+          "linkText":"Oregon Water Resources Department",
+          "linkUrl":"https://www.oregon.gov/owrd/pages/gw/gw_critical_allocations.aspx",
+          "description":"Data from 2017. Data digitized from static map."
+        },
+        {
+          "title":"Idaho Groundwater Restricted Areas: ",
+          "linkText":"Idaho Department of Water Resources",
+          "linkUrl":"https://www.idwr.idaho.gov/water-rights/critical-groundwater-areas/",
+          "description":"Data from 2017."
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

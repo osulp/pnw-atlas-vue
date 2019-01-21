@@ -1,0 +1,968 @@
+{
+    "title": "International Migration",
+    "URL":"immigration_icon",
+    "chapter":"population",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "basemap":[{"title":"terrain","opacity":1},
+      {"title":"geoserver","layer":"pnw_outline2","opacity":0.3},
+      {"title":"label","opacity":1}],
+    "maps":[{
+        "id":0,
+        "title":"N Europe",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "facts":["&#9900 It is estimated that 11% of all PNW residents were born outside the U.S.","&#9900 Of all world regions, Central America has the largest immigrant population in the PNW."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/population/counties_foreign_born.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"per_n_euro",
+            "values":[0.55,0.4,0.25,0.1],
+            "fillColors":["#045a8d","#2b8cbe","#74a9cf","#bdc9e1","#f1eef6"],
+            "colors":"#ffffff",
+            "fillOpacity":0.7,
+            "opacity":0.8,
+            "weight":1,
+            "tooltipVars":["NAME","ST","population","n_euro","per_n_euro"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ," County, ","</h2><br/><p3 style='display:inline; font-weight:normal;'>Total Pop.: </p3><p3 style='display:inline; font-weight:bold;'>","</p3><br/><p3 style='display:inline; font-weight:normal;'>Northern European Pop.: </p3><p3 style='font-weight:bold; display:inline;'>","</p3><br/><p3 style='display:inline; font-weight:bold;'>","%</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"% Residents Born in Northern Europe",
+                "icon":"region_icons/north_europe",
+                "containers":[{
+                    "color":"#045a8d",
+                    "label":"0.55+"
+                  },
+                  {
+                    "color":"#2b8cbe",
+                    "label":"0.4 to 0.55"
+                  },
+                  {
+                    "color":"#74a9cf",
+                    "label":"0.25 to 0.4"
+                  },
+                  {
+                    "color":"#bdc9e1",
+                    "label":"0.1 to 0.25"
+                  },
+                  {
+                    "color":"#f1eef6",
+                    "label":"Less than 0.1"
+                  }],
+                "description":"Residents born in Northern Europe as a percentage of total population. Estimates from 2011-2015."
+            }]
+      },
+      {
+        "id":1,
+        "title":"W Europe",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "facts":["&#9900 It is estimated that 11% of all PNW residents were born outside the U.S.","&#9900 Of all world regions, Central America has the largest immigrant population in the PNW."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/population/counties_foreign_born.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"per_w_euro",
+            "values":[0.55,0.4,0.25,0.1],
+            "fillColors":["#54278f","#756bb1","#9e9ac8","#cbc9e2","#f2f0f7"],
+            "colors":"#ffffff",
+            "fillOpacity":0.7,
+            "opacity":0.8,
+            "weight":1,
+            "tooltipVars":["NAME","ST","population","w_euro","per_w_euro"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ," County, ","</h2><br/><p3 style='display:inline; font-weight:normal;'>Total Pop.: </p3><p3 style='display:inline; font-weight:bold;'>","</p3><br/><p3 style='display:inline; font-weight:normal;'>Western European Pop.: </p3><p3 style='font-weight:bold; display:inline;'>","</p3><br/><p3 style='display:inline; font-weight:bold;'>","%</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"% Residents Born in Western Europe",
+                "icon":"region_icons/west_europe",
+                "containers":[{
+                    "color":"#54278f",
+                    "label":"0.55+"
+                  },
+                  {
+                    "color":"#756bb1",
+                    "label":"0.4 to 0.55"
+                  },
+                  {
+                    "color":"#9e9ac8",
+                    "label":"0.25 to 0.4"
+                  },
+                  {
+                    "color":"#cbc9e2",
+                    "label":"0.1 to 0.25"
+                  },
+                  {
+                    "color":"#f2f0f7",
+                    "label":"Less than 0.1"
+                  }],
+                "description":"Residents born in Western Europe as a percentage of total population. Estimates from 2011-2015."
+            }]
+      },
+      {
+        "id":2,
+        "title":"S Europe",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "facts":["&#9900 It is estimated that 11% of all PNW residents were born outside the U.S.","&#9900 Of all world regions, Central America has the largest immigrant population in the PNW."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/population/counties_foreign_born.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"per_s_euro",
+            "values":[0.2,0.1,0.05,0.01],
+            "fillColors":["#006d2c","#31a354","#74c476","#bae4b3","#edf8e9"],
+            "colors":"#ffffff",
+            "fillOpacity":0.7,
+            "opacity":0.8,
+            "weight":1,
+            "tooltipVars":["NAME","ST","population","s_euro","per_s_euro"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ," County, ","</h2><br/><p3 style='display:inline; font-weight:normal;'>Total Pop.: </p3><p3 style='display:inline; font-weight:bold;'>","</p3><br/><p3 style='display:inline; font-weight:normal;'>Southern European Pop.: </p3><p3 style='font-weight:bold; display:inline;'>","</p3><br/><p3 style='display:inline; font-weight:bold;'>","%</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"% Residents Born in Southern Europe",
+                "icon":"region_icons/south_europe",
+                "containers":[{
+                    "color":"#006d2c",
+                    "label":"0.2+"
+                  },
+                  {
+                    "color":"#31a354",
+                    "label":"0.1 to 0.2"
+                  },
+                  {
+                    "color":"#74c476",
+                    "label":"0.05 to 0.1"
+                  },
+                  {
+                    "color":"#bae4b3",
+                    "label":"0.01 to 0.05"
+                  },
+                  {
+                    "color":"#edf8e9",
+                    "label":"Less than 0.01"
+                  }],
+                "description":"Residents born in Southern Europe as a percentage of total population. Estimates from 2011-2015."
+            }]
+      },
+      {
+        "id":3,
+        "title":"E Europe",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "facts":["&#9900 It is estimated that 11% of all PNW residents were born outside the U.S.","&#9900 Of all world regions, Central America has the largest immigrant population in the PNW."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/population/counties_foreign_born.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"per_e_euro",
+            "values":[1,0.5,0.25,0.1],
+            "fillColors":["#a50f15","#de2d26","#fb6a4a","#fcae91","#fee5d9"],
+            "colors":"#ffffff",
+            "fillOpacity":0.7,
+            "opacity":0.8,
+            "weight":1,
+            "tooltipVars":["NAME","ST","population","e_euro","per_e_euro"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ," County, ","</h2><br/><p3 style='display:inline; font-weight:normal;'>Total Pop.: </p3><p3 style='display:inline; font-weight:bold;'>","</p3><br/><p3 style='display:inline; font-weight:normal;'>Eastern European Pop.: </p3><p3 style='font-weight:bold; display:inline;'>","</p3><br/><p3 style='display:inline; font-weight:bold;'>","%</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"% Residents Born in Eastern Europe",
+                "icon":"region_icons/east_europe",
+                "containers":[{
+                    "color":"#a50f15",
+                    "label":"1+"
+                  },
+                  {
+                    "color":"#de2d26",
+                    "label":"0.5 to 1"
+                  },
+                  {
+                    "color":"#fb6a4a",
+                    "label":"0.25 to 0.5"
+                  },
+                  {
+                    "color":"#fcae91",
+                    "label":"0.1 to 0.25"
+                  },
+                  {
+                    "color":"#fee5d9",
+                    "label":"Less than 0.1"
+                  }],
+                "description":"Residents born in Eastern Europe as a percentage of total population. Estimates from 2011-2015."
+            }]
+      },
+      {
+        "id":4,
+        "title":"E Asia",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "facts":["&#9900 It is estimated that 11% of all PNW residents were born outside the U.S.","&#9900 Of all world regions, Central America has the largest immigrant population in the PNW."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/population/counties_foreign_born.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"per_e_asia",
+            "values":[2,1,0.5,0.2],
+            "fillColors":["#54278f","#756bb1","#9e9ac8","#cbc9e2","#f2f0f7"],
+            "colors":"#ffffff",
+            "fillOpacity":0.7,
+            "opacity":0.8,
+            "weight":1,
+            "tooltipVars":["NAME","ST","population","e_asia","per_e_asia"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ," County, ","</h2><br/><p3 style='display:inline; font-weight:normal;'>Total Pop.: </p3><p3 style='display:inline; font-weight:bold;'>","</p3><br/><p3 style='display:inline; font-weight:normal;'>East Asian Pop.: </p3><p3 style='font-weight:bold; display:inline;'>","</p3><br/><p3 style='display:inline; font-weight:bold;'>","%</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"% Residents Born in East Asia",
+                "icon":"region_icons/east_asia",
+                "containers":[{
+                    "color":"#54278f",
+                    "label":"2+"
+                  },
+                  {
+                    "color":"#756bb1",
+                    "label":"1 to 2"
+                  },
+                  {
+                    "color":"#9e9ac8",
+                    "label":"0.5 to 1"
+                  },
+                  {
+                    "color":"#cbc9e2",
+                    "label":"0.2 to 0.5"
+                  },
+                  {
+                    "color":"#f2f0f7",
+                    "label":"Less than 0.2"
+                  }],
+                "description":"Residents born in East Asia as a percentage of total population. Estimates from 2011-2015."
+            }]
+      },
+      {
+        "id":5,
+        "title":"W Asia",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "facts":["&#9900 It is estimated that 11% of all PNW residents were born outside the U.S.","&#9900 Of all world regions, Central America has the largest immigrant population in the PNW."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/population/counties_foreign_born.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"per_w_asia",
+            "values":[0.5,0.2,0.1,0.01],
+            "fillColors":["#045a8d","#2b8cbe","#74a9cf","#bdc9e1","#f1eef6"],
+            "colors":"#ffffff",
+            "fillOpacity":0.7,
+            "opacity":0.8,
+            "weight":1,
+            "tooltipVars":["NAME","ST","population","w_asia","per_w_asia"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ," County, ","</h2><br/><p3 style='display:inline; font-weight:normal;'>Total Pop.: </p3><p3 style='display:inline; font-weight:bold;'>","</p3><br/><p3 style='display:inline; font-weight:normal;'>West Asian Pop.: </p3><p3 style='font-weight:bold; display:inline;'>","</p3><br/><p3 style='display:inline; font-weight:bold;'>","%</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"% Residents Born in West Asia",
+                "icon":"region_icons/west_asia",
+                "containers":[{
+                    "color":"#045a8d",
+                    "label":"0.5+"
+                  },
+                  {
+                    "color":"#2b8cbe",
+                    "label":"0.2 to 0.5"
+                  },
+                  {
+                    "color":"#74a9cf",
+                    "label":"0.1 to 0.2"
+                  },
+                  {
+                    "color":"#bdc9e1",
+                    "label":"0.01 to 0.1"
+                  },
+                  {
+                    "color":"#f1eef6",
+                    "label":"Less than 0.01"
+                  }],
+                "description":"Residents born in West Asia as a percentage of total population. Estimates from 2011-2015."
+            }]
+      },
+      {
+        "id":6,
+        "title":"SE Asia",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "facts":["&#9900 It is estimated that 11% of all PNW residents were born outside the U.S.","&#9900 Of all world regions, Central America has the largest immigrant population in the PNW."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/population/counties_foreign_born.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"per_se_asi",
+            "values":[2.5,1,0.5,0.2],
+            "fillColors":["#006d2c","#31a354","#74c476","#bae4b3","#edf8e9"],
+            "colors":"#ffffff",
+            "fillOpacity":0.7,
+            "opacity":0.8,
+            "weight":1,
+            "tooltipVars":["NAME","ST","population","se_asia","per_se_asi"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ," County, ","</h2><br/><p3 style='display:inline; font-weight:normal;'>Total Pop.: </p3><p3 style='display:inline; font-weight:bold;'>","</p3><br/><p3 style='display:inline; font-weight:normal;'>Southeast Asian Pop.: </p3><p3 style='font-weight:bold; display:inline;'>","</p3><br/><p3 style='display:inline; font-weight:bold;'>","%</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"% Residents Born in Southeast Asia",
+                "icon":"region_icons/southeast_asia",
+                "containers":[{
+                    "color":"#006d2c",
+                    "label":"2.5+"
+                  },
+                  {
+                    "color":"#31a354",
+                    "label":"1 to 2.5"
+                  },
+                  {
+                    "color":"#74c476",
+                    "label":"0.5 to 1"
+                  },
+                  {
+                    "color":"#bae4b3",
+                    "label":"0.2 to 0.5"
+                  },
+                  {
+                    "color":"#edf8e9",
+                    "label":"Less than 0.2"
+                  }],
+                "description":"Residents born in Southeast Asia as a percentage of total population. Estimates from 2011-2015."
+            }]
+      },
+      {
+        "id":7,
+        "title":"SC Asia",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "facts":["&#9900 It is estimated that 11% of all PNW residents were born outside the U.S.","&#9900 Of all world regions, Central America has the largest immigrant population in the PNW."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/population/counties_foreign_born.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"per_sc_asi",
+            "values":[0.5,0.2,0.1,0.01],
+            "fillColors":["#a50f15","#de2d26","#fb6a4a","#fcae91","#fee5d9"],
+            "colors":"#ffffff",
+            "fillOpacity":0.7,
+            "opacity":0.8,
+            "weight":1,
+            "tooltipVars":["NAME","ST","population","sc_asia","per_sc_asi"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ," County, ","</h2><br/><p3 style='display:inline; font-weight:normal;'>Total Pop.: </p3><p3 style='display:inline; font-weight:bold;'>","</p3><br/><p3 style='display:inline; font-weight:normal;'>South/Central Asian Pop.: </p3><p3 style='font-weight:bold; display:inline;'>","</p3><br/><p3 style='display:inline; font-weight:bold;'>","%</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"% Residents Born in South/Central Asia",
+                "icon":"region_icons/south_asia",
+                "containers":[{
+                    "color":"#a50f15",
+                    "label":"0.5+"
+                  },
+                  {
+                    "color":"#de2d26",
+                    "label":"0.2 to 0.5"
+                  },
+                  {
+                    "color":"#fb6a4a",
+                    "label":"0.1 to 0.2"
+                  },
+                  {
+                    "color":"#fcae91",
+                    "label":"0.01 to 0.1"
+                  },
+                  {
+                    "color":"#fee5d9",
+                    "label":"Less than 0.01"
+                  }],
+                "description":"Residents born in South/Central Asia as a percentage of total population. Estimates from 2011-2015."
+            }]
+      },
+      {
+        "id":8,
+        "title":"E Africa",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "facts":["&#9900 It is estimated that 11% of all PNW residents were born outside the U.S.","&#9900 Of all world regions, Central America has the largest immigrant population in the PNW."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/population/counties_foreign_born.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"per_e_afri",
+            "values":[0.2,0.1,0.05,0.01],
+            "fillColors":["#045a8d","#2b8cbe","#74a9cf","#bdc9e1","#f1eef6"],
+            "colors":"#ffffff",
+            "fillOpacity":0.7,
+            "opacity":0.8,
+            "weight":1,
+            "tooltipVars":["NAME","ST","population","e_africa","per_e_afri"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ," County, ","</h2><br/><p3 style='display:inline; font-weight:normal;'>Total Pop.: </p3><p3 style='display:inline; font-weight:bold;'>","</p3><br/><p3 style='display:inline; font-weight:normal;'>East African Pop.: </p3><p3 style='font-weight:bold; display:inline;'>","</p3><br/><p3 style='display:inline; font-weight:bold;'>","%</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"% Residents Born in East Africa",
+                "icon":"region_icons/east_africa",
+                "containers":[{
+                    "color":"#045a8d",
+                    "label":"0.2+"
+                  },
+                  {
+                    "color":"#2b8cbe",
+                    "label":"0.1 to 0.2"
+                  },
+                  {
+                    "color":"#74a9cf",
+                    "label":"0.05 to 0.1"
+                  },
+                  {
+                    "color":"#bdc9e1",
+                    "label":"0.01 to 0.05"
+                  },
+                  {
+                    "color":"#f1eef6",
+                    "label":"Less than 0.01"
+                  }],
+                "description":"Residents born in East Africa as a percentage of total population. Estimates from 2011-2015."
+            }]
+      },
+      {
+        "id":9,
+        "title":"C Africa",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "facts":["&#9900 It is estimated that 11% of all PNW residents were born outside the U.S.","&#9900 Of all world regions, Central America has the largest immigrant population in the PNW."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/population/counties_foreign_born.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"per_m_afri",
+            "values":[0.2,0.1,0.05,0.01],
+            "fillColors":["#006d2c","#31a354","#74c476","#bae4b3","#edf8e9"],
+            "colors":"#ffffff",
+            "fillOpacity":0.7,
+            "opacity":0.8,
+            "weight":1,
+            "tooltipVars":["NAME","ST","population","m_africa","per_m_afri"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ," County, ","</h2><br/><p3 style='display:inline; font-weight:normal;'>Total Pop.: </p3><p3 style='display:inline; font-weight:bold;'>","</p3><br/><p3 style='display:inline; font-weight:normal;'>Central African Pop.: </p3><p3 style='font-weight:bold; display:inline;'>","</p3><br/><p3 style='display:inline; font-weight:bold;'>","%</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"% Residents Born in Central Africa",
+                "icon":"region_icons/central_africa",
+                "containers":[{
+                    "color":"#006d2c",
+                    "label":"0.2+"
+                  },
+                  {
+                    "color":"#31a354",
+                    "label":"0.1 to 0.2"
+                  },
+                  {
+                    "color":"#74c476",
+                    "label":"0.05 to 0.1"
+                  },
+                  {
+                    "color":"#bae4b3",
+                    "label":"0.01 to 0.05"
+                  },
+                  {
+                    "color":"#edf8e9",
+                    "label":"Less than 0.01"
+                  }],
+                "description":"Residents born in Central Africa as a percentage of total population. Estimates from 2011-2015."
+            }]
+      },
+      {
+        "id":10,
+        "title":"N Africa",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "facts":["&#9900 It is estimated that 11% of all PNW residents were born outside the U.S.","&#9900 Of all world regions, Central America has the largest immigrant population in the PNW."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/population/counties_foreign_born.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"per_n_afri",
+            "values":[0.1,0.05,0.02,0.01],
+            "fillColors":["#a50f15","#de2d26","#fb6a4a","#fcae91","#fee5d9"],
+            "colors":"#ffffff",
+            "fillOpacity":0.7,
+            "opacity":0.8,
+            "weight":1,
+            "tooltipVars":["NAME","ST","population","n_africa","per_n_afri"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ," County, ","</h2><br/><p3 style='display:inline; font-weight:normal;'>Total Pop.: </p3><p3 style='display:inline; font-weight:bold;'>","</p3><br/><p3 style='display:inline; font-weight:normal;'>North African Pop.: </p3><p3 style='font-weight:bold; display:inline;'>","</p3><br/><p3 style='display:inline; font-weight:bold;'>","%</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"% Residents Born in North Africa",
+                "icon":"region_icons/north_africa",
+                "containers":[{
+                    "color":"#a50f15",
+                    "label":"0.1+"
+                  },
+                  {
+                    "color":"#de2d26",
+                    "label":"0.05 to 0.1"
+                  },
+                  {
+                    "color":"#fb6a4a",
+                    "label":"0.02 to 0.05"
+                  },
+                  {
+                    "color":"#fcae91",
+                    "label":"0.01 to 0.02"
+                  },
+                  {
+                    "color":"#fee5d9",
+                    "label":"Less than 0.01"
+                  }],
+                "description":"Residents born in North Africa as a percentage of total population. Estimates from 2011-2015."
+            }]
+      },
+      {
+        "id":11,
+        "title":"S Africa",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "facts":["&#9900 It is estimated that 11% of all PNW residents were born outside the U.S.","&#9900 Of all world regions, Central America has the largest immigrant population in the PNW."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/population/counties_foreign_born.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"per_s_afri",
+            "values":[0.1,0.05,0.02,0.01],
+            "fillColors":["#54278f","#756bb1","#9e9ac8","#cbc9e2","#f2f0f7"],
+            "colors":"#ffffff",
+            "fillOpacity":0.7,
+            "opacity":0.8,
+            "weight":1,
+            "tooltipVars":["NAME","ST","population","s_africa","per_s_afri"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ," County, ","</h2><br/><p3 style='display:inline; font-weight:normal;'>Total Pop.: </p3><p3 style='display:inline; font-weight:bold;'>","</p3><br/><p3 style='display:inline; font-weight:normal;'>South African Pop.: </p3><p3 style='font-weight:bold; display:inline;'>","</p3><br/><p3 style='display:inline; font-weight:bold;'>","%</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"% Residents Born in South Africa",
+                "icon":"region_icons/south_africa",
+                "containers":[{
+                    "color":"#54278f",
+                    "label":"0.1+"
+                  },
+                  {
+                    "color":"#756bb1",
+                    "label":"0.05 to 0.1"
+                  },
+                  {
+                    "color":"#9e9ac8",
+                    "label":"0.02 to 0.05"
+                  },
+                  {
+                    "color":"#cbc9e2",
+                    "label":"0.01 to 0.02"
+                  },
+                  {
+                    "color":"#f2f0f7",
+                    "label":"Less than 0.01"
+                  }],
+                "description":"Residents born in South Africa as a percentage of total population. Estimates from 2011-2015."
+            }]
+      },
+      {
+        "id":12,
+        "title":"W Africa",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "facts":["&#9900 It is estimated that 11% of all PNW residents were born outside the U.S.","&#9900 Of all world regions, Central America has the largest immigrant population in the PNW."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/population/counties_foreign_born.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"per_w_afri",
+            "values":[0.25,0.1,0.05,0.01],
+            "fillColors":["#ff776c","#fe9b64","#febb72","#f9f6b1","#f3f3f3"],
+            "colors":"#ffffff",
+            "fillOpacity":0.7,
+            "opacity":0.8,
+            "weight":1,
+            "tooltipVars":["NAME","ST","population","w_africa","per_w_afri"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ," County, ","</h2><br/><p3 style='display:inline; font-weight:normal;'>Total Pop.: </p3><p3 style='display:inline; font-weight:bold;'>","</p3><br/><p3 style='display:inline; font-weight:normal;'>West African Pop.: </p3><p3 style='font-weight:bold; display:inline;'>","</p3><br/><p3 style='display:inline; font-weight:bold;'>","%</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"% Residents Born in West Africa",
+                "icon":"region_icons/west_africa",
+                "containers":[{
+                    "color":"#ff776c",
+                    "label":"0.25+"
+                  },
+                  {
+                    "color":"#fe9b64",
+                    "label":"0.1 to 0.25"
+                  },
+                  {
+                    "color":"#febb72",
+                    "label":"0.05 to 0.1"
+                  },
+                  {
+                    "color":"#f9f6b1",
+                    "label":"0.01 to 0.05"
+                  },
+                  {
+                    "color":"#f3f3f3",
+                    "label":"Less than 0.01"
+                  }],
+                "description":"Residents born in West Africa as a percentage of total population. Estimates from 2011-2015."
+            }]
+      },
+      {
+        "id":13,
+        "title":"Aust/NZ",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "facts":["&#9900 It is estimated that 11% of all PNW residents were born outside the U.S.","&#9900 Of all world regions, Central America has the largest immigrant population in the PNW."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/population/counties_foreign_born.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"per_austnz",
+            "values":[0.2,0.1,0.05,0.01],
+            "fillColors":["#045a8d","#2b8cbe","#74a9cf","#bdc9e1","#f1eef6"],
+            "colors":"#ffffff",
+            "fillOpacity":0.7,
+            "opacity":0.8,
+            "weight":1,
+            "tooltipVars":["NAME","ST","population","aust_nz","per_austnz"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ," County, ","</h2><br/><p3 style='display:inline; font-weight:normal;'>Total Pop.: </p3><p3 style='display:inline; font-weight:bold;'>","</p3><br/><p3 style='display:inline; font-weight:normal;'>Australia/New Zealand Pop.: </p3><p3 style='font-weight:bold; display:inline;'>","</p3><br/><p3 style='display:inline; font-weight:bold;'>","%</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"% Residents Born in Australia/New Zealand",
+                "icon":"region_icons/australia",
+                "containers":[{
+                    "color":"#045a8d",
+                    "label":"0.2+"
+                  },
+                  {
+                    "color":"#2b8cbe",
+                    "label":"0.1 to 0.2"
+                  },
+                  {
+                    "color":"#74a9cf",
+                    "label":"0.05 to 0.1"
+                  },
+                  {
+                    "color":"#bdc9e1",
+                    "label":"0.01 to 0.05"
+                  },
+                  {
+                    "color":"#f1eef6",
+                    "label":"Less than 0.01"
+                  }],
+                "description":"Residents born in Australia/New Zealand as a percentage of total population. Estimates from 2011-2015."
+            }]
+      },
+      {
+        "id":14,
+        "title":"Oceania",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "facts":["&#9900 It is estimated that 11% of all PNW residents were born outside the U.S.","&#9900 Of all world regions, Central America has the largest immigrant population in the PNW."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/population/counties_foreign_born.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"per_ocean",
+            "values":[0.25,0.1,0.05,0.01],
+            "fillColors":["#a50f15","#de2d26","#fb6a4a","#fcae91","#fee5d9"],
+            "colors":"#ffffff",
+            "fillOpacity":0.7,
+            "opacity":0.8,
+            "weight":1,
+            "tooltipVars":["NAME","ST","population","oceania","per_ocean"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ," County, ","</h2><br/><p3 style='display:inline; font-weight:normal;'>Total Pop.: </p3><p3 style='display:inline; font-weight:bold;'>","</p3><br/><p3 style='display:inline; font-weight:normal;'>Oceanian Pop.: </p3><p3 style='font-weight:bold; display:inline;'>","</p3><br/><p3 style='display:inline; font-weight:bold;'>","%</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"% Residents Born in Oceania/Pacific Islands",
+                "icon":"region_icons/oceania",
+                "containers":[{
+                    "color":"#a50f15",
+                    "label":"0.25+"
+                  },
+                  {
+                    "color":"#de2d26",
+                    "label":"0.1 to 0.2"
+                  },
+                  {
+                    "color":"#fb6a4a",
+                    "label":"0.05 to 0.1"
+                  },
+                  {
+                    "color":"#fcae91",
+                    "label":"0.01 to 0.05"
+                  },
+                  {
+                    "color":"#fee5d9",
+                    "label":"Less than 0.01"
+                  }],
+                "description":"Residents born in Oceania/Pacific Islands as a percentage of total population. Estimates from 2011-2015."
+            }]
+      },
+      {
+        "id":15,
+        "title":"Caribbean",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "facts":["&#9900 It is estimated that 11% of all PNW residents were born outside the U.S.","&#9900 Of all world regions, Central America has the largest immigrant population in the PNW."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/population/counties_foreign_born.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"per_carib",
+            "values":[0.2,0.1,0.05,0.01],
+            "fillColors":["#045a8d","#2b8cbe","#74a9cf","#bdc9e1","#f1eef6"],
+            "colors":"#ffffff",
+            "fillOpacity":0.7,
+            "opacity":0.8,
+            "weight":1,
+            "tooltipVars":["NAME","ST","population","caribbean","per_carib"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ," County, ","</h2><br/><p3 style='display:inline; font-weight:normal;'>Total Pop.: </p3><p3 style='display:inline; font-weight:bold;'>","</p3><br/><p3 style='display:inline; font-weight:normal;'>Caribbean Pop.: </p3><p3 style='font-weight:bold; display:inline;'>","</p3><br/><p3 style='display:inline; font-weight:bold;'>","%</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"% Residents Born in the Caribbean",
+                "icon":"region_icons/caribbean",
+                "containers":[{
+                    "color":"#045a8d",
+                    "label":"0.2+"
+                  },
+                  {
+                    "color":"#2b8cbe",
+                    "label":"0.1 to 0.2"
+                  },
+                  {
+                    "color":"#74a9cf",
+                    "label":"0.05 to 0.1"
+                  },
+                  {
+                    "color":"#bdc9e1",
+                    "label":"0.01 to 0.05"
+                  },
+                  {
+                    "color":"#f1eef6",
+                    "label":"Less than 0.01"
+                  }],
+                "description":"Residents born in the Caribbean as a percentage of total population. Estimates from 2011-2015."
+            }]
+      },
+      {
+        "id":16,
+        "title":"C America",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "facts":["&#9900 It is estimated that 11% of all PNW residents were born outside the U.S.","&#9900 Of all world regions, Central America has the largest immigrant population in the PNW."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/population/counties_foreign_born.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"per_c_amer",
+            "values":[10,5,1,0.5],
+            "fillColors":["#a50f15","#de2d26","#fb6a4a","#fcae91","#fee5d9"],
+            "colors":"#ffffff",
+            "fillOpacity":0.7,
+            "opacity":0.8,
+            "weight":1,
+            "tooltipVars":["NAME","ST","population","c_america","per_c_amer"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ," County, ","</h2><br/><p3 style='display:inline; font-weight:normal;'>Total Pop.: </p3><p3 style='display:inline; font-weight:bold;'>","</p3><br/><p3 style='display:inline; font-weight:normal;'>Central American Pop.: </p3><p3 style='font-weight:bold; display:inline;'>","</p3><br/><p3 style='display:inline; font-weight:bold;'>","%</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"% Residents Born in Central America",
+                "icon":"region_icons/central_america",
+                "containers":[{
+                    "color":"#a50f15",
+                    "label":"10+"
+                  },
+                  {
+                    "color":"#de2d26",
+                    "label":"5 to 10"
+                  },
+                  {
+                    "color":"#fb6a4a",
+                    "label":"1 to 5"
+                  },
+                  {
+                    "color":"#fcae91",
+                    "label":"0.5 to 1"
+                  },
+                  {
+                    "color":"#fee5d9",
+                    "label":"Less than 0.5"
+                  }],
+                "description":"Residents born in the Central America as a percentage of total population. Estimates from 2011-2015."
+            }]
+      },
+      {
+        "id":17,
+        "title":"S America",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "facts":["&#9900 It is estimated that 11% of all PNW residents were born outside the U.S.","&#9900 Of all world regions, Central America has the largest immigrant population in the PNW."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/population/counties_foreign_born.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"per_s_amer",
+            "values":[0.6,0.4,0.2,0.1],
+            "fillColors":["#006d2c","#31a354","#74c476","#bae4b3","#edf8e9"],
+            "colors":"#ffffff",
+            "fillOpacity":0.7,
+            "opacity":0.8,
+            "weight":1,
+            "tooltipVars":["NAME","ST","population","s_america","per_s_amer"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ," County, ","</h2><br/><p3 style='display:inline; font-weight:normal;'>Total Pop.: </p3><p3 style='display:inline; font-weight:bold;'>","</p3><br/><p3 style='display:inline; font-weight:normal;'>South American Pop.: </p3><p3 style='font-weight:bold; display:inline;'>","</p3><br/><p3 style='display:inline; font-weight:bold;'>","%</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"% Residents Born in South America",
+                "icon":"region_icons/south_america",
+                "containers":[{
+                    "color":"#006d2c",
+                    "label":"0.6+"
+                  },
+                  {
+                    "color":"#31a354",
+                    "label":"0.4 to 0.6"
+                  },
+                  {
+                    "color":"#74c476",
+                    "label":"0.2 to 0.4"
+                  },
+                  {
+                    "color":"#bae4b3",
+                    "label":"0.1 to 0.2"
+                  },
+                  {
+                    "color":"#edf8e9",
+                    "label":"Less than 0.1"
+                  }],
+                "description":"Residents born in the South America as a percentage of total population. Estimates from 2011-2015."
+            }]
+      },
+      {
+        "id":18,
+        "title":"Canada",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "facts":["&#9900 It is estimated that 11% of all PNW residents were born outside the U.S.","&#9900 Of all world regions, Central America has the largest immigrant population in the PNW."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/population/counties_foreign_born.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"per_canada",
+            "values":[0.8,0.6,0.4,0.2],
+            "fillColors":["#a50f15","#de2d26","#fb6a4a","#fcae91","#fee5d9"],
+            "colors":"#ffffff",
+            "fillOpacity":0.7,
+            "opacity":0.8,
+            "weight":1,
+            "tooltipVars":["NAME","ST","population","canada","per_canada"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ," County, ","</h2><br/><p3 style='display:inline; font-weight:normal;'>Total Pop.: </p3><p3 style='display:inline; font-weight:bold;'>","</p3><br/><p3 style='display:inline; font-weight:normal;'>Canadian Pop.: </p3><p3 style='font-weight:bold; display:inline;'>","</p3><br/><p3 style='display:inline; font-weight:bold;'>","%</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"% Residents Born in Canada",
+                "icon":"region_icons/canada",
+                "containers":[{
+                    "color":"#a50f15",
+                    "label":"0.8+"
+                  },
+                  {
+                    "color":"#de2d26",
+                    "label":"0.6 to 0.8"
+                  },
+                  {
+                    "color":"#fb6a4a",
+                    "label":"0.4 to 0.6"
+                  },
+                  {
+                    "color":"#fcae91",
+                    "label":"0.2 to 0.4"
+                  },
+                  {
+                    "color":"#fee5d9",
+                    "label":"Less than 0.2"
+                  }],
+                "description":"Residents born in the Canada as a percentage of total population. Estimates from 2011-2015."
+            }]
+      }],
+      "sources":{
+        "geographic":[{
+            "title":"Foreign Born Population: ",
+            "linkText":"United States Census Bureau",
+            "linkUrl":"https://data2.nhgis.org/main",
+            "description":"ACS data from 2011-2015."
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

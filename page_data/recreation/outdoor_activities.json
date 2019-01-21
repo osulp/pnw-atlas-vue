@@ -1,0 +1,351 @@
+{
+    "title": "Outdoor Activities",
+    "URL":"activities_icon",
+    "chapter":"recreation",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "basemap":[{"title":"terrain","opacity":1},
+        {"title":"geoserver","layer":"pnw_outline2","opacity":0.3},
+        {"title":"label","opacity":1}],
+    "maps":[{
+        "id":0,
+        "title":"Camping",
+        "border":{"title":"pnw_borders_black","include":true,"opacity":0.5},
+        "tileLayers":[{"title":"parks_total","pane":200,"opacity":1},{"title":"pnw_water","pane":250,"opacity":0.8}],
+        "fastFacts":[{
+            "facts":["&#9900 Approximately 40% of PNW residents participate in developed camping.","&#9900 Developed camping is more popular than primitive camping, and includes car-camping, RV camping, or camper cabins."]
+        }],
+        "jsonLayers":[{
+            "url":"map_data/recreation/camp_sites.json",
+            "feature":"point",
+            "type":"categorized",
+            "attribute":"owner",
+            "values":["federal","state","local"],
+            "fillColors":["#0066cc","#377e35","#904b9b","#8c8c8c"],
+            "colors":"#ffffff",
+            "fillOpacity":0.7,
+            "opacity":1,
+            "weight":0.75,
+            "radiusType":"graduated",
+            "radiusAttribute":"sites",
+            "radiusValues":[200,100,50,25],
+            "radius":[11,9,5,7,3],
+            "tooltipVars":["name","sites"],
+            "tooltipText":["<h3 style='margin:0;'>","</h3><p3>","</p3>"]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"pointSizeColor",
+                "title":["Campsites","Owner"],
+                "titleMargin":52,
+                "containers":[{
+                    "size":22,
+                    "sizeLabel":"200+",
+                    "color": "#0066cc",
+                    "colorLabel":"Federal"  
+                  },
+                  {
+                    "size":18,
+                    "sizeLabel":"100 to 200",
+                    "color":"#377e35",
+                    "colorLabel":"State"
+                  },
+                  {
+                    "size":14,
+                    "sizeLabel":"50 to 100",
+                    "color":"#904b9b",
+                    "colorLabel":"Local"
+                  },
+                  {
+                    "size":10,
+                    "sizeLabel":"25 to 50",
+                    "color":"#8c8c8c",
+                    "colorLabel":"Other"
+                  },
+                  {
+                    "size":5,
+                    "sizeLabel":"Less than 25"
+                  }
+                ],
+                "description":"Number of campsites at a particular campground."
+            }]
+      },
+      {
+        "id":1,
+        "title":"Skiing",
+        "border":{"title":"pnw_borders_black","include":true,"opacity":0.5},
+        "tileLayers":[{"title":"pnw_snowfall","pane":250,"opacity":0.7}],
+        "fastFacts":[{
+            "facts":["&#9900 Timberline Resort on Mount Hood has the highest true-up vertical drop in the region, at 3,690 feet.","&#9900 The Summit at Snoqualmie is the most visited ski resort in the region."]
+        }],
+        "jsonLayers":[{
+            "url":"map_data/recreation/ski_resorts.json",
+            "pane":"overBorder",
+            "feature":"point",
+            "type":"icon",
+            "icon":{
+                "iconAttribute":null,
+                "iconValues":null,
+                "iconUrl":"ski_resort",
+                "iconHover":"ski_resort_shadow",
+                "iconSize":25,
+                "iconHoverSize":32
+            },
+            "tooltipVars":["Name"],
+            "tooltipText":["<h3 style='margin:0;'>","</h3>"],
+            "tooltipOffset":[15,0]
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"Annual Snowfall",
+                "icon":"skiing",
+                "containers":[{
+                    "color":"#54278f",
+                    "label":"100+"
+                  },
+                  {
+                    "color":"#756bb1",
+                    "label":"50 to 100"
+                  },
+                  {
+                    "color":"#9e9ac8",
+                    "label":"25 to 50"
+                  },
+                  {
+                    "color":"#cbc9e2",
+                    "label":"10 to 25"
+                  },
+                  {
+                    "color":"#f2f0f7",
+                    "label":"Less than 10"
+                  }
+                ],
+                "description":"Mean annual snowfall in inches."
+            },
+            {
+                "id":1,
+                    "type":"icon",
+                    "containers":[{
+                        "icon":"ski_resort",
+                        "size":30,
+                        "margin":15,
+                        "label":"Ski Resort"
+                      }]
+                }]
+      },
+      {
+        "id":2,
+        "title":"Rafting",
+        "border":{"title":"pnw_borders_black","include":true,"opacity":0.5},
+        "tileLayers":[{"title":"parks_total","pane":200,"opacity":1},{"title":"pnw_water","pane":250,"opacity":0.8}],
+        "fastFacts":[{
+            "facts":["&#9900 Approximately 12% of Pacific Northwest residents participate in some form of white-water activity (rafting, kayaking, canoeing)."]
+        }],
+        "jsonLayers":[{
+            "url":"map_data/recreation/rafting_river_points.json",
+            "pane":"overBorder",
+            "feature":"point",
+            "type":"icon",
+            "icon":{
+                "iconAttribute":"CAT",
+                "iconValues":["S","L"],
+                "iconUrl":["raft_icon","raft_icon2"],
+                "iconHover":["raft_icon_hover2","raft_icon_hover"],
+                "iconSize":[20,28],
+                "iconHoverSize":[25,33]
+            },
+            "tooltipVars":["UID"],
+            "tooltipText":["<h3 style='margin:0;'>","</h3>"],
+            "tooltipOffset":[15,0]
+          },
+          {
+            "interactive":false,
+            "url":"map_data/recreation/rafting_rivers.json",
+            "feature":"line",
+            "type":"single",
+            "colors":"#3399ff",
+            "weight":2,
+            "opacity":1
+          }],
+          "legend":[{
+            "id":0,
+            "type":"icon",
+            "title":"Rapid Class",
+            "description":"Rapid class based on the highest level rapid in each river. Only the sections of each river suitable for rafting are shown.",
+            "icon":"raft",
+            "containers":[{
+                "icon":"raft_icon2",
+                "size":32,
+                "margin":15,
+                "label":"Class IV to V"
+                },
+                {
+                "icon":"raft_icon",
+                "size":26,
+                "margin":15,
+                "label":"Class I to III"
+                }]
+            },
+            {
+            "id":1,
+            "type":"line",
+            "containers":[{
+                "color":"#3399ff",
+                "height":3,
+                "label":"Raftable River Section"
+                }]
+        }]
+      },
+      {
+        "id":3,
+        "title":"Mountaineering",
+        "border":{"title":"pnw_borders_black","include":true,"opacity":0.5},
+        "tileLayers":[{"title":"pnw_DEM_feet","pane":200,"opacity":0.7}],
+        "fastFacts":[{
+            "facts":["&#9900 Mount Rainier is the tallest mountain in the PNW, at 14,411 feet.","&#9900 Three major ranges are present in the PNW: the Pacific Coast Range, the Cascades, and the Northern Rocky Mountains."]
+        }],
+        "jsonLayers":[{
+            "url":"map_data/recreation/pnw_mountains.json",
+            "pane":"overBorder",
+            "feature":"point",
+            "type":"icon",
+            "icon":{
+                "iconAttribute":"elev_cat",
+                "iconValues":[1,2,3,4,5],
+                "iconUrl":["mountain_icon1","mountain_icon2","mountain_icon3","mountain_icon4","mountain_icon5"],
+                "iconHover":["mountain_icon_hover","mountain_icon_hover","mountain_icon_hover","mountain_icon_hover","mountain_icon_hover"],
+                "iconSize":[20,16,13,10,7],
+                "iconHoverSize":[21,17,14,11,8]
+            },
+            "tooltipVars":["name"],
+            "tooltipText":["<h3 style='margin:0;'>","</h3>"]
+          }],
+          "legend":[{
+            "id":0,
+            "type":"iconPoly",
+            "title":"Elevation (Terrain, Mountain)",
+            "containers":[{
+                "icon":"mountain_icon1",
+                "size":30,
+                "color":"rgba(37,37,37,0.7)",
+                "label":"12,000+",
+                "margin":15,
+                "iconMargin":10
+                },
+                {
+                "icon":"mountain_icon2",
+                "size":28,
+                "color":"rgba(99,99,99,0.7)",
+                "label":"9,000 to 12,000",
+                "margin":19,
+                "iconMargin":10
+                },
+                {
+                "icon":"mountain_icon3",
+                "size":24,
+                "color":"rgba(150,150,150,0.7)",
+                "label":"6,000 to 9,000",
+                "margin":23,
+                "iconMargin":10
+                },
+                {
+                "icon":"mountain_icon4",
+                "size":20,
+                "color":"rgba(204,204,204,0.7)",
+                "label":"3,000 to 6,000",
+                "margin":26,
+                "iconMargin":10
+                },
+                {
+                "icon":"mountain_icon5",
+                "size":16,
+                "color":"rgba(247,247,247,0.7)",
+                "label":"Less than 3,000",
+                "margin":30,
+                "iconMargin":10
+                }],
+            "description":"Elevations are expressed in feet."
+          }]
+      }],
+      "sources":{
+        "geographic":[{
+            "title":"Campgrounds: ",
+            "linkText":"USCampgrounds",
+            "linkUrl":"http://www.uscampgrounds.info/"
+        },
+        {
+            "title":"Idaho Ski Resorts: ",
+            "linkText":"Google MyMaps",
+            "linkUrl":"https://www.google.com/maps/d/u/0/viewer?mid=1B9fdGsbVONzJFnqAIF-JYslyXgY&hl=en_US&ll=44.86332209654876%2C-113.97446376171877&z=7",
+            "description":"Crowdsourced data."
+        },
+        {
+            "title":"Oregon Ski Resorts: ",
+            "linkText":"Google MyMaps",
+            "linkUrl":"https://www.google.com/maps/d/u/0/viewer?mid=1kglHouudKga-bJYC3Zgyul2yVZs&hl=en_US&ll=43.946186771129085%2C-119.90923214999998&z=7",
+            "description":"Crowdsourced data."
+        },
+        {
+            "title":"Washington Ski Resorts: ",
+            "linkText":"Google MyMaps",
+            "linkUrl":"https://www.google.com/maps/d/u/0/viewer?mid=1q99S90kSKateNROg2Omn4kEedxE&hl=en_US&ll=46.9634435779086%2C-119.16908730078126&z=7",
+            "description":"Crowdsourced data."
+        },
+        {
+            "title":"Annual Snowfall: ",
+            "linkText":"Andreas Hamann and ClimateWNA",
+            "linkUrl":"https://sites.ualberta.ca/~ahamann/data/climatewna.html",
+            "description":"Snowfall data included in 24 Bioclimate Variables dataset. 1961-1990 climate normal."
+        },
+        {
+            "title":"Idaho Whitewater Rafting Rivers: ",
+            "linkText":"Go Northwest!",
+            "linkUrl":"http://www.gonorthwest.com/Idaho/Activities/rafting/rafting.htm"
+        },
+        {
+            "title":"Oregon Whitewater Rafting Rivers: ",
+            "linkText":"Go Northwest!",
+            "linkUrl":"http://www.gonorthwest.com/Oregon/Activities/rafting/rafting.htm"
+        },
+        {
+            "title":"Washington Whitewater Rafting Rivers: ",
+            "linkText":"Go Northwest!",
+            "linkUrl":"http://www.gonorthwest.com/Washington/Activities/rafting/rafting.htm"
+        },
+        {
+            "title":"Additional Rafting Data for Class and Rapid Location: ",
+            "linkText":"American Whitewater",
+            "linkUrl":"https://www.americanwhitewater.org/"
+        },
+        {
+            "title":"Mountain Elevations: ",
+            "linkText":"Summit Post",
+            "linkUrl":"http://www.summitpost.org/"
+        },
+        {
+            "title":"Background Elevation: ",
+            "linkText":"United States Geological Survey EarthExplorer",
+            "linkUrl":"https://earthexplorer.usgs.gov/"
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

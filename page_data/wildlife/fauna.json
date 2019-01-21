@@ -1,0 +1,568 @@
+{
+    "title": "Fauna ",
+    "URL":"fauna_icon",
+    "chapter":"wildlife",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "dropdownLabel":{"type":"breaks","labels":["Biodiversity","Species of Concern"],"breaks":[1,7]},
+    "basemap":[{"title":"terrain","opacity":1},
+        {"title":"geoserver","layer":"pnw_outline2","opacity":0.3},
+        {"title":"label","opacity":1}],
+    "checkboxLayer":{
+        "title":"Public Lands",
+        "interactive":false,
+        "url":"map_data/wildlife/protected_lands.json",
+        "feature":"polygon",
+        "type":"pattern",
+        "fillOpacity":1,
+        "opacity":0,
+        "colors":"#005ce6",
+        "pattern":{
+            "weight": 1,
+            "spaceWeight": 5,
+            "height": 6,
+            "angle":45,
+            "color":"#257425",
+            "spaceColor":"#ffffff"
+        },
+        "legend":{
+            "color":"repeating-linear-gradient(45deg, rgba(255,255,255,0), rgba(255,255,255,0) 5%, #257425 10%)",
+            "label":"Public Lands"
+        }
+    },
+    "maps":[{
+        "id":0,
+        "title":"Habitats",
+        "featureSelected":false, 
+        "border":{"title":"pnw_states_black"},
+        "tileLayers":[{"title":"fauna","pane":300,"opacity":0.6}],
+        "jsonLayers":[{
+            "url":"map_data/wildlife/ecoregions_fauna.json",
+            "feature":"polygon",
+            "type":"selection",
+            "fillColors":"#ffffff",
+            "fillOpacity":0,
+            "hoverOpacity":0.7,
+            "colors":"#ffffff",
+            "tooltipVars":["US_L3NAME"],
+            "tooltipText":["<b style='display:inline;'>","</b>"],  
+            "tooltip":"tooltip",  
+            "sticky":true,   
+            "selection":{
+                "titleVar":"US_L3NAME",
+                "unselectedOpacity":0.7,
+                "unselectedHover":0.3,
+                "selectionOpacity":0,
+                "selectionHover":0,
+                "subtitle":"Habitat Status",
+                "varList":["species"],
+                "varLabel":["Common Species: "]
+            }           
+          }],
+        "legend":[{
+            "id":0,
+            "type":"selectionChartOnly",
+            "chartID":"protChart",
+            "title":"Select an Ecoregion",
+            "varList":false,
+            "secondTitle":"Habitat Status"
+        },
+        {
+            "id":1,
+            "type":"selectionChartOnly",
+            "chartID":"altChart"
+        },
+        {
+            "id":2,
+            "subtitle":"Altered land includes agriculture, logging and urban areas. Protected land includes public land included in USGS protected lands database.",
+            "type":"selection",
+            "bottomMargin":false,
+            "varList":false
+        },
+        {
+            "id":3,
+            "type":"selection",
+            "varListFont":18
+        },
+        {
+            "id":4,
+            "title":"Habitat Types",
+            "type":"polygon",
+            "containers":[{
+                "color":"#277e4e",
+                "label":"Forest/Woodland"
+                },
+                {
+                "color":"#5ca79e",
+                "label":"Freshwater Marsh/Bog"
+                },
+                {
+                "color":"#afdfe9",
+                "label":"Salt Marsh"
+                },
+                {
+                "color":"#409bd8",
+                "label":"Open Water"
+                },
+                {
+                "color":"#d0ccb3",
+                "label":"Scrubland/Grassland"
+                },
+                {
+                "color":"#e5dfbd",
+                "label":"Desert/Semi-Desert"
+                },
+                {
+                "color":"#d4cadd",
+                "label":"Alpine Tundra"
+                },
+                {
+                "color":"#ffffff",
+                "label":"Bare Rock/Glacier"
+                }]
+        },
+        {
+            "id":5,
+            "type":"polygon",
+            "containers":[{
+                "color":"#f2efb9",
+                "label":"Agriculture/Logged"
+                },
+                {
+                "color":"#f3ec58",
+                "label":"Urban Area"
+                }],
+            "description":"Vegetation type based on 2011 USGS GAP Analysis data."
+        }],
+        "chart":[{
+            "chartLoc":"legendClick",
+            "chartType":"pie",
+            "labels":["Developed","Natural"],
+            "data":["per_alt","per_unalt"],
+            "colors":["#f2efb9","#31814d"],
+            "options": {
+              "responsive": true,
+              "legend": {
+                  "position": "left",
+                  "labels": {
+                      "fontColor":"#000000",
+                      "fontFamily":"GoudyOld",
+                      "fontSize":14
+                  }
+              },
+              "plugins":{
+                  "labels":{
+                      "render": "percentage",
+                      "fontColor":"#000000",    
+                      "fontFamily":"GoudyOld",
+                      "fontSize":14
+                  }
+              },   
+              "tooltips":{
+                  "enabled":false
+              }
+            }
+        },
+        {
+            "chartLoc":"legendClick",
+            "chartType":"pie",
+            "labels":["Public","Private"],
+            "data":["per_prot","per_unprot"],
+            "colors":["rgba(255, 255, 255,0.2)","#e1e1d0"],
+            "pattern":{"data":0,"color":"#3fa663","type":"diagonal"},
+            "options": {
+              "responsive": true,
+              "legend": {
+                  "position": "left",
+                  "labels": {
+                      "fontColor":"#000000",
+                      "fontFamily":"GoudyOld",
+                      "fontSize":14
+                  }
+              },
+              "plugins":{
+                  "labels":{
+                      "render": "percentage",
+                      "fontColor":"#000000",    
+                      "fontFamily":"GoudyOld",
+                      "fontSize":14
+                  }
+              },   
+              "tooltips":{
+                  "enabled":false
+              }
+            }
+        }]
+      },
+      {
+        "id":1,
+        "title":"Total",
+        "border":{"title":"pnw_borders_black","opacity":0.5},
+        "tileLayers":[{"title":"biodiversity_total","pane":300,"opacity":0.8}],
+        "fastFacts":[{
+            "facts":["&#9900 As of 2002, Idaho had 466 total vertebrate species.","&#9900 As of 2002, Oregon had 616 total vertebrate species.","&#9900 As of 2002, Washington had 596 total vertebrate species."]
+          }],
+        "legend":[{
+            "id":0,
+            "type":"gradient",
+            "title":"Total Biodiversity",
+            "subtitle":"# of Vertebrate Species",
+            "gradient":"linear-gradient(to right, #f9f9e0 0%, #d0d8bd 20%, #9bbc99 40%, #55a26c 60%, #398051 80%, #246039 100%)",
+            "gradientLabels":["250 and under","300+"],
+            "gradientMargin":110,
+            "description":"Includes mammals, birds, reptiles, amphibians, and freshwater fish. Data doesn't include subspecies."
+        }]
+      },
+      {
+        "id":2,
+        "title":"Mammals",
+        "border":{"title":"pnw_borders_black","opacity":0.5},
+        "tileLayers":[{"title":"mammal_total","pane":300,"opacity":0.8}],
+        "fastFacts":[{
+            "facts":["&#9900 As of 2002, Idaho had 105 total mammal species, ranking 12th among US states.","&#9900 As of 2002, Oregon had 150 total mammal species, ranking 4th among US states.","&#9900 As of 2002, Washington had 127 total mammal species, ranking 7th among US states."]
+          }],
+        "legend":[{
+            "id":0,
+            "type":"gradient",
+            "title":"Mammal Biodiversity",
+            "subtitle":"# of Mammal Species",
+            "gradient":"linear-gradient(to right, #f9f9e0 0%, #d0d8bd 20%, #9bbc99 40%, #55a26c 60%, #398051 80%, #246039 100%)",
+            "gradientLabels":["55 and under","70+"],
+            "gradientMargin":135,
+            "description":"Data doesn't include subspecies."
+        }]
+      },
+      {
+        "id":3,
+        "title":"Birds",
+        "border":{"title":"pnw_borders_black","opacity":0.5},
+        "tileLayers":[{"title":"bird_total","pane":300,"opacity":0.8}],
+        "fastFacts":[{
+            "facts":["&#9900 As of 2002, Idaho had 284 total bird species, ranking 35th among US states.","&#9900 As of 2002, Oregon had 338 total bird species, ranking 14th among US states.","&#9900 As of 2002, Washington had 372 total bird species, ranking 6th among US states."]
+          }],
+        "legend":[{
+            "id":0,
+            "type":"gradient",
+            "title":"Bird Biodiversity",
+            "subtitle":"# of Bird Species",
+            "gradient":"linear-gradient(to right, #f9f9e0 0%, #d0d8bd 20%, #9bbc99 40%, #55a26c 60%, #398051 80%, #246039 100%)",
+            "gradientLabels":["155 and under","185+"],
+            "gradientMargin":115,
+            "description":"Data doesn't include subspecies."
+        }]
+      },
+      {
+        "id":4,
+        "title":"Reptiles",
+        "border":{"title":"pnw_borders_black","opacity":0.5},
+        "tileLayers":[{"title":"reptile_total","pane":300,"opacity":0.8}],
+        "fastFacts":[{
+            "facts":["&#9900 As of 2002, Idaho had 23 total reptile species, ranking 42nd among US states.","&#9900 As of 2002, Oregon had 32 total reptile species, ranking 34th among US states.","&#9900 As of 2002, Washington had 21 total reptile species, ranking 44th among US states."]
+          }],
+        "legend":[{
+            "id":0,
+            "type":"gradient",
+            "title":"Reptile Biodiversity",
+            "subtitle":"# of Reptile Species",
+            "gradient":"linear-gradient(to right, #f9f9e0 0%, #d0d8bd 20%, #9bbc99 40%, #55a26c 60%, #398051 80%, #246039 100%)",
+            "gradientLabels":["4 and under","16+"],
+            "gradientMargin":145,
+            "description":"Data doesn't include subspecies."
+        }]
+      },
+      {
+        "id":5,
+        "title":"Amphibians",
+        "border":{"title":"pnw_borders_black","opacity":0.5},
+        "tileLayers":[{"title":"amphibian_total","pane":300,"opacity":0.8}],
+        "fastFacts":[{
+            "facts":["&#9900 As of 2002, Idaho had 12 total amphibian species, ranking 48th among US states.","&#9900 As of 2002, Oregon had 31 total amphibian species, ranking 23rd among US states.","&#9900 As of 2002, Washington had 25 total amphibian species, ranking 28th among US states."]
+          }],
+        "legend":[{
+            "id":0,
+            "type":"gradient",
+            "title":"Amphibian Biodiversity",
+            "subtitle":"# of Amphibian Species",
+            "gradient":"linear-gradient(to right, #f9f9e0 0%, #d0d8bd 20%, #9bbc99 40%, #55a26c 60%, #398051 80%, #246039 100%)",
+            "gradientLabels":["4 and under","13+"],
+            "gradientMargin":145,
+            "description":"Data doesn't include subspecies."
+        }]
+      },
+      {
+        "id":6,
+        "title":"Fish",
+        "border":{"title":"pnw_borders_black","opacity":0.5},
+        "tileLayers":[{"title":"fish_total","pane":300,"opacity":0.8}],
+        "fastFacts":[{
+            "facts":["&#9900 As of 2002, Idaho had 42 total fish species, ranking 47th among US states.","&#9900 As of 2002, Oregon had 65 total fish species, ranking 32nd among US states.","&#9900 As of 2002, Washington had 51 total fish species, ranking 40th among US states."]
+          }],
+        "legend":[{
+            "id":0,
+            "type":"gradient",
+            "title":"Fish Biodiversity",
+            "subtitle":"# of Fish Species",
+            "gradient":"linear-gradient(to right, #f9f9e0 0%, #d0d8bd 20%, #9bbc99 40%, #55a26c 60%, #398051 80%, #246039 100%)",
+            "gradientLabels":["20 and under","36+"],
+            "gradientMargin":135,
+            "description":"Data doesn't include subspecies."
+        }]
+      },
+      {
+        "id":7,
+        "title":"Gray Wolf",
+        "border":{"title":"pnw_borders_black","opacity":0.5},
+        "tileLayers":[{"title":"gray_wolf_distribution","pane":300,"opacity":0.5}],
+        "fastFacts":[{
+            "facts":["&#9900 Listed as an endangered species in Oregon and Washington. Not listed in Idaho.","&#9900 Extensive predator control programs in the Western U.S eradicated the Gray Wolf population.","&#9900 Reintroduction efforts began in Idaho in the mid-1990s, and later spread to Oregon and Washington."]
+          }],
+          "jsonLayers":[{
+            "interactive":false,
+            "url":"map_data/wildlife/wolf_historical.json",
+            "feature":"polygon",
+            "type":"pattern",
+            "colors":"#6b6b47",
+            "fillColors":"#ccccb3",
+            "weight":1.5,
+            "opacity":0,
+            "fillOpacity":0.7,
+            "pattern":{
+                "weight": 1,
+                "spaceWeight": 3,
+                "height": 4,
+                "angle":-45,
+                "color":"#6b6b47",
+                "spaceColor":"#ffffff"
+            }
+          }],
+        "legend":[{
+            "id":0,
+            "type":"polygon",
+            "title":"Gray Wolf (Canis Lupus)",
+            "containers":[{
+                "color":"#339966",
+                "label":"Current Habitat"
+                },
+                {
+                "color":"repeating-linear-gradient(-45deg, rgba(255,255,255,0), rgba(255,255,255,0) 5%, #6b6b47 10%)",
+                "label":"Historical Range"
+            }],
+            "bottomIcon":"gray_wolf",
+            "bottomIconWidth":125
+        }]
+      },
+      {
+        "id":8,
+        "title":"Sage Grouse",
+        "border":{"title":"pnw_borders_black","opacity":0.5},
+        "tileLayers":[{"title":"sage_grouse_distribution","pane":300,"opacity":0.5}],
+        "fastFacts":[{
+            "facts":["&#9900 Removed from Endangered Species Act protection in 2015, although it is still protected by state governments.","&#9900 Habitat continues to be altered through land clearance."]
+          }],
+          "jsonLayers":[{
+            "interactive":false,
+            "url":"map_data/wildlife/sage_grouse_historical.json",
+            "feature":"polygon",
+            "type":"pattern",
+            "colors":"#6b6b47",
+            "fillColors":"#ccccb3",
+            "weight":1.5,
+            "opacity":0,
+            "fillOpacity":0.7,
+            "pattern":{
+                "weight": 1,
+                "spaceWeight": 3,
+                "height": 4,
+                "angle":-45,
+                "color":"#6b6b47",
+                "spaceColor":"#ffffff"
+            }
+          }],
+        "legend":[{
+            "id":0,
+            "type":"polygon",
+            "title":"Greater Sage Grouse (Centrocercus urophasianus)",
+            "containers":[{
+                "color":"#339966",
+                "label":"Current Habitat"
+                },
+                {
+                "color":"repeating-linear-gradient(-45deg, rgba(255,255,255,0), rgba(255,255,255,0) 5%, #6b6b47 10%)",
+                "label":"Historical Range"
+            }],
+            "bottomIcon":"sage_grouse",
+            "bottomIconWidth":125,
+            "bottomMargin":false
+        }]
+      },
+      {
+        "id":9,
+        "title":"Spotted Owl",
+        "border":{"title":"pnw_borders_black","opacity":0.5},
+        "tileLayers":[{"title":"spotted_owl_distribution","pane":300,"opacity":0.5}],
+        "fastFacts":[{
+            "facts":["&#9900 Listed as a threatened species in Oregon and Washington.","&#9900 Population jeopardized by habitat loss and the invasive Barred Owl.","&#9900 Debate over conservation status sparked controversy between the logging industry and environmentalists in the 1990s."]
+          }],
+          "jsonLayers":[{
+            "interactive":false,
+            "url":"map_data/wildlife/spotted_owl_historical.json",
+            "feature":"polygon",
+            "type":"pattern",
+            "colors":"#6b6b47",
+            "fillColors":"#ccccb3",
+            "weight":1.5,
+            "opacity":0,
+            "fillOpacity":0.7,
+            "pattern":{
+                "weight": 1,
+                "spaceWeight": 3,
+                "height": 4,
+                "angle":-45,
+                "color":"#6b6b47",
+                "spaceColor":"#ffffff"
+            }
+          }],
+        "legend":[{
+            "id":0,
+            "type":"polygon",
+            "title":"Northern Spotted Owl (Strix occidentalis caurina)",
+            "containers":[{
+                "color":"#339966",
+                "label":"Current Habitat"
+                },
+                {
+                "color":"repeating-linear-gradient(-45deg, rgba(255,255,255,0), rgba(255,255,255,0) 5%, #6b6b47 10%)",
+                "label":"Historical Range"
+            }],
+            "bottomIcon":"spotted_owl",
+            "bottomIconWidth":125,
+            "bottomMargin":false
+        }]
+      },
+      {
+        "id":10,
+        "title":"Oregon Spotted Frog",
+        "border":{"title":"pnw_borders_black","opacity":0.5},
+        "fastFacts":[{
+            "facts":["&#9900 Listed as a threatened species in Oregon and Washington. Listed as vulnerable on the IUCN Red List.","&#9900 Population decline due to habitat alteration and the invasive American Bullfrog."]
+          }],
+          "jsonLayers":[{
+                "interactive":false,
+                "url":"map_data/wildlife/oregon_spotted_frog.json",
+                "feature":"polygon",
+                "type":"single",
+                "fillColors":"#339966",
+                "weight":1.5,
+                "opacity":0,
+                "fillOpacity":0.7
+            },
+            {
+                "interactive":false,
+                "url":"map_data/wildlife/oregon_spotted_frog_historical.json",
+                "feature":"polygon",
+                "type":"pattern",
+                "colors":"#6b6b47",
+                "fillColors":"#ccccb3",
+                "weight":1.5,
+                "opacity":0,
+                "fillOpacity":0.7,
+                "pattern":{
+                    "weight": 1,
+                    "spaceWeight": 3,
+                    "height": 4,
+                    "angle":-45,
+                    "color":"#6b6b47",
+                    "spaceColor":"#ffffff"
+                }
+          }],
+        "legend":[{
+            "id":0,
+            "type":"polygon",
+            "title":"Oregon Spotted Frog (Rana pretiosa)",
+            "containers":[{
+                "color":"#339966",
+                "label":"Current Habitat"
+                },
+                {
+                "color":"repeating-linear-gradient(-45deg, rgba(255,255,255,0), rgba(255,255,255,0) 5%, #6b6b47 10%)",
+                "label":"Historical Range"
+            }],
+            "bottomIcon":"oregon_spotted_frog",
+            "bottomIconWidth":125,
+            "bottomMargin":false
+        }]
+      }],
+      "sources":{
+        "geographic":[{
+            "title":"Level 3 Ecoregions: ",
+            "linkText":"US Environmental Protection Agency",
+            "linkUrl":"https://www.epa.gov/eco-research/level-iii-and-iv-ecoregions-continental-united-states"
+        },
+        {
+            "title":"Ecoregion Wildlife:: ",
+            "linkText":"CEC Publications",
+            "linkUrl":"http://www3.cec.org/islandora/en/item/10415-north-american-terrestrial-ecoregionslevel-iii-en.pdf"
+        },
+        {
+            "title":"Habitat Type: ",
+            "linkText":"USGS Gap Analysis",
+            "linkUrl":"https://gapanalysis.usgs.gov/gaplandcover/data/download/",
+            "description":"Data from 2011. Raster data downloaded for each state and merged."
+        },
+        {
+            "title":"Biodiversity: ",
+            "linkText":"Biodiveristymapping.org",
+            "linkUrl":"https://biodiversitymapping.org/wordpress/index.php/download/",
+            "description":"Number of species by type per area. Date not provided. The following datasets were merged: bird_total_richness, mammal_total_richness, reptile_total_richness, amphibian_total_richness, fish_total_richness. Data derived from BirdLife International, IUCN, NatureServe, and USGS."
+        },
+        {
+            "title":"Current Endangered Species Habitats: ",
+            "linkText":"USGS National GAP Analysis Project",
+            "linkUrl":"https://gapanalysis.usgs.gov/species/data/download/",
+            "description":"Data from 2013. Distribution data used for Gray Wolf, Northern Spotted Owl, and Greater Sage-Grouse."
+        },
+        {
+            "title":"Oregon Spotted Frog Critical Habitat: ",
+            "linkText":"US Department of the Interior",
+            "linkUrl":"https://catalog.data.gov/dataset/final-critical-habitat-for-oregon-spotted-frog-rana-pretiosa",
+            "description":"Data from 2016."
+        },
+        {
+            "title":"Gray Wolf/Spotted Owl Historical Range: ",
+            "linkText":"USGS National GAP Analysis Project",
+            "linkUrl":"https://gapanalysis.usgs.gov/species/data/download/",
+            "description":"Data from 2013."
+        },
+        {
+            "title":"Greater Sage Grouse Historical Range: ",
+            "linkText":"USGS ScienceBase Catalog",
+            "linkUrl":"https://www.sciencebase.gov/catalog/item/52e17ac3e4b0d0c3df9a3968",
+            "description":"Data from 2002."
+        },
+        {
+            "title":"Oregon Spotted Frog Historical Range: ",
+            "linkText":"IUCN Red List",
+            "linkUrl":"https://commons.wikimedia.org/wiki/File:Oregon_Spotted_Frog_Rana_pretiosa_distribution_map.png",
+            "description":"Digitized from image."
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","Chart.js","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

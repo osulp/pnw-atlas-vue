@@ -1,0 +1,479 @@
+{
+    "title": "Hunting",
+    "URL":"hunting_icon",
+    "chapter":"recreation",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "basemap":[{"title":"terrain","opacity":1},
+      {"title":"geoserver","layer":"pnw_outline2","opacity":0.3},
+      {"title":"label","opacity":1}],
+    "secondDropdown":{"title":"Select Animal", "buttons":[{"filter":"deer", "label":"Deer","values":[2000,1000,500,250,0,2,1.5,1,0.5,0,100,50,25,10,0]},{"filter":"elk","label":"Elk","values":[500,250,100,50,0,1,0.5,0.25,0.1,0,50,25,10,1]},{"filter":"bear","label":"Bear","values":[100,50,20,10,0,0.15,0.1,0.05,0.01,0,5,2.5,1,0.1,0]}]},
+    "maps":[{
+        "id":0,
+        "title":"Total",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "facts":["&#9900 General deer hunting seasons typically begin in late-September, and last through late-November or early December."]
+          }],
+        "jsonLayers":[{
+            "secondDropdownValues":true,
+            "url":"map_data/recreation/gmu.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"total",
+            "values":[0,1,2,3,4],
+            "fillColors":["#a50f15","#de2d26","#fb6a4a","#fcae91","#fee5d9","#ffffff"],
+            "colors":["#a50f15","#de2d26","#fb6a4a","#fcae91","#fee5d9","#ffffff"],
+            "fillOpacity":0.7,
+            "opacity":0.5,
+            "weight":1.5,
+            "tooltipVars":["NAME","STATE","total"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ,", ","</h2><br/><p3 style='display:inline; font-weight:normal;'>Total Harvest: ","</p3>"],
+            "filterVariable":"animal",
+            "filterValue":"deer",
+            "hoverColor":"#000000",
+            "hoverDash":4
+          }],
+        "legend":[{
+            "id":0,
+              "type":"polygon",
+              "secondDropdownLegend":true,
+              "title":"2016 Deer Harvest",
+              "icon":"deer",
+              "containers":[{
+                  "color":"#a50f15",
+                  "label":"2,000+"
+                },
+                {
+                  "color":"#de2d26",
+                  "label":"1,000 to 2,000"
+                },
+                {
+                  "color":"#fb6a4a",
+                  "label":"500 to 1,000"
+                },
+                {
+                  "color":"#fcae91",
+                  "label":"250 to 500"
+                },
+                {
+                  "color":"#fee5d9",
+                  "label":"Less than 250"
+                },
+                {
+                  "color":"#ffffff",
+                  "label":"0 or No Data"
+                }],
+              "description":"Total deer harvested per Game Management Unit (GMU)."
+          },
+          {
+            "id":1,
+              "type":"polygon",
+              "title":"2016 Elk Harvest",
+              "secondDropdownLegend":true,
+              "icon":"elk",
+              "containers":[{
+                  "color":"#a50f15",
+                  "label":"500+"
+                },
+                {
+                  "color":"#de2d26",
+                  "label":"250 to 500"
+                },
+                {
+                  "color":"#fb6a4a",
+                  "label":"100 to 250"
+                },
+                {
+                  "color":"#fcae91",
+                  "label":"50 to 100"
+                },
+                {
+                  "color":"#fee5d9",
+                  "label":"Less than 100"
+                },
+                {
+                  "color":"#ffffff",
+                  "label":"0 or No Data"
+                }],
+              "description":"Total elk harvested per Game Management Unit (GMU)."
+          },
+          {
+            "id":2,
+              "type":"polygon",
+              "title":"2016 Bear Harvest",
+              "secondDropdownLegend":true,
+              "icon":"bear",
+              "containers":[{
+                  "color":"#a50f15",
+                  "label":"100+"
+                },
+                {
+                  "color":"#de2d26",
+                  "label":"50 to 100"
+                },
+                {
+                  "color":"#fb6a4a",
+                  "label":"20 to 50"
+                },
+                {
+                  "color":"#fcae91",
+                  "label":"10 to 20"
+                },
+                {
+                  "color":"#fee5d9",
+                  "label":"Less than 10"
+                },
+                {
+                  "color":"#ffffff",
+                  "label":"0 or No Data"
+                }],
+              "description":"Total bears harvested per Game Management Unit (GMU)."
+          }]
+      },
+      {
+        "id":1,
+        "title":"Density",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "facts":["&#9900 General deer hunting seasons typically begin in late-September, and last through late-November or early December."]
+          }],
+        "jsonLayers":[{
+            "secondDropdownValues":true,
+            "url":"map_data/recreation/gmu.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"dens",
+            "values":[5,6,7,8,9],
+            "fillColors":["#006837","#31a354","#78c679","#c2e699","#ffffcc","#ffffff"],
+            "colors":["#006837","#31a354","#78c679","#c2e699","#ffffcc","#ffffff"],
+            "fillOpacity":0.7,
+            "opacity":0.5,
+            "weight":1.5,
+            "tooltipVars":["NAME","STATE","dens"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ,", ","</h2><br/><p3 style='display:inline; font-weight:normal;'>Harvested Animals Per Sq. Mile: ","</p3>"],
+            "filterVariable":"animal",
+            "filterValue":"deer",
+            "hoverColor":"#000000",
+            "hoverDash":4
+          }],
+          "legend":[{
+            "id":0,
+            "type":"polygon",
+            "title":"2016 Deer Harvest Density",
+            "secondDropdownLegend":true,
+            "icon":"deer",
+            "containers":[{
+                "color":"#006837",
+                "label":"2+"
+              },
+              {
+                "color":"#31a354",
+                "label":"1.5 to 2"
+              },
+              {
+                "color":"#78c679",
+                "label":"1 to 1.5"
+              },
+              {
+                "color":"#c2e699",
+                "label":"0.5 to 1"
+              },
+              {
+                "color":"#ffffcc",
+                "label":"Less than 0.5"
+              },
+              {
+                "color":"#ffffff",
+                "label":"0 or No Data"
+              }],
+            "description":"Deer harvested per sq. mi. per Game Management Unit (GMU)."
+            },
+            {
+              "id":1,
+              "type":"polygon",
+              "title":"2016 Elk Harvest Density",
+              "secondDropdownLegend":true,
+              "icon":"elk",
+              "containers":[{
+                  "color":"#006837",
+                  "label":"1+"
+                },
+                {
+                  "color":"#31a354",
+                  "label":"0.5 to 1"
+                },
+                {
+                  "color":"#78c679",
+                  "label":"0.25 to 0.5"
+                },
+                {
+                  "color":"#c2e699",
+                  "label":"0.1 to 0.25"
+                },
+                {
+                  "color":"#ffffcc",
+                  "label":"Less than 0.1"
+                },
+                {
+                  "color":"#ffffff",
+                  "label":"0 or No Data"
+                }],
+              "description":"Elk harvested per sq. mi. per Game Management Unit (GMU)."
+          },
+          {
+            "id":2,
+            "type":"polygon",
+            "title":"2016 Bear Harvest Density",
+            "secondDropdownLegend":true,
+            "icon":"bear",
+            "containers":[{
+                "color":"#006837",
+                "label":"0.15+"
+              },
+              {
+                "color":"#31a354",
+                "label":"0.1 to 0.15"
+              },
+              {
+                "color":"#78c679",
+                "label":"0.05 to 0.1"
+              },
+              {
+                "color":"#c2e699",
+                "label":"0.01 to 0.05"
+              },
+              {
+                "color":"#ffffcc",
+                "label":"Less than 0.01"
+              },
+              {
+                "color":"#ffffff",
+                "label":"0 or No Data"
+              }],
+            "description":"Bear harvested per sq. mi. per Game Management Unit (GMU)."
+        }]
+      },
+      {
+        "id":2,
+        "title":"M/F Ratio",
+        "border":{"title":"pnw_states_black","opacity":0.8},
+        "fastFacts":[{
+            "facts":["&#9900 General deer hunting seasons typically begin in late-September, and last through late-November or early December."]
+          }],
+        "jsonLayers":[{
+            "secondDropdownValues":true,
+            "url":"map_data/recreation/gmu.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"ratio",
+            "values":[10,11,12,13,14],
+            "fillColors":["#045a8d","#2b8cbe","#74a9cf","#bdc9e1","#f1eef6","#ffffff"],
+            "colors":["#045a8d","#2b8cbe","#74a9cf","#bdc9e1","#f1eef6","#ffffff"],
+            "fillOpacity":0.7,
+            "opacity":0.5,
+            "weight":1.5,
+            "tooltipVars":["NAME","STATE","ratio"],
+            "tooltipText":["<h2 style='margin:0; display:inline-block;'>" ,", ","</h2><br/><p3 style='display:inline; font-weight:normal;'>Harvest M/F Ratio: ","</p3>"],
+            "filterVariable":"animal",
+            "filterValue":"deer",
+            "hoverColor":"#000000",
+            "hoverDash":4
+          }],
+          "legend":[{
+            "id":0,
+                "type":"polygon",
+                "title":"2016 Deer M/F Ratio",
+                "secondDropdownLegend":true,
+                "icon":"deer",
+                "containers":[{
+                    "color":"#045a8d",
+                    "label":"100+"
+                  },
+                  {
+                    "color":"#2b8cbe",
+                    "label":"50 to 100"
+                  },
+                  {
+                    "color":"#74a9cf",
+                    "label":"25 to 50"
+                  },
+                  {
+                    "color":"#bdc9e1",
+                    "label":"10 to 25"
+                  },
+                  {
+                    "color":"#f1eef6",
+                    "label":"Less than 10"
+                  },
+                  {
+                    "color":"#ffffff",
+                    "label":"0 or No Data"
+                  }],
+                "description":"Ratio of males to females per Game Management Unit (GMU)."
+            },
+            {
+              "id":1,
+                  "type":"polygon",
+                  "title":"2016 Elk M/F Ratio",
+                  "secondDropdownLegend":true,
+                  "icon":"elk",
+                  "containers":[{
+                      "color":"#045a8d",
+                      "label":"50+"
+                    },
+                    {
+                      "color":"#2b8cbe",
+                      "label":"25 to 50"
+                    },
+                    {
+                      "color":"#74a9cf",
+                      "label":"10 to 25"
+                    },
+                    {
+                      "color":"#bdc9e1",
+                      "label":"1 to 10"
+                    },
+                    {
+                      "color":"#f1eef6",
+                      "label":"Less than 11"
+                    },
+                    {
+                      "color":"#ffffff",
+                      "label":"0 or No Data"
+                    }],
+                  "description":"Ratio of males to females per Game Management Unit (GMU)."
+              },
+              {
+                "id":2,
+                    "type":"polygon",
+                    "title":"2016 Bear M/F Ratio",
+                    "secondDropdownLegend":true,
+                    "icon":"bear",
+                    "containers":[{
+                        "color":"#045a8d",
+                        "label":"5+"
+                      },
+                      {
+                        "color":"#2b8cbe",
+                        "label":"2.5 to 5"
+                      },
+                      {
+                        "color":"#74a9cf",
+                        "label":"1 to 2.5"
+                      },
+                      {
+                        "color":"#bdc9e1",
+                        "label":"0.1 to 1"
+                      },
+                      {
+                        "color":"#f1eef6",
+                        "label":"Less than 0.1"
+                      },
+                      {
+                        "color":"#ffffff",
+                        "label":"0 or No Data"
+                      }],
+                    "description":"Ratio of males to females per Game Management Unit (GMU)."
+                }]
+      }],
+      "sources":{
+        "geographic":[{
+            "title":"Idaho Game Management Units: ",
+            "linkText":"Idaho Department of Fish and Game",
+            "linkUrl":"https://data-idfggis.opendata.arcgis.com/datasets/game-management-units",
+            "description":"Data from 2018."
+        },
+        {
+          "title":"Idaho Deer Harvest Statistics: ",
+          "linkText":"Idaho Department of Fish and Game",
+          "linkUrl":"https://idfg.idaho.gov/ifwis/huntplanner/stats.aspx?season=general&game=deer&yr=2016",
+          "description":"Total deer harvested. Data from 2016."
+        },
+        {
+          "title":"Idaho Elk Harvest Statistics: ",
+          "linkText":"Idaho Department of Fish and Game",
+          "linkUrl":"https://idfg.idaho.gov/ifwis/huntplanner/stats.aspx?season=general&game=elk&yr=2016",
+          "description":"Total elk harvested. Data from 2016."
+        },
+        {
+          "title":"Idaho Bear Harvest Statistics: ",
+          "linkText":"Idaho Department of Fish and Game",
+          "linkUrl":"https://idfg.idaho.gov/ifwis/huntplanner/stats.aspx?season=general&game=bear&yr=2016",
+          "description":"Total bears harvested. Data from 2016."
+        },
+        {
+          "title":"Oregon Game Management Units: ",
+          "linkText":"Oregon Department of Fish and Wildlife",
+          "linkUrl":"https://nrimp.dfw.state.or.us/DataClearinghouse/default.aspx?p=202&XMLname=805.xml",
+          "description":"Data from 2016."
+        },
+        {
+          "title":"Oregon Deer Harvest Statistics: ",
+          "linkText":"Oregon Department of Fish and Wildlife",
+          "linkUrl":"http://www.dfw.state.or.us/resources/Hunting/big_game/controlled_hunts/reports/index.asp",
+          "description":"Total deer harvested. Data from 2016. Statistics combined from the following files: ", 
+          "descriptionLinkUrl":["http://www.dfw.state.or.us/resources/hunting/big_game/controlled_hunts/docs/hunts_summary_reports/2016_Rifle_Deer_Harvest_Est_100_Series.pdf","http://www.dfw.state.or.us/resources/hunting/big_game/controlled_hunts/docs/hunts_summary_reports/2016_Rifle_Antlerless_Deer_Harvest_Est_600_Series.pdf","http://www.dfw.state.or.us/resources/hunting/big_game/controlled_hunts/docs/hunts_summary_reports/2016_Muzzleloader_Deer_Harvest_Est.pdf","http://www.dfw.state.or.us/resources/hunting/big_game/controlled_hunts/docs/hunts_summary_reports/2016_Archery_Deer_Harvest_Est.pdf"],
+          "descriptionLinkText":["2016 100 Series Deer Harvest,"," 2016 600 Series Deer Harvest,"," 2016 Muzzleloader Deer Harvest,"," 2016 Archery Deer Harvest."]
+        },
+        {
+          "title":"Oregon Elk Harvest Statistics: ",
+          "linkText":"Oregon Department of Fish and Wildlife",
+          "linkUrl":"http://www.dfw.state.or.us/resources/Hunting/big_game/controlled_hunts/reports/index.asp",
+          "description":"Total elk harvested. Data from 2016. Statistics combined from the following files: ", 
+          "descriptionLinkUrl":["http://www.dfw.state.or.us/resources/hunting/big_game/controlled_hunts/docs/hunts_summary_reports/2016_Rifle_Elk_Harvest_Est.pdf","http://www.dfw.state.or.us/resources/hunting/big_game/controlled_hunts/docs/hunts_summary_reports/2016_Muzzleloader_Elk_Harvest_Est.pdf","http://www.dfw.state.or.us/resources/hunting/big_game/controlled_hunts/docs/hunts_summary_reports/2016_Archery_Elk_Harvest_Est.pdf"],
+          "descriptionLinkText":["2016 Rifle Harvest,"," 2016 Muzzleloader Elk Harvest,"," 2016 Archery Elk Harvest."]
+        },
+        {
+          "title":"Oregon Bear Harvest Statistics: ",
+          "linkText":"Oregon Department of Fish and Wildlife",
+          "linkUrl":"http://www.dfw.state.or.us/resources/Hunting/big_game/controlled_hunts/reports/index.asp",
+          "description":"Total bears harvested. Data from 2016. Statistics combined from the following files: ", 
+          "descriptionLinkUrl":["http://www.dfw.state.or.us/resources/hunting/big_game/controlled_hunts/docs/hunts_summary_reports/2016_Black_Bear_Harvest_Est.pdf"],
+          "descriptionLinkText":["2016 Black Bear Harvest."]
+        },
+        {
+          "title":"Washington Game Management Units: ",
+          "linkText":"Washington Department of Fish and Wildlife",
+          "linkUrl":"http://geo.wa.gov/datasets/wdfw::game-management-units-polygons-2018",
+          "description":"Data from 2018."
+        },
+        {
+          "title":"Washington Deer Harvest Statistics: ",
+          "linkText":"Washington Department of Fish and Wildlife",
+          "linkUrl":"http://wdfw.wa.gov/hunting/harvest/2016/reports/deer_combo_dist_all.php",
+          "description":"Total deer harvested. Data from 2016."
+        },
+        {
+          "title":"Washington Elk Harvest Statistics: ",
+          "linkText":"Washington Department of Fish and Wildlife",
+          "linkUrl":"http://wdfw.wa.gov/hunting/harvest/2016/reports/elk_combo_dist_all.php",
+          "description":"Total elk harvested. Data from 2016."
+        },
+        {
+          "title":"Washington Bear Harvest Statistics: ",
+          "linkText":"Washington Department of Fish and Wildlife",
+          "linkUrl":"http://wdfw.wa.gov/hunting/harvest/2016/reports/bear_bmu_all.php",
+          "description":"Total bear harvested. Data from 2016."
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}
