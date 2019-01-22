@@ -76,7 +76,7 @@
         "id":1,
         "title":"Age",
         "border":{"title":"pnw_borders","include":true,"opacity":0.5},
-        "tileLayers":[{"title":"age_group_demographics","pane":300,"opacity":0.7}],
+        "tileLayers":[{"title":"age_raster","pane":300,"opacity":0.7}],
         "jsonLayers":[{
             "pane":"overBorder",
             "url":"map_data/population/age_group_demographics.json",
