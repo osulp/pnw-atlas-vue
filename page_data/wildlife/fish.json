@@ -279,7 +279,7 @@
             {
             "type":"line",
             "description":"Current population status and historical range of Cutthroat Trout subspecies. Cutthroat trout are not listed in the Endangered Species Act.",
-            "bottomIcon":"bull",
+            "bottomIcon":"cutthroat",
             "containers":[{
                 "color":"#000000",
                 "label":"Subspecies Boundary",
