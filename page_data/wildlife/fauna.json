@@ -169,7 +169,7 @@
             "labels":["Public","Private"],
             "data":["per_prot","per_unprot"],
             "colors":["rgba(255, 255, 255,0.2)","#e1e1d0"],
-            "pattern":{"data":0,"color":"#3fa663","type":"diagonal"},
+            "pattern":{"data":0,"color":"#3fa663","type":"diagonal","patternColor":"rgba(63, 166, 99, 0.8)"},
             "options": {
               "responsive": true,
               "legend": {
