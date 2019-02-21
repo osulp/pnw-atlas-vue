@@ -4,7 +4,7 @@
     "chapter":"recreation",
     "initial":0,
     "dropdownText":"Select Map",
-    "dropdownLabel":{"type":"top","labels":["County","State"]},
+    "dropdownLabel":{"type":"top","labels":["County","State"],"breaks":[0]},
     "basemap":[{"title":"terrain","opacity":1},
       {"title":"uslabel","opacity":1}],
     "bounds":[[14.172626315855425, -175.58519708215204],[76.10396253416393, -50.34035998361294]],
