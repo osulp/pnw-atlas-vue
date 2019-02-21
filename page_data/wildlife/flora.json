@@ -279,37 +279,20 @@
         "id":7,
         "title":"Sagebrush",
         "border":{"title":"pnw_borders_black","opacity":0.5},
-        "tileLayers":[{"title":"sagebrush","pane":300,"opacity":0.9}],
+        "tileLayers":[{"title":"trees_sagebrush","pane":300,"opacity":0.9}],
         "fastFacts":[{
             "facts":["&#9900 Scientific name: Artemisia.","&#9900 Big Sagebrush and its subspecies are the most widespread sagebrush varieties in the PNW.","&#9900 Important for a variety of native species, including Sage Grouse, Pronghorn, and Mule Deer."]
           }],
         "legend":[{
             "id":0,
-            "type":"polygon",
-            "title":"Sagebrush Distribution",
-            "containers":[{
-                "color":"#d6d3bd",
-                "label":"Basin Big Sagebrush"
-                },
-                {
-                "color":"#adaa9a",
-                "label":"Mountain Big Sagebrush"
-                },
-                {
-                "color":"#6d6957",
-                "label":"Threetip Sagebrush"
-                },
-                {
-                "color":"#afc6aa",
-                "label":"Low Sagebrush"
-                },
-                {
-                "color":"#62835c",
-                "label":"Black Sagebrush"
-                }],
+            "type":"gradient",
+            "title":"% Sagebrush Cover",
+            "gradient":"linear-gradient(to right, #f7fcf5 0%, #e5f5e0 10%, #c7e9c0 20%, #a1d99b 30%, #74c476 40%, #41ab5d 50%, #238b45 60%, #006d2c 70%, #005722 80%, #003514 90%)",
+            "gradientLabels":["0","45+"],
+            "gradientMargin":230,
             "bottomIcon":"sagebrush",
             "bottomIconWidth":100,
-            "description":"Distribution of dominant sagebrush species and subspecies."
+            "description":"Percent of landscape covered by sagebrush."
         }]
       }],
       "sources":{
@@ -338,9 +321,9 @@
         },
         {
             "title":"Sagebrush: ",
-            "linkText":"Data Basin",
-            "linkUrl":"https://databasin.org/datasets/d904c24857de45238508580e4cd818eb",
-            "description":"Sagebrush species distribution. Data from 2002. Original data source: NatureServe."
+            "linkText":"Multi-Resolution Land Characteristics Consortium",
+            "linkUrl":"https://www.mrlc.gov/data?f%5B0%5D=category%3Ashrubland",
+            "description":"% Sagebrush datasets were downloaded and combined across 3 regions: Columbia Plateau/Blue Mountains, Wyoming/Montana/Black Hills, and Great Basin."
         }],
         "text":[{
             "title":"Lumber Statistics: ",
