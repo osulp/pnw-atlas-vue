@@ -1,0 +1,375 @@
+{
+    "title": "Railroads",
+    "URL":"railroad_icon",
+    "chapter":"transportation",
+    "basemapType":"mapbox",
+    "dropdownLabel":{"type":"breaks","labels":["Modern"],"breaks":[1]},
+    "initial":0,
+    "dropdownText":"Select Map",
+    "maxZoom":10,
+    "maps":[{
+        "id":0,
+        "title":"Historical",
+        "tileLayers":[{"title":"pnw_outline2","pane":300,"opacity":0.3},
+            {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjt7nvyr828jo1fmwmwl7s622/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox","maxZoom":11},
+            {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjt7lxlvw0w411fmexya1fogu/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":250,"opacity":1,"type":"mapbox"}
+        ],
+        "border":{"title":"pnw_borders","opacity":0.6},
+        "jsonLayers":[{
+            "interactive":false,
+            "url":"map_data/transportation/hist_railroads_total.json",
+            "feature":"line",
+            "type":"single",
+            "colors":"#404040",
+            "weight":1,
+            "opacity":1,
+            "tooltipVars":["date"],
+            "tooltipText":["<h2 style='margin: 0px 0px; font-size:20px;'>" ,"</h2>"],
+            "filterType":"lesser",
+            "filterVariable":"date"          
+        },
+          {
+            "pane":"overJson",
+            "url":"map_data/transportation/hist_railway_stations.json",
+            "feature":"point",
+            "type":"categorized",
+            "sliderAttribute":[{"sliderValue":1920,"attribute":"pop_1920","nullText":"Less than 2,500"},{"sliderValue":1910,"attribute":"pop_1910","nullText":"Less than 500"},{"sliderValue":1900,"attribute":"pop_1900","nullText":"Less than 500"},{"sliderValue":1890,"attribute":"pop_1890","nullText":"Less than 500"},{"sliderValue":1880,"attribute":"pop_1880","nullText":"Less than 500"}],
+            "radiusType":"categorized",
+            "radiusAttribute":"size",
+            "radiusValues":[1,2,3,4],
+            "radius":[3.25,2.5,2,1.5,1.5],
+            "attribute":"size",
+            "values":[1,2,3,4],
+            "fillColors":["#000000","#000000","#000000","#000000","#ffffff"],
+            "colors":["#000000","#000000","#000000","#000000","#000000"],
+            "weight":1,
+            "opacity":1,
+            "fillOpacity":1,
+            "tooltipVars":["NAME","STATE","sliderText","sliderAttribute"],
+            "tooltipText":["<h2 style='margin: 0px 0px; font-size:20px;'>" ,", ","</h2><p3>"," Population: ","</p3>"],
+            "filterType":"greaterLesser",
+            "filterVariable":"min_rail",
+            "secondFilterVariable":"max_rail"
+          }],
+        "slider":{
+            "title":"railroads",
+            "min":1880,
+            "max":1920,
+            "step":10,
+            "default":1880             
+        },
+        "legend":[
+            {
+            "id":1,
+            "type":"line",
+            "containers":[{
+                "color":"#000000",
+                "height":3,
+                "label":"Railroads"
+                }]
+            },
+            {
+            "id":2,
+            "type":"pointRow",
+            "title":"Railroad Stations",
+            "containers":[{
+                "size":6.5,
+                "label":"     ",
+                "background":"#000000",
+                "color":"#000000",
+                "border":1 
+                },
+                {
+                "size":5,
+                "label":"     ",
+                "background":"#000000",
+                "color":"#000000",
+                "border":1
+                },
+                {
+                "size":4,
+                "label":"     ",
+                "background":"#000000",
+                "color":"#000000",
+                "border":1
+                },
+                {
+                "size":3,
+                "label":"     ",
+                "background":"#000000",
+                "color":"#000000",
+                "border":1
+                },
+                {
+                "size":3,
+                "label":"     ",
+                "background":"#ffffff",
+                "color":"#000000",
+                "border":1
+                }
+            ],
+            "description":"Beginning in the 1860s and 1870s, railroad construction began in the Pacific Northwest. Over the course of the next 20 years, the expansion of railways and their connection with cities across the rest of the United States had a profound effect on the growth of population and economy in the Pacific Northwest. Railroad stations are not comprehensive, and based on historical map data."
+            }]
+        },
+        {
+            "id":1,
+            "title":"Ownership",
+            "fastFacts":[{
+                "facts":["&#9900 Union Pacifc owns the most rail line in the Pacific Northwest, with over 2,0000 miles of line.","&#9900 There are over 600 miles of abandoned/out of service railways in the PNW. Some old railways have been converted into trails."]
+              }],
+            "tileLayers":[{"title":"pnw_outline2","pane":300,"opacity":0.3},
+                {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjtg4l2zj66s71fs8vbqdy7lt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox","maxZoom":11},
+                {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjthgl41l11sv1gqiwdfq00eg/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":250,"opacity":1,"type":"mapbox","maxZoom":11}
+            ],
+            "border":{"title":"pnw_borders","opacity":0.6},
+            "jsonLayers":[{
+                "url":"map_data/transportation/modern_railroads.json",
+                "feature":"line",
+                "type":"categorized",
+                "attribute":"NAME",
+                "values":["Abandoned","UP","BNSF"],
+                "colors":["#e60000","#3366cc","#339933","#737373"],
+                "weightType":"categorized",
+                "weightAttribute":"NET",
+                "weightValues":["Major Industrial Lead"],
+                "weight":[0.5,1.5],
+                "opacity":1,
+                "tooltipVars":["FULLNAME"],
+                "sticky":true,
+                "tooltipText":["<h2 style='margin: 0px 0px; font-size:20px;'>" ,"</h2>"]
+            }],
+            "legend":[
+                {
+                "id":1,
+                "type":"line",
+                "title":"Railroad Owner",
+                "containers":[{
+                    "color":"#3366cc",
+                    "height":3,
+                    "label":"Union Pacific"
+                    },
+                    {
+                    "color":"#339933",
+                    "height":3,
+                    "label":"BNSF"
+                    },
+                    {
+                    "color":"#737373",
+                    "height":3,
+                    "label":"Other"
+                    },
+                    {
+                    "color":"#e60000",
+                    "height":3,
+                    "label":"Abandoned"
+                    }],
+                "description":"Current railroad ownership as declared by the Federal Railroad Administration."
+                }]
+      },
+      {
+        "id":2,
+        "title":"Amtrak",
+        "fastFacts":[{
+            "facts":["&#9900 There are 27 total Amtrak rail stations in the Pacific Northwest.","&#9900 The Seattle, Washington station had the most passengers in 2018, followed by the Portland, Oregon station."]
+          }],
+        "tileLayers":[{"title":"pnw_outline2","pane":300,"opacity":0.3},
+            {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjtg4l2zj66s71fs8vbqdy7lt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox","maxZoom":11},
+            {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjthgl41l11sv1gqiwdfq00eg/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":250,"opacity":1,"type":"mapbox","maxZoom":11}
+        ],
+        "border":{"title":"pnw_borders","opacity":0.6},
+        "jsonLayers":[
+        {
+            "interactive":false,
+            "url":"map_data/transportation/amtrack_routes.json",
+            "feature":"line",
+            "type":"single",
+            "colors":"#666699",
+            "weight":2.5,
+            "opacity":1
+        },
+        {
+            "pane":"overJson",
+            "url":"map_data/transportation/amtrack_stations.json",
+            "feature":"point",
+            "type":"single",
+            "colors":"#ffffff",
+            "fillColors":"#47476b",
+            "radiusType":"graduated",
+            "radiusAttribute":"riders_18",
+            "radiusValues":[100000,25000],
+            "radius":[8,6,4],
+            "weight":2,
+            "opacity":1,
+            "fillOpacity":1,
+            "tooltipVars":["STNNAME","riders_18"],
+            "tooltipText":["<h2 style='margin: 0px 0px; font-size:20px;'>" ,"</h2><p3>2018 Passengers: ","</p3>"]
+        }],
+        "legend":[
+            {
+            "id":1,
+            "type":"line",
+            "containers":[{
+                "color":"#666699",
+                "height":3,
+                "label":"Amtrak Line"
+                }]
+            },
+            {
+            "id":2,
+            "type":"pointRow",
+            "title":"Amtrack Station Passengers",
+            "containers":[{
+                "size":16,
+                "label":"100+",
+                "background":"#47476b",
+                "color":"#ffffff",
+                "border":1.5
+                },
+                {
+                "size":12,
+                "label":"25 to 100",
+                "background":"#47476b",
+                "color":"#ffffff",
+                "border":1.5
+                },
+                {
+                "size":8,
+                "label":"Under 25",
+                "background":"#47476b",
+                "color":"#ffffff",
+                "border":1
+                }
+            ],
+            "description":"1000s of passengers that boarded or de-trained at a particular station in 2018."
+        }]
+  }],
+      "sources":{
+        "geographic":[{
+            "title":"Historical Railways",
+            "linkText":"Jeremy Atack, Vanderbilt University",
+            "linkUrl":"https://my.vanderbilt.edu/jeremyatack/data-downloads/",
+            "description":"Jeremy Atack, “Historical Geographic Information Systems (GIS) database of U.S. Railroads for [selected years based on value of .dbf field “InOpBy” or “Exact”]” (May 2016) replacing the contents in brackets with the appropriate years(s) based upon the database selection criteria. Railway data were edited in accordance with the following historical maps."
+        },
+        {
+            "title":"1873 Oregon and Washington",
+            "linkText":"Gray's Atlas New Rail Road and County Map of the States of Oregon, California, and Nevada",
+            "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~264547~5524883:Railroad-and-County-Map-of-Oregon,-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=w4s:/where%2FWashington;q:%3D%22Gray%27s%20Atlas%20Of%20The%20United%20States%2C%20With%20General%20Maps%20Of%20The%20World.%20Accompanied%20By%20Descriptions%20Geographical%2C%20Historical%2C%20Scientific%20and%20Statistical.%20By%20O.W.%20Gray%2C%20Civil%20And%20Topographical%20Engineer%2C%20No.%2010%20North%20Fifth%20Street%2C%20Philadelphia.%20Published%20By%20Stedman%2C%20Brown%20%26%20Lyon%2C%20No.%2010%20North%20Fifth%20Street%2C%20Philadelphia.%201873.%20(on%20verso)%20Entered%20...%201873%2C%20by%20O.W.%20Gray%20...%20Washington.%22;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=1&trs=2",
+            "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+        },
+        {
+            "title":"1879 Washington",
+            "linkText":"Rand McNally and Company map of Washington",
+            "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~3892~400082:Washington-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=w4s:/where%2FWashington;q:%3D%22Rand%2C%20McNally%20%26%20Co.%27s%20Business%20Atlas%20Containing%20Large%20Scale%20Maps%20of%20Each%20State%20and%20Territory%20of%20the%20United%20States%2C%20The%20Provinces%20Of%20Canada%2C%20West%20India%20Islands%2C%20Etc.%2C%20Etc.%20Together%20with%20a%20Complete%20Reference%20Map%20of%20the%20World%20...%20Accompanied%20by%20a%20New%20and%20Original%20Compilation%20and%20Ready%20Reference%20Index%2C%20Showing%20in%20Detail%20the%20Entire%20Railroad%20System%20of%20North%20America%20...%20Chicago%3A%20Rand%2C%20McNally%20%26%20Co.%2C%20Printers%2C%20Engravers%20And%20Publishers.%201878-9.%20(on%20verso)%20Entered%20...%201878%2C%20by%20Rand%2C%20McNally%20%26%20Co.%20...%20Washington%2C%20D.C.%22;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=0&trs=1",
+            "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+        },
+        {
+            "title":"1879 Oregon",
+            "linkText":"Rand McNally and Company map of Oregon",
+            "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~3894~410046:Oregon-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No",
+            "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+        },
+        {
+            "title":"1889 Washington",
+            "linkText":"George F. Cram's Standard American Atlas of the World",
+            "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~212993~5500810:Washington-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No",
+            "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+        },
+        {
+            "title":"1889 Oregon",
+            "linkText":"George F. Cram's Standard American Atlas of the World",
+            "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~212995~5500811:Oregon-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No",
+            "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+        },
+        {
+            "title":"1889 Idaho",
+            "linkText":"George F. Cram's Standard American Atlas of the World",
+            "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~212991~5500809:Idaho-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=w4s:/where%2FIdaho%2Fwhen%2F1889;q:Cram%27s%20Standard%20American%20Atlas%20Of%20The%20World;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=0&trs=1",
+            "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+        },
+        {
+            "title":"1901 Washington",
+            "linkText":"George F. Cram's Standard American Railway System Atlas Of The World",
+            "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~213320~5500961:Washington-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=w4s:/where%2FWashington;q:%3D%22Locations%20of%20banking%20towns%20shown%20by%20red%20circles.%20Railroads%20are%20indicated%20by%20numbers%20and%20colors%20and%20patterns%2C%20and%20each%20railroad%20has%20the%20same%20number%20and%20color%20and%20pattern%20in%20every%20state%20through%20which%20it%20passes.%20All%20railroads%20on%20each%20map%20are%20in%20a%20list%20keyed%20to%20the%20map.%20Border%20of%20map%20has%20a%20table%20of%20contents%20for%20the%20atlas.%20Relief%20shown%20by%20hachures.%20Prime%20meridians%20Washington%20D.C.%20and%20Greenwich.%22;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=0&trs=1",
+            "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+        },
+        {
+            "title":"1901 Oregon",
+            "linkText":"George F. Cram's Standard American Railway System Atlas Of The World",
+            "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~213322~5500962:Oregon-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No",
+            "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+        },
+        {
+            "title":"1901 Idaho",
+            "linkText":"George F. Cram's Standard American Railway System Atlas Of The World",
+            "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~213318~5500960:Idaho-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=w4s:/where%2FIdaho;q:Cram%27s%20Standard%20American%20Railway%20Atlas;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=0&trs=3",
+            "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+        },
+        {
+            "title":"1912 Washington",
+            "linkText":"Rand McNally and Company Library Atlas Of The World",
+            "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~308560~90078288:Washington-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=w4s:/where%2FWashington%2Fwhen%2F1912;q:washington;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=0&trs=2#",
+            "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+        },
+        {
+            "title":"1910 Oregon",
+            "linkText":"George F. Cram's Standard American Railway Atlas",
+            "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~216312~5502626:Oregon?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=w4s:/who%2FCram%25252C%2BGeorge%2BFranklin%2Fwhere%2FOregon;q:railroad;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=4&trs=9",
+            "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+        },
+        {
+            "title":"1909 Idaho",
+            "linkText":"Idaho: Rand McNally & Company",
+            "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~214860~5501862",
+            "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+        },
+        {
+            "title":"1924 Washington",
+            "linkText":"Rand McNally Black and White Mileage Map, Washington.",
+            "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~201792~3000711:Washington-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=w4s:/where%2FWashington%2Fwhen%2F1924;q:railroad;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=2&trs=3",
+            "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+        },
+        {
+            "title":"1924 Oregon",
+            "linkText":"Rand McNally Black and White Mileage Map, Oregon.",
+            "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~201786~3000708:Oregon-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=w4s:/where%2FOregon%2Fwhen%2F1924;q:railroad;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=2&trs=3",
+            "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+        },
+        {
+            "title":"1924 Idaho",
+            "linkText":"Rand McNally Black and White Mileage Map, Idaho.",
+            "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~201781~3000705:Idaho-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=w4s:/where%2FIdaho%2Fwhen%2F1924;q:railroad;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=2&trs=4",
+            "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+        },
+        {
+            "title":"Railroad Ownership",
+            "linkText":"National Transit Atlas",
+            "linkUrl":"http://osav-usdot.opendata.arcgis.com/datasets/f15d9e40cd1d4170a36bf31d4e6a3c28_0",
+            "description":"Data from 2018."
+        },
+        {
+            "title":"Amtrak Routes",
+            "linkText":"National Transit Atlas",
+            "linkUrl":"http://osav-usdot.opendata.arcgis.com/datasets/4e32613ba4c9450880118b2fd639e8cb_0",
+            "description":"Data from 2018."
+        },
+        {
+            "title":"Amtrak Stations",
+            "linkText":"National Transit Atlas",
+            "linkUrl":"http://osav-usdot.opendata.arcgis.com/datasets/3e9daf681b154fb19372044f4d52941a_0",
+            "description":"Data from 2018."
+        },
+        {
+            "title":"Amtrak Station Passenger Statistics",
+            "linkText":"National Transit Atlas",
+            "linkUrl":"https://www.railpassengers.org/site/assets/files/1220/wa.pdf",
+            "description":"Data from 2018. Data joined with Amtrak station layer."
+        }],
+        "basemap":[{
+            "title":"Created with Mapbox Studio"
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://github.com/sarahbellum/Canvas-Flowmap-Layer","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","Canvas Flowmap Layer","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

@@ -1,0 +1,636 @@
+{
+    "title": "Commute",
+    "URL":"commute_icon",
+    "chapter":"transportation",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "dropdownLabel":{"type":"breaks","labels":["Commute Modes"],"breaks":[2]},
+    "basemap":[{"title":"streets","opacity":1, "maxZoom":11},
+        {"title":"imagery","opacity":0.4, "maxZoom":11},
+        {"title":"terrain","opacity":0.2, "maxZoom":11},
+        {"title":"geoserver","layer":"pnw_outline2","opacity":0.5, "maxZoom":11},
+        {"title":"label","opacity":1, "maxZoom":11}],
+    "infoBackground":"rgba(255,255,255,0.7)",
+    "maps":[{
+        "id":0,
+        "title":"Time",
+        "border":{"title":"pnw_borders","opacity":0.8,"include":true},
+        "infoWidth":"280px",
+        "featureSelected":false, 
+        "fastFacts":[{
+            "facts":["&#9900 At 69%, Snohomish County and King County, Washington have the highest percentage of commutes over 20 minutes of all PNW counties.","&#9900 At 15%, Lake County, Oregon has the lowest percentage of commutes over 20 minutes of all PNW counties."]
+            }],
+        "tileLayers":[{"title":"commute_time","pane":250,"opacity":0.5}],
+        "jsonLayers":[{
+            "url":"map_data/transportation/commute_blocks.json",
+            "feature":"polygon",
+            "type":"single",
+            "attribute":"per_drove",
+            "fillColors":["#ffffff"],
+            "colors":["#ffffff"],
+            "opacityType":"graduated",
+            "opacityAttribute":"per_drove",
+            "fillOpacity":0,
+            "opacity":0,
+            "weight":1,
+            "hoverOpacity":0.8,
+            "tooltipVars":["NAME_E"],
+            "tooltipText":["<p3 style='margin:0; line-height:16px;'>","</p3><p3 id='chartDescription' style='display:inline-block; margin-top:5px; font-weight:bold;'></p3><canvas id='commuteChart' style='margin-left:-5px; margin-top:10px;'></canvas><p3 id='chartDescription' style='display:inline-block; margin-top:15px; line-height:22px;'>Average commute time in minutes. Data from 2013-2017.</p3>"]                 
+            }],
+            "chart":[{
+            "id":1,
+            "chartLoc":"info",
+            "chartType":"doughnut",
+            "labels":["Under 10","10 - 20","20 - 30","30 - 40","40+"],
+            "data":["COM_U10","COM_10_20","COM_20_30","COM_30_40","COM_O40"],
+            "colors":["#1a9641","#a6d96a","#ffffbf","#f4a582","#ca0020"],
+            "options": {
+                "responsive": true,
+                "legend": {
+                    "position": "left",
+                    "labels": {
+                        "fontColor":"#000000",
+                        "fontFamily":"GoudyOld",
+                        "fontSize":14
+                    }
+                },
+                "plugins":{
+                    "labels":{
+                        "render": "value",
+                        "fontColor":"#000000",    
+                        "fontFamily":"GoudyOld",
+                        "fontSize":14,
+                        "overlap":false
+                    }
+                },   
+                "tooltips":{
+                    "enabled":false
+                }
+            }
+        }],
+        "legend":[
+            {
+            "id":0,
+            "type":"gradient",
+            "title":"% Long Commutes",
+            "gradient":"linear-gradient(to right, #1a9641, #a6d96a, #ffffbf, #f4a582, #ca0020)",
+            "gradientLabels":["20","35","50","65","80"],
+            "chartID":"commuteChart",
+            "gradientMargin":43,
+            "bottomIcon":"commute_total",
+            "bottomIconWidth":280,
+            "description":"Percent of commutes 20 minutes or longer."
+            }]
+        },
+        {
+            "id":1,
+            "title":"Flow",
+            "border":{"title":"pnw_borders","opacity":1,"include":true},
+            "featureSelected":false, 
+            "fastFacts":[{
+                "facts":["&#9900 At 58%, Polk County, Oregon has the highest percentage of residents that work in a different county.","&#9900 At 2.5%, Curry County, Oregon has the lowest percentage of residents that work in a different county."]
+                }],
+            "jsonLayers":[{
+                "url":"map_data/transportation/flow_county_points.json",
+                "pane":"overBorder",
+                "feature":"point",
+                "type":"single",
+                "fillOpacity":0,
+                "opacity":0,
+                "hoverOpacity":0,
+                "radiusType":"graduated",
+                "radiusAttribute":"RES_TOT",
+                "radiusValues":[250000,50000,5000],
+                "radius":[20,14,8,4],
+                "tooltipVars":["NAME","RES_TOT","RES_WORK","RES_COM"],
+                "tooltipText":["<h2 style='margin:0px; font-size:20px;'>"," County</h2><p3>Total Residential Workers: ","<br/>In-County Workers: ","<br/>Residents who Commute: ","</p3>"],
+                "flow":{
+                    "flow_id":"FIPS",
+                    "flowURL":"map_data/transportation/commute_flow.csv",
+                    "sourceCoordinates":["RES_LON", "RES_LAT"],
+                    "targetCoordinates":["WORK_LON", "WORK_LAT"],
+                    "source":"RES_FIPS",
+                    "target":"WORK_FIPS",
+                    "canvasBezierStyle": {
+                      "type": "classBreaks",
+                      "field": "FLOW",
+                      "classBreakInfos": [
+                      {
+                      "classMinValue": 0,
+                      "classMaxValue": 1000,
+                      "symbol": {
+                          "strokeStyle": "#ffffcc",
+                          "lineWidth": 0.5,
+                          "lineCap": "round",
+                          "shadowColor": "#ffffff",
+                          "shadowBlur": 0
+                        }
+                      },
+                      {
+                      "classMinValue": 1000,
+                      "classMaxValue": 10000,
+                      "symbol": {
+                          "strokeStyle": "#ffffcc",
+                          "lineWidth": 3,
+                          "lineCap": "round",
+                          "shadowColor": "#000000",
+                          "shadowBlur": 0
+                        }
+                      },
+                      {
+                      "classMinValue": 10000,
+                      "classMaxValue": 25000,
+                      "symbol": {
+                          "strokeStyle": "#ffffcc",
+                          "lineWidth": 6,
+                          "lineCap": "round",
+                          "shadowColor": "#000000",
+                          "shadowBlur": 0
+                        }
+                      },
+                      {
+                        "classMinValue": 25000,
+                        "classMaxValue": 1000000,
+                        "symbol": {
+                            "strokeStyle": "#ffffcc",
+                            "lineWidth": 10,
+                            "lineCap": "round",
+                            "shadowColor": "#000000",
+                            "shadowBlur": 0
+                          }
+                        }],
+                      "defaultSymbol": {
+                      "strokeStyle": "#595959",
+                      "lineWidth": 0.5,
+                      "lineCap": "round",
+                      "shadowColor": "#595959",
+                      "shadowBlur": 1.5
+                      }
+                    }
+                  }
+              },
+              {
+                "interactive":false,
+                "url":"map_data/transportation/flow_county_points.json",
+                "feature":"point",
+                "pane":"overBorder",
+                "type":"pointDivGrad",
+                "attribute":"WOR_COM_PE",
+                "values":[90,60],
+                "fillColors":["#99d594","#ffffbf","#fc8d59"],
+                "opacityType":"graduated",
+                "opacityAttribute":"per_drove",
+                "fillOpacity":1,
+                "opacity":1,
+                "weight":1,
+                "radiusType":"graduated",
+                "radiusAttribute":"RES_TOT",
+                "radiusValues":[250000,50000,5000],
+                "radius":[20,14,8,4],
+                "divIcon":"border-radius:50%; border:2px solid white; opacity:1; -webkit-box-shadow: 1px 1px 2px black; box-shadow: 1px 1px 2px black; -moz-box-shadow: 1px 1px 2px black;"                 
+            }],
+            "legend":[{
+                "id":0,
+                "type":"selection",
+                "title":"Select a County"
+            },  
+            {
+              "id":1,
+              "type":"doubleLine",
+              "legendDisplay":"selected",
+              "title":"Commute Flow (1000s)",
+              "containers":[{
+                    "color":"#ffffcc",
+                    "label":"25+",
+                    "height":10,
+                    "color2":"#ffffcc",
+                    "label2":"1 to 10",
+                    "height2":3
+                  },
+                  {
+                    "color":"#ffffcc",
+                    "label":"10 to 25",
+                    "height":6,
+                    "color2":"#ffffcc",
+                    "label2":"Less than 1",
+                    "height2":1 
+                  }
+                ],
+              "description":"Flow of commuters from selected county in 1000s."
+          },
+          {
+                "id":2,
+                "type":"pointSizeColor",
+                "title":["Res. Workers","% In-County"],
+                "titleMargin":24,
+                "containers":[{
+                      "size":22,
+                      "sizeLabel":"250+",
+                      "color": "#99d594",
+                      "colorLabel":"90+",
+                      "border":2,
+                      "borderColor":"#ffffff"
+                    },
+                    {
+                      "size":16,
+                      "sizeLabel":"50 to 250",
+                      "color": "#ffffbf",
+                      "colorLabel":"60 to 90",
+                      "border":2,
+                      "borderColor":"#ffffff"
+                    },
+                    {
+                      "size":10,
+                      "sizeLabel":"5 to 50",
+                      "color": "#fc8d59",
+                      "colorLabel":"Less than 60",
+                      "border":2,
+                      "borderColor":"#ffffff"
+                    },
+                    {
+                      "size":6,
+                      "sizeLabel":"Less than 5"
+                    }
+                  ],
+                "description":"Total resident workers. % of residents who work in county.",
+                "bottomIcon":"commute_flow",
+                "bottomIconWidth":280
+            }]
+        },
+        {
+        "id":2,
+        "title":"Drove",
+        "border":{"title":"pnw_borders","opacity":0.8,"include":true},
+        "infoWidth":"280px",
+        "featureSelected":false, 
+        "tileLayers":[{"title":"commute_drove","pane":250,"opacity":0.5}],
+        "fastFacts":[{
+          "facts":["&#9900 At 96%, Minidoka County, Idaho has the highest percentage of workers who drive to work of all PNW counties.","&#9900 At 70%, Multnomah County, Oregon has the lowest percentage of workers who drive to work of all PNW counties."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/transportation/commute_blocks.json",
+            "feature":"polygon",
+            "type":"single",
+            "fillColors":["#ffffff"],
+            "colors":["#ffffff"],
+            "fillOpacity":0,
+            "opacity":0,
+            "weight":1,
+            "hoverOpacity":0.8,
+            "tooltipVars":["NAME_E"],
+            "tooltipText":["<p3 style='margin:0; line-height:16px;'>","</p3><p3 id='chartDescription' style='display:inline-block; margin-top:5px; font-weight:bold;'></p3><canvas id='commuteChart' style='margin-left:-5px; margin-top:10px;'></canvas><p3 id='chartDescription' style='display:inline-block; margin-top:15px; line-height:22px;'>Mode of commute within one census block group. Data from 2013-2017.</p3>"]                 
+          }],
+          "chart":[{
+            "id":0,
+            "chartLoc":"info",
+            "chartType":"doughnut",
+            "labels":["Drove","Other"],
+            "data":["PER_DROVE"],
+            "pattern":{"data":1,"color":"#e4534e","type":"diagonal","patternColor":"rgba(255, 255, 255,0)"},
+            "colors":["#e4534e","rgba(255, 255, 255,0)"],
+            "options": {
+              "responsive": true,
+              "legend": {
+                  "position": "left",
+                  "labels": {
+                      "fontColor":"#000000",
+                      "fontFamily":"GoudyOld",
+                      "fontSize":14
+                  }
+              },
+              "plugins":{
+                  "labels":{
+                      "fontColor":"#000000",    
+                      "fontFamily":"GoudyOld",
+                      "fontSize":14,
+                      "overlap":false
+                  }
+              },   
+              "tooltips":{
+                  "enabled":false
+              }
+            }
+        }],
+        "legend":[
+            {
+            "id":0,
+            "type":"gradient",
+            "title":"% of Workers who Drive to Work",
+            "gradient":"linear-gradient(to right, #fee5d9, #fcae91, #fb6a4a, #de2d26, #a50f15)",
+            "gradientLabels":["60","70","80","90","100"],
+            "chartID":"commuteChart",
+            "gradientMargin":42,
+            "bottomIcon":"commute_drove",
+            "bottomIconWidth":280
+            }]
+      },
+      {
+        "id":3,
+        "title":"Transit",
+        "border":{"title":"pnw_borders","opacity":0.8,"include":true},
+        "infoWidth":"280px",
+        "featureSelected":false, 
+        "tileLayers":[{"title":"commute_transit","pane":250,"opacity":0.5}],
+        "fastFacts":[{
+            "facts":["&#9900 At 13%, King County, Washington has the highest percentage of workers who take transit to work of all PNW counties.","&#9900 13 PNW counties have no workers who take transit to work."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/transportation/commute_blocks.json",
+            "feature":"polygon",
+            "type":"single",
+            "fillColors":["#ffffff"],
+            "colors":["#ffffff"],
+            "fillOpacity":0,
+            "opacity":0,
+            "weight":1,
+            "hoverOpacity":0.8,
+            "tooltipVars":["NAME_E"],
+            "tooltipText":["<p3 style='margin:0; line-height:16px;'>","</p3><p3 id='chartDescription' style='display:inline-block; margin-top:5px; font-weight:bold;'></p3><canvas id='commuteChart' style='margin-left:-5px; margin-top:10px;'></canvas><p3 id='chartDescription' style='display:inline-block; margin-top:15px; line-height:22px;'>Mode of commute within one census block group. Data from 2013-2017.</p3>"]                 
+          }],
+          "chart":[{
+            "id":0,
+            "chartLoc":"info",
+            "chartType":"doughnut",
+            "labels":["Transit","Other"],
+            "pattern":{"data":1,"color":"#6458a7","type":"diagonal","patternColor":"rgba(255, 255, 255,0)"},
+            "data":["per_public"],
+            "colors":["#6458a7","rgba(255, 255, 255,0)"],
+            "options": {
+              "responsive": true,
+              "legend": {
+                  "position": "left",
+                  "labels": {
+                      "fontColor":"#000000",
+                      "fontFamily":"GoudyOld",
+                      "fontSize":14
+                  }
+              },
+              "plugins":{
+                  "labels":{
+                      "fontColor":"#000000",    
+                      "fontFamily":"GoudyOld",
+                      "fontSize":14,
+                      "overlap":false
+                  }
+              },   
+              "tooltips":{
+                  "enabled":false
+              }
+            }
+        }],
+        "legend":[
+            {
+            "id":0,
+            "type":"gradient",
+            "title":"% of Workers who take Public Transit to Work",
+            "gradient":"linear-gradient(to right, #f2f0f7, #cbc9e2, #9e9ac8, #756bb1, #54278f)",
+            "gradientLabels":["0","2","5","10","25"],
+            "chartID":"commuteChart",
+            "gradientMargin":51,
+            "bottomIcon":"commute_transit",
+            "bottomIconWidth":280
+            }]
+      },
+      {
+        "id":4,
+        "title":"Walk",
+        "border":{"title":"pnw_borders","opacity":0.8,"include":true},
+        "infoWidth":"280px",
+        "featureSelected":false, 
+        "tileLayers":[{"title":"commute_walk","pane":250,"opacity":0.5}],
+        "fastFacts":[{
+            "facts":["&#9900 At 16%, Whitman County, Washington has the highest percentage of workers who walk to work of all PNW counties.","&#9900 At 0.9%, Mason County, Washington has the lowest percentage of workers who walk to work of all PNW counties."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/transportation/commute_blocks.json",
+            "feature":"polygon",
+            "type":"single",
+            "fillColors":["#ffffff"],
+            "colors":["#ffffff"],
+            "fillOpacity":0,
+            "opacity":0,
+            "weight":1,
+            "hoverOpacity":0.8,
+            "tooltipVars":["NAME_E"],
+            "tooltipText":["<p3 style='margin:0; line-height:16px;'>","</p3><p3 id='chartDescription' style='display:inline-block; margin-top:5px; font-weight:bold;'></p3><canvas id='commuteChart' style='margin-left:-5px; margin-top:10px;'></canvas><p3 id='chartDescription' style='display:inline-block; margin-top:15px; line-height:22px;'>Mode of commute within one census block group. Data from 2013-2017.</p3>"]                 
+          }],
+          "chart":[{
+            "id":0,
+            "chartLoc":"info",
+            "chartType":"doughnut",
+            "labels":["Walk","Other"],
+            "pattern":{"data":1,"color":"#3182bd","type":"diagonal","patternColor":"rgba(255, 255, 255,0)"},
+            "data":["per_walk"],
+            "colors":["#3182bd","rgba(255, 255, 255,0)"],
+            "options": {
+              "responsive": true,
+              "legend": {
+                  "position": "left",
+                  "labels": {
+                      "fontColor":"#000000",
+                      "fontFamily":"GoudyOld",
+                      "fontSize":14
+                  }
+              },
+              "plugins":{
+                  "labels":{
+                      "fontColor":"#000000",    
+                      "fontFamily":"GoudyOld",
+                      "fontSize":14,
+                      "overlap":false
+                  }
+              },   
+              "tooltips":{
+                  "enabled":false
+              }
+            }
+        }],
+        "legend":[
+            {
+            "id":0,
+            "type":"gradient",
+            "title":"% of Workers who Walk to Work",
+            "gradient":"linear-gradient(to right, #eff3ff, #bdd7e7, #6baed6, #3182bd, #08519c)",
+            "gradientLabels":["0","2","5","10","25"],
+            "chartID":"commuteChart",
+            "gradientMargin":51,
+            "bottomIcon":"commute_walk",
+            "bottomIconWidth":280
+            }]
+      },
+      {
+        "id":5,
+        "title":"Bike",
+        "border":{"title":"pnw_borders","opacity":0.8,"include":true},
+        "infoWidth":"280px",
+        "featureSelected":false, 
+        "tileLayers":[{"title":"commute_bike","pane":250,"opacity":0.5}],
+        "fastFacts":[{
+            "facts":["&#9900 At 9%, Benton County, Oregon has the highest percentage of workers who bike to work of all PNW counties.","&#9900 12 PNW counties have no workers who take transit to work."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/transportation/commute_blocks.json",
+            "feature":"polygon",
+            "type":"single",
+            "fillColors":["#ffffff"],
+            "colors":["#ffffff"],
+            "fillOpacity":0,
+            "opacity":0,
+            "weight":1,
+            "hoverOpacity":0.8,
+            "tooltipVars":["NAME_E"],
+            "tooltipText":["<p3 style='margin:0; line-height:16px;'>","</p3><p3 id='chartDescription' style='display:inline-block; margin-top:5px; font-weight:bold;'></p3><canvas id='commuteChart' style='margin-left:-5px; margin-top:10px;'></canvas><p3 id='chartDescription' style='display:inline-block; margin-top:15px; line-height:22px;'>Mode of commute within one census block group. Data from 2013-2017.</p3>"]                 
+          }],
+          "chart":[{
+            "id":0,
+            "chartLoc":"info",
+            "chartType":"doughnut",
+            "labels":["Bike","Other"],
+            "pattern":{"data":1,"color":"#31a354","type":"diagonal","patternColor":"rgba(255, 255, 255,0)"},
+            "data":["per_bike"],
+            "colors":["#31a354","rgba(255, 255, 255,0)"],
+            "options": {
+              "responsive": true,
+              "legend": {
+                  "position": "left",
+                  "labels": {
+                      "fontColor":"#000000",
+                      "fontFamily":"GoudyOld",
+                      "fontSize":14
+                  }
+              },
+              "plugins":{
+                  "labels":{
+                      "fontColor":"#000000",    
+                      "fontFamily":"GoudyOld",
+                      "fontSize":14,
+                      "overlap":false
+                  }
+              },   
+              "tooltips":{
+                  "enabled":false
+              }
+            }
+        }],
+        "legend":[
+            {
+            "id":0,
+            "type":"gradient",
+            "title":"% of Workers who Bike to Work",
+            "gradient":"linear-gradient(to right, #edf8e9, #bae4b3, #74c476, #31a354, #006d2c)",
+            "gradientLabels":["0","1","4","7","10"],
+            "chartID":"commuteChart",
+            "gradientMargin":54,
+            "bottomIcon":"commute_bike",
+            "bottomIconWidth":280
+            }]
+      },
+      {
+        "id":6,
+        "title":"Home",
+        "border":{"title":"pnw_borders","opacity":0.8,"include":true},
+        "infoWidth":"280px",
+        "featureSelected":false, 
+        "tileLayers":[{"title":"commute_home","pane":250,"opacity":0.5}],
+        "fastFacts":[{
+          "facts":["&#9900 At 12%, Klickitat County, Washington has the highest percentage of workers who work from home of all PNW counties.","&#9900 At 2%, Minidoka County, Idaho has the lowest percentage of workers who work from home of all PNW counties."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/transportation/commute_blocks.json",
+            "feature":"polygon",
+            "type":"single",
+            "fillColors":["#ffffff"],
+            "colors":["#ffffff"],
+            "fillOpacity":0,
+            "opacity":0,
+            "weight":1,
+            "hoverOpacity":0.8,
+            "tooltipVars":["NAME_E"],
+            "tooltipText":["<p3 style='margin:0; line-height:16px;'>","</p3><p3 id='chartDescription' style='display:inline-block; margin-top:5px; font-weight:bold;'></p3><canvas id='commuteChart' style='margin-left:-5px; margin-top:10px;'></canvas><p3 id='chartDescription' style='display:inline-block; margin-top:15px; line-height:22px;'>Mode of commute within one census block group. Data from 2013-2017.</p3>"]                 
+          }],
+          "chart":[{
+            "id":0,
+            "chartLoc":"info",
+            "chartType":"doughnut",
+            "labels":["Home","Other"],
+            "pattern":{"data":1,"color":"#d95f0e","type":"diagonal","patternColor":"rgba(255, 255, 255,0)"},
+            "data":["per_home"],
+            "colors":["#d95f0e","rgba(255, 255, 255,0)"],
+            "options": {
+              "responsive": true,
+              "legend": {
+                  "position": "left",
+                  "labels": {
+                      "fontColor":"#000000",
+                      "fontFamily":"GoudyOld",
+                      "fontSize":14
+                  }
+              },
+              "plugins":{
+                  "labels":{
+                      "fontColor":"#000000",    
+                      "fontFamily":"GoudyOld",
+                      "fontSize":14,
+                      "overlap":false
+                  }
+              },   
+              "tooltips":{
+                  "enabled":false
+              }
+            }
+        }],
+        "legend":[
+            {
+            "id":0,
+            "type":"gradient",
+            "title":"% of Workers who Work From Home",
+            "gradient":"linear-gradient(to right, #ffffd4, #fed98e, #fe9929, #d95f0e, #993404)",
+            "gradientLabels":["0","2","5","10","25"],
+            "chartID":"commuteChart",
+            "gradientMargin":51,
+            "bottomIcon":"commute_home",
+            "bottomIconWidth":280
+            }]
+      }],
+      "sources":{
+        "geographic":[{
+          "title":"Commute Time & Commute Mode: ",
+          "linkText":"IPUMS NHGIS, University of Minnesota",
+          "linkUrl":"https://data2.nhgis.org/main",
+          "description":"IPUMS Data selected from ACS 2013-2017. Geographic Level: Census Block Group GIS Data. Dataset: Commute Time, Means of Transportation to Work"
+      },
+      {
+          "title":"Commute Flows: ",
+          "linkText":"U.S Census Bureau",
+          "linkUrl":"https://www.census.gov/data/tables/2015/demo/metro-micro/commuting-flows-2015.html",
+          "description":"2011-2015 5-Year American Community Survey Commuting Flows."
+      }],
+        "basemap":[{
+          "title":"Background Terrain: ",
+          "linkText":"ESRI",
+          "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+          "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+          "descriptionLinkUrl":["https://developers.arcgis.com/"],
+          "descriptionLinkText":["here."]
+      },
+      {
+          "title":"Satellite Imagery: ",
+          "linkText":"ESRI",
+          "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldImagery",
+          "description":"ESRI World Imagery; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community. More information can be found ",
+          "descriptionLinkUrl":["https://developers.arcgis.com/"],
+          "descriptionLinkText":["here."]
+      },
+      {
+          "title":"Background Labels: ",
+          "linkText":"Carto",
+          "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+          "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+          "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+      }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://github.com/sarahbellum/Canvas-Flowmap-Layer","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","Canvas Flowmap Layer","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

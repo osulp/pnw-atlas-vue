@@ -1,0 +1,334 @@
+{
+    "title": "Public Transit",
+    "URL":"transit_icon",
+    "chapter":"transportation",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "basemap":[{"title":"streets","opacity":1, "maxZoom":13},
+        {"title":"imagery","opacity":0.4, "maxZoom":13},
+        {"title":"terrain","opacity":0.2, "maxZoom":13},
+        {"title":"geoserver","layer":"pnw_outline2","opacity":0.5, "maxZoom":13},
+        {"title":"label","opacity":1, "maxZoom":13}],
+    "infoBackground":"rgba(255,255,255,0.7)",
+    "maps":[{
+        "id":0,
+        "title":"Public Transit",
+        "border":{"title":"pnw_borders","opacity":0.8,"include":true},
+        "featureSelected":false, 
+        "fastFacts":[{
+            "facts":["&#9900 Metro Transit, in the Seattle Area, had the largest ridership in 2016, providing over 127 million rides.","&#9900 Bus transit is the most used form of public transit in the PNW, followed by Light Rail."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/transportation/transit_agencies.json",
+            "pane":"overBorder",
+            "feature":"point",
+            "type":"selection",
+            "fillOpacity":0,
+            "opacity":0,
+            "hoverOpacity":0,
+            "radiusType":"graduated",
+            "radiusAttribute":"TOTAL",
+            "radiusValues":[5000000,100000],
+            "radius":[10,7.5,4],
+            "tooltipVars":["NAME"],
+            "tooltipText":["<h2 style='margin: 0px 0px; font-size:20px;'>" ,"</h2>"],
+            "selection":{
+                "titleVar":"NAME",
+                "filterVar":"OPERATOR",
+                "varList":["CITYSTATE","FIXEDR","VOMS","TOTAL"],
+                "subtitleVar":"OPERATOR",
+                "subtitleType":"italic",
+                "varLabel":["","Fixed Routes:  ", "Max. Vehicles: ", "2016 Ridership: "],
+                "chartDescription":["LR: Light Rail","SC: Street Car","DR: Direct Response"],
+                "selectionOffset":0,
+                "selectionLayers":[{
+                    "interactive":false,
+                    "url":"map_data/transportation/total_routes.json",
+                    "feature":"line",
+                    "type":"categorized",
+                    "attribute":"MODE",
+                    "values":["Bus","Light Rail","Ferry","Streetcar"],
+                    "colors":["#47476b","#ff0000","#66a3ff","#ff9900","#39ac73"],
+                    "weightType":"categorized",
+                    "weightAttribute":"MODE",
+                    "weightValues":["Bus","Light Rail","Ferry","Streetcar"],
+                    "weight":[1,1,2,1,2],
+                    "opacity":1,
+                    "filterVariable":"OPERATOR"
+                }]
+            }
+          },
+          {
+            "interactive":false,
+            "url":"map_data/transportation/transit_agencies.json",
+            "pane":"overBorder",
+            "feature":"point",
+            "type":"pointDivGrad",
+            "fillColors":["#5c5c8a"],
+            "radiusType":"graduated",
+            "radiusAttribute":"TOTAL",
+            "radiusValues":[5000000,100000],
+            "radius":[20,14,8],
+            "divIcon":"border-radius:50%; border:2px solid white; opacity:1; -webkit-box-shadow: 1px 1px 2px black; box-shadow: 1px 1px 2px black; -moz-box-shadow: 1px 1px 2px black;"
+          }],
+          "chart":[{
+            "chartLoc":"legendClick",
+            "chartType":"pie",
+            "labels":["Bus","LR","SC","DR","Ferry","Other"],
+            "data":["BUS","LR","SC","DR","FERRY","OTHER"],
+            "colors":["#7575a3","#ff0000","#ff9900","#ffff99","#66a3ff","#39ac73"],
+            "options": {
+              "responsive": true,
+              "legend": {
+                  "position": "left",
+                  "labels": {
+                      "fontColor":"#000000",
+                      "fontFamily":"GoudyOld",
+                      "fontSize":14
+                  }
+              },
+              "plugins":{
+                  "labels":{
+                      "render": "percentage",
+                      "fontColor":"#000000",    
+                      "fontFamily":"GoudyOld",
+                      "fontSize":14,
+                      "overlap":false
+                  }
+              },   
+              "tooltips":{
+                  "enabled":false
+              }
+            }
+        }],
+        "legend":[{
+            "id":0,
+            "type":"selectionChart",
+            "chartID":"modeChart",
+            "title":"Select Transit Agency",
+            "chartHeight":180
+        },
+        {
+            "id":1,
+            "type":"point",
+            "title":"Total 2016 Ridership (1000s)",
+            "containers":[{
+                "size":20,
+                "label":"5,000+",
+                "background":"#52527a",
+                "color":"#ffffff",
+                "border":2,
+                "shadow":true
+                },
+                {
+                "size":14,
+                "label":"100 to 5,000",
+                "background":"#52527a",
+                "color":"#ffffff",
+                "border":2,
+                "shadow":true
+                },
+                {
+                "size":8,
+                "label":"Less than 100",
+                "background":"#52527a",
+                "color":"#ffffff",
+                "border":2,
+                "shadow":true
+                }
+            ],
+            "description":"Total 2016 Ridership in 1000s of rides."
+        }]
+      }],
+      "sources":{
+        "geographic":[{
+            "title":"Bus Routes: ",
+            "linkText":"National Transit Atlas",
+            "linkUrl":"https://osav-usdot.opendata.arcgis.com/datasets/fb287fdf48e740d2ac06e9b61e2ff7e8_17",
+            "description":"Data from 2018. Includes the majority of transit agency bus routes."
+        },
+        {
+            "title":"Light Rail/Streetcar Routes: ",
+            "linkText":"National Transit Atlas",
+            "linkUrl":"https://osav-usdot.opendata.arcgis.com/datasets/6524b0bd02bc4f2aa0c44e11ebccabec_14",
+            "description":"Data from 2018. Includes all transit agency streetcar and light rail routes."
+        },
+        {
+            "title":"Ferry Routes: ",
+            "linkText":"National Transit Atlas",
+            "linkUrl":"https://osav-usdot.opendata.arcgis.com/datasets/20bbd0a14b6143a291d88e120fbb24e1_8",
+            "description":"Data from 2018."
+        },
+        {
+            "title":"Spokane Transit Bus Routes: ",
+            "linkText":"Spokane Transit",
+            "linkUrl":"https://www.spokanetransit.com/about-sta/developer-resources-gtfs-and-gtfsr",
+            "description":"Data from 2018. Includes all Spokane Transit bus routes."
+        },
+        {
+            "title":"Mountain Rides Bus Routes: ",
+            "linkText":"GTFS Data Exchange",
+            "linkUrl":"http://www.gtfs-data-exchange.com/agency/mountain-rides-transportation-authority-mrta/",
+            "description":"Data from 2018. Includes all Mountain Rides bus routes."
+        },
+        {
+            "title":"Mason County Bus Routes: ",
+            "linkText":"Transit Feeds",
+            "linkUrl":"http://transitfeeds.com/p/mason-transit/590",
+            "description":"Data from 2018. Includes all Mason County bus routes."
+        },
+        {
+            "title":"Clallam Transit Bus Routes: ",
+            "linkText":"Transit Feeds",
+            "linkUrl":"http://transitfeeds.com/p/mason-transit/590",
+            "description":"Data from 2018. Includes all Clallam Transit Transit bus routes."
+        },
+        {
+            "title":"Twin Transit Bus Routes: ",
+            "linkText":"MJC Action",
+            "linkUrl":"http://www.mjcaction.com/clients_gtfs.html",
+            "description":"Data from 2018. Includes all Twin Transit bus routes."
+        },
+        {
+            "title":"Valley Transit: ",
+            "linkText":"Transit Feeds",
+            "linkUrl":"https://transit.land/feed-registry/operators/o-c25y-valleytransit",
+            "description":"Data from 2018. Includes all Valley Transit bus routes."
+        },
+        {
+            "title":"Skagit Transit Transit: ",
+            "linkText":"GTFS Data Exchange",
+            "linkUrl":"http://www.gtfs-data-exchange.com/agency/skagit-transit/",
+            "description":"Data from 2018. Includes all Skagit Transit bus routes."
+        },
+        {
+            "title":"Wahkiakum on the Move: ",
+            "linkText":"MJC Action",
+            "linkUrl":"http://www.mjcaction.com/clients_gtfs.html",
+            "description":"Data from 2018. Includes all Wahkiakum County bus routes."
+        },
+        {
+            "title":"Idaho Citylink Bus Routes: ",
+            "linkText":"Idaho Citylink",
+            "linkUrl":"https://idahocitylink.com/routes.php",
+            "description":"Data from 2018. Route data digitized from static map."
+        },
+        {
+            "title":"Idaho Falls Bus Routes: ",
+            "linkText":"Targhee Regional Public Transportation Authority",
+            "linkUrl":"http://www.trpta.org/idaho-falls-routes/",
+            "description":"Data from 2018. Route data digitized from static map."
+        },
+        {
+            "title":"Treasure Valley Transit Bus Routes: ",
+            "linkText":"Treasure Valley Transit",
+            "linkUrl":"https://www.treasurevalleytransit.com/",
+            "description":"Data from 2018. Route data digitized from static map."
+        },
+        {
+            "title":"SMART Transit Bus Routes: ",
+            "linkText":"SMART Transit",
+            "linkUrl":"http://r2transit.com/Downloads/schedule.pdf",
+            "description":"Data from 2018. Route data digitized from static map."
+        },
+        {
+            "title":"Lewiston/Clarkston Bus Routes: ",
+            "linkText":"Ride the Valley",
+            "linkUrl":"https://www.arcgis.com/apps/MapJournal/index.html?appid=b2d242cbf2bb4fe1a146513be0f0db1c",
+            "description":"Data from 2018. Route data digitized from static map."
+        },
+        {
+            "title":"Ellensburg Bus Routes: ",
+            "linkText":"City of Ellensburg",
+            "linkUrl":"https://ci.ellensburg.wa.us/DocumentCenter/View/11597/CENTRAL-TRANSIT-SYS-MAP-1-18",
+            "description":"Data from 2018. Route data digitized from static map."
+        },
+        {
+            "title":"SPOT Transit Bus Routes: ",
+            "linkText":"SPOT Transit",
+            "linkUrl":"http://spotbus.org/schedule/",
+            "description":"Data from 2018. Route data digitized from static map."
+        },
+        {
+            "title":"Okanogan Transit: ",
+            "linkText":"Transit for Greater Okanogan",
+            "linkUrl":"https://okanogantransit.com/",
+            "description":"Data from 2018. Route data digitized from static map."
+        },
+        {
+            "title":"Pahto Passage: ",
+            "linkText":"Pahto Transit",
+            "linkUrl":"http://www.pahtotransit.com/12102015_pahto_tabloid.pdf",
+            "description":"Data from 2018. Route data digitized from static map."
+        },
+        {
+            "title":"Moccasin Express: ",
+            "linkText":"Spokane Tribe",
+            "linkUrl":"http://www.spokanetribe.com/userfiles/file/The%20Moccasin%20Express%20Web%20Page%2085x1103072011.pdf",
+            "description":"Data from 2018. Route data digitized from static map."
+        },
+        {
+            "title":"Kaltran: ",
+            "linkText":"Kalispel Tribe",
+            "linkUrl":"https://nebula.wsimg.com/7c42b73100864e98eeee19e40a0acdfc?AccessKeyId=1B82DE9A13B9AA9FD04E&disposition=0&alloworigin=1",
+            "description":"Data from 2018. Route data digitized from static map."
+        },
+        {
+            "title":"Colville Shuttle: ",
+            "linkText":"Colville Confederated Tribes",
+            "linkUrl":"https://static1.squarespace.com/static/571fa45ce3214047f5004b1a/t/5b6c63a7aa4a99de234266b0/1533830056232/InchNesp+Sheet1.pdf",
+            "description":"Data from 2018. Route data digitized from static map."
+        },
+        {
+            "title":"Silver Express: ",
+            "linkText":"Shoshone County",
+            "linkUrl":"https://nebula.wsimg.com/7c42b73100864e98eeee19e40a0acdfc?AccessKeyId=1B82DE9A13B9AA9FD04E&disposition=0&alloworigin=1",
+            "description":"Data from 2018. Route data digitized from static map."
+        },
+        {
+            "title":"Grant County Transit Bus Routes: ",
+            "linkText":"WSDOT",
+            "linkUrl":"http://www.wsdot.wa.gov/mapsdata/geodatacatalog/",
+            "description":"Data from 2018. Route data created by connecting stop points."
+        },
+        {
+            "title":"Transit Agencies: ",
+            "linkText":"Federal Transit Administration",
+            "linkUrl":"https://cms.fta.dot.gov/ntd/data-product/2016-annual-database-agency-information-1",
+            "description":"Data from 2016. Address data geocoded using Texas A&M free online geocoder. Some agency points were moved for visual ease."
+        },
+        {
+            "title":"Ridership: ",
+            "linkText":"Federal Transit Administration",
+            "linkUrl":"https://www.transit.dot.gov/ntd/data-product/2016-service",
+            "description":"Data from 2016. Combined with transit agency data."
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Satellite Imagery: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldImagery",
+            "description":"ESRI World Imagery; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://github.com/sarahbellum/Canvas-Flowmap-Layer","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","Canvas Flowmap Layer","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

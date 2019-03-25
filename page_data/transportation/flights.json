@@ -1,0 +1,352 @@
+{
+    "title": "Air Travel",
+    "URL":"flight_icon",
+    "chapter":"transportation",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "basemap":[{"title":"streets","opacity":1, "maxZoom":11},
+      {"title":"imagery","opacity":0.4, "maxZoom":11},
+      {"title":"terrain","opacity":0.2, "maxZoom":11},
+      {"title":"uslabel","opacity":1, "maxZoom":11}],
+    "zoom":6,
+    "bounds":[[14.172626315855425, -175.58519708215204],[76.10396253416393, -50.34035998361294]],
+    "maps":[
+      {
+        "id":0,
+        "title":"Airports",
+        "border":{"title":"pnw_borders","include":true,"opacity":0.7},
+        "tileLayers":[{"title":"pnw_outline2","pane":200,"opacity":0.5}],
+        "fastFacts":[{
+            "fastTitle":"Operation Types:",
+            "facts":["Commercial: A large aircraft carrying passengers or cargo for hire or compensation.","Air Taxi: A small aircraft carrying passengers or cargo for hire or compensation.","Local: General aviation operations that remain within local airspace.","Itinerant: General aviation operations that arrive from another airport area or leave the current airport area."]
+          }],
+        "jsonLayers":[{
+          "position":{"lat":45.60, "lon":-119.75, "zoom":6},
+          "spiderfy":true,
+          "url":"map_data/transportation/pnw_small_airports.json",
+          "feature":"point",
+          "type":"pointDivCat",
+          "attribute":"FacilityTy",
+          "values":["Airport","Heliport","Seaplane Base"],
+          "fillColors":["#5eba61","#fec44f","#a6bddb","#636363"],
+          "colors":["#ffffff"],
+          "radiusType": "categorized",
+          "radiusAttribute": "sizeCat",
+          "radiusValues":["4","3","2","1"],
+          "radius": [22,16,11,5],
+          "weight": 1,
+          "fillOpacity":1,
+          "opacity":1,
+          "divIcon":"border-radius:50%; border:2px solid white; opacity:1; -webkit-box-shadow: 1px 1px 2px black; box-shadow: 1px 1px 2px black; -moz-box-shadow: 1px 1px 2px black;",
+          "tooltipVars":["FullName","OwnerType","FacilityTy","City","StateAbbv","op_total"],
+          "tooltipText":["<div style='width:300px'><div style='display:block; margin-left:5px; margin-top:5px;'><p3 style='display:inline; line-height:24px; font-weight:bold; font-size:22px; white-space:normal;'>","</p3><p3 style='display:inline; line-height:18px; font-size:22px; white-space:normal;'> ("," ",")</p3></div><p3 style='margin:0px 0px 5px 5px; display:block; font-size:18px; white-space:normal;'>",", ","<br/>Total Operations: ","</p3>"]  
+          },
+          {
+            "spiderfy":true,
+            "activeLayer":true,
+            "url":"map_data/transportation/pnw_large_airports.json",
+            "pane":"overBorder",
+            "feature":"point",
+            "type":"pointDivCat",
+            "attribute":"FacilityTy",
+            "values":["Airport","Heliport","Seaplane Base"],
+            "fillColors":["#5eba61","#fec44f","#a6bddb","#636363"],
+            "colors":["#ffffff"],
+            "radiusType": "categorized",
+            "radiusAttribute": "sizeCat",
+            "radiusValues":["4","3","2","1"],
+            "radius": [22,16,11,5],
+            "weight": 1,
+            "fillOpacity":1,
+            "opacity":1,
+            "divIcon":"border-radius:50%; border:2px solid white; opacity:1; -webkit-box-shadow: 1px 1px 2px black; box-shadow: 1px 1px 2px black; -moz-box-shadow: 1px 1px 2px black;",
+            "tooltipVars":["FullName","OwnerType","FacilityTy","City","StateAbbv","op_total"],
+            "tooltipText":["<div style='width:300px'><div style='display:block; margin-left:5px; margin-top:5px;'><p3 style='display:inline; line-height:22px; font-weight:bold; font-size:22px; white-space:normal;'>","</p3><p3 style='display:inline; line-height:22px; font-size:22px; white-space:normal;'> ("," ",")</p3></div><p3 style='margin:0px 0px 5px 5px; display:block; font-size:18px; white-space:normal;'>",", ","<br/>Total Operations: ","</p3><p3 style='font-weight:bold; margin:0px 0px 5px 5px; display:block; font-size:18px; white-space:normal;'>Operations by Type</p3><canvas id='flightChart' style='margin-left:-5px; margin-bottom:10px; display:block;'></canvas></div>"]  
+        }],
+      "chart":[{
+          "id":0,
+          "chartLoc":"tooltip",
+          "chartType":"doughnut",
+          "labels":["Commercial","Air Taxi","Local","Itinerant","Military"],
+          "data":["Commercial","AirTaxi","Local","Itinerant","Military"],
+          "colors":["#beaed4","#adad85","#7fc97f","#ffff99","#ffad99"],
+          "options": {
+              "responsive": true,
+              "legend": {
+                  "position": "left",
+                  "labels": {
+                      "fontColor":"#000000",
+                      "fontFamily":"GoudyOld",
+                      "fontSize":14
+                  }
+              },
+              "plugins":{
+                  "labels":{
+                      "render": "value",
+                      "fontColor":"#000000",    
+                      "fontFamily":"GoudyOld",
+                      "fontSize":14,
+                      "overlap":false
+                  }
+              },   
+              "tooltips":{
+                  "enabled":false
+              }
+          }
+        }],
+        "legend":[{
+          "id":0,
+          "type":"pointSizeColor",
+          "chartID":"flightChart",
+          "title":["Operations","Size"],
+          "titleMargin":45,
+          "containers":[{
+                "size":22,
+                "sizeLabel":"100+",
+                "sizeBorder":2,
+                "borderColorSize":"#ffffff",
+                "shadow":true,
+                "color": "#5eba61",
+                "colorLabel":"Airport",
+                "borderColor":"#ffffff",
+                "border":2
+              },
+              {
+                "size":16,
+                "sizeLabel":"20 to 100",
+                "sizeBorder":2,
+                "borderColorSize":"#ffffff",
+                "shadow":true,
+                "color": "#fec44f",
+                "colorLabel":"Helipad",
+                "borderColor":"#ffffff",
+                "border":2
+              },
+              {
+                "size":11,
+                "sizeLabel":"1 to 20",
+                "shadow":true,
+                "sizeBorder":2,
+                "borderColorSize":"#ffffff",
+                "color": "#a6bddb",
+                "colorLabel":"Seaport",
+                "borderColor":"#ffffff",
+                "border":2
+              },
+              {
+                "size":5,
+                "sizeLabel":"Less than 1",
+                "shadow":true,
+                "sizeBorder":2,
+                "borderColorSize":"#ffffff",
+                "color": "#636363",
+                "colorLabel":"Other",
+                "borderColor":"#ffffff",
+                "border":2
+              }
+            ],
+          "description":"Total flight operations from July 2017 to July 2018 in 1000s of operations."
+      }]
+      },
+      {
+        "id":1,
+        "title":"Commercial Flights",
+        "tileLayers":[{"title":"states","pane":200,"opacity":0.5},{"title":"us_outline","pane":200,"opacity":0.3}],
+        "border":{"title":"pnw_states_black"},
+        "fastFacts":[{
+            "facts":["&#9900 Seattle-Tacoma International Airport had the most commercial passenger flights between January and October 2018.","&#9900 The most popular domestic passenger flight route in the PNW is between Seattle-Tacoma International Airport and Portland International Airport."]
+          }],
+        "jsonLayers":[{
+            "position":{"lat":45.60, "lon":-119.75, "zoom":5},
+            "url":"map_data/transportation/us_airports.json",
+            "pane":"underFlow",
+            "feature":"point",
+            "type":"single",
+            "fillColors":["#000000"],
+            "colors":["#ffffff"],
+            "radiusType": "graduated",
+            "radiusAttribute": "departures",
+            "radiusValues":[25000,2500],
+            "radius": [13,9,5],
+            "weight": 1,
+            "opacity":0,
+            "fillOpacity":0,
+            "hoverOpacity":0,
+            "tooltipOffset":[5,3],
+            "tooltipVars":["NAME"],
+            "tooltipText":["<p style='margin:0;'>" ,"</p>"], 
+            "flow":{
+              "flow_id":"airports_D",
+              "flowURL":"map_data/transportation/routes_2018_total.csv",
+              "sourceCoordinates":["source_lon", "source_lat"],
+              "targetCoordinates":["target_lon", "target_lat"],
+              "source":"SOURCE",
+              "target":"TARGET",
+              "canvasBezierStyle": {
+                "type": "classBreaks",
+                "field": "flow",
+                "classBreakInfos": [
+                {
+                "classMinValue": 0,
+                "classMaxValue": 1000,
+                "symbol": {
+                    "strokeStyle": "#ffffff",
+                    "lineWidth": 0.5,
+                    "lineCap": "round",
+                    "shadowColor": "#ffffff",
+                    "shadowBlur": 1.5
+                  }
+                },
+                {
+                "classMinValue": 1000,
+                "classMaxValue": 5000,
+                "symbol": {
+                    "strokeStyle": "#ffffff",
+                    "lineWidth": 2.5,
+                    "lineCap": "round",
+                    "shadowColor": "#ffffff",
+                    "shadowBlur": 1.5
+                  }
+                },
+                {
+                "classMinValue": 5000,
+                "classMaxValue": 100000,
+                "symbol": {
+                    "strokeStyle": "#ffffff",
+                    "lineWidth": 5,
+                    "lineCap": "round",
+                    "shadowColor": "#ffffff",
+                    "shadowBlur": 1.5
+                  }
+                }],
+                "defaultSymbol": {
+                "strokeStyle": "#ffffff",
+                "lineWidth": 0.5,
+                "lineCap": "round",
+                "shadowColor": "#ffffff",
+                "shadowBlur": 1.5
+                }
+              }
+            }
+          },
+          {
+            "pane":"underFlow",
+            "interactive":false,
+            "url":"map_data/transportation/us_airports.json",
+            "feature":"point",
+            "type":"pointDivCat",
+            "attribute":"TYPE_CODE",
+            "values":["AD"],
+            "fillColors":["#5eba61"],
+            "colors":["#ffffff"],
+            "radiusType": "graduated",
+            "radiusAttribute": "departures",
+            "radiusValues":[25000,2500],
+            "radius": [22,15,6],
+            "weight": 1,
+            "fillOpacity":1,
+            "opacity":1,
+            "divIcon":"border-radius:50%; border:2px solid white; opacity:1; -webkit-box-shadow: 1px 1px 2px black; box-shadow: 1px 1px 2px black; -moz-box-shadow: 1px 1px 2px black;"
+            }],
+        "legend":[{
+            "id":0,
+            "type":"selection",
+            "title":"Select an Airport"
+        },
+        {
+            "id":1,
+            "type":"point",
+            "title":"Total Commerical Passenger Flights (1000s)",
+            "containers":[{
+                "size":22,
+                "label":"250+",
+                "background":"#5eba61",
+                "color":"#ffffff",
+                "border":2,
+                "shadow":true
+                },
+                {
+                "size":15,
+                "label":"25 to 250",
+                "background":"#5eba61",
+                "color":"#ffffff",
+                "border":2,
+                "shadow":true
+                },
+                {
+                "size":6,
+                "label":"Less than 25",
+                "background":"#5eba61",
+                "color":"#ffffff",
+                "border":2,
+                "shadow":true
+                }
+            ],
+            "description":"1000s of domestic commerical passenger flights (arrivals & departures) between January and October 2018."
+        },
+        {
+            "id":2,
+            "type":"line",
+            "legendDisplay":"selected",
+            "title":"Total Flights",
+            "containers":[{
+                  "color":"#ffffff",
+                  "label":"Less than 1,000",
+                  "height":1
+                },
+                {
+                  "color":"#ffffff",
+                  "label":"1,000 to 5,000",
+                  "height":3
+                },
+                {
+                  "color":"#ffffff",
+                  "label":"5,000+",
+                  "height":6
+                }
+              ],
+            "description":"Total flights on a particular route between January and October 2018."
+        }]
+      }],
+      "sources":{
+        "geographic":[{
+            "title":"Airports & Airport Statistics: ",
+            "linkText":"US Department of Transportation",
+            "linkUrl":"http://osav-usdot.opendata.arcgis.com/datasets/a36a509eab4e43b4864fb594a35b90d6_0",
+            "description":"Data from July 2018."
+        },
+        {
+          "title":"Flight Routes & Statistics: ",
+          "linkText":"Bureau of Transportation Statistics",
+          "linkUrl":"https://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236",
+          "description":"Datasets download for each available month of 2018, merged into single dataset and dissolved based on route."
+      }],
+        "basemap":[{
+          "title":"Background Terrain: ",
+          "linkText":"ESRI",
+          "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+          "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+          "descriptionLinkUrl":["https://developers.arcgis.com/"],
+          "descriptionLinkText":["here."]
+      },
+      {
+          "title":"Satellite Imagery: ",
+          "linkText":"ESRI",
+          "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldImagery",
+          "description":"ESRI World Imagery; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community. More information can be found ",
+          "descriptionLinkUrl":["https://developers.arcgis.com/"],
+          "descriptionLinkText":["here."]
+      },
+      {
+          "title":"Background Labels: ",
+          "linkText":"Carto",
+          "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+          "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+          "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+      }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://github.com/sarahbellum/Canvas-Flowmap-Layer","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","Canvas Flowmap Layer","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

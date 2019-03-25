@@ -1,0 +1,271 @@
+{
+    "title": "Highways & Roads",
+    "URL":"highway_icon",
+    "chapter":"transportation",
+    "basemapType":"mapbox",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "infoBackground":"rgba(255,255,255,0.7)",
+    "basemap":[{"title":"streets","opacity":1, "maxZoom":11},
+        {"title":"imagery","opacity":0.4, "maxZoom":11},
+        {"title":"terrain","opacity":0.2, "maxZoom":11},
+        {"title":"geoserver","layer":"pnw_outline2","opacity":0.5, "maxZoom":11},
+        {"title":"label","opacity":1, "maxZoom":11}],
+    "maps":[{
+        "id":0,
+        "title":"Type",
+        "border":{"title":"pnw_borders","opacity":0.5},
+        "tileLayers":[{"title":"total_highways","pane":400,"opacity":1},
+            {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjteohlzj53py1fpidwc90k3t/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"}
+        ],
+        "featureSelected":false, 
+        "fastFacts":[{
+            "facts":["&#9900 Planning for the U.S Interstate system began with the Federal Aid Highway Act in 1956."]
+          }],
+        "legend":[
+        {
+            "id":0,
+            "type":"line",
+            "title":"Highway Type",
+            "containers":[{
+                "color":"#ff0000",
+                "height":3,
+                "label":"Interstate"
+                },
+                {
+                "color":"#595959",
+                "height":2,
+                "label":"U.S Highway"
+                },
+                {
+                "color":"#ffffff",
+                "height":1.5,
+                "label":"State Highway"
+                }]
+        }]
+      },
+      {
+        "id":1,
+        "title":"Speed Limit",
+        "border":{"title":"pnw_borders","opacity":0.5,"include":true},
+        "tileLayers":[{"title":"speed_limit","pane":600,"opacity":1},
+            {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjteohlzj53py1fpidwc90k3t/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
+            {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjteouw9e542l1fpi0vhbxnp5/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":100,"opacity":0.5,"type":"mapbox"}
+        ],
+        "fastFacts":[{
+            "facts":["&#9900 80 miles per hour is the highest declared speed limit in the PNW. It is only found in Idaho."]
+          }],
+        "legend":[
+        {
+            "id":0,
+            "type":"polygon",
+            "title":"Speed Limit in MPH",
+            "containers":[{
+                    "label":"70+",
+                    "color":"#d7191c"
+                },
+                {
+                    "label":"60 - 69",
+                    "color":"#fdae61"
+                },
+                {
+                    "label":"50 to 59",
+                    "color":"#ffffbf"
+                },
+                {
+                    "label":"40 to 49",
+                    "color":"#a6d96a"
+                },
+                {
+                    "label":"Less than 40",
+                    "color":"#1a9641"
+                }
+            ],
+            "description":"Declared speed limit in miles per hour (MPH)."
+        }]
+      },
+      {
+        "id":2,
+        "title":"Traffic",
+        "border":{"title":"pnw_borders","opacity":0.8,"include":true},
+        "tileLayers":[{"title":"aadt","pane":400,"opacity":1},
+            {"title":"simple_highways","pane":300,"opacity":0.6},
+            {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjteohlzj53py1fpidwc90k3t/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"}
+        ],
+        "fastFacts":[{
+            "facts":["&#9900 The highest AADT values in the PNW are found in the Seattle metro area."]
+          }],
+        "legend":[
+        {
+            "id":0,
+            "type":"polygon",
+            "title":"Average Annual Daily Traffic in 1000s of Vehicles per Day",
+            "containers":[{
+                "label":"100+",
+                "color":"#d7191c"
+            },
+            {
+                "label":"25 to 100",
+                "color":"#fdae61"
+            },
+            {
+                "label":"10 to 25",
+                "color":"#ffffbf"
+            },
+            {
+                "label":"5 to 10",
+                "color":"#a6d96a"
+            },
+            {
+                "label":"Less than 5",
+                "color":"#1a9641"
+            }
+            ],
+            "description":"Average Annual Daily Traffic (AADT) represents the total volume of vehicles at a specific point over an entire year, divided by 365."
+        }]
+      },
+      {
+        "id":3,
+        "title":"Road Density",
+        "border":{"title":"pnw_borders","opacity":0.8,"include":true},
+        "fastFacts":[{
+            "facts":["&#9900 The highest AADT values in the PNW are found in the Seattle metro area."]
+          }],
+        "jsonLayers":[{
+            "url":"map_data/transportation/mileage_counties.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"road_dens",
+            "values":[2,1.5,1,0.5],
+            "fillColors":["#252525","#636363","#969696","#cccccc","#f7f7f7"],
+            "colors":["#ffffff"],
+            "fillOpacity":0.7,
+            "opacity":1,
+            "tooltipVars":["NAME","road_dens","road_miles"],
+            "tooltipText":["<h2 style='margin:0;'>"," County</h2><p3 style='font-weight:normal'>Road Density: "," mi/sq. mi</br>Total Road Miles: "," mi</p3>"]                 
+          }],  
+        "legend":[
+        {
+            "id":0,
+            "type":"polygon",
+            "title":"Road Density (mi/sq. mi)",
+            "containers":[{
+                "label":"2+",
+                "color":"#252525"
+            },
+            {
+                "label":"1.5 to 2",
+                "color":"#636363"
+            },
+            {
+                "label":"1 to 1.5",
+                "color":"#969696"
+            },
+            {
+                "label":"0.5 to 1",
+                "color":"#cccccc"
+            },
+            {
+                "label":"Less than 0.5",
+                "color":"#f7f7f7"
+            }
+            ],
+            "description":"Total mileage of public roads within a county divided by the total area of that county."
+        }]
+      }],
+      "sources":{
+        "geographic":[{
+            "title":"Highways: ",
+            "linkText":"USGS",
+            "linkUrl":"https://prd-tnm.s3.amazonaws.com/index.html?prefix=StagedProducts/Tran/GDB/",
+            "description":"Data from 2017."
+        },
+        {
+            "title":"Idaho Speed Limits: ",
+            "linkText":"National Transit Atlas",
+            "linkUrl":"http://data.gis.idaho.gov/datasets/IPLAN::speed-zone-mph?geometry=-130.493%2C39.939%2C-63.74%2C50.705",
+            "description":"Data from 2018. Combined with Washington and Oregon highway speed limit datasets."
+        },
+        {
+            "title":"Oregon Speed Limits: ",
+            "linkText":"National Transit Atlas",
+            "linkUrl":" ftp://ftp.odot.state.or.usU/tdb/trandata/GIS_data/Traffic/",
+            "description":"Data from 2017. Combined with Washington and Idaho highway speed limit datasets."
+        },
+        {
+            "title":"Washington Speed Limits: ",
+            "linkText":"Washington Department of Transportation",
+            "linkUrl":"http://geo.wa.gov/datasets/WSDOT::wsdot-roadway-data-speed-limits?geometry=-137.459%2C44.631%2C-104.082%2C49.846",
+            "description":"Data from 2018. Combined with Idaho and Oregon highway speed limit datasets."
+        },
+        {
+            "title":"Idaho AADT: ",
+            "linkText":"National Transit Atlas",
+            "linkUrl":"http://data.gis.idaho.gov/datasets/IPLAN::speed-zone-mph?geometry=-130.493%2C39.939%2C-63.74%2C50.705",
+            "description":"Data from 2018. Combined with Washington and Oregon AADTdatasets."
+        },
+        {
+            "title":"Oregon AADT: ",
+            "linkText":"National Transit Atlas",
+            "linkUrl":" ftp://ftp.odot.state.or.us/tdb/trandata/GIS_data/Traffic/",
+            "description":"Data from 2017. Combined with Washington and Idaho AADT datasets."
+        },
+        {
+            "title":"Washington AADT: ",
+            "linkText":"Washington Department of Transportation",
+            "linkUrl":"http://data.gis.idaho.gov/datasets/1acf064aca584aeebac363624a127148_50?geometry=-137.755%2C39.965%2C-104.796%2C50.727",
+            "description":"Data from 2018. Combined with Idaho and Oregon AADT datasets."
+        },
+        {
+            "title":"Idaho Road Miles: ",
+            "linkText":"Idaho Department of Transportation",
+            "linkUrl":"https://apps.itd.idaho.gov/apps/Fund/Local/SURTYPE17.pdf",
+            "description":"Data from 2017. Combined with Washington and Oregon road mileage datasets."
+        },
+        {
+            "title":"Oregon Road Miles: ",
+            "linkText":"Oregon Department of Transportation",
+            "linkUrl":"https://www.oregon.gov/ODOT/Data/Documents/OMR_2017.pdf",
+            "description":"Data from 2017. Combined with Washington and Idaho road mileage datasets."
+        },
+        {
+            "title":"Washington Road Miles: ",
+            "linkText":"Washington Department of Transportation",
+            "linkUrl":"http://www.wsdot.wa.gov/mapsdata/geodatacatalog/Maps/noscale/DOT_TDO/WAPR.htm",
+            "description":"Data from 2018. Combined with Idaho and Oregon road mileage datasets. Mileage calculated from GIS file. "
+        },
+        {
+            "title":"Land Area: ",
+            "linkText":"U.S Census Bureau",
+            "linkUrl":"https://www.census.gov/library/publications/2011/compendia/usa-counties-2011.html#LND",
+            "description":"Data from 2010. Used with road mile datasets to calculate road density."
+        }],
+        "basemap":[{
+            "title":"Background Terrain: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+            "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Satellite Imagery: ",
+            "linkText":"ESRI",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldImagery",
+            "description":"ESRI World Imagery; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community. More information can be found ",
+            "descriptionLinkUrl":["https://developers.arcgis.com/"],
+            "descriptionLinkText":["here."]
+        },
+        {
+            "title":"Background Labels: ",
+            "linkText":"Carto",
+            "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+            "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+            "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+        }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://github.com/sarahbellum/Canvas-Flowmap-Layer","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","Canvas Flowmap Layer","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}
