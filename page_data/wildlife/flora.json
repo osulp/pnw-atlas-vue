@@ -189,7 +189,7 @@
             "title":"Douglas Fir Basal Area (Sq Ft./Acre)",
             "gradient":"linear-gradient(to right, #f7fcf5 0%, #e5f5e0 10%, #c7e9c0 20%, #a1d99b 30%, #74c476 40%, #41ab5d 50%, #238b45 60%, #006d2c 70%, #005722 80%, #003514 90%)",
             "gradientLabels":["0","160+"],
-            "gradientMargin":255,
+            "gradientMargin":230,
             "bottomIcon":"douglas_fir",
             "bottomIconWidth":100,
             "description":"Basal area represents the cross section (square footage) of tree trunks at the base over an acre."
@@ -209,7 +209,7 @@
             "title":"Western Hemlock Basal Area (Sq Ft./Acre)",
             "gradient":"linear-gradient(to right, #f7fcf5 0%, #e5f5e0 10%, #c7e9c0 20%, #a1d99b 30%, #74c476 40%, #41ab5d 50%, #238b45 60%, #006d2c 70%, #005722 80%, #003514 90%)",
             "gradientLabels":["0","130+"],
-            "gradientMargin":255,
+            "gradientMargin":230,
             "bottomIcon":"western_hemlock",
             "bottomIconWidth":100,
             "description":"Basal area represents the cross section (square footage) of tree trunks at the base over an acre."
@@ -237,31 +237,71 @@
       },
       {
         "id":5,
-        "title":"Grand Fir",
+        "title":"Subalpine Fir",
         "border":{"title":"pnw_borders_black","opacity":0.5},
-        "tileLayers":[{"title":"grand_fir","pane":300,"opacity":0.8}],
+        "tileLayers":[{"title":"subalpine_fir","pane":300,"opacity":0.8}],
         "fastFacts":[{
-            "facts":["&#9900 Scientific name: Abies grandis.","&#9900 Can grow between 120 and 210 ft. tall.","&#9900 In the logging industry, Grand Fir is known as 'hem fir'.","&#9900 Commonly used as a Christmas tree."]
+            "facts":["&#9900 Scientific name: Abies lasiocarpa.","&#9900 Can grow between 60 and 130 ft. tall.","&#9900 There are two subspecies of Subalpine Fir in the PNW, Coast Range Subalpine Fir, and Rocky Mountain Subalpine Fir.","&#9900 Commonly used as a Christmas tree."]
           }],
         "legend":[{
             "id":0,
             "type":"gradient",
-            "title":"Grand Fir Basal Area (Sq Ft./Acre)",
+            "title":"Subalpine Fir Basal Area (Sq Ft./Acre)",
             "gradient":"linear-gradient(to right, #f7fcf5 0%, #e5f5e0 10%, #c7e9c0 20%, #a1d99b 30%, #74c476 40%, #41ab5d 50%, #238b45 60%, #006d2c 70%, #005722 80%, #003514 90%)",
-            "gradientLabels":["0","65+"],
+            "gradientLabels":["0","48+"],
             "gradientMargin":235,
-            "bottomIcon":"grand_fir",
-            "bottomIconWidth":100,
+            "bottomIcon":"subalpine_fir",
+            "bottomIconWidth":80,
             "description":"Basal area represents the cross section (square footage) of tree trunks at the base over an acre."
         }]
       },
       {
         "id":6,
+        "title":"Mountain Hemlock",
+        "border":{"title":"pnw_borders_black","opacity":0.5},
+        "tileLayers":[{"title":"mountain_hemlock","pane":300,"opacity":0.8}],
+        "fastFacts":[{
+            "facts":["&#9900 Scientific name: Tsuga mertensiana.","&#9900 Can grow between 66 and 131 ft. tall.","&#9900 Typically found at subalpine elevations."]
+          }],
+        "legend":[{
+            "id":0,
+            "type":"gradient",
+            "title":"Mountain Hemlock Basal Area (Sq Ft./Acre)",
+            "gradient":"linear-gradient(to right, #f7fcf5 0%, #e5f5e0 10%, #c7e9c0 20%, #a1d99b 30%, #74c476 40%, #41ab5d 50%, #238b45 60%, #006d2c 70%, #005722 80%, #003514 90%)",
+            "gradientLabels":["0","120+"],
+            "gradientMargin":230,
+            "bottomIcon":"mountain_hemlock",
+            "bottomIconWidth":80,
+            "description":"Basal area represents the cross section (square footage) of tree trunks at the base over an acre."
+        }]
+      },
+      {
+        "id":7,
+        "title":"Western White Pine",
+        "border":{"title":"pnw_borders_black","opacity":0.5},
+        "tileLayers":[{"title":"western_white_pine","pane":300,"opacity":0.8}],
+        "fastFacts":[{
+            "facts":["&#9900 Scientific name: Pinus monticola.","&#9900 Can grow between 98 and 164 ft. tall.","&#9900 State tree of Idaho.","&#9900 Population has been dramatically reduced by white pine blister rust (Cronartium ribicola)."]
+          }],
+        "legend":[{
+            "id":0,
+            "type":"gradient",
+            "title":"Western White Pine Basal Area (Sq Ft./Acre)",
+            "gradient":"linear-gradient(to right, #f7fcf5 0%, #e5f5e0 10%, #c7e9c0 20%, #a1d99b 30%, #74c476 40%, #41ab5d 50%, #238b45 60%, #006d2c 70%, #005722 80%, #003514 90%)",
+            "gradientLabels":["0","10+"],
+            "gradientMargin":235,
+            "bottomIcon":"western_white_pine",
+            "bottomIconWidth":80,
+            "description":"Basal area represents the cross section (square footage) of tree trunks at the base over an acre."
+        }]
+      },
+      {
+        "id":8,
         "title":"Juniper",
         "border":{"title":"pnw_borders_black","opacity":0.5},
         "tileLayers":[{"title":"western_juniper","pane":300,"opacity":0.9},{"title":"utah_juniper","pane":300,"opacity":0.9},{"title":"rocky_mountain_juniper","pane":300,"opacity":0.5}],
         "fastFacts":[{
-            "facts":["&#9900 Scientific name: Pseudotsuga menziesii.","&#9900 Can grow between 70 and 330 ft. tall. Larger specimens are found in the Coast Range.","&#9900 State tree of Oregon.","&#9900 Not considered a true fir, such as Grand Fir or Subalpine Fir."]
+            "facts":["&#9900 Scientific name: Pseudotsuga menziesii.","&#9900 Can grow between 70 and 330 ft. tall. Larger specimens are found in the Coast Range.","&#9900 Not considered a true fir, such as Grand Fir or Subalpine Fir."]
           }],
         "legend":[{
             "id":0,
@@ -276,7 +316,7 @@
         }]
       },
       {
-        "id":7,
+        "id":9,
         "title":"Sagebrush",
         "border":{"title":"pnw_borders_black","opacity":0.5},
         "tileLayers":[{"title":"trees_sagebrush","pane":300,"opacity":0.9}],

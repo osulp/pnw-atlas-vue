@@ -4,7 +4,7 @@
     "chapter":"wildlife",
     "initial":0,
     "dropdownText":"Select Map",
-    "dropdownLabel":{"type":"breaks","labels":["Biodiversity","Species of Concern"],"breaks":[1,7]},
+    "dropdownLabel":{"type":"breaks","labels":["Biodiversity","At-Risk Species"],"breaks":[1,7]},
     "basemap":[{"title":"terrain","opacity":1},
         {"title":"geoserver","layer":"pnw_outline2","opacity":0.3},
         {"title":"label","opacity":1}],
@@ -312,11 +312,29 @@
         "id":7,
         "title":"Gray Wolf",
         "border":{"title":"pnw_borders_black","opacity":0.5},
-        "tileLayers":[{"title":"gray_wolf_distribution","pane":300,"opacity":0.5}],
         "fastFacts":[{
             "facts":["&#9900 Listed as an endangered species in Oregon and Washington. Not listed in Idaho.","&#9900 Extensive predator control programs in the Western U.S eradicated the Gray Wolf population.","&#9900 Reintroduction efforts began in Idaho in the mid-1990s, and later spread to Oregon and Washington."]
           }],
           "jsonLayers":[{
+            "url":"map_data/wildlife/wolves_total.json",
+            "feature":"polygon",
+            "type":"categorized",
+            "attribute":"status_tot",
+            "values":["Active","Suspected","Terminated"],
+            "colors":["#206040","#66cc99","#d9f2e6"],
+            "fillColors":["#206040","#66cc99","#d9f2e6"],
+            "weight":2,
+            "opacity":0,
+            "dashArray":4,
+            "hoverLineOpacity":1,
+            "fillOpacity":0.7,
+            "hoverOpacity":0.7,
+            "tooltipVars":["name","status_tot"],
+            "tooltipText":["<b style='display:inline; font-size:24px;'>"," Pack</b><br/><p3>Status: ","</p3>"],  
+            "tooltip":"tooltip"
+          },
+          {
+            "pane":"underFlow",
             "interactive":false,
             "url":"map_data/wildlife/wolf_historical.json",
             "feature":"polygon",
@@ -341,7 +359,7 @@
             "title":"Gray Wolf (Canis Lupus)",
             "containers":[{
                 "color":"#339966",
-                "label":"Current Habitat"
+                "label":"Wolfpack Locations"
                 },
                 {
                 "color":"repeating-linear-gradient(-45deg, rgba(255,255,255,0), rgba(255,255,255,0) 5%, #6b6b47 10%)",
@@ -514,6 +532,24 @@
             "linkText":"Biodiveristymapping.org",
             "linkUrl":"https://biodiversitymapping.org/wordpress/index.php/download/",
             "description":"Number of species by type per area. Date not provided. The following datasets were merged: bird_total_richness, mammal_total_richness, reptile_total_richness, amphibian_total_richness, fish_total_richness. Data derived from BirdLife International, IUCN, NatureServe, and USGS."
+        },
+        {
+            "title":"Idaho Wolfpack Locations: ",
+            "linkText":"Idaho Department of Fish and Game",
+            "linkUrl":"https://idfg.idaho.gov/sites/default/files/idaho-wolf-monitoring-progress-report-2015.pdf",
+            "description":"Data from 2015. Digitized from map on page 11."
+        },
+        {
+            "title":"Oregon Wolfpack Locations: ",
+            "linkText":"Oregon Department of Fish and Wildlife",
+            "linkUrl":"https://dfw.state.or.us/Wolves/population.asp",
+            "description":"Data from 2017. Digitized from static map."
+        },
+        {
+            "title":"Washington Wolfpack Locations: ",
+            "linkText":"Washington Department of Fish and Wildlife",
+            "linkUrl":"https://wdfw.wa.gov/conservation/gray_wolf/packs/",
+            "description":"Data from 2017. Digitized from static map."
         },
         {
             "title":"Current Endangered Species Habitats: ",
