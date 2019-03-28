@@ -276,12 +276,6 @@
             "linkText":"USGS",
             "linkUrl":"https://earthquake.usgs.gov/scenarios/eventpage/uscasc9.0_expanded_peak_se#shakemap",
             "description":"Predicted Instrumental Intensity from a Magnitude 9.0 Earthquake. Data from 2016."
-        },
-        {
-            "title":"Precipitation Anomaly: ",
-            "linkText":"Oregon State University PRISM Group",
-            "linkUrl":"http://prism.oregonstate.edu/recent/",
-            "description":"Percent differentiation from average precipitation. Annual precipitation datasets from 2012-2017 subtracted from 1980-2010 30-year normals."
         }],
         "text":[{
             "title":"Cascadia Subduction Zone Facts: ",
