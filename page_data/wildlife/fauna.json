@@ -359,7 +359,15 @@
             "title":"Gray Wolf (Canis Lupus)",
             "containers":[{
                 "color":"#339966",
-                "label":"Wolfpack Locations"
+                "label":"Confirmed Wolfpack"
+                },
+                {
+                "color":"#66cc99",
+                "label":"Suspected Wolfpack"
+                },
+                {
+                "color":"#d9f2e6",
+                "label":"Terminated Wolfpack"
                 },
                 {
                 "color":"repeating-linear-gradient(-45deg, rgba(255,255,255,0), rgba(255,255,255,0) 5%, #6b6b47 10%)",
