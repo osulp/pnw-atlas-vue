@@ -1,0 +1,380 @@
+{
+    "title": "Marine Conservation",
+    "URL":"conservation_icon",
+    "chapter":"marine",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "basemapType":"mapbox",
+    "dropdownLabel":{"type":"breaks","labels":["State Managed"],"breaks":[1]},
+    "center":[45.663,-125.431],
+    "maps":[
+      {
+        "id":0,
+        "title":"Conservation Areas",
+        "border":{"title":"marine_counties","include":false,"opacity":1},
+        "tileLayers":[
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue3sv5f0jji1fs1xv1hegb9/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjucpgefr023c1fnr10vbi0rt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"marine_outline","pane":300,"opacity":0.3}
+        ],
+        "fastFacts":[{
+            "facts":["Includes National Historical Preserves and National Marine Sanctuaries. Development, disturbance of the seabed, removal of cultural resources, and deposition of material are prohibited in Marine Sanctuaries."],
+            "fastTitle":"National Park Service/National Marine Sanctuary",
+            "titleColor":"#2d5986"
+          },
+          {
+            "facts":["Includes Essential Fish Habitat, Rockfish Conservation Areas, and Salmon Conservation Areas, all managed by the National Marine Fisheries Service. These areas have resctrictions on bottom trawling/bottom-contact gear."],
+            "titleColor":"#4080bf",
+            "fastTitle":"Essential Fish Habitat"
+          },
+          {
+            "facts":["Any protected lands managed by state agencies in Oregon and Washington. These agencies include natural resources, fish and wildlife, parks and recreation, and others. More information can be found in the 'State Management' maps in the dropdown."],
+            "titleColor":"#9fbfdf",
+            "fastTitle":"State Managed"
+          },
+          {
+            "facts":["National Wildlife Refuges are managed by the U.S Department of Fish and Wildlife. These Refuges are designed to protect important ecosystems and wildlife."],
+            "titleColor":"#258e8e",
+            "fastTitle":"National Wildlife Refuge"
+          },
+          {
+            "facts":["National Estuarine Research Reserves are managed by partnerships between state agencies and the National Oceanic and Atmospheric Administration. They are designed to promote research, education, and coastal stewardship."],
+            "titleColor":"#5dd5d5",
+            "fastTitle":"National Estuarine Research Reserve"
+          }],
+        "jsonLayers":[
+          {
+            "position":{"lat":45.663, "lon":-125.431, "zoom":6},
+            "activeLayer":true,
+            "url":"map_data/marine/marine_protected_areas.json",
+            "pane":"overJson",
+            "feature":"polygon",
+            "type":"categorized",
+            "attribute":"State",
+            "values":["National Marine Sanctuaries","National Park Service","Oregon","Washington","National Wildlife Refuge System","National Estuarine Research Reserve System"],
+            "fillColors":["#2d5986","#2d5986","#9fbfdf","#9fbfdf","#258e8e","#9ae5e5"],
+            "colors":["#2d5986","#2d5986","#9fbfdf","#9fbfdf","#258e8e","#9ae5e5"],
+            "weight": 1,
+            "fillOpacity":0.6,
+            "opacity":1,
+            "tooltip":"tooltip",
+            "tooltipVars":["Site_Name"],
+            "tooltipText":["<div style='width:280px; padding:2px;'><p3 style='font-weight:bold; font-size:24px; white-space:normal; line-height:28px;'>","</p3></div>"]        
+        },
+        {
+            "pane":"overBorder",
+            "url":"map_data/marine/EFH.json",
+            "feature":"polygon",
+            "type":"pattern",
+            "colors":["#9fbfdf"],
+            "fillColors":["#538cc6"],
+            "weight":1,
+            "opacity":0,
+            "hoverFill":0.8,
+            "pattern":{
+                "weight": 1.5,
+                "spaceWeight": 3,
+                "height": 4,
+                "angle":45,
+                "color":"#2d5986",
+                "spaceColor":"#2d5986"
+            },
+            "tooltip":"tooltip",
+            "tooltipVars":["Site_Name"],
+            "tooltipText":["<div style='width:280px; padding:2px;'><p3 style='font-weight:bold; font-size:24px; white-space:normal; line-height:28px;'>","</p3></div>"]    
+        }],
+        "legend":[{
+            "id":0,
+            "type":"polygon",
+            "title":"Conservation Area Types",
+            "titleMargin":45,
+            "containers":[{
+              "color":"#2d5986",
+              "label":"NPS/Marine Sanctuaries"
+            },
+            {
+              "color":"repeating-linear-gradient(45deg, rgba(255,255,255,0), rgba(255,255,255,0) 10%, #2d5986 15%, #2d5986 15%)",
+              "label":"Essential Fish Habitat"
+            },
+            {
+              "color":"#9fbfdf",
+              "label":"State Managed"
+            },
+            {
+                "color":"#258e8e",
+                "label":"National Wildlife Refuge"
+            },
+            {
+                "color":"#9ae5e5",
+                "label":"National Estuary Reserve"
+            }]   
+          }]
+      },
+      {
+        "id":1,
+        "title":"Oregon",
+        "border":{"title":"marine_counties","include":false,"opacity":1},
+        "tileLayers":[
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue3sv5f0jji1fs1xv1hegb9/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjucpgefr023c1fnr10vbi0rt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"marine_outline","pane":300,"opacity":0.3}
+        ],
+        "fastFacts":[{
+            "facts":["Managed by the Oregon Department of Fish and Wildlife (ODFW), and dedicated to conservation and scientific research. All development is prohibited in Marine Reserves, as is the removal of marine life."],
+            "fastTitle":"Marine Reserve",
+            "titleColor":"#2d5986"
+          },
+          {
+            "facts":["Managed by the ODFW, and are adjacent to Marine Reserves. Development is prohibited in Marine Protected Areas, but certain fishing activites are allowed."],
+            "titleColor":"#9fbfdf",
+            "fastTitle":"Marine Protected Area"
+          },
+          {
+            "facts":["A protected area managed by the ODFW where the removal of marine invertebrates is prohibited and educational programs are encouraged."],
+            "titleColor":"#258e8e",
+            "fastTitle":"Marine Garden"
+          },
+          {
+            "facts":["Designed to allow scientists to obtain information and rocky shore conditions. There are two types of Research Reserves: subtidal and intertidal. Each site has varying restrictions on the removal of invertebrates. Research Reserves are managed by the ODFW."],
+            "titleColor":"#5dd5d5",
+            "fastTitle":"Research Reserve"
+          },
+          {
+            "facts":["Includes Habitat Refuges, and Shellfish Preserves, both of which are managed by the Oregon Department of Fish. Removal of shellfish is prohibited in Shellfish Preserves. Removal of all marine species is prohibited in Habitat Refuges."],
+            "titleColor":"#ccb3ff",
+            "fastTitle":"Other"
+          }],
+        "jsonLayers":[
+          {
+            "position":{"lat":44.5, "lon":-124.931, "zoom":7},
+            "activeLayer":true,
+            "url":"map_data/marine/marine_protected_areas.json",
+            "pane":"overJson",
+            "feature":"polygon",
+            "type":"categorized",
+            "attribute":"Design",
+            "values":["Marine Reserve","Marine Protected Area","Marine Garden","Research Reserve"],
+            "fillColors":["#2d5986","#9fbfdf","#258e8e","#9ae5e5","#ccb3ff"],
+            "colors":["#2d5986","#9fbfdf","#258e8e","#9ae5e5","#ccb3ff"],
+            "weight": 1,
+            "fillOpacity":0.6,
+            "opacity":1,
+            "tooltip":"tooltip",
+            "tooltipVars":["Site_Name"],
+            "tooltipText":["<div style='width:280px; padding:2px;'><p3 style='font-weight:bold; font-size:24px; white-space:normal; line-height:28px;'>","</p3></div>"],
+            "filterVariable":"State",
+            "filterValue":"Oregon"
+        },
+        {
+            "activeLayer":true,
+            "spiderfy":true,
+            "url":"map_data/marine/marine_protected_area_points.json",
+            "pane":"overBorder",
+            "feature":"point",
+            "type":"pointDivCat",
+            "attribute":"Design",
+            "values":["Marine Reserve","Marine Protected Area","Marine Garden","Research Reserve"],
+            "fillColors":["#2d5986","#9fbfdf","#258e8e","#9ae5e5","#ccb3ff"],
+            "weight": 1.5,
+            "radius":8,
+            "fillOpacity":1,
+            "opacity":1,
+            "tooltip":"tooltip",
+            "tooltipVars":["Site_Name"],
+            "divIcon":"border-radius:50%; border:2px solid white; opacity:1; -webkit-box-shadow: 1px 1px 2px black; box-shadow: 1px 1px 2px black; -moz-box-shadow: 1px 1px 2px black;",
+            "tooltipText":["<div style='width:280px; padding:2px;'><p3 style='font-weight:bold; font-size:24px; white-space:normal; line-height:28px;'>","</p3></div>"],
+            "filterVariable":"State",
+            "filterValue":"Oregon"
+        }],
+        "legend":[{
+            "id":0,
+            "type":"polygon",
+            "title":"Conservation Area Types",
+            "titleMargin":45,
+            "containers":[{
+              "color":"#2d5986",
+              "label":"Marine Reserve"
+            },
+            {
+              "color":"#9fbfdf",
+              "label":"Marine Protected Area"
+            },
+            {
+              "color":"#258e8e",
+              "label":"Marine Garden"
+            },
+            {
+                "color":"#9ae5e5",
+                "label":"Research Reserve"
+            },
+            {
+                "color":"#ccb3ff",
+                "label":"Other"
+            }]   
+          }]
+      },
+      {
+        "id":2,
+        "title":"Washington",
+        "border":{"title":"marine_counties","include":false,"opacity":1},
+        "tileLayers":[
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue3sv5f0jji1fs1xv1hegb9/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjucpgefr023c1fnr10vbi0rt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"marine_outline","pane":300,"opacity":0.3}
+        ],
+        "fastFacts":[{
+          "facts":["Managed by the Washington Department of Fish and Wildlife (WDFW). Harvest/Removal of all marine resources is prohibited in Conservation Areas."],
+          "fastTitle":"Conservation Area",
+          "titleColor":"#2d5986"
+        },
+        {
+          "facts":["Managed by the WDFW. Similar to Conservation Areas, but with fewer restrictions on the harvest/removal of marine resources."],
+          "titleColor":"#9fbfdf",
+          "fastTitle":"Marine Preserve"
+        },
+        {
+          "facts":["A protected area managed by the Washington State Department of Natural Resources (WSDNR), designed to protected important ecosystems and promote natural stewardship."],
+          "titleColor":"#258e8e",
+          "fastTitle":"Aquatic Reserve"
+        },
+        {
+          "facts":["Underwater Parks are managed by the Washington Department of Parks and Recreation, and are designed for scuba diving. Underwater Parks are generally connected to state parks on land."],
+          "titleColor":"#5dd5d5",
+          "fastTitle":"Underwater Park"
+        },
+        {
+          "facts":["Managed by the WSDNR. Designed to preserve ecological communities and rare plants and animals."],
+          "titleColor":"#9966ff",
+          "fastTitle":"Natural Area Preserve"
+        },
+        {
+          "facts":["Includes Special Management Fishery Areas, Marine Life Sancturaries, Biological Preserves, and Wildlife Areas."],
+          "titleColor":"#ccb3ff",
+          "fastTitle":"Other"
+        }],
+          "jsonLayers":[
+            {
+              "position":{"lat":47.840, "lon":-123.308, "zoom":7},
+              "activeLayer":true,
+              "url":"map_data/marine/marine_protected_areas.json",
+              "pane":"overJson",
+              "feature":"polygon",
+              "type":"categorized",
+              "attribute":"Design",
+              "values":["Conservation Area","Marine Preserve","Aquatic Reserve","Underwater Park","Natural Area Preserve"],
+              "fillColors":["#2d5986","#9fbfdf","#258e8e","#9ae5e5","#9966ff","#ccb3ff"],
+              "colors":["#2d5986","#9fbfdf","#258e8e","#9ae5e5","#9966ff","#ccb3ff"],
+              "weight": 1,
+              "fillOpacity":0.6,
+              "opacity":1,
+              "tooltip":"tooltip",
+              "tooltipVars":["Site_Name"],
+              "tooltipText":["<div style='width:280px; padding:2px;'><p3 style='font-weight:bold; font-size:24px; white-space:normal; line-height:28px;'>","</p3></div>"],
+              "filterVariable":"State",
+              "filterValue":"Washington"
+          },
+          {
+              "activeLayer":true,
+              "spiderfy":true,
+              "url":"map_data/marine/marine_protected_area_points.json",
+              "pane":"overBorder",
+              "feature":"point",
+              "type":"pointDivCat",
+              "attribute":"Design",
+              "values":["Conservation Area","Marine Preserve","Aquatic Reserve","Underwater Park","Natural Area Preserve"],
+              "fillColors":["#2d5986","#9fbfdf","#258e8e","#9ae5e5","#9966ff","#ccb3ff"],
+              "weight": 1.5,
+              "radius":8,
+              "fillOpacity":1,
+              "opacity":1,
+              "tooltip":"tooltip",
+              "tooltipVars":["Site_Name"],
+              "divIcon":"border-radius:50%; border:2px solid white; opacity:1; -webkit-box-shadow: 1px 1px 2px black; box-shadow: 1px 1px 2px black; -moz-box-shadow: 1px 1px 2px black;",
+              "tooltipText":["<div style='width:280px; padding:2px;'><p3 style='font-weight:bold; font-size:24px; white-space:normal; line-height:28px;'>","</p3></div>"],
+              "filterVariable":"State",
+              "filterValue":"Washington",
+              "secondFilterVariable":"large",
+              "secondFilterValue":"0"
+          }],
+        "legend":[{
+            "id":0,
+            "type":"polygon",
+            "title":"Conservation Area Types",
+            "titleMargin":45,
+            "containers":[{
+              "color":"#2d5986",
+              "label":"Conservation Area"
+            },
+            {
+              "color":"#9fbfdf",
+              "label":"Marine Preserve"
+            },
+            {
+              "color":"#258e8e",
+              "label":"Aquatic Reserve"
+            },
+            {
+                "color":"#9ae5e5",
+                "label":"Underwater Park"
+            },
+            {
+                "color":"#9966ff",
+                "label":"Natural Area Preserve"
+            },
+            {
+                "color":"#ccb3ff",
+                "label":"Other"
+            }]   
+          }]
+      }],
+      "sources":{
+        "geographic":[{
+          "title":"Total Marine Protected Areas: ",
+          "linkText":"National Marine Protected Areas Center",
+          "linkUrl":"https://marineprotectedareas.noaa.gov/dataanalysis/mpainventory/",
+          "description":"Data from 2017."
+        }],
+        "text":[{
+          "title":"National Marine Sanctuary Regulations: ",
+          "linkText":"NOAA",
+          "linkUrl":"https://sanctuaries.noaa.gov/protect/regulations/"
+        },
+        {
+          "title":"National Estuarine Regulations",
+          "linkText":"NOAA National Ocean Service",
+          "linkUrl":"https://oceanservice.noaa.gov/ecosystems/nerrs/"
+        },
+        {
+          "title":"Oregon Marine Reserve/MPA Regulations",
+          "linkText":"Oregon Marine Reserves",
+          "linkUrl":"http://oregonmarinereserves.com/reserves/"
+        },
+        {
+          "title":"Other Oregon Marine Protected Area Regulations",
+          "linkText":"Oregon Department of Fish and Wildlife",
+          "linkUrl":"https://www.oregon.gov/oprd/NATRES/pages/rs_faqcoastal.aspx"
+        },
+        {
+          "title":"Washington Marine Protected Area Regulations",
+          "linkText":"Washington Department of Fish and Wildlife",
+          "linkUrl":"https://wdfw.wa.gov/fishing/management/mpa"
+        },
+        {
+          "title":"Washington Aquatic Reserve Regulations",
+          "linkText":"Washington Department of Natural Resources",
+          "linkUrl":"https://www.dnr.wa.gov/managed-lands/aquatic-reserves"
+        },
+        {
+          "title":"Washington Underwater Park Regulations",
+          "linkText":"City of Edmonds",
+          "linkUrl":"http://www.edmondswa.gov/edmonds-underwater-park-discovery.html"
+        }],
+      "basemap":[{
+        "title":"Created with Mapbox Studio"
+      }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://github.com/sarahbellum/Canvas-Flowmap-Layer","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","Canvas Flowmap Layer","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

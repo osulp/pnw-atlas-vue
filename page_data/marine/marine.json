@@ -1,0 +1,26 @@
+{
+    "chapterTitle":"Marine",
+    "chapterLink":"/marine",
+    "maps":[
+        { 
+            "id":0,
+            "text":"Conservation",
+            "description":"Protected areas, marine sanctuaries, wildlife refuges, estuary reserves, state reserves",
+            "imageURL":"conservation_icon",
+            "chapter":"marine",
+            "link":"marine/conservation",
+            "mapLink":"conservation",
+            "active":false,
+            "backgroundURL":"conservation_background"},
+        { 
+            "id":1,
+            "text":"Fisheries",
+            "description":"Ports, commercial landings, essential habitat, fishery locations",
+            "imageURL":"fisheries_icon",
+            "chapter":"marine",
+            "link":"marine/fisheries",
+            "mapLink":"fisheries",
+            "active":false,
+            "backgroundURL":"fisheries_background"}
+        ]
+}

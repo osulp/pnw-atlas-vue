@@ -1,0 +1,452 @@
+{
+    "title": "Fisheries",
+    "URL":"fisheries_icon",
+    "chapter":"marine",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "basemapType":"mapbox",
+    "dropdownLabel":{"type":"breaks","labels":["Fishery Locations"],"breaks":[2]},
+    "center":[45.663,-125.431],
+    "maps":[
+      {
+        "id":0,
+        "title":"Ports & Vessels",
+        "border":{"title":"marine_counties","include":true,"opacity":1},
+        "tileLayers":[
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue3sv5f0jji1fs1xv1hegb9/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjucpgefr023c1fnr10vbi0rt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"fishing_routes","pane":450,"opacity":0.9},
+          {"title":"marine_outline","pane":300,"opacity":0.3}
+        ],
+        "fastFacts":[{
+          "facts":["&#9900 Dungeness Crab had the highest total landing value in both Oregon and Washington in 2017, with over $150 million worth of crab landed between the two states.","&#9900 Pacific Hake (or Whiting) had the highest total landing weight in both Oregon and Washington in 2017, with over 210 million pounds worth of fish landed between the two states."]
+        }],
+        "jsonLayers":[
+          {
+            "position":{"lat":45.663, "lon":-125.431, "zoom":6},
+            "activeLayer":true,
+            "url":"map_data/marine/port_fisheries.json",
+            "pane":"overBorder",
+            "feature":"point",
+            "type":"pointDivGrad",
+            "fillColors":["#000000"],
+            "colors":["#ffffff"],
+            "radiusType": "graduated",
+            "radiusAttribute": "v_2017",
+            "radiusValues":[30,10],
+            "radius": [19,12,6],
+            "weight": 1,
+            "fillOpacity":1,
+            "opacity":1,
+            "divIcon":"border-radius:50%; border:2px solid white; opacity:1; -webkit-box-shadow: 1px 1px 2px black; box-shadow: 1px 1px 2px black; -moz-box-shadow: 1px 1px 2px black;",
+            "tooltipVars":["name","ST","v_2017"],
+            "tooltipText":["<div style='width:360px'><p3 style='display:inline; font-weight:bold; font-size:28px; white-space:normal; margin-left:5px;'>", ", ","</p3><p3 style='margin:0px 0px 0px 5px; display:block; font-size:18px; white-space:normal; font-weight:bold;'>2017 Commercial Landing Value: $"," Million</p3><p3 style='font-weight:bold; margin:0px 0px 5px 5px; display:block; font-size:18px; white-space:normal;'>Past Commercial Fishery Landings</p3><canvas id='portChart' style='margin-left:-5px; display:block;'></canvas><p3 style='font-weight:bold; font-size:14px; white-space:normal; display:block; line-height:15px; margin-bottom:4px;'>Total value in millions of 2017 dollars<br/>Total poundage in millions of pounds</p3></div>"]
+        }],
+      "chart":[{
+          "id":0,
+          "chartLoc":"tooltip",
+          "chartType":"line",
+          "labels":["2017","2016","2015","2014","2013","2012","2011","2010","2009","2008","2007","2006","2005","2004"],
+          "data":["v_2017","inf_v_2016","inf_v_2015","inf_v_2014","inf_v_2013","inf_v_2012","inf_v_2011","inf_v_2010","inf_v_2009","inf_v_2008","inf_v_2007","inf_v_2006","inf_v_2005","inf_v_2004"],
+          "data2":["lbs_2017","lbs_2016","lbs_2015","lbs_2014","lbs_2013","lbs_2012","lbs_2011","lbs_2010","lbs_2009","lbs_2008","lbs_2007","lbs_2006","lbs_2005","lbs_2004"],
+          "datasetLabel":["Total $ Value","Total Lbs."],
+          "options": {
+              "responsive": true,
+              "scales": {
+                "yAxes": [{
+                  "id": "val",
+                  "type": "linear",
+                  "position": "left",
+                  "ticks":{
+                    "fontSize":13,
+                    "fontFamily":"GoudyOld",
+                    "fontColor":"rgb(191, 64, 64)"
+                    }
+                }, {
+                  "id": "lbs",
+                  "type": "linear",
+                  "position": "right",
+                  "ticks":{
+                    "fontSize":13,
+                    "fontFamily":"GoudyOld",
+                    "fontColor":"rgb(245, 203, 112)"
+                    }
+                }],
+                "xAxes": [{
+                "ticks":{
+                    "fontSize":13,
+                    "fontFamily":"GoudyOld"
+                    }
+                }]
+              },
+              "legend": {
+                "labels": {
+                    "fontColor":"#000000",
+                    "fontFamily":"GoudyOld",
+                    "fontSize":14
+                }
+            },
+              "tooltips":{
+                  "enabled":false
+              }
+          }
+        }],
+        "legend":[
+          {
+            "id":0,
+            "type":"point",
+            "chartID":"portChart",
+            "title":"Ports by 2017 Commerical Fishery Landings (millions $)",
+            "containers":[{
+                "size":19,
+                "label":"30+",
+                "background":"#000000",
+                "color":"#ffffff",
+                "border":2,
+                "shadow":true
+                },
+                {
+                "size":12,
+                "label":"10 to 30",
+                "background":"#000000",
+                "color":"#ffffff",
+                "border":2,
+                "shadow":true
+                },
+                {
+                "size":6,
+                "label":"Under 10",
+                "background":"#000000",
+                "color":"#ffffff",
+                "border":2,
+                "shadow":true
+                }
+            ]
+        },
+        {
+          "id":1,
+          "type":"gradient",
+          "title":"Fishing Vessel Density",
+          "gradient":"linear-gradient(to right, #f9ecec, #df9f9f, #cc6666, #993333, #602020)",
+          "gradientLabels":["Lower","Higher"],
+          "gradientMargin":170,
+          "description":"Density derived from Automatic Identification Systems (AIS) data."
+        }]
+      },
+      {
+        "id":1,
+        "title":"Essential Habitat",
+        "border":{"title":"marine_counties","include":true,"opacity":1},
+        "tileLayers":[
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue3sv5f0jji1fs1xv1hegb9/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjucpgefr023c1fnr10vbi0rt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"marine_outline","pane":300,"opacity":0.3}
+        ],
+        "fastFacts":[{
+          "facts":["Areas where the use of bottom trawl or bottom-contact fishing gear is restricted or prohibited in order to protect essential fish habitat."],
+          "fastTitle":"Essential Fish Habitat (EFH)",
+          "titleColor":"#204060"
+        },
+        {
+          "facts":["Rockfish Conservation Areas are defined to protect overfished rockfish from incidental catch. Many have restrictions on trawling and bottom-contant gear that vary seasonally."],
+          "titleColor":"#8cb0d9",
+          "fastTitle":"Rockfish Conservation Areas"
+        },
+        {
+          "facts":["Area where commercial and recreational salmon fishing is restricted."],
+          "titleColor":"#669999",
+          "fastTitle":"Salmon Conservation Zone"
+        }],
+        "jsonLayers":[
+          {
+            "pane":"overBorder",
+            "interactive":false,
+            "position":{"lat":45.663, "lon":-125.431, "zoom":6},
+            "activeLayer":true,
+            "url":"map_data/marine/deepwater_fisheries.json",
+            "feature":"polygon",
+            "type":"pattern",
+            "colors":["#396fac"],
+            "weight":1,
+            "opacity":1,
+            "pattern":{
+                "weight": 1.5,
+                "spaceWeight": 3,
+                "height": 4,
+                "angle":45,
+                "color":"#8cb0d9",
+                "spaceColor":"#8cb0d9"
+            }
+        },
+        {
+          "pane":"overJson",
+          "url":"map_data/marine/fishery_restrictions.json",
+          "feature":"polygon",
+          "type":"categorized",
+          "attribute":"Design",
+          "values":["Essential Fish Habitat Conservation Area","Rockfish Conservation Area","Fishery Management Area"],
+          "fillColors":["#204060","#b3cbe6","#669999"],
+          "colors":["#204060","#b3cbe6","#669999"],
+          "weight": 1,
+          "fillOpacity":0.7,
+          "opacity":1,
+          "tooltip":"tooltip",
+          "tooltipVars":["Site_Name"],
+          "tooltipText":["<div style='width:280px; padding:2px;'><p3 style='font-weight:bold; font-size:24px; white-space:normal; line-height:28px;'>","</p3></div>"]
+        }],
+        "legend":[{
+          "id":0,
+          "type":"polygon",
+          "title":"Essential Habitat Types",
+          "titleMargin":45,
+          "containers":[{
+            "color":"#204060",
+            "label":"Essential Fish Habitat"
+          },
+          {
+            "color":"#b3cbe6",
+            "label":"Rockfish Conservation Area"
+          },
+          {
+            "color":"#669999",
+            "label":"Salmon Conservation Zone"
+          }]   
+        },
+        {
+          "id":0,
+          "type":"polygon",
+          "containers":[{
+            "color":"repeating-linear-gradient(45deg, rgba(255,255,255,0), rgba(255,255,255,0) 10%, #8cb0d9 15%, #8cb0d9 15%)",
+            "label":"EFH depths 1280 to 3500m"
+          }],
+          "description":"Essential fish habitat types as defined by the National Marine Fisheries Service."
+        }]
+      },
+      {
+        "id":2,
+        "title":"Crab",
+        "border":{"title":"marine_counties","include":true,"opacity":1},
+        "tileLayers":[
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue40d8m29b31fpkta00rfvv/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":750,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue3ysyo1ud31fqd9rh68cro/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":250,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjucpgefr023c1fnr10vbi0rt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"fishery_crab_locations","pane":700,"opacity":0.7},
+          {"title":"marine_outline","pane":300,"opacity":0.3}
+        ],
+        "fastFacts":[{
+          "facts":["&#9900 In 2017, 27.3 million pounds of Dungeness Crab were caught in Washington, and 18.9 million pounds were caught in Oregon."]
+        }],
+        "legend":[{
+          "id":0,
+          "type":"polygon",
+          "title":"Crab Fishing Locations",
+          "titleMargin":45,
+          "containers":[{
+            "color":"#993333",
+            "label":"Commercial"
+          },
+          {
+            "color":"#d09590",
+            "label":"Commercial & Recreational"
+          }],
+          "description":"Commercial and recreational crab fishing locations."
+        }]
+      },
+      {
+        "id":3,
+        "title":"Halibut",
+        "border":{"title":"marine_counties","include":true,"opacity":1},
+        "tileLayers":[
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue40d8m29b31fpkta00rfvv/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":750,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue3ysyo1ud31fqd9rh68cro/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":250,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjucpgefr023c1fnr10vbi0rt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"fishery_halibut_locations","pane":700,"opacity":0.7},
+          {"title":"marine_outline","pane":300,"opacity":0.3}
+        ],
+        "fastFacts":[{
+          "facts":["&#9900 In 2017, 1.4 million pounds of Halibut were caught in Washington, and 0.2 million pounds were caught in Oregon."]
+        }],
+        "legend":[{
+          "id":0,
+          "type":"polygon",
+          "title":"Halibut Fishing Locations",
+          "titleMargin":45,
+          "containers":[{
+            "color":"#993333",
+            "label":"Commercial"
+          },
+          {
+            "color":"#d09590",
+            "label":"Commercial & Recreational"
+          },
+          {
+            "color":"#f7d790",
+            "label":"Recreational"
+          }],
+          "description":"Commercial and recreational halibut fishing locations."
+        }]
+      },
+      {
+        "id":4,
+        "title":"Sablefish",
+        "border":{"title":"marine_counties","include":true,"opacity":1},
+        "tileLayers":[
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue40d8m29b31fpkta00rfvv/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":750,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue3ysyo1ud31fqd9rh68cro/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":250,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjucpgefr023c1fnr10vbi0rt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"fishery_sablefish_locations","pane":700,"opacity":0.7},
+          {"title":"marine_outline","pane":300,"opacity":0.3}
+        ],
+        "fastFacts":[{
+          "facts":["&#9900 In 2017, 2.6 million of Sablefish pounds were caught in Washington, and 5.5 million pounds were caught in Oregon."]
+        }],
+        "legend":[{
+          "id":0,
+          "type":"polygon",
+          "title":"Sablefish Fishing Locations",
+          "titleMargin":45,
+          "containers":[{
+            "color":"#993333",
+            "label":"Commercial"
+          },
+          {
+            "color":"#d09590",
+            "label":"Commercial & Recreational"
+          },
+          {
+            "color":"#f7d790",
+            "label":"Recreational"
+          }],
+          "description":"Commercial and recreational sablefish fishing locations. Sablefish is also known as Black Cod."
+        }]
+      },
+      {
+        "id":5,
+        "title":"Tuna",
+        "border":{"title":"marine_counties","include":true,"opacity":1},
+        "tileLayers":[
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue40d8m29b31fpkta00rfvv/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":750,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue3ysyo1ud31fqd9rh68cro/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":250,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjucpgefr023c1fnr10vbi0rt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"fishery_tuna_locations","pane":700,"opacity":0.7},
+          {"title":"marine_outline","pane":300,"opacity":0.3}
+        ],
+        "fastFacts":[{
+          "facts":["&#9900 In 2017, 11.4 million pounds of Albacore Tuna were caught in Washington, and 4.7 million pounds were caught in Oregon."]
+        }],
+        "legend":[{
+          "id":0,
+          "type":"polygon",
+          "title":"Commercial and Recreational Fishing Locations",
+          "titleMargin":45,
+          "containers":[{
+            "color":"#993333",
+            "label":"Commercial"
+          },
+          {
+            "color":"#d09590",
+            "label":"Commercial & Recreational"
+          },
+          {
+            "color":"#f7d790",
+            "label":"Recreational"
+          }],
+          "description":"Commercial and recreational tuna fishing locations."
+        }]
+      },
+      {
+        "id":6,
+        "title":"Groundfish",
+        "border":{"title":"marine_counties","include":true,"opacity":1},
+        "tileLayers":[
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue40d8m29b31fpkta00rfvv/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":750,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue3ysyo1ud31fqd9rh68cro/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":250,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjucpgefr023c1fnr10vbi0rt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"fishery_groundfish_locations","pane":700,"opacity":0.7},
+          {"title":"marine_outline","pane":300,"opacity":0.3}
+        ],
+        "fastFacts":[{
+          "facts":["&#9900 In 2017, 1 million poundsof Dover Sole were caught in Washington, and 11 million pounds were caught in Oregon."]
+        }],
+        "legend":[{
+          "id":0,
+          "type":"polygon",
+          "title":"Commercial and Recreational Fishing Locations",
+          "titleMargin":45,
+          "containers":[{
+            "color":"#993333",
+            "label":"Commercial"
+          },
+          {
+            "color":"#d09590",
+            "label":"Commercial & Recreational"
+          }],
+          "description":"Commercial and recreational groundfish fishing locations. Groundfish include sole and flounder."
+        }]
+      },
+      {
+        "id":7,
+        "title":"Shrimp",
+        "border":{"title":"marine_counties","include":true,"opacity":1},
+        "tileLayers":[
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue40d8m29b31fpkta00rfvv/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":750,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue3ysyo1ud31fqd9rh68cro/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":250,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjucpgefr023c1fnr10vbi0rt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"fishery_shrimp_locations","pane":700,"opacity":0.7},
+          {"title":"marine_outline","pane":300,"opacity":0.3}
+        ],
+        "fastFacts":[{
+          "facts":["&#9900 In 2017, 6.8 million pounds of Ocean Shrimp were caught in Washington, and 3 million pounds were caught in Oregon."]
+        }],
+        "legend":[{
+          "id":0,
+          "type":"polygon",
+          "title":"Commercial and Recreational Fishing Locations",
+          "titleMargin":45,
+          "containers":[{
+            "color":"#993333",
+            "label":"Commercial"
+          }],
+          "description":"Commercial and recreational shrimp fishing locations."
+        }]
+      }],
+      "sources":{
+        "geographic":[{
+          "title":"Washington Total Port Landings: ",
+          "linkText":"NOAA Office of Science and Technology",
+          "linkUrl":"https://www.st.nmfs.noaa.gov/commercial-fisheries/commercial-landings/other-specialized-programs/total-commercial-fishery-landings-at-an-individual-u-s-port-for-all-years-after-1980/index",
+          "description":"Data from 2017, copied from each individual port and aggregated."
+        },
+        {
+          "title":"Oregon Total Port Landings: ",
+          "linkText":"Oregon Department of Fish and Wildlife",
+          "linkUrl":"https://www.dfw.state.or.us/mrp/regulations/commercial_fishing/",
+          "description":"Data from 2017, copied from each individual port for each individual year (2004-2017) and aggregated."
+        },
+        {
+          "title":"Fishing Vessel Density",
+          "linkText":"NOAA Department of Commerce",
+          "linkUrl":"https://catalog.data.gov/dataset/2013-fishing-vessel-density",
+          "description":"Data from 2013, derived from Automatic Identification Systems (AIS) data."
+        },
+        {
+          "title":"Essential Habitat",
+          "linkText":"National Marine Protecte Areas Database",
+          "linkUrl":"https://marineprotectedareas.noaa.gov/dataanalysis/mpainventory/",
+          "description":"Data from 2017, filtered to only include areas defined by the National Marine Fisheries Service."
+        },
+        {
+          "title":"Fishery Locations",
+          "linkText":"West Coast Ocean Data Portal",
+          "linkUrl":"http://portal.westcoastoceans.org/discover/#?c=Category.Human.Economy~Category.Human.Economy.Fishing&text=ethnography",
+          "description":"Data from 2012. 'West Coast Fishing Ethnography' dataset downloaded."
+        }],
+      "basemap":[{
+        "title":"Created with Mapbox Studio"
+      }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://github.com/sarahbellum/Canvas-Flowmap-Layer","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","Canvas Flowmap Layer","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}
