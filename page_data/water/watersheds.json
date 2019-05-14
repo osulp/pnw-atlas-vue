@@ -29,7 +29,7 @@
             "selection":{
               "titleVar":"Name",
               "filterVar":"HUC4",
-              "varList":["area_sqmi","dams_major","POPULATION","States","counties","cities_001"],
+              "varList":["area","dams_major","POPULATION","States","counties","cities_001"],
               "varLabel":["Area: ", "Large Dams: ", "Population: ", "States/Provinces: ", "Counties: ", "Cities: "],
               "selectionOpacity":0.7,
               "selectionLayers":[{
@@ -207,7 +207,7 @@
             "selection":{
               "titleVar":"Name",
               "filterVar":"HUC6",
-              "varList":["area_sqmi","dams_major","POPULATION","States","counties","cities_001"],
+              "varList":["area","dams_major","POPULATION","States","counties","cities_001"],
               "varLabel":["Area: ", "Large Dams: ", "Population: ", "States/Provinces: ", "Counties: ", "Cities: "],
               "selectionOpacity":0.7,
               "selectionLayers":[{
@@ -385,7 +385,7 @@
             "selection":{
               "titleVar":"Name",
               "filterVar":"HUC8",
-              "varList":["area_sqmi","dams_total","POPULATION","States","counties","cities_001"],
+              "varList":["area","dams_total","POPULATION","States","counties","cities_001"],
               "varLabel":["Area: ", "Dams: ", "Population: ", "States/Provinces: ", "Counties: ", "Cities: "],
               "selectionOpacity":0.7,
               "selectionLayers":[{
