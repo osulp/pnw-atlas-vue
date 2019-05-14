@@ -11,11 +11,11 @@
       {
         "id":0,
         "title":"Conservation Areas",
-        "border":{"title":"marine_counties","include":false,"opacity":1},
+        "border":{"title":"marine_borders","include":true,"opacity":0.2},
         "tileLayers":[
-          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue3sv5f0jji1fs1xv1hegb9/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
-          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjucpgefr023c1fnr10vbi0rt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
-          {"title":"marine_outline","pane":300,"opacity":0.3}
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv49vru51cat1fqcqcap1iqo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjumyke6p17m01fmzjmncujhq/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"marine_watershed_outline","pane":300,"opacity":0.3}
         ],
         "fastFacts":[{
             "facts":["Includes National Historical Preserves and National Marine Sanctuaries. Development, disturbance of the seabed, removal of cultural resources, and deposition of material are prohibited in Marine Sanctuaries."],
@@ -30,7 +30,7 @@
           {
             "facts":["Any protected lands managed by state agencies in Oregon and Washington. These agencies include natural resources, fish and wildlife, parks and recreation, and others. More information can be found in the 'State Management' maps in the dropdown."],
             "titleColor":"#9fbfdf",
-            "fastTitle":"State Managed"
+            "fastTitle":"State Marine Managed Areas"
           },
           {
             "facts":["National Wildlife Refuges are managed by the U.S Department of Fish and Wildlife. These Refuges are designed to protect important ecosystems and wildlife."],
@@ -108,16 +108,25 @@
                 "color":"#9ae5e5",
                 "label":"National Estuary Reserve"
             }]   
+          },
+          {
+            "id":1,
+            "type":"borders",
+            "containers":[{
+                "color":"#000000",
+                "height":3,
+                "label":"Extent of State Waters"
+                }]
           }]
       },
       {
         "id":1,
         "title":"Oregon",
-        "border":{"title":"marine_counties","include":false,"opacity":1},
+        "border":{"title":"marine_borders","include":true,"opacity":0.2},
         "tileLayers":[
-          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue3sv5f0jji1fs1xv1hegb9/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
-          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjucpgefr023c1fnr10vbi0rt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
-          {"title":"marine_outline","pane":300,"opacity":0.3}
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv49vru51cat1fqcqcap1iqo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjumyke6p17m01fmzjmncujhq/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"marine_watershed_outline","pane":300,"opacity":0.3}
         ],
         "fastFacts":[{
             "facts":["Managed by the Oregon Department of Fish and Wildlife (ODFW), and dedicated to conservation and scientific research. All development is prohibited in Marine Reserves, as is the removal of marine life."],
@@ -125,7 +134,7 @@
             "titleColor":"#2d5986"
           },
           {
-            "facts":["Managed by the ODFW, and are adjacent to Marine Reserves. Development is prohibited in Marine Protected Areas, but certain fishing activites are allowed."],
+            "facts":["Managed by the ODFW, and are adjacent to Marine Reserves. Development is prohibited in Marine Protected Areas, but certain fishing activites are allowed. Also includes Seabird Protection Areas."],
             "titleColor":"#9fbfdf",
             "fastTitle":"Marine Protected Area"
           },
@@ -211,16 +220,25 @@
                 "color":"#ccb3ff",
                 "label":"Other"
             }]   
+          },
+          {
+            "id":1,
+            "type":"borders",
+            "containers":[{
+                "color":"#000000",
+                "height":3,
+                "label":"Extent of State Waters"
+                }]
           }]
       },
       {
         "id":2,
         "title":"Washington",
-        "border":{"title":"marine_counties","include":false,"opacity":1},
+        "border":{"title":"marine_borders","include":true,"opacity":0.2},
         "tileLayers":[
-          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue3sv5f0jji1fs1xv1hegb9/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
-          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjucpgefr023c1fnr10vbi0rt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
-          {"title":"marine_outline","pane":300,"opacity":0.3}
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv49vru51cat1fqcqcap1iqo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjumyke6p17m01fmzjmncujhq/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"marine_watershed_outline","pane":300,"opacity":0.3}
         ],
         "fastFacts":[{
           "facts":["Managed by the Washington Department of Fish and Wildlife (WDFW). Harvest/Removal of all marine resources is prohibited in Conservation Areas."],
@@ -325,9 +343,21 @@
                 "color":"#ccb3ff",
                 "label":"Other"
             }]   
+          },
+          {
+            "id":1,
+            "type":"borders",
+            "containers":[{
+                "color":"#000000",
+                "height":3,
+                "label":"Extent of State Waters"
+                }]
           }]
       }],
       "sources":{
+        "geographyNote":"The EEZ Line represents the outer boundary of the United States' Exclusive Economic Zone. The dashed line off the coast represents the extent of the state boundary. Both datasets were acquired from the ",
+        "geographyNoteLinkTitle":"Washington Department of Natural Resources.",
+        "geographyNoteLink":"http://dnr-msp-wa.opendata.arcgis.com/",
         "geographic":[{
           "title":"Total Marine Protected Areas: ",
           "linkText":"National Marine Protected Areas Center",

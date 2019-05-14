@@ -1,0 +1,770 @@
+{
+    "title": "Ocean Economy",
+    "URL":"ocean_economy_icon",
+    "chapter":"marine",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "basemapType":"mapbox",
+    "dropdownLabel":{"type":"breaks","labels":["Economic Sectors"],"breaks":[2]},
+    "center":[45.663,-125.431],
+    "maps":[
+      {
+        "id":0,
+        "title":"Total Economy",
+        "border":{"title":"marine_borders","include":true,"opacity":0.2},
+        "tileLayers":[
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv49vru51cat1fqcqcap1iqo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjumyke6p17m01fmzjmncujhq/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"marine_watershed_outline","pane":300,"opacity":0.3}
+        ],
+        "fastFacts":[{
+            "facts":["&#9900 The Ocean Economy, as defined by NOAA's National Ocean Watch, includes six economic sectors: marine construction, marine transportation, living resources (fishing and seafood processing), offshore mining, ship and boat building, and recreation and tourism.","&#9900 In the PNW, tourism and recreation is the largest overall sector of the Ocean Economy."]
+          }],
+        "jsonLayers":[
+          {
+            "position":{"lat":45.663, "lon":-125.431, "zoom":6},
+            "activeLayer":true,
+            "url":"map_data/marine/ocean_economy_counties.json",
+            "pane":"overBorder",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"per_OC_GDP",
+            "values":[20,10,5,0],
+            "fillColors":["#6a51a3","#9e9ac8","#cbc9e2","#f2f0f7","#ffffff"],
+            "colors":["#ffffff"],
+            "weight": 1,
+            "fillOpacity":[0.8,0.8,0.8,0.8,0.5],
+            "opacity":1,
+            "tooltipVars":["NAME","STATE","H_GDP_DESC"],
+            "tooltipText":["<div style='width:350px'><p3 style='display:inline; font-weight:bold; font-size:22px; white-space:normal; margin-left:5px;'>"," County, ","</p3><p3 style='margin:0px 0px 5px 5px; display:block; font-size:18px; white-space:normal; font-weight:normal;'>Largest Ocean Industry (GDP): ","</p3><canvas id='econChart' style='margin-left:-5px; margin-bottom:10px; display:block;'></canvas><p3 style='font-weight:bold; font-size:18px; white-space:normal; display:block; line-height:20px; margin-bottom:4px;'>Ocean Economy GDP as a percentage of total economy GDP.</p3></div>"]    
+        }],
+        "chart":[{
+            "id":0,
+            "chartLoc":"tooltip",
+            "chartType":"doughnut",
+            "labels":["Ocean Economy","Other Economy"],
+            "data":["per_OC_GDP"],
+            "pattern":{"data":1,"color":"#9e9ac8","type":"diagonal","patternColor":"rgba(255, 255, 255,0)"},
+            "colors":["#9e9ac8","rgba(255, 255, 255,0)"],
+            "options": {
+                "responsive": true,
+                "legend": {
+                    "position": "left",
+                    "labels": {
+                        "fontColor":"#000000",
+                        "fontFamily":"GoudyOld",
+                        "fontSize":14
+                    }
+                },
+                "plugins":{
+                    "labels":{
+                        "fontColor":"#000000",    
+                        "fontFamily":"GoudyOld",
+                        "fontSize":14,
+                        "overlap":false
+                    }
+                },   
+                "tooltips":{
+                    "enabled":false
+                }
+              }
+            }],
+          "legend":[{
+              "id":0,
+              "type":"polygon",
+              "chartID":"econChart",
+              "title":"% Ocean Economy",
+              "titleMargin":45,
+              "containers":[{
+                "color":"#6a51a3",
+                "label":"20+"
+              },
+              {
+                "color":"#9e9ac8",
+                "label":"10 to 20"
+              },
+              {
+                "color":"#cbc9e2",
+                "label":"5 to 10"
+              },
+              {
+                "color":"#f2f0f7",
+                "label":"Less than 5"
+              },
+              {
+                "color":"#ffffff",
+                "label":"0 or No Data"
+              }],
+              "description":"Percentage of the total economy that is comprised of ocean-related industries. Calculated using GDP values. Data from 2015."   
+            },
+            {
+              "id":1,
+              "type":"borders",
+              "containers":[{
+                  "color":"#000000",
+                  "height":3,
+                  "label":"Extent of State Waters"
+                  }]
+            }]
+          },
+          {
+            "id":1,
+            "title":"Wages",
+            "border":{"title":"marine_borders","include":true,"opacity":0.2},
+            "tileLayers":[
+              {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv49vru51cat1fqcqcap1iqo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
+              {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjumyke6p17m01fmzjmncujhq/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+              {"title":"marine_watershed_outline","pane":300,"opacity":0.3}
+            ],
+            "fastFacts":[{
+                "facts":["&#9900 Kitsap County, Washington, where ship and boat building is the largest sector of the Ocean Economy, had the highest average annual Ocean Economy wage in 2016."]
+              }],
+            "jsonLayers":[
+              {
+                "position":{"lat":45.663, "lon":-125.431, "zoom":6},
+                "activeLayer":true,
+                "url":"map_data/marine/ocean_economy_counties.json",
+                "pane":"overBorder",
+                "feature":"polygon",
+                "type":"graduated",
+                "attribute":"WA_PER_CAP",
+                "values":[40000,30000,25000,0],
+                "fillColors":["#cc4c02","#fe9929","#fed98e","#ffffd4","#ffffff"],
+                "colors":["#ffffff"],
+                "weight": 1,
+                "fillOpacity":[0.8,0.8,0.8,0.8,0.5],
+                "opacity":1,
+                "tooltipVars":["NAME","STATE","WA_PER_CAP"],
+                "tooltipText":["<div style='width:360px'><p3 style='display:inline; font-weight:bold; font-size:26px; white-space:normal; margin-left:5px;'>"," County, ","</p3><p3 style='margin:0px 0px 5px 5px; display:block; font-size:20px; white-space:normal; font-weight:normal;'>Average Wage in Ocean Industries: $","</p3>"]    
+            }],
+            "legend":[{
+                "id":0,
+                "type":"polygon",
+                "chartID":"econChart",
+                "title":"Average Annual 2016 Wages ($1000s)",
+                "titleMargin":45,
+                "containers":[{
+                  "color":"#cc4c02",
+                  "label":"40+"
+                },
+                {
+                  "color":"#fe9929",
+                  "label":"30 to 40"
+                },
+                {
+                  "color":"#fed98e",
+                  "label":"25 to 30"
+                },
+                {
+                  "color":"#ffffd4",
+                  "label":"Less than 25"
+                },
+                {
+                  "color":"#ffffff",
+                  "label":"0 or No Data"
+                }],
+                "description":"Average annual per capita wages in the Ocean Economy in 2016."   
+              },
+              {
+              "id":1,
+              "type":"borders",
+              "containers":[{
+                  "color":"#000000",
+                  "height":3,
+                  "label":"Extent of State Waters"
+                  }]
+          }]
+      },
+      {
+        "id":2,
+        "title":"Recreation",
+        "border":{"title":"marine_borders","include":true,"opacity":0.2},
+        "tileLayers":[
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv49vru51cat1fqcqcap1iqo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjumyke6p17m01fmzjmncujhq/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"marine_watershed_outline","pane":300,"opacity":0.3}
+        ],
+        "fastFacts":[{
+            "facts":["&#9900 The tourism and recreation sector includes hotels, restaurants, recreation and sport fishing businesses, sporting goods stores, and parks.","&#9900 Data is sometimes suppressed to protect the confidentiality of one or more businesses."]
+          }],
+        "jsonLayers":[
+          {
+            "position":{"lat":45.663, "lon":-125.431, "zoom":6},
+            "activeLayer":true,
+            "url":"map_data/marine/ocean_economy_counties.json",
+            "pane":"overBorder",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"PER_REC",
+            "values":[75,60,45,0],
+            "fillColors":["#238b45","#74c476","#bae4b3","#edf8e9","#ffffff"],
+            "colors":["#ffffff"],
+            "weight": 1,
+            "fillOpacity":[0.8,0.8,0.8,0.8,0.5],
+            "opacity":1,
+            "tooltipVars":["NAME","STATE","RED_GDP_16","REC_EMP_16","REC_SEMP_1"],
+            "tooltipText":["<div style='width:350px'><p3 style='display:inline; font-weight:bold; font-size:22px; white-space:normal; margin-left:5px;'>"," County, ","</p3><p3 style='margin:0px 0px 5px 5px; display:block; font-size:18px; white-space:normal; font-weight:normal;'>Recreation GDP: $","<br/>Employed Recreation Workers: ","<br/>Self-Employed Recreation Workers: ","<canvas id='econChart' style='margin-left:-5px; margin-bottom:10px; display:block;'></canvas><p3 style='font-weight:bold; font-size:18px; white-space:normal; display:block; line-height:20px; margin-bottom:4px;'>Recreation and Tourism GDP as a percentage of Ocean Economy GDP.</p3></div>"]    
+        }],
+        "chart":[{
+            "id":0,
+            "chartLoc":"tooltip",
+            "chartType":"doughnut",
+            "labels":["Recreation","Other Ocean Economy"],
+            "data":["PER_REC"],
+            "pattern":{"data":1,"color":"#238b45","type":"diagonal","patternColor":"rgba(255, 255, 255,0)"},
+            "colors":["#238b45","rgba(255, 255, 255,0)"],
+            "options": {
+                "responsive": true,
+                "legend": {
+                    "position": "left",
+                    "labels": {
+                        "fontColor":"#000000",
+                        "fontFamily":"GoudyOld",
+                        "fontSize":14
+                    }
+                },
+                "plugins":{
+                    "labels":{
+                        "fontColor":"#000000",    
+                        "fontFamily":"GoudyOld",
+                        "fontSize":14,
+                        "overlap":false
+                    }
+                },   
+                "tooltips":{
+                    "enabled":false
+                }
+              }
+            }],
+          "legend":[{
+              "id":0,
+              "type":"polygon",
+              "chartID":"econChart",
+              "title":"% Recreation and Tourism",
+              "titleMargin":45,
+              "containers":[{
+                "color":"#238b45",
+                "label":"75+"
+              },
+              {
+                "color":"#74c476",
+                "label":"60 to 75"
+              },
+              {
+                "color":"#bae4b3",
+                "label":"45 to 60"
+              },
+              {
+                "color":"#edf8e9",
+                "label":"Less than 45"
+              },
+              {
+                "color":"#ffffff",
+                "label":"0 or Suppressed Data"
+              }],
+              "description":"Percentage of the Ocean Economy that is comprised of recreation and tourism industries. Calculated using GDP values. Data from 2016."   
+            },
+            {
+              "id":1,
+              "type":"borders",
+              "containers":[{
+                  "color":"#000000",
+                  "height":3,
+                  "label":"Extent of State Waters"
+                  }]
+            }]
+          },
+          {
+            "id":3,
+            "title":"Living Resources",
+            "border":{"title":"marine_borders","include":true,"opacity":0.2},
+            "tileLayers":[
+              {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv49vru51cat1fqcqcap1iqo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
+              {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjumyke6p17m01fmzjmncujhq/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+              {"title":"marine_watershed_outline","pane":300,"opacity":0.3}
+            ],
+            "fastFacts":[{
+              "facts":["&#9900 The living resource sector includes commercial marine fishing, aquaculture, seafood processing, and seafood markets. It does not include recreational fishing.","&#9900 Data is sometimes suppressed to protect the confidentiality of one or more businesses."]
+            }],
+            "jsonLayers":[
+              {
+                "position":{"lat":45.663, "lon":-125.431, "zoom":6},
+                "activeLayer":true,
+                "url":"map_data/marine/ocean_economy_counties.json",
+                "pane":"overBorder",
+                "feature":"polygon",
+                "type":"graduated",
+                "attribute":"PER_LR",
+                "values":[25,15,5,0],
+                "fillColors":["#d7301f","#fc8d59","#fdcc8a","#fef0d9","#ffffff"],
+                "colors":["#ffffff"],
+                "weight": 1,
+                "fillOpacity":[0.8,0.8,0.8,0.8,0.5],
+                "opacity":1,
+                "tooltipVars":["NAME","STATE","LR_GDP_16","LR_EMP_16","LR_SEMP_16"],
+                "tooltipText":["<div style='width:350px'><p3 style='display:inline; font-weight:bold; font-size:22px; white-space:normal; margin-left:5px;'>"," County, ","</p3><p3 style='margin:0px 0px 5px 5px; display:block; font-size:18px; white-space:normal; font-weight:normal;'>Living Resources GDP: $","<br/>Employed Living Resource Workers: ","<br/>Self-Employed Living Resource Workers: ","</p3><canvas id='econChart' style='margin-left:-5px; margin-bottom:10px; display:block;'></canvas><p3 style='font-weight:bold; font-size:18px; white-space:normal; display:block; line-height:20px; margin-bottom:4px;'>Living Resources (Fishing and seafood proccessing) GDP as a percentage of Ocean Economy GDP. This value does not include self-employed workers and their recipts.</p3></div>"]    
+            }],
+            "chart":[{
+                "id":0,
+                "chartLoc":"tooltip",
+                "chartType":"doughnut",
+                "labels":["Living Resources","Other Ocean Economy"],
+                "data":["PER_LR"],
+                "pattern":{"data":1,"color":"#fc8d59","type":"diagonal","patternColor":"rgba(255, 255, 255,0)"},
+                "colors":["#fc8d59","rgba(255, 255, 255,0)"],
+                "options": {
+                    "responsive": true,
+                    "legend": {
+                        "position": "left",
+                        "labels": {
+                            "fontColor":"#000000",
+                            "fontFamily":"GoudyOld",
+                            "fontSize":14
+                        }
+                    },
+                    "plugins":{
+                        "labels":{
+                            "fontColor":"#000000",    
+                            "fontFamily":"GoudyOld",
+                            "fontSize":14,
+                            "overlap":false
+                        }
+                    },   
+                    "tooltips":{
+                        "enabled":false
+                    }
+                  }
+                }],
+              "legend":[{
+                  "id":0,
+                  "type":"polygon",
+                  "chartID":"econChart",
+                  "title":"% Living Resources",
+                  "titleMargin":45,
+                  "containers":[{
+                    "color":"#d7301f",
+                    "label":"25+"
+                  },
+                  {
+                    "color":"#fc8d59",
+                    "label":"15 to 25"
+                  },
+                  {
+                    "color":"#fdcc8a",
+                    "label":"5 to 15"
+                  },
+                  {
+                    "color":"#fef0d9",
+                    "label":"Less than 5"
+                  },
+                  {
+                    "color":"#ffffff",
+                    "label":"0 or Suppressed Data"
+                  }],
+                  "description":"Percentage of the Ocean Economy that is comprised of living resource industries. Calculated using GDP values. Data from 2016."   
+                },
+                {
+                  "id":1,
+                  "type":"borders",
+                  "containers":[{
+                      "color":"#000000",
+                      "height":3,
+                      "label":"Extent of State Waters"
+                      }]
+              }]
+            },
+            {
+              "id":4,
+              "title":"Construction",
+              "border":{"title":"marine_borders","include":true,"opacity":0.2},
+              "tileLayers":[
+                {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv49vru51cat1fqcqcap1iqo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
+                {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjumyke6p17m01fmzjmncujhq/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+                {"title":"marine_watershed_outline","pane":300,"opacity":0.3}
+              ],
+              "fastFacts":[{
+                "facts":["&#9900 The marine construction sector includes construction involving navigation channels, beach nourishment, and dock building.","&#9900 Data is sometimes suppressed to protect the confidentiality of one or more businesses."]
+              }],
+              "jsonLayers":[
+                {
+                  "position":{"lat":45.663, "lon":-125.431, "zoom":6},
+                  "activeLayer":true,
+                  "url":"map_data/marine/ocean_economy_counties.json",
+                  "pane":"overBorder",
+                  "feature":"polygon",
+                  "type":"graduated",
+                  "attribute":"PER_MC",
+                  "values":[5,3,0],
+                  "fillColors":["#525252","#969696","#d9d9d9","#ffffff"],
+                  "colors":["#ffffff"],
+                  "weight": 1,
+                  "fillOpacity":[0.8,0.8,0.8,0.8,0.5],
+                  "opacity":1,
+                  "tooltipVars":["NAME","STATE","MC_GDP_16","MC_EMP_16","MC_SEMP_16"],
+                  "tooltipText":["<div style='width:350px'><p3 style='display:inline; font-weight:bold; font-size:22px; white-space:normal; margin-left:5px;'>"," County, ","</p3><p3 style='margin:0px 0px 5px 5px; display:block; font-size:18px; white-space:normal; font-weight:normal;'>Marine Cons. GDP: $","<br/>Employed Marine Cons. Workers: ","<br/>Self-Employed Marine Cons. Workers: ","</p3><canvas id='econChart' style='margin-left:-5px; margin-bottom:10px; display:block;'></canvas><p3 style='font-weight:bold; font-size:18px; white-space:normal; display:block; line-height:20px; margin-bottom:4px;'>Marine Construction GDP as a percentage of Ocean Economy GDP.</p3></div>"]    
+              }],
+              "chart":[{
+                  "id":0,
+                  "chartLoc":"tooltip",
+                  "chartType":"doughnut",
+                  "labels":["Marine Construction","Other Ocean Economy"],
+                  "data":["PER_MC"],
+                  "pattern":{"data":1,"color":"#b3b3b3","type":"diagonal","patternColor":"rgba(255, 255, 255,0)"},
+                  "colors":["#b3b3b3","rgba(255, 255, 255,0)"],
+                  "options": {
+                      "responsive": true,
+                      "legend": {
+                          "position": "left",
+                          "labels": {
+                              "fontColor":"#000000",
+                              "fontFamily":"GoudyOld",
+                              "fontSize":14
+                          }
+                      },
+                      "plugins":{
+                          "labels":{
+                              "fontColor":"#000000",    
+                              "fontFamily":"GoudyOld",
+                              "fontSize":14,
+                              "overlap":false
+                          }
+                      },   
+                      "tooltips":{
+                          "enabled":false
+                      }
+                    }
+                  }],
+                "legend":[{
+                    "id":0,
+                    "type":"polygon",
+                    "chartID":"econChart",
+                    "title":"% Marine Construction",
+                    "titleMargin":45,
+                    "containers":[{
+                      "color":"#525252",
+                      "label":"5+"
+                    },
+                    {
+                      "color":"#969696",
+                      "label":"3 to 5"
+                    },
+                    {
+                      "color":"#d9d9d9",
+                      "label":"Less than 3"
+                    },
+                    {
+                      "color":"#ffffff",
+                      "label":"0 or Suppressed Data"
+                    }],
+                    "description":"Percentage of the Ocean Economy that is comprised of marine construction industries. Calculated using GDP values. Data from 2016."   
+                  },
+                  {
+                    "id":1,
+                    "type":"borders",
+                    "containers":[{
+                        "color":"#000000",
+                        "height":3,
+                        "label":"Extent of State Waters"
+                        }]
+                  }]
+                },
+                {
+                  "id":5,
+                  "title":"Transportation",
+                  "border":{"title":"marine_borders","include":true,"opacity":0.2},
+                  "tileLayers":[
+                    {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv49vru51cat1fqcqcap1iqo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
+                    {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjumyke6p17m01fmzjmncujhq/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+                    {"title":"marine_watershed_outline","pane":300,"opacity":0.3}
+                  ],
+                  "fastFacts":[{
+                    "facts":["&#9900 The marine transportation sector includes cargo and transportation services, and port operations. It does not include the value of cargo itself.","&#9900 Data is sometimes suppressed to protect the confidentiality of one or more businesses."]
+                  }],
+                  "jsonLayers":[
+                    {
+                      "position":{"lat":45.663, "lon":-125.431, "zoom":6},
+                      "activeLayer":true,
+                      "url":"map_data/marine/ocean_economy_counties.json",
+                      "pane":"overBorder",
+                      "feature":"polygon",
+                      "type":"graduated",
+                      "attribute":"PER_TRA",
+                      "values":[20,3,0],
+                      "fillColors":["#3182bd","#9ecae1","#deebf7","#ffffff"],
+                      "colors":["#ffffff"],
+                      "weight": 1,
+                      "fillOpacity":[0.8,0.8,0.8,0.8,0.5],
+                      "opacity":1,
+                      "tooltipVars":["NAME","STATE","TRA_GDP_16","TRA_EMP_16","TRA_SEMP_1"],
+                      "tooltipText":["<div style='width:350px'><p3 style='display:inline; font-weight:bold; font-size:22px; white-space:normal; margin-left:5px;'>"," County, ","</p3><p3 style='margin:0px 0px 5px 5px; display:block; font-size:18px; white-space:normal; font-weight:normal;'>Marine Trans. GDP: $","<br/>Employed Marine Trans. Workers: ","<br/>Self-Employed Marine Trans. Workers: ","</p3><canvas id='econChart' style='margin-left:-5px; margin-bottom:10px; display:block;'></canvas><p3 style='font-weight:bold; font-size:18px; white-space:normal; display:block; line-height:20px; margin-bottom:4px;'>Marine Transportation GDP as a percentage of Ocean Economy GDP.</p3></div>"]    
+                  }],
+                  "chart":[{
+                      "id":0,
+                      "chartLoc":"tooltip",
+                      "chartType":"doughnut",
+                      "labels":["Marine Transportation","Other Ocean Economy"],
+                      "data":["PER_TRA"],
+                      "pattern":{"data":1,"color":"#9ecae1","type":"diagonal","patternColor":"rgba(255, 255, 255,0)"},
+                      "colors":["#9ecae1","rgba(255, 255, 255,0)"],
+                      "options": {
+                          "responsive": true,
+                          "legend": {
+                              "position": "left",
+                              "labels": {
+                                  "fontColor":"#000000",
+                                  "fontFamily":"GoudyOld",
+                                  "fontSize":14
+                              }
+                          },
+                          "plugins":{
+                              "labels":{
+                                  "fontColor":"#000000",    
+                                  "fontFamily":"GoudyOld",
+                                  "fontSize":14,
+                                  "overlap":false
+                              }
+                          },   
+                          "tooltips":{
+                              "enabled":false
+                          }
+                        }
+                      }],
+                    "legend":[{
+                        "id":0,
+                        "type":"polygon",
+                        "chartID":"econChart",
+                        "title":"% Marine Transportation",
+                        "titleMargin":45,
+                        "containers":[{
+                          "color":"#3182bd",
+                          "label":"20+"
+                        },
+                        {
+                          "color":"#9ecae1",
+                          "label":"3 to 20"
+                        },
+                        {
+                          "color":"#deebf7",
+                          "label":"Less than 3"
+                        },
+                        {
+                          "color":"#ffffff",
+                          "label":"0 or Suppressed Data"
+                        }],
+                        "description":"Percentage of the Ocean Economy that is comprised of marine transportation industries. Calculated using GDP values. Data from 2016."   
+                      },
+                      {
+                        "id":1,
+                        "type":"borders",
+                        "containers":[{
+                            "color":"#000000",
+                            "height":3,
+                            "label":"Extent of State Waters"
+                            }]
+                    }]
+                  },
+                {
+                  "id":6,
+                  "title":"Shipbuilding",
+                  "border":{"title":"marine_borders","include":true,"opacity":0.2},
+                  "tileLayers":[
+                    {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv49vru51cat1fqcqcap1iqo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
+                    {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjumyke6p17m01fmzjmncujhq/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+                    {"title":"marine_watershed_outline","pane":300,"opacity":0.3}
+                  ],
+                  "fastFacts":[{
+                    "facts":["&#9900 The ship and boat building sector includes the construction of military vessels, cargo and passenger ships, recreational boats, and floating platforms. It also includes ship and boat repairs.","&#9900 Data is sometimes suppressed to protect the confidentiality of one or more businesses."]
+                  }],
+                  "jsonLayers":[
+                    {
+                      "position":{"lat":45.663, "lon":-125.431, "zoom":6},
+                      "activeLayer":true,
+                      "url":"map_data/marine/ocean_economy_counties.json",
+                      "pane":"overBorder",
+                      "feature":"polygon",
+                      "type":"graduated",
+                      "attribute":"PER_SB",
+                      "values":[25,5,0],
+                      "fillColors":["#604020","#c68c53","#dfbf9f","#ffffff"],
+                      "colors":["#ffffff"],
+                      "weight": 1,
+                      "fillOpacity":[0.8,0.8,0.8,0.8,0.5],
+                      "opacity":1,
+                      "tooltipVars":["NAME","STATE","SB_GDP_16","SB_EMP_16","SB_SEMP_16"],
+                      "tooltipText":["<div style='width:350px'><p3 style='display:inline; font-weight:bold; font-size:22px; white-space:normal; margin-left:5px;'>"," County, ","</p3><p3 style='margin:0px 0px 5px 5px; display:block; font-size:18px; white-space:normal; font-weight:normal;'>Shipbuilding GDP: $","<br/>Employed Shipbuilding Workers: ","<br/>Self-Employed Shipbuilding Workers: ","</p3><canvas id='econChart' style='margin-left:-5px; margin-bottom:10px; display:block;'></canvas><p3 style='font-weight:bold; font-size:18px; white-space:normal; display:block; line-height:20px; margin-bottom:4px;'>Ship and boat building GDP as a percentage of Ocean Economy GDP.</p3></div>"]    
+                  }],
+                  "chart":[{
+                      "id":0,
+                      "chartLoc":"tooltip",
+                      "chartType":"doughnut",
+                      "labels":["Ship and Boat Building","Other Ocean Economy"],
+                      "data":["PER_SB"],
+                      "pattern":{"data":1,"color":"#c68c53","type":"diagonal","patternColor":"rgba(255, 255, 255,0)"},
+                      "colors":["#c68c53","rgba(255, 255, 255,0)"],
+                      "options": {
+                          "responsive": true,
+                          "legend": {
+                              "position": "left",
+                              "labels": {
+                                  "fontColor":"#000000",
+                                  "fontFamily":"GoudyOld",
+                                  "fontSize":14
+                              }
+                          },
+                          "plugins":{
+                              "labels":{
+                                  "fontColor":"#000000",    
+                                  "fontFamily":"GoudyOld",
+                                  "fontSize":14,
+                                  "overlap":false
+                              }
+                          },   
+                          "tooltips":{
+                              "enabled":false
+                          }
+                        }
+                      }],
+                    "legend":[{
+                        "id":0,
+                        "type":"polygon",
+                        "chartID":"econChart",
+                        "title":"% Ship and Boat Building",
+                        "titleMargin":45,
+                        "containers":[{
+                          "color":"#604020",
+                          "label":"25+"
+                        },
+                        {
+                          "color":"#c68c53",
+                          "label":"5 to 25"
+                        },
+                        {
+                          "color":"#dfbf9f",
+                          "label":"Less than 5"
+                        },
+                        {
+                          "color":"#ffffff",
+                          "label":"0 or Suppressed Data"
+                        }],
+                        "description":"Percentage of the Ocean Economy that is comprised of ship and boat building industries. Calculated using GDP values. Data from 2016."   
+                      },
+                      {
+                        "id":1,
+                        "type":"borders",
+                        "containers":[{
+                            "color":"#000000",
+                            "height":3,
+                            "label":"Extent of State Waters"
+                            }]
+                      }]
+                    },
+                  {
+                    "id":7,
+                    "title":"Offshore Mining",
+                    "border":{"title":"marine_borders","include":true,"opacity":0.2},
+                    "tileLayers":[
+                      {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv49vru51cat1fqcqcap1iqo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
+                      {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjumyke6p17m01fmzjmncujhq/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+                      {"title":"marine_watershed_outline","pane":300,"opacity":0.3}
+                    ],
+                    "fastFacts":[{
+                      "facts":["&#9900 The offshore mining sector includes oil and gas extraction, as well as offshore sand and gravel mining. Due to bans on oil and gas drilling in both Oregon and Washington, in the PNW offshore mining is almost universally comprised of sand and gravel extraction.","&#9900 Data is sometimes suppressed to protect the confidentiality of one or more businesses."]
+                    }],
+                    "jsonLayers":[
+                      {
+                        "position":{"lat":45.663, "lon":-125.431, "zoom":6},
+                        "activeLayer":true,
+                        "url":"map_data/marine/ocean_economy_counties.json",
+                        "pane":"overBorder",
+                        "feature":"polygon",
+                        "type":"graduated",
+                        "attribute":"PER_OM",
+                        "values":[5,0],
+                        "fillColors":["#99994d","#d4d4aa","#ffffff"],
+                        "colors":["#ffffff"],
+                        "weight": 1,
+                        "fillOpacity":[0.8,0.8,0.8,0.8,0.5],
+                        "opacity":1,
+                        "tooltipVars":["NAME","STATE","OM_GDP_16","OM_EMP_16","OM_SEMP_16"],
+                        "tooltipText":["<div style='width:350px'><p3 style='display:inline; font-weight:bold; font-size:22px; white-space:normal; margin-left:5px;'>"," County, ","</p3><p3 style='margin:0px 0px 5px 5px; display:block; font-size:18px; white-space:normal; font-weight:normal;'>Offshore Mining GDP: $","<br/>Employed Offshore Mining Workers: ","<br/>Self-Employed Offshore Mining Workers: ","</p3><canvas id='econChart' style='margin-left:-5px; margin-bottom:10px; display:block;'></canvas><p3 style='font-weight:bold; font-size:18px; white-space:normal; display:block; line-height:20px; margin-bottom:4px;'>Offshore Mining GDP as a percentage of Ocean Economy GDP.</p3></div>"]    
+                    }],
+                    "chart":[{
+                        "id":0,
+                        "chartLoc":"tooltip",
+                        "chartType":"doughnut",
+                        "labels":["Offshore Mining","Other Ocean Economy"],
+                        "data":["PER_OM"],
+                        "pattern":{"data":1,"color":"#d4d4aa","type":"diagonal","patternColor":"rgba(255, 255, 255,0)"},
+                        "colors":["#d4d4aa","rgba(255, 255, 255,0)"],
+                        "options": {
+                            "responsive": true,
+                            "legend": {
+                                "position": "left",
+                                "labels": {
+                                    "fontColor":"#000000",
+                                    "fontFamily":"GoudyOld",
+                                    "fontSize":14
+                                }
+                            },
+                            "plugins":{
+                                "labels":{
+                                    "fontColor":"#000000",    
+                                    "fontFamily":"GoudyOld",
+                                    "fontSize":14,
+                                    "overlap":false
+                                }
+                            },   
+                            "tooltips":{
+                                "enabled":false
+                            }
+                          }
+                        }],
+                      "legend":[{
+                          "id":0,
+                          "type":"polygon",
+                          "chartID":"econChart",
+                          "title":"% Offshore Mining of Ocean Economy",
+                          "titleMargin":45,
+                          "containers":[{
+                            "color":"#99994d",
+                            "label":"5+"
+                          },
+                          {
+                            "color":"#d4d4aa",
+                            "label":"Less than 5"
+                          },
+                          {
+                            "color":"#ffffff",
+                            "label":"0 or Suppressed Data"
+                          }],
+                          "description":"Percentage of the Ocean Economy that is comprised of offshore mining industries. Calculated using GDP values. Data from 2016."   
+                        },
+                        {
+                          "id":1,
+                          "type":"borders",
+                          "containers":[{
+                              "color":"#000000",
+                              "height":3,
+                              "label":"Extent of State Waters"
+                              }]
+                        }]
+                      }],
+      "sources":{
+        "geographyNote":"The EEZ Line represents the outer boundary of the United States' Exclusive Economic Zone. The dashed line off the coast represents the extent of the state boundary. Both datasets were acquired from the ",
+        "geographyNoteLinkTitle":"Washington Department of Natural Resources.",
+        "geographyNoteLink":"http://dnr-msp-wa.opendata.arcgis.com/",
+        "geographic":[{
+          "title":"Marine Economy Statistics: ",
+          "linkText":"NOAA: National Ocean Watch",
+          "linkUrl":"https://coast.noaa.gov/quickreport/#/ENOW/ENOW//2013,2012,2011,2010,2009,2008,2007,2006,2005",
+          "description":"Data from 2015 and 2016."
+        }],
+      "basemap":[{
+        "title":"Created with Mapbox Studio"
+      }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://github.com/sarahbellum/Canvas-Flowmap-Layer","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","Canvas Flowmap Layer","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

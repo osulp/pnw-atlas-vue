@@ -1,0 +1,176 @@
+{
+    "title": "Ocean Health",
+    "URL":"health_icon",
+    "chapter":"marine",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "basemapType":"mapbox",
+    "center":[45.663,-125.431],
+    "basemap":[
+        {"title":"marineBackground","opacity":1},
+        {"title":"geoserver","layer":"marine_watershed_outline","opacity":0.3},
+        {"title":"marineLabel","opacity":1}
+    ],
+    "maps":[
+      {
+        "id":0,
+        "title":"Hypoxia",
+        "border":{"title":"marine_borders","include":true,"opacity":0.2},
+        "tileSlider":true,
+        "tileLayers":[
+          {"title":"do_2008","pane":250,"opacity":0.9,"value":[2008, 2008]},
+          {"title":"do_2009","pane":250,"opacity":0.9,"value":[2009, 2009]},
+          {"title":"do_2010","pane":250,"opacity":0.9,"value":[2010, 2010]},
+          {"title":"do_2011","pane":250,"opacity":0.9,"value":[2011, 2011]},
+          {"title":"do_2012","pane":250,"opacity":0.9,"value":[2012, 2012]},
+          {"title":"do_2013","pane":250,"opacity":0.9,"value":[2013, 2013]},
+          {"title":"do_2014","pane":250,"opacity":0.9,"value":[2014, 2014]},
+          {"title":"do_2015","pane":250,"opacity":0.9,"value":[2015, 2015]},
+          {"title":"do_2016","pane":250,"opacity":0.9,"value":[2016, 2016]},
+          {"title":"do_2017","pane":250,"opacity":0.9,"value":[2017, 2017]},
+          {"title":"do_2018","pane":250,"opacity":0.9,"value":[2018, 2018]}
+        ],
+        "fastFacts":[{
+          "fastTitle":"What is Hypoxia?",  
+          "facts":["Hypoxic zones, otherwise known as Dead Zones, are areas of the ocean with little to no oxygen. More specificially, they are areas where dissolved oxygen levels are lower than 1.4 ml/L, which is considered to be lethal for many organisms. These zones tend to occur in lower parts of the water column, and are highly seasonal. Off the Pacific Northwest coast, hypoxia is more likely to occur in the summer months, when upwelling brings high-nutrient, low-oxygen water from the depths to the surface. The nutrient influx causes an explosion of phytoplankton, and when these organisms decompose, they further reduce the oxygen supply. Hypoxia is becoming more frequent due to climate change."]
+          }],
+          "jsonLayers":[
+            {
+              "interactive":false,
+              "position":{"lat":45.663, "lon":-125.431, "zoom":6},
+              "url":"map_data/marine/hypoxia_polygons.json",
+              "pane":"overBorder",
+              "feature":"polygon",
+              "type":"pattern",
+              "colors":["#ffffff"],
+              "fillColors":["#d9d9d9"],
+              "weight":1,
+              "opacity":1,
+              "hoverFill":0.8,
+              "pattern":{
+                "weight": 1.5,
+                "spaceWeight": 3,
+                "height": 4,
+                "angle":45,
+                "color":"#d9d9d9",
+                "spaceColor":"#d9d9d9"
+              },
+              "filterVariable":"date"          
+          }],
+        "slider":{
+            "title":"hypoxia",
+            "min":2008,
+            "max":2018,
+            "step":1,
+            "default":2018             
+        },
+        "legend":[{
+            "id":0,
+            "subtitle":"June of Selected Year",
+            "type":"gradient",
+            "title":"Dissolved Oxygen (mL/L)",
+            "gradient":"linear-gradient(to right, #ac3939, #d79075, #fae5b8, #fdf6e7, #ffffff)",
+            "gradientLabels":["0.4","4.4"],
+            "gradientMargin":220
+        },
+        {
+            "id":1,
+            "type":"polygon",
+            "containers":[{
+              "color":"repeating-linear-gradient(45deg, rgba(255,255,255,0), rgba(255,255,255,0) 10%, #ffffff 15%, #ffffff 15%)",                
+              "label":"Approx. Hypoxic Zone"
+            }],
+            "description":"Hypoxia observations shows the minimum dissolved oxygen value at various depths. Only observations within a certain depth of the bottom are included."
+        },
+        {
+            "id":2,
+            "type":"borders",
+            "containers":[{
+                "color":"#000000",
+                "height":3,
+                "label":"Extent of State Waters"
+                }]
+        }]
+        },
+          {
+            "id":1,
+            "title":"Acidification",
+            "border":{"title":"marine_borders","include":true,"opacity":0.2},
+            "fastFacts":[{
+                "fastTitle":"What is Ocean Acidification?",
+                "facts":["Ocean Acidification refers to reduction of ocean pH, carbonate ion concentrations, and biologically important calcium carbonate due to increased absorpotion of Carbon Dioxide from the atmosphere. Over the past 200 years, the average pH of the surface ocean has fallen by 0.1 units, representing a 30% increase in acidity. Species that rely on Calcium Carbonate to construct shells, such as oysters, are subject to mass die-offs when areas acidify. Rates of ocean acidification vary seasonally."]
+              },
+              {
+                "fastTitle":"What is Aragonite Saturation State?",
+                "facts":["Aragonite saturation State is a measure of the concentration of calcium and carbonate ions in water, and is an indicator of Ocean Acidification. A higher Aragonite Saturation State means there is more Calcium Carbonate available for shellfish larvae to construct their shells. Low Aragonite Saturation means shellfish larvae will not survive. Aragonite Saturation States of less than 1.7 are correlated with shellfish die-offs."]
+              }],
+              "tileLayers":[
+                {"title":"aragonite_raster","pane":250,"opacity":0.9}
+              ],
+              "jsonLayers":[
+                {
+                  "interactive":false,
+                  "position":{"lat":45.663, "lon":-125.431, "zoom":6},
+                  "url":"map_data/marine/hypoxia_contours.json",
+                  "pane":"overBorder",
+                  "feature":"line",
+                  "type":"single",
+                  "colors":"#000000",
+                  "weight": 1,
+                  "opacity":0,
+                  "dashArray":4              
+                }],
+            "legend":[{
+                "id":0,
+                "type":"gradient",
+                "title":"Aragonite Saturation State",
+                "gradient":"linear-gradient(to right, #ca6868, #dea0a0, #f2d9d9, #ffffff, #d9e6f2, #a0c0de, #689bca)",
+                "gradientLabels":["Lower","Higher"],
+                "gradientMargin":170,
+                "description":"Modeled Aragonite Saturation State based off 2013 observations."
+              },
+              {
+                "id":1,
+                "type":"borders",
+                "containers":[{
+                    "color":"#000000",
+                    "height":3,
+                    "label":"Extent of State Waters"
+                    }]
+            }]
+      }],
+      "sources":{
+        "geographyNote":"The EEZ Line represents the outer boundary of the United States' Exclusive Economic Zone. The dashed line off the coast represents the extent of the state boundary. Both datasets were acquired from the ",
+        "geographyNoteLinkTitle":"Washington Department of Natural Resources.",
+        "geographyNoteLink":"http://dnr-msp-wa.opendata.arcgis.com/",
+        "geographic":[{
+          "title":"Dissolved Oxygen Observations: ",
+          "linkText":"NOAA",
+          "linkUrl":"https://www.webapps.nwfsc.noaa.gov/apex/parrdata/inventory/tables/table/ocean_ctd_chlorophyll_nutrient_data",
+          "description":"Observation data from 2008-2018 were requested from NOAA. Observations were CTD casts at various latitudes along the coast. These data were then interpolated to make a raster and record approximate hypoxic zones."
+        },
+        {
+          "title":"Aragonite Saturation State Model: ",
+          "linkText":"West Coast ResilienSea Bren School",
+          "linkUrl":"https://github.com/resilienseas/resilienseas.github.io",
+          "description":"Model created from 2013 data."
+        }],
+        "text":[{
+          "title":"Hypoxia Description: ",
+          "linkText":"NOAA Northwest Fisheries Science Center",
+          "linkUrl":"https://www.nwfsc.noaa.gov/research/divisions/fe/estuarine/oeip/de-hypoxia.cfm"
+        },
+        {
+          "title":"Ocean Acidification Description: ",
+          "linkText":"NOAA PMEL",
+          "linkUrl":"https://www.pmel.noaa.gov/co2/story/What+is+Ocean+Acidification%3F"
+        }],
+      "basemap":[{
+        "title":"Created with Mapbox Studio"
+      }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://github.com/sarahbellum/Canvas-Flowmap-Layer","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","Canvas Flowmap Layer","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

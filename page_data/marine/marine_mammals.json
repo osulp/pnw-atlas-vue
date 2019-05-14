@@ -1,0 +1,527 @@
+{
+    "title": "Marine Mammals",
+    "URL":"whale_icon",
+    "chapter":"marine",
+    "initial":0,
+    "dropdownText":"Select Map",
+    "basemapType":"mapbox",
+    "dropdownLabel":{"type":"breaks","labels":["Cectatean Density","Seals/Sea Lions"],"breaks":[1,7]},
+    "center":[45.663,-125.431],
+    "maps":[
+      {
+        "id":0,
+        "title":"Orcas",
+        "border":{"title":"marine_borders","include":true,"opacity":0.2},
+        "tileLayers":[
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv49vru51cat1fqcqcap1iqo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjumyke6p17m01fmzjmncujhq/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"marine_watershed_outline","pane":300,"opacity":0.3}
+        ],
+        "fastFacts":[{
+          "facts":["&#9900 Also known as the Killer Whale, the Orca is techinally the world's largest dolphin. They can be seen in Puget Sound in spring, summer, and fall.","&#9900 Most Orcas in the Pacific Northwest are members of the Southern resident killer whale community, the only population of orcas protected under the Endangered Species Act.","&#9900 Southern resident killer whale community members primarily consume fish, while orcas in other parts of the world hunt and consume seals."]
+        }],
+        "jsonLayers":[
+          {
+            "interactive":false,
+            "position":{"lat":47.840, "lon":-123.308, "zoom":7},
+            "activeLayer":true,
+            "url":"map_data/marine/orca_sightings_polygon.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "sliderAttribute":[{"sliderValue":"Jan.","attribute":"january","nullText":"N/A","values":[20,10,5,1]},{"sliderValue":"Feb.","attribute":"february","nullText":"N/A","values":[20,10,5,1]},{"sliderValue":"Mar.","attribute":"march","nullText":"N/A","values":[20,10,5,1]},{"sliderValue":"Apr.","attribute":"april","nullText":"N/A","values":[20,10,5,1]},{"sliderValue":"May","attribute":"may","nullText":"N/A","values":[20,10,5,1]},{"sliderValue":"June","attribute":"june","nullText":"N/A","values":[20,10,5,1]},{"sliderValue":"July","attribute":"july","nullText":"N/A","values":[20,10,5,1]},{"sliderValue":"Aug.","attribute":"august","nullText":"N/A","values":[20,10,5,1]},{"sliderValue":"Sept.","attribute":"september","nullText":"N/A","values":[20,10,5,1]},{"sliderValue":"Oct.","attribute":"october","nullText":"N/A","values":[20,10,5,1]},{"sliderValue":"Nov.","attribute":"november","nullText":"N/A","values":[20,10,5,1]},{"sliderValue":"Dec.","attribute":"december","nullText":"N/A","values":[20,10,5,1]}],"fillColors":["#252525","#636363","#969696","#cccccc","#f7f7f7"],
+            "colors":["#252525","#636363","#969696","#cccccc","#f7f7f7"],
+            "weight": 1,
+            "fillOpacity":0.8,
+            "opacity":0.8
+        }],
+        "slider":{
+            "title":"orca",
+            "type":"string",
+            "values":["Jan.", "Feb.", "Mar.", "Apr.", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."],
+            "min":"Jan.",
+            "max":"Dec.",
+            "step":1,
+            "default":"Jan."             
+        },
+        "legend":[{
+            "id":0,
+            "type":"polygon",
+            "title":"Orca Sightings",
+            "titleMargin":45,
+            "containers":[{
+              "color":"#252525",
+              "label":"20+"
+            },
+            {
+              "color":"#636363",
+              "label":"10 to 20"
+            },
+            {
+              "color":"#969696",
+              "label":"5 to 10"
+            },
+            {
+                "color":"#cccccc",
+                "label":"1 to 5"
+            },
+            {
+                "color":"#f7f7f7",
+                "label":"Less than 1"
+            }],
+            "description":"Public sighting reports of Orca Whales from 2006 to 2016, provided by the Whale Musuem's Whale Hotline.",
+            "bottomIcon":"orca",
+            "bottomIconWidth":300
+        },
+        {
+          "id":1,
+          "type":"borders",
+          "containers":[{
+              "color":"#000000",
+              "height":3,
+              "label":"Extent of State Waters"
+              }]
+        }]
+      },
+      {
+        "id":1,
+        "title":"Humpback Whale",
+        "border":{"title":"marine_borders","include":true,"opacity":0.2},
+        "tileLayers":[
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv49vru51cat1fqcqcap1iqo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjumyke6p17m01fmzjmncujhq/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"marine_watershed_outline","pane":300,"opacity":0.3}
+        ],
+        "fastFacts":[{
+          "facts":["&#9900 Humpback whales can grow up to 50 feet long, and weigh up to 30 metric tons.","&#9900 Humpback whales spend summers in the waters of Alaska and the Bering sea, and winters around Baja California. Their migration routes in the spring and fall bring them off the coasts of Oregon and Washington."]
+        }],
+        "jsonLayers":[
+          {
+            "interactive":false,
+            "position":{"lat":45.663, "lon":-125.431, "zoom":6},
+            "activeLayer":true,
+            "url":"map_data/marine/whales_total.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"HW_DENS",
+            "values":[0.008,0.006,0.004,0.002],
+            "fillColors":["#252525","#636363","#969696","#cccccc","#f7f7f7"],
+            "colors":["#252525","#636363","#969696","#cccccc","#f7f7f7"],
+            "weight": 1,
+            "fillOpacity":0.8,
+            "opacity":0.8
+        }],
+        "legend":[{
+            "id":0,
+            "type":"gradient",
+            "title":"Probability of Humpback Whale Presence",
+            "description":"Modeled density of Humback Whales at any given time between July and December. Overall probability of Humpback Whale presence is low.",
+            "gradient":"linear-gradient(to right, #f7f7f7 20%, #cccccc 20%, #cccccc 40%, #969696 40%, #969696 60%, #636363 60%, #636363 80%, #252525 80%, #252525 100%)",
+            "gradientLabels":["Lower","Higher"],
+            "gradientMargin":170,
+            "bottomIcon":"humpback",
+            "bottomIconWidth":300     
+          },
+          {
+            "id":1,
+            "type":"borders",
+            "containers":[{
+                "color":"#000000",
+                "height":3,
+                "label":"Extent of State Waters"
+                }]
+          }]
+      },
+      {
+        "id":2,
+        "title":"Fin Whale",
+        "border":{"title":"marine_borders","include":true,"opacity":0.2},
+        "tileLayers":[
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjvgurz9n2box1fo6gtz49p9o/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjumyke6p17m01fmzjmncujhq/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"marine_watershed_outline","pane":300,"opacity":0.3}
+        ],
+        "fastFacts":[{
+          "facts":["&#9900 Fin whales can grow up to 80 feet long, and weigh up to 114 metric tons. They are second-largest species on earth, behind the Blue whale, and named for the fin on its back.","&#9900 Fin Whales live year-round in deepwater areas of the open ocean."]
+        }],
+        "jsonLayers":[
+          {
+            "interactive":false,
+            "position":{"lat":45.663, "lon":-125.431, "zoom":6},
+            "activeLayer":true,
+            "url":"map_data/marine/whales_total.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"FW_DENS",
+            "values":[0.002,0.0015,0.001,0.0005],
+            "fillColors":["#252525","#636363","#969696","#cccccc","#f7f7f7"],
+            "colors":["#252525","#636363","#969696","#cccccc","#f7f7f7"],
+            "weight": 1,
+            "fillOpacity":0.8,
+            "opacity":0.8
+        }],
+        "legend":[{
+          "id":0,
+          "type":"gradient",
+          "title":"Probability of Fin Whale Presence",
+          "description":"Modeled density of Fin Whales at any given time between July and December. Overall probability of Fin Whale presence is low.",
+          "gradient":"linear-gradient(to right, #f7f7f7 20%, #cccccc 20%, #cccccc 40%, #969696 40%, #969696 60%, #636363 60%, #636363 80%, #252525 80%, #252525 100%)",
+          "gradientLabels":["Lower","Higher"],
+          "gradientMargin":170,
+            "bottomIcon":"fin",
+            "bottomIconWidth":300
+          },
+          {
+            "id":1,
+            "type":"borders",
+            "containers":[{
+                "color":"#000000",
+                "height":3,
+                "label":"Extent of State Waters"
+                }]
+          }]
+      },
+      {
+        "id":3,
+        "title":"Blue Whale",
+        "border":{"title":"marine_borders","include":true,"opacity":0.2},
+        "tileLayers":[
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv49vru51cat1fqcqcap1iqo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjumyke6p17m01fmzjmncujhq/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"marine_watershed_outline","pane":300,"opacity":0.3}
+        ],
+        "fastFacts":[{
+          "facts":["&#9900 Blue whales can grow up to 98 feet long, and weigh up to 173 metric tons. They are the largest species on earth.","&#9900 Blue Whales breed in waters off Mexico and Central America, then migrate to feeding grounds along the west coast of the US and Canada. They are very rarely seen off the coasts of Oregon and Washington."]
+        }],
+        "jsonLayers":[
+          {
+            "interactive":false,
+            "position":{"lat":45.663, "lon":-125.431, "zoom":6},
+            "activeLayer":true,
+            "url":"map_data/marine/whales_total.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"BW_DENS",
+            "values":[0.008,0.006,0.004,0.002],
+            "fillColors":["#252525","#636363","#969696","#cccccc","#f7f7f7"],
+            "colors":["#252525","#636363","#969696","#cccccc","#f7f7f7"],
+            "weight": 1,
+            "fillOpacity":0.8,
+            "opacity":0.8
+        }],
+        "legend":[{
+          "id":0,
+          "type":"gradient",
+          "title":"Probability of Blue Whale Presence",
+          "description":"Modeled density of Blue Whales at any given time between July and December. Overall probability of Blue Whale presence is low.",
+          "gradient":"linear-gradient(to right, #f7f7f7 20%, #cccccc 20%, #cccccc 40%, #969696 40%, #969696 60%, #636363 60%, #636363 80%, #252525 80%, #252525 100%)",
+          "gradientLabels":["Lower","Higher"],
+          "gradientMargin":170,
+            "bottomIcon":"blue",
+            "bottomIconWidth":300
+        },
+        {
+          "id":1,
+          "type":"borders",
+          "containers":[{
+              "color":"#000000",
+              "height":3,
+              "label":"Extent of State Waters"
+              }]
+        }]
+      },
+      {
+        "id":4,
+        "title":"Sperm Whale",
+        "border":{"title":"marine_borders","include":true,"opacity":0.2},
+        "tileLayers":[
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjvgurz9n2box1fo6gtz49p9o/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjumyke6p17m01fmzjmncujhq/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"marine_watershed_outline","pane":300,"opacity":0.3}
+        ],
+        "fastFacts":[{
+          "facts":["&#9900 Sperm Whales can grow up to 60 feet long, and weigh up to 57 metric tons. They are the largest toothed whale on earth.","&#9900 Sperm Whales dive thousands of feet to hunt to hunt their primary: squid.","&#9900 Observations of Sperm Whales in the Pacific Northwest occur March through November, generally in deep offshore waters."]
+        }],
+        "jsonLayers":[
+          {
+            "interactive":false,
+            "position":{"lat":45.663, "lon":-125.431, "zoom":6},
+            "activeLayer":true,
+            "url":"map_data/marine/whales_total.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"SW_DENS",
+            "values":[0.002,0.0015,0.001,0.0005],
+            "fillColors":["#252525","#636363","#969696","#cccccc","#f7f7f7"],
+            "colors":["#252525","#636363","#969696","#cccccc","#f7f7f7"],
+            "weight": 1,
+            "fillOpacity":0.8,
+            "opacity":0.8
+        }],
+        "legend":[{
+          "id":0,
+          "type":"gradient",
+          "title":"Probability of Sperm Whale Presence",
+          "description":"Modeled density of Sperm Whales at any given time between July and December. Overall probability of Sperm Whale presence is low.",
+          "gradient":"linear-gradient(to right, #f7f7f7 20%, #cccccc 20%, #cccccc 40%, #969696 40%, #969696 60%, #636363 60%, #636363 80%, #252525 80%, #252525 100%)",
+          "gradientLabels":["Lower","Higher"],
+          "gradientMargin":170,
+            "bottomIcon":"sperm",
+            "bottomIconWidth":300
+        },
+        {
+          "id":1,
+          "type":"borders",
+          "containers":[{
+              "color":"#000000",
+              "height":3,
+              "label":"Extent of State Waters"
+              }]
+        }]
+      },
+      {
+        "id":5,
+        "title":"Dall's Porpoise",
+        "border":{"title":"marine_borders","include":true,"opacity":0.2},
+        "tileLayers":[
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv49vru51cat1fqcqcap1iqo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjumyke6p17m01fmzjmncujhq/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"marine_watershed_outline","pane":300,"opacity":0.3}
+        ],
+        "fastFacts":[{
+          "facts":["&#9900 Dall's Porpoise grow up to 7.5 feet long and weight up to 490 pounds. Sometimes, they are mistaken for Orcas.","&#9900 Dall's Porpoise prefer cold, deep waters, as they dive to hunt prey. They are fast swimmers and highly active."]
+        }],
+        "jsonLayers":[
+          {
+            "interactive":false,
+            "position":{"lat":45.663, "lon":-125.431, "zoom":6},
+            "activeLayer":true,
+            "url":"map_data/marine/whales_total.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"DP_DENS",
+            "values":[0.2,0.15,0.1,0.05],
+            "fillColors":["#252525","#636363","#969696","#cccccc","#f7f7f7"],
+            "colors":["#252525","#636363","#969696","#cccccc","#f7f7f7"],
+            "weight": 1,
+            "fillOpacity":0.8,
+            "opacity":0.8
+        }],
+        "legend":[{
+          "id":0,
+          "type":"gradient",
+          "title":"Probability of Dall's Porpoise Presence",
+          "description":"Modeled density of Dall's Porpoise at any given time between July and December. Overall probability of Dall's Porpoise presence is moderate.",
+          "gradient":"linear-gradient(to right, #f7f7f7 20%, #cccccc 20%, #cccccc 40%, #969696 40%, #969696 60%, #636363 60%, #636363 80%, #252525 80%, #252525 100%)",
+          "gradientLabels":["Lower","Higher"],
+          "gradientMargin":170,
+            "bottomIcon":"dall_porpoise",
+            "bottomIconWidth":280
+        },
+        {
+          "id":1,
+          "type":"borders",
+          "containers":[{
+              "color":"#000000",
+              "height":3,
+              "label":"Extent of State Waters"
+              }]
+        }]
+      },
+      {
+        "id":6,
+        "title":"White Sided Dolphin",
+        "border":{"title":"marine_borders","include":true,"opacity":0.2},
+        "tileLayers":[
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv49vru51cat1fqcqcap1iqo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjumyke6p17m01fmzjmncujhq/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"marine_watershed_outline","pane":300,"opacity":0.3}
+        ],
+        "fastFacts":[{
+          "facts":["&#9900 Pacific White-Sided Dolphins grow up to 8 feet long and weight up 440 pounds. They travel in pods of up to 100 individuals.","&#9900 Pacific White-Sided Dolphins can be spotted off the Oregon and Washington coasts in the summertime, while they spend their winters further south."]
+        }],
+        "jsonLayers":[
+          {
+            "interactive":false,
+            "position":{"lat":45.663, "lon":-125.431, "zoom":6},
+            "activeLayer":true,
+            "url":"map_data/marine/whales_total.json",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"PWD_DENS",
+            "values":[0.2,0.15,0.1,0.05],
+            "fillColors":["#252525","#636363","#969696","#cccccc","#f7f7f7"],
+            "colors":["#252525","#636363","#969696","#cccccc","#f7f7f7"],
+            "weight": 1,
+            "fillOpacity":0.8,
+            "opacity":0.8
+        }],
+        "legend":[{
+          "id":0,
+          "type":"gradient",
+          "title":"Probability of White Sided Dolphin Presence",
+          "description":"Modeled density of White Sided Dolphins at any given time between July and December. Overall probability of White Sided Dolphin presence is moderate.",
+          "gradient":"linear-gradient(to right, #f7f7f7 20%, #cccccc 20%, #cccccc 40%, #969696 40%, #969696 60%, #636363 60%, #636363 80%, #252525 80%, #252525 100%)",
+          "gradientLabels":["Lower","Higher"],
+          "gradientMargin":170,
+            "bottomIcon":"white_sided_dolphin",
+            "bottomIconWidth":280
+        },
+        {
+          "id":1,
+          "type":"borders",
+          "containers":[{
+              "color":"#000000",
+              "height":3,
+              "label":"Extent of State Waters"
+              }]
+        }]
+      },
+      {
+        "id":7,
+        "title":"Sea Lion Haulouts",
+        "border":{"title":"marine_borders","include":true,"opacity":0.2},
+        "tileLayers":[
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv49vru51cat1fqcqcap1iqo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjumyke6p17m01fmzjmncujhq/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"marine_watershed_outline","pane":300,"opacity":0.3}
+        ],
+        "fastFacts":[{
+          "facts":["&#9900 Male Stellar Sea Lions can weigh up 2,500 pounds. They live in large groups at haulouts or rookeries.","&#9900 Stellar Sea Lions are one of two species of sea lions in the Pacific Northwest, the other being the California Sea Lion. While California Sea Lions bark to communicate, Stellar Sea Lions roar."]
+        }],
+        "jsonLayers":[
+          {
+            "interactive":false,
+            "position":{"lat":45.663, "lon":-125.431, "zoom":6},
+            "url":"map_data/marine/sea_lion_critical_habitat.json",
+            "feature":"polygon",
+            "type":"pattern",
+            "colors":["#333333"],
+            "fillColors":["#8c8c8c"],
+            "weight":1,
+            "opacity":1,
+            "hoverFill":0.8,
+            "pattern":{
+              "weight": 1.5,
+              "spaceWeight": 3,
+              "height": 4,
+              "angle":45,
+              "color":"#8c8c8c",
+              "spaceColor":"#8c8c8c"
+            }
+        },
+        {
+          "position":{"lat":45.663, "lon":-125.431, "zoom":6},          
+          "url":"map_data/marine/sea_lion_haulouts.json",
+          "pane":"overBorder",
+          "feature":"point",
+          "type":"pointDivCat",
+          "fillColors":["#734d26"],
+          "weight": 1.5,
+          "radius":8,
+          "fillOpacity":1,
+          "opacity":1,
+          "tooltip":"tooltip",
+          "tooltipVars":["field_1"],
+          "divIcon":"border-radius:50%; border:2px solid white; opacity:1; -webkit-box-shadow: 1px 1px 2px black; box-shadow: 1px 1px 2px black; -moz-box-shadow: 1px 1px 2px black;",
+          "tooltipText":["<div style='width:280px; padding:2px;'><p3 style='font-weight:bold; font-size:20px; white-space:normal; line-height:28px;'>","</p3></div>"]
+        }],
+        "legend":[{
+          "id":0,
+          "type":"point",
+          "title":"Stellar Sea Lion Haulouts",
+          "containers":[{
+              "size":11,
+              "label":"Haulout Area",
+              "background":"#734d26",
+              "color":"#ffffff",
+              "border":2,
+              "shadow":true
+              }]
+        },
+        {
+          "id":1,
+          "type":"polygon",
+          "containers":[{
+            "color":"repeating-linear-gradient(45deg, rgba(255,255,255,0), rgba(255,255,255,0) 10%, #8c8c8c 15%, #8c8c8c 15%)",                
+            "label":"Critical Habitat"
+          }],
+          "bottomIcon":"sea_lion",
+          "bottomIconWidth":280
+        },
+        {
+          "id":2,
+          "type":"borders",
+          "containers":[{
+              "color":"#000000",
+              "height":3,
+              "label":"Extent of State Waters"
+              }]
+        }]
+      }],
+      "sources":{
+        "geographyNote":"The EEZ Line represents the outer boundary of the United States' Exclusive Economic Zone. The dashed line off the coast represents the extent of the state boundary. Both datasets were acquired from the ",
+        "geographyNoteLinkTitle":"Washington Department of Natural Resources.",
+        "geographyNoteLink":"http://dnr-msp-wa.opendata.arcgis.com/",
+        "geographic":[{
+          "title":"Orca Sightings: ",
+          "linkText":"The Whale Museum",
+          "linkUrl":"http://hotline.whalemuseum.org/api",
+          "description":"Data from 2006 to 2016, downloaded from the Whale Hotline API."
+        },
+        {
+          "title":"Cectacean Densities: ",
+          "linkText":"NOAA",
+          "linkUrl":"https://inport.nmfs.noaa.gov/inport/item/55923",
+          "description":"Modeled density from 2016."
+        },
+        {
+          "title":"Stellar Sea Lion Haulouts",
+          "linkText":"NOAA National Centers for Environmental Information",
+          "linkUrl":"https://data.nodc.noaa.gov/cgi-bin/iso?id=gov.noaa.nodc%3A0129877",
+          "description":"Data from 2016."
+        },
+        {
+          "title":"Stellar Sea Lion Critical Habitat",
+          "linkText":"National Marine Protected Areas Database",
+          "linkUrl":"https://www.westcoast.fisheries.noaa.gov/maps_data/marine_mammal_maps.html",
+          "description":"Data from 2016. Downloaded from the 'Stellar Sea Lion Critical Habitat Map, GIS Data' link."
+        }],
+        "text":[{
+          "title":"Species Information: ",
+          "linkText":"Oregon Department of Fish and Wildlife",
+          "linkUrl":"https://myodfw.com/wildlife-viewing/species/whales-dolphins-and-porpoises"
+        },
+        {
+          "title":"Fin Whale Information: ",
+          "linkText":"NOAA Fisheries",
+          "linkUrl":"https://www.fisheries.noaa.gov/species/fin-whale"
+        },
+        {
+          "title":"Whale Images: ",
+          "linkText":"Cetaceans of the Channel Islands National Marine Sanctuary",
+          "linkUrl":"https://archive.org/details/cetaceansofchann00leat"
+        },
+        {
+          "title":"Pacific White-Sided Dolphin Image: ",
+          "linkText":"NOAA Fisheries",
+          "linkUrl":"https://www.fisheries.noaa.gov/species/pacific-white-sided-dolphin"
+        },
+        {
+          "title":"Dall's Porpoise Image: ",
+          "linkText":"NOAA Fisheries",
+          "linkUrl":"https://www.fisheries.noaa.gov/species/dalls-porpoise"
+        },
+        {
+          "title":"Stellar Sea Lion Image: ",
+          "linkText":"NOAA Fisheries",
+          "linkUrl":"https://www.fisheries.noaa.gov/species/steller-sea-lion"
+        }],
+      "basemap":[{
+        "title":"Created with Mapbox Studio"
+      }],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://github.com/sarahbellum/Canvas-Flowmap-Layer","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","Canvas Flowmap Layer","D3 Topojson","Leaflet"],
+        "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
+        "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
+    }
+}

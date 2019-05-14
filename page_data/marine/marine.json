@@ -14,6 +14,26 @@
             "backgroundURL":"conservation_background"},
         { 
             "id":1,
+            "text":"Ocean Health",
+            "description":"Estuary types, biodiversity, health",
+            "imageURL":"health_icon",
+            "chapter":"marine",
+            "link":"marine/ocean_health",
+            "mapLink":"ocean_health",
+            "active":false,
+            "backgroundURL":"health_background"},
+        { 
+            "id":2,
+            "text":"Ocean Economy",
+            "description":"Economic sectors, wages, recreation, living resources, shipbuilding",
+            "imageURL":"ocean_economy_icon",
+            "chapter":"marine",
+            "link":"marine/ocean_economy",
+            "mapLink":"ocean_economy",
+            "active":false,
+            "backgroundURL":"ocean_economy_background"},
+        { 
+            "id":3,
             "text":"Fisheries",
             "description":"Ports, commercial landings, essential habitat, fishery locations",
             "imageURL":"fisheries_icon",
@@ -21,6 +41,26 @@
             "link":"marine/fisheries",
             "mapLink":"fisheries",
             "active":false,
-            "backgroundURL":"fisheries_background"}
-        ]
+            "backgroundURL":"fisheries_background"},
+        { 
+            "id":4,
+            "text":"Estuaries",
+            "description":"Estuary types, biodiversity, health",
+            "imageURL":"estuary_icon",
+            "chapter":"marine",
+            "link":"marine/estuaries",
+            "mapLink":"estuaries",
+            "active":false,
+            "backgroundURL":"estuary_background"},
+        { 
+            "id":5,
+            "text":"Marine Mammals",
+            "description":"Estuary types, biodiversity, health",
+            "imageURL":"whale_icon",
+            "chapter":"marine",
+            "link":"marine/marine_mammals",
+            "mapLink":"marine_mammals",
+            "active":false,
+            "backgroundURL":"whale_background"}
+    ]
 }

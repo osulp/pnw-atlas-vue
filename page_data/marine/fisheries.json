@@ -5,18 +5,19 @@
     "initial":0,
     "dropdownText":"Select Map",
     "basemapType":"mapbox",
-    "dropdownLabel":{"type":"breaks","labels":["Fishery Locations"],"breaks":[2]},
+    "dropdownLabel":{"type":"breaks","labels":["Fishery Locations","Aquaculture"],"breaks":[2,8]},
     "center":[45.663,-125.431],
+    "maxZoom":10,
     "maps":[
       {
         "id":0,
         "title":"Ports & Vessels",
-        "border":{"title":"marine_counties","include":true,"opacity":1},
+        "border":{"title":"marine_borders","include":true,"opacity":0.2},
         "tileLayers":[
-          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue3sv5f0jji1fs1xv1hegb9/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
-          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjucpgefr023c1fnr10vbi0rt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
-          {"title":"fishing_routes","pane":450,"opacity":0.9},
-          {"title":"marine_outline","pane":300,"opacity":0.3}
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv49vru51cat1fqcqcap1iqo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjumyke6p17m01fmzjmncujhq/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"fishing_routes","pane":400,"opacity":0.9},
+          {"title":"marine_watershed_outline","pane":300,"opacity":0.3}
         ],
         "fastFacts":[{
           "facts":["&#9900 Dungeness Crab had the highest total landing value in both Oregon and Washington in 2017, with over $150 million worth of crab landed between the two states.","&#9900 Pacific Hake (or Whiting) had the highest total landing weight in both Oregon and Washington in 2017, with over 210 million pounds worth of fish landed between the two states."]
@@ -38,6 +39,7 @@
             "weight": 1,
             "fillOpacity":1,
             "opacity":1,
+            "tooltipOffset":[5,-14],
             "divIcon":"border-radius:50%; border:2px solid white; opacity:1; -webkit-box-shadow: 1px 1px 2px black; box-shadow: 1px 1px 2px black; -moz-box-shadow: 1px 1px 2px black;",
             "tooltipVars":["name","ST","v_2017"],
             "tooltipText":["<div style='width:360px'><p3 style='display:inline; font-weight:bold; font-size:28px; white-space:normal; margin-left:5px;'>", ", ","</p3><p3 style='margin:0px 0px 0px 5px; display:block; font-size:18px; white-space:normal; font-weight:bold;'>2017 Commercial Landing Value: $"," Million</p3><p3 style='font-weight:bold; margin:0px 0px 5px 5px; display:block; font-size:18px; white-space:normal;'>Past Commercial Fishery Landings</p3><canvas id='portChart' style='margin-left:-5px; display:block;'></canvas><p3 style='font-weight:bold; font-size:14px; white-space:normal; display:block; line-height:15px; margin-bottom:4px;'>Total value in millions of 2017 dollars<br/>Total poundage in millions of pounds</p3></div>"]
@@ -46,9 +48,9 @@
           "id":0,
           "chartLoc":"tooltip",
           "chartType":"line",
-          "labels":["2017","2016","2015","2014","2013","2012","2011","2010","2009","2008","2007","2006","2005","2004"],
-          "data":["v_2017","inf_v_2016","inf_v_2015","inf_v_2014","inf_v_2013","inf_v_2012","inf_v_2011","inf_v_2010","inf_v_2009","inf_v_2008","inf_v_2007","inf_v_2006","inf_v_2005","inf_v_2004"],
-          "data2":["lbs_2017","lbs_2016","lbs_2015","lbs_2014","lbs_2013","lbs_2012","lbs_2011","lbs_2010","lbs_2009","lbs_2008","lbs_2007","lbs_2006","lbs_2005","lbs_2004"],
+          "labels":["2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017"],
+          "data":["v_2004","inf_v_2005","inf_v_2006","inf_v_2007","inf_v_2008","inf_v_2009","inf_v_2010","inf_v_2011","inf_v_2012","inf_v_2013","inf_v_2014","inf_v_2015","inf_v_2016","inf_v_2017"],
+          "data2":["lbs_2004","lbs_2005","lbs_2006","lbs_2007","lbs_2008","lbs_2009","lbs_2010","lbs_2011","lbs_2012","lbs_2013","lbs_2014","lbs_2015","lbs_2016","lbs_2017"],
           "datasetLabel":["Total $ Value","Total Lbs."],
           "options": {
               "responsive": true,
@@ -130,17 +132,26 @@
           "gradient":"linear-gradient(to right, #f9ecec, #df9f9f, #cc6666, #993333, #602020)",
           "gradientLabels":["Lower","Higher"],
           "gradientMargin":170,
-          "description":"Density derived from Automatic Identification Systems (AIS) data."
+          "description":"Density derived from 2013 Automatic Identification Systems (AIS) data."
+        },
+        {
+          "id":2,
+          "type":"borders",
+          "containers":[{
+              "color":"#000000",
+              "height":3,
+              "label":"Extent of State Waters"
+              }]
         }]
       },
       {
         "id":1,
         "title":"Essential Habitat",
-        "border":{"title":"marine_counties","include":true,"opacity":1},
+        "border":{"title":"marine_borders","include":true,"opacity":0.2},
         "tileLayers":[
-          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue3sv5f0jji1fs1xv1hegb9/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
-          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjucpgefr023c1fnr10vbi0rt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
-          {"title":"marine_outline","pane":300,"opacity":0.3}
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv49vru51cat1fqcqcap1iqo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjumyke6p17m01fmzjmncujhq/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"marine_watershed_outline","pane":300,"opacity":0.3}
         ],
         "fastFacts":[{
           "facts":["Areas where the use of bottom trawl or bottom-contact fishing gear is restricted or prohibited in order to protect essential fish habitat."],
@@ -213,33 +224,43 @@
           }]   
         },
         {
-          "id":0,
+          "id":1,
           "type":"polygon",
           "containers":[{
             "color":"repeating-linear-gradient(45deg, rgba(255,255,255,0), rgba(255,255,255,0) 10%, #8cb0d9 15%, #8cb0d9 15%)",
             "label":"EFH depths 1280 to 3500m"
           }],
           "description":"Essential fish habitat types as defined by the National Marine Fisheries Service."
+        },
+        {
+          "id":2,
+          "type":"borders",
+          "containers":[{
+              "color":"#000000",
+              "height":3,
+              "label":"Extent of State Waters"
+              }]
         }]
       },
       {
         "id":2,
         "title":"Crab",
-        "border":{"title":"marine_counties","include":true,"opacity":1},
+        "border":{"title":"marine_borders","include":true,"opacity":0.2},
         "tileLayers":[
-          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue40d8m29b31fpkta00rfvv/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":750,"opacity":1,"type":"mapbox"},
-          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue3ysyo1ud31fqd9rh68cro/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":250,"opacity":1,"type":"mapbox"},
-          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjucpgefr023c1fnr10vbi0rt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
-          {"title":"fishery_crab_locations","pane":700,"opacity":0.7},
-          {"title":"marine_outline","pane":300,"opacity":0.3}
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv4ayath1dc21ft9dje3hpc6/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":750,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv4af2uwctky1frvbp3e2702/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":250,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjumyke6p17m01fmzjmncujhq/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"fishery_crab_locations","pane":400,"opacity":0.7},
+          {"title":"marine_watershed_outline","pane":300,"opacity":0.3}
         ],
         "fastFacts":[{
-          "facts":["&#9900 In 2017, 27.3 million pounds of Dungeness Crab were caught in Washington, and 18.9 million pounds were caught in Oregon."]
+          "facts":["&#9900 In 2017, 27.3 million pounds of Dungeness Crab were caught in Washington, and 18.9 million pounds were caught in Oregon.","&#9900 Dungeness crab season starts in winter, and typically goes through spring and early summer."]
         }],
         "legend":[{
           "id":0,
           "type":"polygon",
           "title":"Crab Fishing Locations",
+          "subtitle":"All crab species",
           "titleMargin":45,
           "containers":[{
             "color":"#993333",
@@ -249,26 +270,27 @@
             "color":"#d09590",
             "label":"Commercial & Recreational"
           }],
-          "description":"Commercial and recreational crab fishing locations."
+          "description":"Commercial and recreational crab fishing locations as reported by fishers and anglers."
         }]
       },
       {
         "id":3,
         "title":"Halibut",
-        "border":{"title":"marine_counties","include":true,"opacity":1},
+        "border":{"title":"marine_borders","include":true,"opacity":0.2},
         "tileLayers":[
-          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue40d8m29b31fpkta00rfvv/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":750,"opacity":1,"type":"mapbox"},
-          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue3ysyo1ud31fqd9rh68cro/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":250,"opacity":1,"type":"mapbox"},
-          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjucpgefr023c1fnr10vbi0rt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
-          {"title":"fishery_halibut_locations","pane":700,"opacity":0.7},
-          {"title":"marine_outline","pane":300,"opacity":0.3}
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv4ayath1dc21ft9dje3hpc6/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":750,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv4af2uwctky1frvbp3e2702/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":250,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjumyke6p17m01fmzjmncujhq/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"fishery_halibut_locations","pane":400,"opacity":0.7},
+          {"title":"marine_watershed_outline","pane":300,"opacity":0.3}
         ],
         "fastFacts":[{
-          "facts":["&#9900 In 2017, 1.4 million pounds of Halibut were caught in Washington, and 0.2 million pounds were caught in Oregon."]
+          "facts":["&#9900 In 2017, 1.4 million pounds of Halibut were caught in Washington, and 0.2 million pounds were caught in Oregon.","&#9900 Pacific Halibut season lasts from spring to fall."]
         }],
         "legend":[{
           "id":0,
           "type":"polygon",
+          "subtitle":"Hippoglossus stenolepis",
           "title":"Halibut Fishing Locations",
           "titleMargin":45,
           "containers":[{
@@ -283,26 +305,36 @@
             "color":"#f7d790",
             "label":"Recreational"
           }],
-          "description":"Commercial and recreational halibut fishing locations."
+          "description":"Commercial and recreational halibut fishing locations as reported by fishers and anglers."
+        },
+        {
+          "id":1,
+          "type":"borders",
+          "containers":[{
+              "color":"#000000",
+              "height":3,
+              "label":"Extent of State Waters"
+              }]
         }]
       },
       {
         "id":4,
         "title":"Sablefish",
-        "border":{"title":"marine_counties","include":true,"opacity":1},
+        "border":{"title":"marine_borders","include":true,"opacity":0.2},
         "tileLayers":[
-          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue40d8m29b31fpkta00rfvv/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":750,"opacity":1,"type":"mapbox"},
-          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue3ysyo1ud31fqd9rh68cro/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":250,"opacity":1,"type":"mapbox"},
-          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjucpgefr023c1fnr10vbi0rt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
-          {"title":"fishery_sablefish_locations","pane":700,"opacity":0.7},
-          {"title":"marine_outline","pane":300,"opacity":0.3}
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv4ayath1dc21ft9dje3hpc6/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":750,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv4af2uwctky1frvbp3e2702/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":250,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjumyke6p17m01fmzjmncujhq/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"fishery_sablefish_locations","pane":400,"opacity":0.7},
+          {"title":"marine_watershed_outline","pane":300,"opacity":0.3}
         ],
         "fastFacts":[{
-          "facts":["&#9900 In 2017, 2.6 million of Sablefish pounds were caught in Washington, and 5.5 million pounds were caught in Oregon."]
+          "facts":["&#9900 In 2017, 2.6 million of Sablefish pounds were caught in Washington, and 5.5 million pounds were caught in Oregon.","&#9900 Sablefish season lasts from spring to fall."]
         }],
         "legend":[{
           "id":0,
           "type":"polygon",
+          "subtitle":"Anoplopoma fimbria",
           "title":"Sablefish Fishing Locations",
           "titleMargin":45,
           "containers":[{
@@ -317,27 +349,37 @@
             "color":"#f7d790",
             "label":"Recreational"
           }],
-          "description":"Commercial and recreational sablefish fishing locations. Sablefish is also known as Black Cod."
+          "description":"Commercial and recreational sablefish fishing locations as reported by fishers and anglers. Sablefish is also known as Black Cod and Butterfish."
+        },
+        {
+          "id":1,
+          "type":"borders",
+          "containers":[{
+              "color":"#000000",
+              "height":3,
+              "label":"Extent of State Waters"
+              }]
         }]
       },
       {
         "id":5,
         "title":"Tuna",
-        "border":{"title":"marine_counties","include":true,"opacity":1},
+        "border":{"title":"marine_borders","include":true,"opacity":0.2},
         "tileLayers":[
-          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue40d8m29b31fpkta00rfvv/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":750,"opacity":1,"type":"mapbox"},
-          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue3ysyo1ud31fqd9rh68cro/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":250,"opacity":1,"type":"mapbox"},
-          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjucpgefr023c1fnr10vbi0rt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
-          {"title":"fishery_tuna_locations","pane":700,"opacity":0.7},
-          {"title":"marine_outline","pane":300,"opacity":0.3}
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv4ayath1dc21ft9dje3hpc6/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":750,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv4af2uwctky1frvbp3e2702/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":250,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjumyke6p17m01fmzjmncujhq/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"fishery_tuna_locations","pane":400,"opacity":0.7},
+          {"title":"marine_watershed_outline","pane":300,"opacity":0.3}
         ],
         "fastFacts":[{
-          "facts":["&#9900 In 2017, 11.4 million pounds of Albacore Tuna were caught in Washington, and 4.7 million pounds were caught in Oregon."]
+          "facts":["&#9900 In 2017, 11.4 million pounds of Albacore Tuna were caught in Washington, and 4.7 million pounds were caught in Oregon.","&#9900 Albacore tuna season lasts from summer to early fall.","&#9900 In Washington, Albacore Tuna are generally caught beyond 30 miles offshore, while in Oregon, they are generally caught beyond 15."]
         }],
         "legend":[{
           "id":0,
           "type":"polygon",
-          "title":"Commercial and Recreational Fishing Locations",
+          "subtitle":"Thunnus alalunga",
+          "title":"Tuna Fishing Locations",
           "titleMargin":45,
           "containers":[{
             "color":"#993333",
@@ -351,27 +393,37 @@
             "color":"#f7d790",
             "label":"Recreational"
           }],
-          "description":"Commercial and recreational tuna fishing locations."
+          "description":"Commercial and recreational tuna fishing locations as reported by fishers and anglers."
+        },
+        {
+          "id":1,
+          "type":"borders",
+          "containers":[{
+              "color":"#000000",
+              "height":3,
+              "label":"Extent of State Waters"
+              }]
         }]
       },
       {
         "id":6,
         "title":"Groundfish",
-        "border":{"title":"marine_counties","include":true,"opacity":1},
+        "border":{"title":"marine_borders","include":true,"opacity":0.2},
         "tileLayers":[
-          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue40d8m29b31fpkta00rfvv/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":750,"opacity":1,"type":"mapbox"},
-          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue3ysyo1ud31fqd9rh68cro/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":250,"opacity":1,"type":"mapbox"},
-          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjucpgefr023c1fnr10vbi0rt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
-          {"title":"fishery_groundfish_locations","pane":700,"opacity":0.7},
-          {"title":"marine_outline","pane":300,"opacity":0.3}
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv4ayath1dc21ft9dje3hpc6/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":750,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv4af2uwctky1frvbp3e2702/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":250,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjumyke6p17m01fmzjmncujhq/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"fishery_groundfish_locations","pane":400,"opacity":0.7},
+          {"title":"marine_watershed_outline","pane":300,"opacity":0.3}
         ],
         "fastFacts":[{
-          "facts":["&#9900 In 2017, 1 million poundsof Dover Sole were caught in Washington, and 11 million pounds were caught in Oregon."]
+          "facts":["&#9900 In 2017, 1 million pounds of Dover Sole were caught in Washington, and 11 million pounds were caught in Oregon.","&#9900 Groundfish season is year-round, but catch restrictions vary by species and location."]
         }],
         "legend":[{
           "id":0,
           "type":"polygon",
-          "title":"Commercial and Recreational Fishing Locations",
+          "subtitle":"All groundfish",
+          "title":"Commercial and Recreational Groundfish Fishing Locations",
           "titleMargin":45,
           "containers":[{
             "color":"#993333",
@@ -381,36 +433,184 @@
             "color":"#d09590",
             "label":"Commercial & Recreational"
           }],
-          "description":"Commercial and recreational groundfish fishing locations. Groundfish include sole and flounder."
+          "description":"Commercial and recreational groundfish fishing locations as reported by fishers and anglers. Groundfish include sole, flounder, and rockfish."
+        },
+        {
+          "id":1,
+          "type":"borders",
+          "containers":[{
+              "color":"#000000",
+              "height":3,
+              "label":"Extent of State Waters"
+              }]
         }]
       },
       {
         "id":7,
         "title":"Shrimp",
-        "border":{"title":"marine_counties","include":true,"opacity":1},
+        "border":{"title":"marine_borders","include":true,"opacity":0.2},
         "tileLayers":[
-          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue40d8m29b31fpkta00rfvv/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":750,"opacity":1,"type":"mapbox"},
-          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjue3ysyo1ud31fqd9rh68cro/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":250,"opacity":1,"type":"mapbox"},
-          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjucpgefr023c1fnr10vbi0rt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
-          {"title":"fishery_shrimp_locations","pane":700,"opacity":0.7},
-          {"title":"marine_outline","pane":300,"opacity":0.3}
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv4ayath1dc21ft9dje3hpc6/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":750,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv4af2uwctky1frvbp3e2702/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":250,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjumyke6p17m01fmzjmncujhq/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"fishery_shrimp_locations","pane":400,"opacity":0.7},
+          {"title":"marine_watershed_outline","pane":300,"opacity":0.3}
         ],
         "fastFacts":[{
-          "facts":["&#9900 In 2017, 6.8 million pounds of Ocean Shrimp were caught in Washington, and 3 million pounds were caught in Oregon."]
+          "facts":["&#9900 In 2017, 6.8 million pounds of Ocean Shrimp were caught in Washington, and 3 million pounds were caught in Oregon.","&#9900 Shrimp season lasts from spring to fall."]
         }],
         "legend":[{
           "id":0,
           "type":"polygon",
+          "subtitle":"All shrimp",
           "title":"Commercial and Recreational Fishing Locations",
           "titleMargin":45,
           "containers":[{
             "color":"#993333",
             "label":"Commercial"
           }],
-          "description":"Commercial and recreational shrimp fishing locations."
+          "description":"Commercial and recreational shrimp fishing locations as reported by fishers and anglers."
+        },
+        {
+          "id":1,
+          "type":"borders",
+          "containers":[{
+              "color":"#000000",
+              "height":3,
+              "label":"Extent of State Waters"
+              }]
         }]
+      },
+      {
+        "id":8,
+        "title":"Total",
+        "border":{"title":"marine_borders","include":true,"opacity":0.2},
+        "tileLayers":[
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv49vru51cat1fqcqcap1iqo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjumyke6p17m01fmzjmncujhq/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"marine_watershed_outline","pane":300,"opacity":0.3}
+        ],
+        "fastFacts":[{
+            "facts":["&#9900 Shellfish aquaculture is the most common form of aquaculture in the Pacific Northwest, with farms producing oysters, clams, and mussels. Coho, Atlantic Salmon, and Steelhead are also farmed.","&#9900 In Mason County, Washington, in 2012, 90% of all agricultural dollar output was comprised of aquaculture."]
+          }],
+        "jsonLayers":[
+          {
+            "position":{"lat":45.663, "lon":-125.431, "zoom":6},
+            "activeLayer":true,
+            "url":"map_data/marine/ocean_economy_counties.json",
+            "pane":"overBorder",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"tot_ops",
+            "values":[20,10,5],
+            "fillColors":["#862d2d","#c65353","#df9f9f","#f2d9d9"],
+            "colors":["#ffffff"],
+            "weight": 1,
+            "fillOpacity":[0.8,0.8,0.8,0.5],
+            "opacity":1,
+            "tooltipVars":["NAME","STATE","tot_ops"],
+            "tooltipText":["<div style='width:360px'><p3 style='display:inline; font-weight:bold; font-size:26px; white-space:normal; margin-left:5px;'>"," County, ","</p3><p3 style='margin:0px 0px 5px 5px; display:block; font-size:20px; white-space:normal; font-weight:normal;'>Total Aquaculture Operations: ","</p3>"]    
+        }],
+        "legend":[{
+            "id":0,
+            "type":"polygon",
+            "title":"Total Aquaculture Operations",
+            "titleMargin":45,
+            "containers":[{
+              "color":"#862d2d",
+              "label":"20+"
+            },
+            {
+              "color":"#cc6666",
+              "label":"10 to 20"
+            },
+            {
+              "color":"#ecc6c6",
+              "label":"5 to 10"
+            },
+            {
+              "color":"#ffffff",
+              "label":"Less than 5"
+            }],
+            "description":"Total number of aquculture operations in a particular county as of 2017."   
+          },
+          {
+            "id":1,
+            "type":"borders",
+            "containers":[{
+                "color":"#000000",
+                "height":3,
+                "label":"Extent of State Waters"
+                }]
+          }]
+      },
+      {
+        "id":9,
+        "title":"Shellfish",
+        "border":{"title":"marine_borders","include":true,"opacity":0.2},
+        "tileLayers":[
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjv49vru51cat1fqcqcap1iqo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":700,"opacity":1,"type":"mapbox"},
+          {"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjumyke6p17m01fmzjmncujhq/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":200,"opacity":1,"type":"mapbox"},
+          {"title":"marine_watershed_outline","pane":300,"opacity":0.3}
+        ],
+        "fastFacts":[{
+            "facts":["&#9900 In 2017, Mason County, Washington, had 64 shellfish aquaculture operations, more than any other county."]
+          }],
+        "jsonLayers":[
+          {
+            "position":{"lat":45.663, "lon":-125.431, "zoom":6},
+            "activeLayer":true,
+            "url":"map_data/marine/ocean_economy_counties.json",
+            "pane":"overBorder",
+            "feature":"polygon",
+            "type":"graduated",
+            "attribute":"shell_ops",
+            "values":[20,5,0],
+            "fillColors":["#862d2d","#cc6666","#ecc6c6","#ffffff"],
+            "colors":["#ffffff"],
+            "weight": 1,
+            "fillOpacity":[0.8,0.8,0.8,0.5],
+            "opacity":1,
+            "tooltipVars":["NAME","STATE","tot_ops","shell_ops"],
+            "tooltipText":["<div style='width:360px'><p3 style='display:inline; font-weight:bold; font-size:26px; white-space:normal; margin-left:5px;'>"," County, ","</p3><p3 style='margin:0px 0px 5px 5px; display:block; font-size:20px; white-space:normal; font-weight:normal;'>Total Aquaculture Operations: ","<br/>Shellfish Aquaculture Operations: ","</p3>"]        
+        }],
+        "legend":[{
+            "id":0,
+            "type":"polygon",
+            "title":"Shellfish Aquaculture Operations",
+            "titleMargin":45,
+            "containers":[{
+              "color":"#862d2d",
+              "label":"20+"
+            },
+            {
+              "color":"#cc6666",
+              "label":"5 to 20"
+            },
+            {
+              "color":"#ecc6c6",
+              "label":"Less than 5"
+            },
+            {
+              "color":"#ffffff",
+              "label":"0 or No Data"
+            }],
+            "description":"Total shellfish aquaculture operations as of 2017. Shellfish aquaculture includes oysters, clams, mussels, geoducks, and abalone."   
+          },
+          {
+            "id":1,
+            "type":"borders",
+            "containers":[{
+                "color":"#000000",
+                "height":3,
+                "label":"Extent of State Waters"
+                }]
+          }]
       }],
       "sources":{
+        "geographyNote":"The EEZ Line represents the outer boundary of the United States' Exclusive Economic Zone. The dashed line off the coast represents the extent of the state boundary. Both datasets were acquired from the ",
+        "geographyNoteLinkTitle":"Washington Department of Natural Resources.",
+        "geographyNoteLink":"http://dnr-msp-wa.opendata.arcgis.com/",
         "geographic":[{
           "title":"Washington Total Port Landings: ",
           "linkText":"NOAA Office of Science and Technology",
@@ -440,6 +640,17 @@
           "linkText":"West Coast Ocean Data Portal",
           "linkUrl":"http://portal.westcoastoceans.org/discover/#?c=Category.Human.Economy~Category.Human.Economy.Fishing&text=ethnography",
           "description":"Data from 2012. 'West Coast Fishing Ethnography' dataset downloaded."
+        },
+        {
+          "title":"Aquaculture Statistics",
+          "linkText":"USDA National Agricultural Statistics Service",
+          "linkUrl":"https://quickstats.nass.usda.gov/?source_desc=CENSUS#206A0A6D-4A0B-3DAC-9B06-80D9BE6ECB2C",
+          "description":"Data from 2017. 'Aquaculture Totals' and 'Mollusk' datasets were downloaded."
+        }],
+        "text":[{
+          "title":"Aquaculture Text: ",
+          "linkText":"NOAA Fisheries West Coast Region",
+          "linkUrl":"https://www.westcoast.fisheries.noaa.gov/aquaculture/"
         }],
       "basemap":[{
         "title":"Created with Mapbox Studio"
