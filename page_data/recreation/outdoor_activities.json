@@ -31,7 +31,7 @@
             "radiusValues":[200,100,50,25],
             "radius":[11,9,5,7,3],
             "tooltipVars":["name","sites"],
-            "tooltipText":["<h3 style='margin:0;'>","</h3><p3>","</p3>"]
+            "tooltipText":["<h3 style='margin:0;'>","</h3><p3>Campsites: ","</p3>"]
           }],
           "legend":[{
             "id":0,
