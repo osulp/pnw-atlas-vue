@@ -23,6 +23,16 @@
         "backgroundURL":"housing_background"},
         { 
         "id":2,
+        "text":"Immigration",
+        "description":"Foreign born population by origin by county",
+        "imageURL":"immigration_icon",
+        "chapter":"population",
+        "link":"population/immigration",
+        "mapLink":"immigration",
+        "active":false,
+        "backgroundURL":"immigration_background"},
+        { 
+        "id":3,
         "text":"Internal Migration",
         "description":"County-to-county net migration, inflow, outflow",
         "imageURL":"migration_icon",
@@ -32,7 +42,7 @@
         "active":false,
         "backgroundURL":"migration_background"},
         { 
-        "id":3,
+        "id":4,
         "text":"Urban & Rural",
         "description":"Urban and rural areas, income, education, employment",
         "imageURL":"urban_rural_icon",
@@ -40,15 +50,5 @@
         "link":"population/urban_rural",
         "mapLink":"urban_rural",
         "active":false,
-        "backgroundURL":"urban_rural_background"},
-        { 
-        "id":4,
-        "text":"Immigration",
-        "description":"Foreign born population by origin by county",
-        "imageURL":"immigration_icon",
-        "chapter":"population",
-        "link":"population/immigration",
-        "mapLink":"immigration",
-        "active":false,
-        "backgroundURL":"immigration_background"}]
+        "backgroundURL":"urban_rural_background"}]
 }
