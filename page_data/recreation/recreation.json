@@ -1,18 +1,19 @@
 {
     "chapterTitle":"Outdoor Recreation",
     "chapterLink":"/recreation",
-    "maps":[{ 
-        "id":0,
-        "text":"Protected Lands",
-        "description":"Parks, park managers, visitation statistics",
-        "imageURL":"park_icon",
-        "chapter":"recreation",
-        "link":"recreation/protected_lands",
-        "mapLink":"protected_lands",
-        "active":false,
-        "backgroundURL":"park_background"},
+    "maps":[
         { 
         "id":1,
+        "text":"Hunting",
+        "description":"Annual deer, elk, bear harvest",
+        "imageURL":"hunting_icon",
+        "chapter":"recreation",
+        "link":"recreation/hunting",
+        "mapLink":"hunting",
+        "active":false,
+        "backgroundURL":"hunting_background"},
+        { 
+        "id":2,
         "text":"Outdoor Activities",
         "description":"Camping, skiing, river rafting, mountaineering",
         "imageURL":"activities_icon",
@@ -22,7 +23,7 @@
         "active":false,
         "backgroundURL":"activities_background"},
         { 
-        "id":2,
+        "id":3,
         "text":"Outdoor Economy",
         "description":"Outdoor recreation employment, wages, spending, taxation",
         "imageURL":"economic_icon",
@@ -32,13 +33,14 @@
         "active":false,
         "backgroundURL":"economic_background"},
         { 
-        "id":3,
-        "text":"Hunting",
-        "description":"Annual deer, elk, bear harvest",
-        "imageURL":"hunting_icon",
+        "id":4,
+        "text":"Protected Lands",
+        "description":"Parks, park managers, visitation statistics",
+        "imageURL":"park_icon",
         "chapter":"recreation",
-        "link":"recreation/hunting",
-        "mapLink":"hunting",
+        "link":"recreation/protected_lands",
+        "mapLink":"protected_lands",
         "active":false,
-        "backgroundURL":"hunting_background"}]
+        "backgroundURL":"park_background"}
+    ]
 }
