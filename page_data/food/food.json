@@ -1,16 +1,17 @@
 {
     "chapterTitle":"Agriculture & Food",
     "chapterLink":"/food",
-    "maps":[{ 
+    "maps":[
+        { 
         "id":0,
-        "text":"Food Access",
-        "description":"Food deserts, SNAP benefits, fast food & poverty rate, food insecurity",
-        "imageURL":"access_icon",
+        "text": "Alcohol Production" ,
+        "description":"Beer crops, breweries, viticultural areas, wineries",
+        "imageURL":"alcohol_icon",
         "chapter":"food",
-        "link":"food/access",
-        "mapLink":"access",
+        "link":"food/alcohol",
+        "mapLink":"alcohol",
         "active":false,
-        "backgroundURL":"access_background"},
+        "backgroundURL":"alcohol_background"},
         { 
         "id":1,
         "text": "Crops" ,
@@ -23,27 +24,6 @@
         "backgroundURL":"crop_background"},
         { 
         "id":2,
-        "text": "Livestock" , 
-        "description":"Cattle/calves, dairy, poultry, eggs, pigs, sheep",
-        "imageURL":"livestock_icon",
-        "chapter":"food",
-        "link":"food/livestock",
-        "mapLink":"livestock",
-        "active":false,
-        "backgroundURL":"livestock_background"},
-        { 
-        "id":3,
-        "text": "Alcohol Production" ,
-        "description":"Beer crops, breweries, viticultural areas, wineries",
-        "imageURL":"alcohol_icon",
-        "chapter":"food",
-        "link":"food/alcohol",
-        "mapLink":"alcohol",
-        "active":false,
-        "backgroundURL":"alcohol_background"
-        },
-        { 
-        "id":4,
         "text": "Farms" ,
         "description":"Farm product value, farm ownership, irrigation, prime farmland",
         "imageURL":"farm_icon",
@@ -51,6 +31,25 @@
         "link":"food/farms",
         "mapLink":"farms",
         "active":false,
-        "backgroundURL":"farm_background"
-        }]
+        "backgroundURL":"farm_background"},
+        { 
+        "id":3,
+        "text":"Food Access",
+        "description":"Food deserts, SNAP benefits, fast food & poverty rate, food insecurity",
+        "imageURL":"access_icon",
+        "chapter":"food",
+        "link":"food/access",
+        "mapLink":"access",
+        "active":false,
+        "backgroundURL":"access_background"},
+        { 
+        "id":4,
+        "text": "Livestock" , 
+        "description":"Cattle/calves, dairy, poultry, eggs, pigs, sheep",
+        "imageURL":"livestock_icon",
+        "chapter":"food",
+        "link":"food/livestock",
+        "mapLink":"livestock",
+        "active":false,
+        "backgroundURL":"livestock_background"}]
 }
