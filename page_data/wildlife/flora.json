@@ -219,7 +219,7 @@
         "id":4,
         "title":"Ponderosa Pine",
         "border":{"title":"pnw_borders_black","opacity":0.5},
-        "tileLayers":[{"title":"douglas_fir","pane":300,"opacity":0.8}],
+        "tileLayers":[{"title":"ponderosa_pine","pane":300,"opacity":0.8}],
         "fastFacts":[{
             "facts":["&#9900 Scientific name: Pinus ponderosa.","&#9900 Can grow over 200 ft. tall.","&#9900 Two subspecies of Ponderosa Pine are present within the PNW: Pacific Ponderosa and Columbia Ponderosa."]
           }],
