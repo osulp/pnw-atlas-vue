@@ -1,18 +1,9 @@
 {
     "chapterTitle":"Wildlife",
     "chapterLink":"/wildlife",
-    "maps":[{ 
-        "id":0,
-        "text":"Flora",
-        "description":"Watershed boundaries, rivers, lakes, dams",
-        "imageURL":"flora_icon",
-        "chapter":"wildlife",
-        "link":"wildlife/flora",
-        "mapLink":"flora",
-        "active":false,
-        "backgroundURL":"flora_background"},
+    "maps":[
         { 
-        "id":1,
+        "id":0,
         "text":"Fauna",
         "description":"Aquifer rock type, annual recharge, groundwater protection",
         "imageURL":"fauna_icon",
@@ -22,7 +13,7 @@
         "active":false,
         "backgroundURL":"fauna_background"},
         { 
-        "id":2,
+        "id":1,
         "text":"Fish",
         "description":"Surface water, groundwater, water use categories",
         "imageURL":"fish_icon",
@@ -31,6 +22,16 @@
         "mapLink":"fish",
         "active":false,
         "backgroundURL":"fish_background"},
+        { 
+        "id":2,
+        "text":"Flora",
+        "description":"Watershed boundaries, rivers, lakes, dams",
+        "imageURL":"flora_icon",
+        "chapter":"wildlife",
+        "link":"wildlife/flora",
+        "mapLink":"flora",
+        "active":false,
+        "backgroundURL":"flora_background"},
         { 
         "id":3,
         "text":"Invasive Species",
