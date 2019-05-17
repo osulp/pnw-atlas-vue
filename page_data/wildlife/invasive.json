@@ -36,7 +36,7 @@
             "gradient":"linear-gradient(to right, #ffffff 0%, #ffff66 30%, #b3b300 50%, #99cc00 70%, #558000 90%)",
             "gradientLabels":["Low","High"],
             "gradientMargin":200,
-            "description":"Concentration of Scotch Broom observations from 2005 to present. Areas with no observations do not necessarily lack species occurances.",
+            "description":"Concentration of Scotch Broom observations from 2005 to 2018. Areas with no observations do not necessarily lack species occurances.",
             "bottomIconWidth":250
         }]
       },
@@ -64,7 +64,7 @@
             "gradient":"linear-gradient(to right, #ffffff 0%, #ffff66 30%, #b3b300 50%, #99cc00 70%, #558000 90%)",
             "gradientLabels":["Low","High"],
             "gradientMargin":200,
-            "description":"Concentration of Canada Thistle observations from 2005 to present. Areas with no observations do not necessarily lack species occurances.",
+            "description":"Concentration of Canada Thistle observations from 2005 to 2018. Areas with no observations do not necessarily lack species occurances.",
             "bottomIconWidth":250
         }]
       },
@@ -92,7 +92,7 @@
             "gradient":"linear-gradient(to right, #ffffff 0%, #ffff66 30%, #b3b300 50%, #99cc00 70%, #558000 90%)",
             "gradientLabels":["Low","High"],
             "gradientMargin":200,
-            "description":"Concentration of Leafy Spurge observations from 2005 to present. Areas with no observations do not necessarily lack species occurances.",
+            "description":"Concentration of Leafy Spurge observations from 2005 to 2018. Areas with no observations do not necessarily lack species occurances.",
             "bottomIconWidth":250
         }]
       },
@@ -120,7 +120,7 @@
             "gradient":"linear-gradient(to right, #ffffff 0%, #ffff66 30%, #b3b300 50%, #99cc00 70%, #558000 90%)",
             "gradientLabels":["Low","High"],
             "gradientMargin":200,
-            "description":"Concentration of Scotch Thistle observations from 2005 to present. Areas with no observations do not necessarily lack species occurances.",
+            "description":"Concentration of Scotch Thistle observations from 2005 to 2018. Areas with no observations do not necessarily lack species occurances.",
             "bottomIconWidth":250
         }]
       },
@@ -148,7 +148,7 @@
             "gradient":"linear-gradient(to right, #ffffff 0%, #ffff66 30%, #b3b300 50%, #99cc00 70%, #558000 90%)",
             "gradientLabels":["Low","High"],
             "gradientMargin":200,
-            "description":"Concentration of Spotted Knapweed observations from 2005 to present. Areas with no observations do not necessarily lack species occurances.",
+            "description":"Concentration of Spotted Knapweed observations from 2005 to 2018. Areas with no observations do not necessarily lack species occurances.",
             "bottomIconWidth":250
         }]
       },
@@ -176,7 +176,7 @@
             "gradient":"linear-gradient(to right, #ffffff 0%, #ffff66 30%, #b3b300 50%, #99cc00 70%, #558000 90%)",
             "gradientLabels":["Low","High"],
             "gradientMargin":200,
-            "description":"Concentration of Garlic Mustard observations from 2005 to present. Areas with no observations do not necessarily lack species occurances.",
+            "description":"Concentration of Garlic Mustard observations from 2005 to 2018. Areas with no observations do not necessarily lack species occurances.",
             "bottomIconWidth":250
         }]
       },
@@ -204,7 +204,7 @@
             "gradient":"linear-gradient(to right, #ffffff 0%, #ffff66 30%, #b3b300 50%, #99cc00 70%, #558000 90%)",
             "gradientLabels":["Low","High"],
             "gradientMargin":200,
-            "description":"Concentration of Himalayan Blackberry observations from 2005 to present. Areas with no observations do not necessarily lack species occurances.",
+            "description":"Concentration of Himalayan Blackberry observations from 2005 to 2018. Areas with no observations do not necessarily lack species occurances.",
             "bottomIconWidth":250
         }]
       },
@@ -232,7 +232,7 @@
             "gradient":"linear-gradient(to right, #ffffff 0%, #ffff66 30%, #b3b300 50%, #99cc00 70%, #558000 90%)",
             "gradientLabels":["Low","High"],
             "gradientMargin":200,
-            "description":"Concentration of Cheatgrass observations from 2005 to present. Areas with no observations do not necessarily lack species occurances.",
+            "description":"Concentration of Cheatgrass observations from 2005 to 2018. Areas with no observations do not necessarily lack species occurances.",
             "bottomIconWidth":250
         }]
       },
@@ -260,7 +260,7 @@
             "gradient":"linear-gradient(to right, #ffffff 0%, #ffe699 30%, #cc9900 50%, #ac7339 70%, #604020 90%)",
             "gradientLabels":["Low","High"],
             "gradientMargin":200,
-            "description":"Concentration of Nutria observations from 2005 to present. Areas with no observations do not necessarily lack species occurances.",
+            "description":"Concentration of Nutria observations from 2005 to 2018. Areas with no observations do not necessarily lack species occurances.",
             "bottomIconWidth":300
         }]
       },
@@ -288,7 +288,7 @@
             "gradient":"linear-gradient(to right, #ffffff 0%, #ffe699 30%, #cc9900 50%, #ac7339 70%, #604020 90%)",
             "gradientLabels":["Low","High"],
             "gradientMargin":200,
-            "description":"Concentration of Bullfrog observations from 2005 to present. Areas with no observations do not necessarily lack species occurances.",
+            "description":"Concentration of Bullfrog observations from 2005 to 2018. Areas with no observations do not necessarily lack species occurances.",
             "bottomIconWidth":200
         }]
       },
@@ -316,7 +316,7 @@
             "gradient":"linear-gradient(to right, #ffffff 0%, #ffe699 30%, #cc9900 50%, #ac7339 70%, #604020 90%)",
             "gradientLabels":["Low","High"],
             "gradientMargin":200,
-            "description":"Concentration of European Starling observations from 2005 to present. Areas with no observations do not necessarily lack species occurances.",
+            "description":"Concentration of European Starling observations from 2005 to 2018. Areas with no observations do not necessarily lack species occurances.",
             "bottomIconWidth":200
         }]
       },
@@ -345,7 +345,7 @@
             "gradient":"linear-gradient(to right, #ffffff 0%, #ffe699 30%, #cc9900 50%, #ac7339 70%, #604020 90%)",
             "gradientLabels":["Low","High"],
             "gradientMargin":200,
-            "description":"Concentration of Invasive Crayfish observations from 2005 to present. Areas with no observations do not necessarily lack species occurances.",
+            "description":"Concentration of Invasive Crayfish observations from 2005 to 2018. Areas with no observations do not necessarily lack species occurances.",
             "bottomIconWidth":200
         }]
       }],
