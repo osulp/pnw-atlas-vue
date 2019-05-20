@@ -182,14 +182,14 @@
         },
         {
             "title":"Idaho Speed Limits: ",
-            "linkText":"National Transit Atlas",
+            "linkText":"Idaho Department of Transportation",
             "linkUrl":"http://data.gis.idaho.gov/datasets/IPLAN::speed-zone-mph?geometry=-130.493%2C39.939%2C-63.74%2C50.705",
             "description":"Data from 2018. Combined with Washington and Oregon highway speed limit datasets."
         },
         {
             "title":"Oregon Speed Limits: ",
-            "linkText":"National Transit Atlas",
-            "linkUrl":" ftp://ftp.odot.state.or.usU/tdb/trandata/GIS_data/Traffic/",
+            "linkText":"Oregon Department of Transportation",
+            "linkUrl":" ftp://ftp.odot.state.or.us/tdb/trandata/GIS_data/Traffic/",
             "description":"Data from 2017. Combined with Washington and Idaho highway speed limit datasets."
         },
         {
@@ -200,13 +200,13 @@
         },
         {
             "title":"Idaho AADT: ",
-            "linkText":"National Transit Atlas",
+            "linkText":"Idaho Department of Transportation",
             "linkUrl":"http://data.gis.idaho.gov/datasets/IPLAN::speed-zone-mph?geometry=-130.493%2C39.939%2C-63.74%2C50.705",
             "description":"Data from 2018. Combined with Washington and Oregon AADTdatasets."
         },
         {
             "title":"Oregon AADT: ",
-            "linkText":"National Transit Atlas",
+            "linkText":"Oregon Department of Transportation",
             "linkUrl":" ftp://ftp.odot.state.or.us/tdb/trandata/GIS_data/Traffic/",
             "description":"Data from 2017. Combined with Washington and Idaho AADT datasets."
         },
