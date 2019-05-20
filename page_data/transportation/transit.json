@@ -179,14 +179,14 @@
         },
         {
             "title":"Clallam Transit Bus Routes: ",
-            "linkText":"Transit Feeds",
-            "linkUrl":"http://transitfeeds.com/p/mason-transit/590",
+            "linkText":"Transit Land",
+            "linkUrl":"https://transit.land/feed-registry/operators/o-c28-clallamtransitsystem",
             "description":"Data from 2018. Includes all Clallam Transit Transit bus routes."
         },
         {
             "title":"Twin Transit Bus Routes: ",
-            "linkText":"MJC Action",
-            "linkUrl":"http://www.mjcaction.com/clients_gtfs.html",
+            "linkText":"Twin Transit",
+            "linkUrl":"http://twintransit.org/route",
             "description":"Data from 2018. Includes all Twin Transit bus routes."
         },
         {
@@ -203,8 +203,8 @@
         },
         {
             "title":"Wahkiakum on the Move: ",
-            "linkText":"MJC Action",
-            "linkUrl":"http://www.mjcaction.com/clients_gtfs.html",
+            "linkText":"Wahkiakum County",
+            "linkUrl":"https://www.co.wahkiakum.wa.us/239/Transit",
             "description":"Data from 2018. Includes all Wahkiakum County bus routes."
         },
         {
@@ -270,7 +270,7 @@
         {
             "title":"Kaltran: ",
             "linkText":"Kalispel Tribe",
-            "linkUrl":"https://nebula.wsimg.com/7c42b73100864e98eeee19e40a0acdfc?AccessKeyId=1B82DE9A13B9AA9FD04E&disposition=0&alloworigin=1",
+            "linkUrl":"https://9b37abdd1c3135d9659b-298f012ea728efea7c302ad9a6f7bba0.ssl.cf2.rackcdn.com/pdf-uploads/KALTRAN-schedule.pdf",
             "description":"Data from 2018. Route data digitized from static map."
         },
         {
