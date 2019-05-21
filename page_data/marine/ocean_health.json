@@ -127,7 +127,7 @@
                 "gradient":"linear-gradient(to right, #ca6868, #dea0a0, #f2d9d9, #ffffff, #d9e6f2, #a0c0de, #689bca)",
                 "gradientLabels":["Lower","Higher"],
                 "gradientMargin":170,
-                "description":"Modeled Aragonite Saturation State based off 2013 observations."
+                "description":"Modeled Aragonite Saturation State based off observations from August, 2013."
               },
               {
                 "id":1,

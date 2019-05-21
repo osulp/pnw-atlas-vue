@@ -5,7 +5,7 @@
     "initial":0,
     "dropdownText":"Select Map",
     "basemapType":"mapbox",
-    "dropdownLabel":{"type":"breaks","labels":["Cectatean Density","Seals/Sea Lions"],"breaks":[1,7]},
+    "dropdownLabel":{"type":"breaks","labels":["Cetacean Density","Seals/Sea Lions"],"breaks":[1,7]},
     "center":[45.663,-125.431],
     "maps":[
       {
@@ -421,6 +421,7 @@
           "fillOpacity":1,
           "opacity":1,
           "tooltip":"tooltip",
+          "tooltipOffset":[5,2],
           "tooltipVars":["field_1"],
           "divIcon":"border-radius:50%; border:2px solid white; opacity:1; -webkit-box-shadow: 1px 1px 2px black; box-shadow: 1px 1px 2px black; -moz-box-shadow: 1px 1px 2px black;",
           "tooltipText":["<div style='width:280px; padding:2px;'><p3 style='font-weight:bold; font-size:20px; white-space:normal; line-height:28px;'>","</p3></div>"]
@@ -430,7 +431,7 @@
           "type":"point",
           "title":"Stellar Sea Lion Haulouts",
           "containers":[{
-              "size":11,
+              "size":9,
               "label":"Haulout Area",
               "background":"#734d26",
               "color":"#ffffff",
@@ -469,7 +470,7 @@
           "description":"Data from 2006 to 2016, downloaded from the Whale Hotline API."
         },
         {
-          "title":"Cectacean Densities: ",
+          "title":"Cetacean Densities: ",
           "linkText":"NOAA",
           "linkUrl":"https://inport.nmfs.noaa.gov/inport/item/55923",
           "description":"Modeled density from 2016."

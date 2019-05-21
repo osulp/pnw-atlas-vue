@@ -17,16 +17,7 @@
           {"title":"marine_watershed_outline","pane":300,"opacity":0.3},
           {"title":"estuary_areas","pane":300,"opacity":0.7}
         ],
-        "fastFacts":[{
-            "facts":["A body of water with some level of enclosure, varying in size and scale. Freshwater/saltwater breakdown can vary, with some bays primarily freshwater, and others with more marine influence."],
-            "fastTitle":"Embayment/Bay",
-            "titleColor":"#009973"
-          },
-          {
-            "facts":["Shallow, fragile estuaries that are highly enclosed and have a limited relationship with the ocean. Evaporation rates are high. These estuaries are generally intertwined with their surrounding terrestrial landscapes."],
-            "titleColor":"#1affc6",
-            "fastTitle":"Lagoonal Estuary"
-          },
+        "fastFacts":[
           {
             "facts":["Swath of land at the mouth of a river. These estuaries are formed by sediment deposits and have mixed salinity."],
             "titleColor":"#4675d2",
@@ -36,6 +27,16 @@
             "facts":["Sediment-rich estuaries with high currents and variable salinity. Formed by rivers and their depositions."],
             "titleColor":"#66b3ff",
             "fastTitle":"Riverine Estuary"
+          },
+          {
+            "facts":["A body of water with some level of enclosure, varying in size and scale. Freshwater/saltwater breakdown can vary, with some bays primarily freshwater, and others with more marine influence."],
+            "fastTitle":"Embayment/Bay",
+            "titleColor":"#009973"
+          },
+          {
+            "facts":["Shallow, fragile estuaries that are highly enclosed and have a limited relationship with the ocean. Evaporation rates are high. These estuaries are generally intertwined with their surrounding terrestrial landscapes."],
+            "titleColor":"#1affc6",
+            "fastTitle":"Lagoonal Estuary"
           }],
         "jsonLayers":[
           {
@@ -65,21 +66,22 @@
             "id":0,
             "type":"polygon",
             "title":"Type of Estuary",
-            "containers":[{
-                    "color":"#009973",
-                    "label":"Embayment/Bay"
+            "containers":[
+                {
+                  "color":"#4675d2",
+                  "label":"Major River Delta"
+                },              
+                {
+                  "color":"#99ccff",
+                  "label":"Riverine Estuary"
                 },
                 {
-                    "color":"#4dffd2",
-                    "label":"Lagoonal Estuary"
+                  "color":"#009973",
+                  "label":"Embayment/Bay"
                 },
                 {
-                    "color":"#4675d2",
-                    "label":"Major River Delta"
-                },
-                {
-                    "color":"#99ccff",
-                    "label":"Riverine Estuary"
+                  "color":"#4dffd2",
+                  "label":"Lagoonal Estuary"
                 }]
         },
         {
@@ -135,25 +137,26 @@
           {"title":"marine_watershed_outline","pane":300,"opacity":0.3},
           {"title":"estuary_habitats","pane":300,"opacity":0.7}
         ],
-        "fastFacts":[{
-            "facts":["Areas in the subtidal and intertidal zone with submersed or floating aquatic plants, such as eelgrass, macroalgae, or moss."],
-            "fastTitle":"Aquatic Vegetation Bed",
-            "titleColor":"#6699cc"
-          },
+        "fastFacts":[
           {
             "facts":["Areas dominated by woody plants at least 20 feet tall."],
-            "titleColor":"#008060",
+            "titleColor":"#154929",
             "fastTitle":"Forested Wetland"
           },
           {
+            "facts":["Areas with emergent, woody vegetation less than 20 feet tall. Includes tree shrubs, young trees, and trees/shrubs with limited growth due to environmental conditions."],
+            "titleColor":"#5f9778",
+            "fastTitle":"Scrub-Shrub Wetland"
+          },
+          {
             "facts":["Areas dominated by emergent vegetation--plants rooted in underwater substrate that grow out of the water. Plants in these wetlands are generally herbaceous. Excludes mosses and lichens."],
-            "titleColor":"#00cc96",
+            "titleColor":"#a4c3a2",
             "fastTitle":"Emergent Wetland"
           },
           {
-            "facts":["Areas with emergent, woody vegetation less than 20 feet tall. Includes tree shrubs, young trees, and trees/shrubs with limited growth due to environmental conditions."],
-            "titleColor":"#a3a375",
-            "fastTitle":"Scrub-Shrub Wetland"
+            "facts":["Areas in the subtidal and intertidal zone with submersed or floating aquatic plants, such as eelgrass, macroalgae, or moss."],
+            "fastTitle":"Aquatic Vegetation Bed",
+            "titleColor":"#999966"
           },
           {
             "facts":["Areas with no classified habitat type data. This can include deepwater habitats in Estuaries, where biotic data doesn't exist."],
@@ -171,7 +174,7 @@
             "type":"pointDivCat",
             "attribute":"common",
             "values":["Aquatic Vegetation Bed","Emergent Wetland","Scrub-Shrub Wetland","Forested Wetland","Unclassified"],
-            "fillColors":["#6699cc","#00ebad","#a3a375","#009973","#c6c6c6"],
+            "fillColors":["#999966","#a4c3a2","#5f9778","#154929","#d9d9d9"],
             "radiusType":"graduated",
             "radiusAttribute":"Estuary_He",
             "radiusValues":[2000,200],
@@ -188,9 +191,9 @@
           "id":0,
           "chartLoc":"tooltip",
           "chartType":"doughnut",
-          "labels":["Aquatic Bed","Forested Wetland","Emergent Wetland","Scrub-Shrub","Unclassified"],
-          "data":["aq_veg_bed","for_wet","em_wet","scrub_wet","unclass"],
-          "colors":["#6699cc","#009973","#00ebad","#a3a375","#c6c6c6"],
+          "labels":["Forested Wetland","Scrub-Shrub","Emergent Wetland","Aquatic Bed","Unclassified"],
+          "data":["for_wet","scrub_wet","em_wet","aq_veg_bed","unclass"],
+          "colors":["#154929","#5f9778","#a4c3a2","#999966","#d9d9d9"],
           "options": {
               "responsive": true,
               "legend": {
@@ -220,24 +223,25 @@
             "type":"polygon",
             "chartID":"habChart",
             "title":"Estuary Habitat Types",
-            "containers":[{
-                    "color":"#6699cc",
-                    "label":"Aquatic Bed"
-                },
+            "containers":[
                 {
-                  "color":"#009973",
+                  "color":"#154929",
                   "label":"Forested Wetland"
                 },
                 {
-                    "color":"#00ebad",
-                    "label":"Emergent Wetland"
+                  "color":"#5f9778",
+                  "label":"Shrub-Scrub Wetland"
                 },
                 {
-                    "color":"#a3a375",
-                    "label":"Shrub-Scrub Wetland"
+                  "color":"#a4c3a2",
+                  "label":"Emergent Wetland"
                 },
                 {
-                  "color":"#c6c6c6",
+                  "color":"#999966",
+                  "label":"Aquatic Bed"
+                },
+                {
+                  "color":"#d9d9d9",
                   "label":"Unclassified"
               }],
             "description":"Estuary habitats are defined based off dominant vegetation and substrate. Points are colored using the most common type of identified/unidentified habitat in that estuary."
