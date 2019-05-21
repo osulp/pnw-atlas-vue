@@ -758,6 +758,12 @@
           "linkText":"NOAA: National Ocean Watch",
           "linkUrl":"https://coast.noaa.gov/quickreport/#/ENOW/ENOW//2013,2012,2011,2010,2009,2008,2007,2006,2005",
           "description":"Data from 2015 and 2016."
+        },
+        {
+          "title":"GDP by County: ",
+          "linkText":"US Bureau of Economic Analysis",
+          "linkUrl":"https://www.bea.gov/data/gdp/gdp-county",
+          "description":"Data from 2015."
         }],
       "basemap":[{
         "title":"Created with Mapbox Studio"
