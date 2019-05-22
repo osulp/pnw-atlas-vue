@@ -148,7 +148,7 @@
         "geographic":[{
             "title":"Aquifers: ",
             "linkText":"USGS",
-            "linkUrl":"https://water.usgs.gov/GIS/metadata/usgswrd/XML/aquifers_us.xmll",
+            "linkUrl":"https://water.usgs.gov/GIS/metadata/usgswrd/XML/aquifers_us.xml#stdorder",
             "description":"Data from 2003. Joined with catchments and groundwater recharge datasets."
         },
         {
