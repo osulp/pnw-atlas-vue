@@ -360,12 +360,12 @@
             "opacity":[0.1,0.1,0.1,0.1,0.1,0.1],
             "tooltip":"tooltip",
             "tooltipVars":["phos_year"],
-            "tooltipText":["<b style='display:inline;'>P in Thousands KG/Year:&nbsp</b><p3 style='font-weight:normal;'>","</p3>"]
+            "tooltipText":["<b style='display:inline;'>P in Thousands kg/Year:&nbsp</b><p3 style='font-weight:normal;'>","</p3>"]
           }],
           "legend":[{
             "id":0,
                 "type":"polygon",
-                "title":"Phosphorus Inputs (1000s KG/yr)",
+                "title":"Phosphorus Inputs (1000s kg/yr)",
                 "icon":"phosphorus",
                 "containers":[{
                     "color":"#810f7c",
@@ -391,7 +391,7 @@
                     "color":"#ffffff",
                     "label":"0 or No Data"
                   }],
-                "description":"Total phosphorus input to water in thousands of KG/yr in 2002."
+                "description":"Total phosphorus input to water in thousands of kg/yr in 2002."
             },
             {
                 "id":1,
@@ -416,12 +416,12 @@
             "opacity":[0.1,0.1,0.1,0.1,0.1,0.1],
             "tooltip":"tooltip",
             "tooltipVars":["nit_year"],
-            "tooltipText":["<b style='display:inline;'>N in Thousands KG/Year:&nbsp</b><p3 style='font-weight:normal;'>","</p3>"]
+            "tooltipText":["<b style='display:inline;'>N in Thousands kg/Year:&nbsp</b><p3 style='font-weight:normal;'>","</p3>"]
           }],
           "legend":[{
             "id":0,
                 "type":"polygon",
-                "title":"Nitrogen Inputs (1000s KG/yr)",
+                "title":"Nitrogen Inputs (1000s kg/yr)",
                 "icon":"nitrogen",
                 "containers":[{
                     "color":"#806600",
@@ -447,7 +447,7 @@
                     "color":"#ffffff",
                     "label":"0 or No Data"
                   }],
-                "description":"Total nitrogen input to water in thousands of KG/yr in 2002."
+                "description":"Total nitrogen input to water in thousands of kg/yr in 2002."
             },
             {
                 "id":1,
