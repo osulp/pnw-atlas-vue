@@ -53,7 +53,7 @@
                   "radiusValues":[300,100],
                   "radius":[8,5,3],
                   "tooltipOffset":[10,0],
-                  "tooltipVars":["NAME","HEIGHT","STORAGE","YEAR","HAZ"],
+                  "tooltipVars":["NAME","HEIGHT","STORAGE","dam_year","HAZ"],
                   "tooltipText":["<h3 style='display:inline;'>","</h3><br/><p style='display:inline;'>Height:&nbsp","&nbspft.<br/>Storage:&nbsp","&nbspacre ft.<br/>Year Completed:&nbsp","<br/>Hazard Rating: ","</p>"]    
               },
               {
@@ -234,7 +234,7 @@
                   "radiusValues":[300,100],
                   "radius":[8,5,3],
                   "tooltipOffset":[10,0],
-                  "tooltipVars":["NAME","HEIGHT","STORAGE","YEAR","HAZ"],
+                  "tooltipVars":["NAME","HEIGHT","STORAGE","dam_year","HAZ"],
                   "tooltipText":["<h3 style='display:inline;'>","</h3><br/><p style='display:inline;'>Height:&nbsp","&nbspft.<br/>Storage:&nbsp","&nbspacre ft.<br/>Year Completed:&nbsp","<br/>Hazard Rating: ","</p>"]    
               },
               {
@@ -413,7 +413,7 @@
                   "radiusValues":[300,100],
                   "radius":[8,5,3],
                   "tooltipOffset":[10,0],
-                  "tooltipVars":["NAME","HEIGHT","STORAGE","YEAR","HAZ"],
+                  "tooltipVars":["NAME","HEIGHT","STORAGE","dam_year","HAZ"],
                   "tooltipText":["<h3 style='display:inline;'>","</h3><br/><p style='display:inline;'>Height:&nbsp","&nbspft.<br/>Storage:&nbsp","&nbspacre ft.<br/>Year Completed:&nbsp","<br/>Hazard Rating: ","</p>"]    
               },
               {
