@@ -394,7 +394,7 @@
               "titleVar":"Name",
               "filterVar":"HUC8",
               "varList":["area","dams_total","POPULATION","States","counties","cities_001"],
-              "varLabel":["Area: ", "Dams: ", "Population: ", "States/Provinces: ", "Counties: ", "Cities/CDPs: "],
+              "varLabel":["Area: ", "Total Dams: ", "Population: ", "States/Provinces: ", "Counties: ", "Cities/CDPs: "],
               "legTooltip":["Area of a watershed in square miles","Dams higher than 10 ft. or capacity greater than 1000 acre ft.","Population within a particular watershed.","States and Provinces intersected by the river basin","Number of Counties intersected by the river basin. British Columbia is considered one county.","Incorporated Cities and selected Census Designated Places with population over 1 person. Cities are not double counted."],
               "selectionOpacity":0.7,
               "selectionLayers":[{
