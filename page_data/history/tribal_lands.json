@@ -114,7 +114,7 @@
         "id":1,
         "title":"Land Seizure",
         "featureSelected":false, 
-        "border":{"title":"pnw_borders_black","include":true,"opacity":0.4},
+        "border":{"title":"pnw_borders_black","include":false,"opacity":0.4},
         "fastFacts":[{
             "facts":["&#9900 Beginning in the early 1800s, the US Government began aggressively seizing land from indigenous populations. These seizures were legitimized through written treaties, and the official language of the government declared the land as 'ceded'. Indigenous people were confined to declared reservations."]
           }],
