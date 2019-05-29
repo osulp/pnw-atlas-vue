@@ -385,8 +385,8 @@
             "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
             "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
         }],
-        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://www.chartjs.org/","https://leafletjs.com/"],
-        "softwareText":["QGIS","Geoserver","Chart.js","D3 Topojson","Leaflet"],
+        "softwareUrls":["https://qgis.org/en/site/","http://geoserver.org/","https://www.chartjs.org/","https://github.com/Leaflet/Leaflet.heat","https://www.chartjs.org/","https://leafletjs.com/"],
+        "softwareText":["QGIS","Geoserver","Chart.js","Leaflet.heat","D3 Topojson","Leaflet"],
         "facebook":"https://facebook.com/sharer.php?u=http://pnwatlas.oregonstate.edu/food/crop.html",
         "twitter":"https://twitter.com/home?status=PNW%20Crops%0Ahttp%3A//pnwatlas.oregonstate.edu/food/crop.html"
     }
