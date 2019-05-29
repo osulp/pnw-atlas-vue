@@ -1,0 +1,1910 @@
+{
+    "chapterTitle":"Sources",
+    "chapterLink":"/sources",
+    "chapters":[
+        {
+            "title":"Software and Plugins",
+            "maps":[
+                {
+                    "sources":[{
+                        "title":"Leaflet: ",
+                        "linkText":"leafletjs",
+                        "linkUrl":"https://leafletjs.com/"
+                    },
+                    {
+                        "title":"Vue: ",
+                        "linkText":"Vue.js",
+                        "linkUrl":"https://vuejs.org/"
+                    },
+                    {
+                        "title":"QGIS: ",
+                        "linkText":"Qgis Project",
+                        "linkUrl":"https://www.qgis.org/en/site/"
+                    },
+                    {
+                        "title":"TopoJson: ",
+                        "linkText":"D3",
+                        "linkUrl":"https://d3js.org/topojson.v1.min.js"
+                    },
+                    {
+                        "title":"GeoServer",
+                        "linkText":"Open Source Geospatial Foundation",
+                        "linkUrl":"http://geoserver.org/"
+                    },
+                    {
+                        "title":"Chart.js: ",
+                        "linkText":"Chart.js",
+                        "linkUrl":"https://www.chartjs.org/"
+                    },
+                    {
+                        "title":"Canvas-Flowmap-Layer: ",
+                        "linkText":"Sarah Bell",
+                        "linkUrl":"https://github.com/sarahbellum/Canvas-Flowmap-Layer"
+                    },
+                    {
+                        "title":"Patternomaly: ",
+                        "linkText":"Tom London",
+                        "linkUrl":"https://github.com/ashiguruma/patternomaly"
+                    },
+                    {
+                        "title":"Leaflet.heat: ",
+                        "linkText":"Leafletjs",
+                        "linkUrl":"https://github.com/Leaflet/Leaflet.heat"
+                    },
+                    {
+                        "title":"Leaflet.pattern: ",
+                        "linkText":"Tyler Eastman",
+                        "linkUrl":"https://github.com/teastman/Leaflet.pattern"
+                    },
+                    {
+                        "title":"Chartjs-plugin-labels: ",
+                        "linkText":"Github User emn178",
+                        "linkUrl":"https://github.com/emn178/chartjs-plugin-labels"
+                    }]
+                }]
+        },
+        {
+            "title":"Basemaps",
+            "maps":[
+                {
+                    "sources":[{
+                        "title":"Background Terrain: ",
+                        "linkText":"ESRI",
+                        "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldTerrain",
+                        "description":"ESRI Background Terrain; Source: USGS, Esri, TANA, DeLorme, and NPS. More information can be found ",
+                        "descriptionLinkUrl":["https://developers.arcgis.com/"],
+                        "descriptionLinkText":["here."]
+                    },
+                    {
+                        "title":"Satellite Imagery: ",
+                        "linkText":"ESRI",
+                        "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/index.html#filter=Esri.WorldImagery",
+                        "description":"ESRI World Imagery; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community. More information can be found ",
+                        "descriptionLinkUrl":["https://developers.arcgis.com/"],
+                        "descriptionLinkText":["here."]
+                    },
+                    {
+                        "title":"Background Labels: ",
+                        "linkText":"Carto",
+                        "linkUrl":"https://leaflet-extras.github.io/leaflet-providers/preview/#filter=CartoDB.PositronOnlyLabels",
+                        "description":"",
+                        "descriptionLinkUrl":["http://www.openstreetmap.org/copyright","http://cartodb.com/attributions"],
+                        "descriptionLinkText":["&#9400;OpenStreetMap", "&#9400;CartoDB"]
+                    },
+                    {
+                        "title":"Other Basemaps: ",
+                        "linkText":"Mapbox Studio",
+                        "linkUrl":"https://www.mapbox.com/mapbox-studio/",
+                        "description":"A handful of custom basemaps were created for the Atlas using Mapbox Studio."
+                    }]
+                }]
+        },
+        {
+        "title":"Agriculture & Food",
+        "maps":[
+            {
+                "title":"Alcohol Production",
+                "sources":[{
+                    "title":"Beer Producers: ",
+                    "linkText":"Beer Mapping Project",
+                    "linkUrl":"https://beermapping.com/about/",
+                    "description":"Data from 2018. Free account is required to download data."
+                },
+                {
+                    "title":"Beer Crop Growing Area: ",
+                    "linkText":"USDA National Agricultural Statistics Service",
+                    "linkUrl":"https://nassgeodata.gmu.edu/CropScape/",
+                    "description":"Data from 2017. Data downloaded for OR, WA and ID. Filtered to include only wheat, barley, and hops crop area data."
+                },
+                {
+                    "title":"Wine Producers: ",
+                    "linkText":"Alcohol and Tobacco Tax and Trade Bureau",
+                    "linkUrl":"https://www.ttb.gov/foia/frl.shtml",
+                    "description":"Data from 2017. Wine Producer and Blender List. Raw data listed as addresses and was geocoded using Texas A&M's free online geocoding service."
+                },
+                {
+                    "title":"American Viticultural Areas: ",
+                    "linkText":"UC Davis Library",
+                    "linkUrl":"https://github.com/UCDavisLibrary/ava",
+                    "description":"Data from 2018. Dataset is incomplete. Gaps in data were filled in using digitized maps (see below)."
+                },
+                {
+                    "title":"Oregon AVAs: ",
+                    "linkText":"Linfield Library",
+                    "linkUrl":"http://digitalcommons.linfield.edu/owha_owb_maps/7/",
+                    "description":"Data from 2008. Used to digitize polygon data."
+                },
+                {
+                    "title":"Washington AVAs: ",
+                    "linkText":"Vineyards.com",
+                    "linkUrl":"https://vineyards.com/photos/maps/Washington_EN.png",
+                    "description":"Date unknown. Used to digitize polygon data."
+                },
+                {
+                    "title":"Snake River AVA: ",
+                    "linkText":"Wines Northwest",
+                    "linkUrl":"http://www.winesnw.com/snakerivervalleyAVA.htm",
+                    "description":"Map from 2015. Used to digitize polygon data."
+                },
+                {
+                    "title":"Lewis Clark Valley AVA: ",
+                    "linkText":"Town News",
+                    "linkUrl":"https://bloximages.newyork1.vip.townnews.com/lmtribune.com/content/tncms/assets/v3/editorial/7/01/70106ce4-2567-11e6-97d2-fb4956650a7d/574a8db348675.image.jpg",
+                    "description":"Date unknown. Used to digitize polygon data."
+                }]
+            },
+            {   
+                "title":"Crops",
+                "sources":[{
+                    "title":"Agricultural Sales/Area Data: ",
+                    "linkText":"USDA Census of Agriculture",
+                    "linkUrl":"https://www.agcensus.usda.gov/Publications/2012/Online_Resources/Ag_Census_Web_Maps/Data_download/index.php",
+                    "description":"Percent of agricultural sales (map), or percent of acreage harvested (table). Data from 2012. Data table was downloaded from 'Data Download' link. Table columns used in maps are: y12_M017, y12_M020, y12_M022, and y12_M021. See full documentation for full listing of columns used in tables."
+                },
+                {
+                    "title":"Crop Area: ",
+                    "linkText":"USDA National Agricultural Statistics Service",
+                    "linkUrl":"https://nassgeodata.gmu.edu/CropScape/",
+                    "description":"Data from 2017. Filtered based on appropriate crop types for each category."
+                }]
+            },
+            {   
+                "title":"Farms",
+                "sources":[{
+                    "title":"Farm Value, Ownership, and Irrigation: ",
+                    "linkText":"USDA Census of Agriculture",
+                    "linkUrl":"https://www.agcensus.usda.gov/Publications/2012/Online_Resources/Ag_Census_Web_Maps/Data_download/index.php",
+                    "description":"Average agricultural products per farm (in $1000s), percent farm ownership, and percent of farmland irrigated. Data from 2012. Data table was downloaded from 'Data Download' link. Table columns used in maps are: y12_M017, y12_M020, y12_M022, and y12_M021. See full documentation for full listing of columns used in tables."
+                },
+                {
+                    "title":"Prime Farmland: ",
+                    "linkText":"USDA Natural Resources Conservation Service",
+                    "linkUrl":"https://datagateway.nrcs.usda.gov/GDGOrder.aspx?order=QuickState",
+                    "description":"Data from 2016. gSSURGO datasets were downloaded for ID, OR, and WA, and joined with mapunit tables for each state."
+                }]
+            },
+            {   
+                "title":"Food Access",
+                "sources":[{
+                    "title":"Grocery Stores: ",
+                    "linkText":"Open Street Map",
+                    "linkUrl":"https://www.openstreetmap.org/",
+                    "description":"Imported using QuickOSM QGIS plugin in 2017. Tags for import were: shop=supermarket and shop=greengrocer."
+                },
+                {
+                    "title":"Grocery Deserts: ",
+                    "linkText":"USDA Food Access Research Atlas",
+                    "linkUrl":"https://www.ers.usda.gov/data-products/food-access-research-atlas/download-the-data/#Current%20Version",
+                    "description":"Census tracts classified as food deserts. Data from 2015. Included fields: LILATracts_1And10 and LILATracts_halfAnd10."
+                },
+                {
+                    "title":"Farmers Markets: ",
+                    "linkText":"USDA Agricultural Marketing Service",
+                    "linkUrl":"https://catalog.data.gov/dataset/farmers-markets-geographic-data",
+                    "description":"Data from 2018."
+                },
+                {
+                    "title":"% SNAP Households: ",
+                    "linkText":"USDA Food Access Research Atlas",
+                    "linkUrl":"https://www.ers.usda.gov/data-products/food-access-research-atlas/download-the-data/#Current%20Version",
+                    "description":"Percent of households receiving SNAP benefits. Data from 2015. Included Fields: OHU2010 and TractSNAP."
+                },
+                {
+                    "title":"Fast Food Restaurants: ",
+                    "linkText":"POI Factory",
+                    "linkUrl":"http://www.poi-factory.com/",
+                    "description":"Data from various dates. Files downloaded for the following fast food restaurants: Arby's, Burger King, Burgerville, Carl's Jr., Del Taco, Dominos, Dairy Queen, Five Guys, Godfather's, Jack in the Box, Jimmy Johns, KFC, Little Caesars, Long John Silver, McDonalds, Papa John's, Papa Murphy's, Pizza Hut, Popeyes, Quiznos, Sonic, Subway, Taco Bell, Taco Time, Wendy's."
+                },
+                {
+                    "title":"Poverty Rate: ",
+                    "linkText":"USDA Food Access Research Atlas",
+                    "linkUrl":"https://www.ers.usda.gov/data-products/food-access-research-atlas/download-the-data/#Current%20Version",
+                    "description":"Percent poverty rate. Data from 2015. Included Field: PovertyRate."
+                },
+                {
+                    "title":"Food Insecure Population: ",
+                    "linkText":"Feeding America",
+                    "linkUrl":"http://www.feedingamerica.org/research/map-the-meal-gap/by-county.html",
+                    "description":"Percent food insecure population. Data from 2016."
+                }]
+            },
+            {   
+                "title":"Livestock",
+                "sources":[{
+                    "title":"Livestock Sales Data: ",
+                    "linkText":"USDA Census of Agriculture",
+                    "linkUrl":"https://www.agcensus.usda.gov/Publications/2012/Online_Resources/Ag_Census_Web_Maps/Data_download/index.php",
+                    "description":"Percent of agricultural sales, total and by source. Data from 2012. Data table was downloaded from 'Data Download' link. Table columns used in maps are: y12_M026. Table columns used in tables are: y12_M028, y12_M029, y12_M027, y12_M032."
+                }]
+            }]
+    },
+    {
+        "title":"Culture & History",
+        "maps":[
+            {
+                "title":"Historic Cities & Borders",
+                "sources":[{
+                    "title":"City Points 1900-2010: ",
+                    "linkText":"IPUMS/US Census",
+                    "linkUrl":"https://data2.nhgis.org/main",
+                    "description":"Point shapefile datasets downloaded for each decennial census year (1900-2010)."
+                },
+                {
+                    "title":"City Points 1830 and Earlier: ",
+                    "linkText":"Map of the United States Of North America, 1839",
+                    "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~1614~140001:Map-of-the-United-States-Of-North-A?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:1839%20united%20states%20david%20burr;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=1&trs=18",
+                    "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+                },
+                {
+                    "title":"City Points 1840: ",
+                    "linkText":"Map of the Oregon Territory, 1841",
+                    "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~224023~5506306:Map-Of-The-Oregon-Territory?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:1841%20wilkes;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=0&trs=183",
+                    "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+                },
+                {
+                    "title":"City Points 1850: ",
+                    "linkText":"California, Oregon, Utah, New Mexico, 1852",
+                    "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~23815~910003:California,-Oregon,-Utah,-New-Mexic?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No",
+                    "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+                },
+                {
+                    "title":"City Points 1860: ",
+                    "linkText":"Map Of Oregon, Washington, And Part Of British Columbia, 1860",
+                    "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~2065~120063:Map-Of-Oregon,-Washington,-And-Part?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:1860%20oregon;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=5&trs=85",
+                    "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+                },
+                {
+                    "title":"City Points 1870: ",
+                    "linkText":"Bancroft's Map Of Oregon, Washington, Idaho, Montana And British Columbia, 1872",
+                    "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~1467~130123:Bancroft-s-Map-Of-Oregon,-Washingto?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:1872%20oregon;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=3&trs=11",
+                    "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+                },
+                {
+                    "title":"City Points 1870/1880: ",
+                    "linkText":"Oregon, Washington and Idaho, 1876",
+                    "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~307530~90077413:Oregon,-Washington-and-Idaho-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:1876%20oregon;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=14&trs=19",
+                    "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+                },
+                {
+                    "title":"City Points 1880: ",
+                    "linkText":"Map of Oregon, Washington, Idaho, and part of Montana, 1880",
+                    "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~30520~1140047:Ore-,-Wash-,-Ida-,-Mont-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:1880%20oregon;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=0&trs=11",
+                    "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+                },
+                {
+                    "title":"City Points 1890: ",
+                    "linkText":"Sectional map of Washington, Oregon, Idaho, and western Montana, 1891",
+                    "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~30520~1140047:Ore-,-Wash-,-Ida-,-Mont-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:1880%20oregon;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=0&trs=11",
+                    "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+                },
+                {
+                    "title":"City Population 1860-1960: ",
+                    "linkText":"Stanford",
+                    "linkUrl":"https://github.com/cestastanford/historical-us-city-populations",
+                    "description":"Population data only included for cities that reached a population of greater than 2,500. Data from earlier decades is incomplete."
+                },
+                {
+                    "title":"City Population 1970-2010: ",
+                    "linkText":"IPUMS NHGIS, University of Minnesota",
+                    "linkUrl":"https://data2.nhgis.org/main",
+                    "description":"Total place population data downloaded for each decade."
+                },
+                {
+                    "title":"Historical County/Territory Boundaries: ",
+                    "linkText":"Atlas of Historical County Boundaries",
+                    "linkUrl":"https://publications.newberry.org/ahcbp/downloads/united_states.html",
+                    "description":"Data downloaded with generalized with 0.01 deg. tolerance."
+                }]
+            },
+            {   
+                "title":"Historical Maps",
+                "sources":[{
+                    "title":"1841 Map: ",
+                    "linkText":"David Rumsey Map Collection",
+                    "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~224023~5506306:Map-Of-The-Oregon-Territory?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:1841%20wilkes;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=0&trs=183"
+                },
+                {
+                    "title":"1859 Map: ",
+                    "linkText":"David Rumsey Map Collection",
+                    "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~240028~5512098:Department-of-Oregon--Map-of-the-st?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:Oregon%2C%2BWashington%2Band%2BIdaho;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=2&trs=238"
+                },
+                {
+                    "title":"1868 Map: ",
+                    "linkText":"David Rumsey Map Collection",
+                    "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~249757~5516651:Map-of-Oregon,-Washington,-Idaho,-a?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:1868%20oregon;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=1&trs=10"
+                },
+                {
+                    "title":"1891 Map: ",
+                    "linkText":"David Rumsey Map Collection",
+                    "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~254839~5519497:Sectional-map-of-Washington,-Oregon?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:Oregon%2C%2BWashington%2Band%2BIdaho;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=1&trs=238"
+                },
+                {
+                    "title":"1929 Map: ",
+                    "linkText":"David Rumsey Map Collection",
+                    "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~31906~1151223:138-39--Wash-,-Ore-,-Ida-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:1929%20oregon;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=1&trs=5"
+                },
+                {
+                    "title":"1956 Map: ",
+                    "linkText":"David Rumsey Map Collection",
+                    "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~212200~5500282:Shell-Sectional-Map-No--11--Pacific?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No"
+                },
+                {
+                    "title":"All David Rumsey maps licensed under: ",
+                    "linkText":"Creative Commons",
+                    "linkUrl":"https://creativecommons.org/licenses/by-nc-sa/3.0/"
+                }]
+        },
+        {   
+            "title":"Indigenous History",
+            "sources":[{
+                "title":"Tribal Locations/Information: ",
+                "linkText":"Hidden History",
+                "linkUrl":"http://www.hiddenhistory.com/PAGE3/Wherwhn1.htm",
+                "description":"Notes: Data obtained from this site are sourced to a 1952 book by Reed Swanton, entitled 'The Indian Tribes of North America'. While some of the book's content is certainly outdated, the maps included provided a fairly complete picture of Indigenous homelands. The maps from Swanton's book (and presented on the linked website) were used to digitize the points on this Indigenous History map. Points were placed at the relative center of the territory outlined by Swanton. Point locations are not supposed to be exact, and do not correspond with any actual geographic feature. Rather, their placement correspond to the general location of that tribe prior to Euro-American contact."
+            }]
+        },
+        {   
+            "title":"Tribal Lands",
+            "sources":[{
+                "title":"Tribal Lands: ",
+                "linkText":"US Census Bureau",
+                "linkUrl":"https://www.census.gov/geo/maps-data/data/cbf/cbf_aiannh.html",
+                "description":"Data from 2017."
+            },
+            {
+                "title":"Land Seizure: ",
+                "linkText":"U.S Forest Service",
+                "linkUrl":"https://enterprisecontent-usfs.opendata.arcgis.com/datasets/e4e788be8cfc4d1f8ff280a81ffaa69c_0",
+                "description":"Data range from 1850 to 1900."
+            },
+            {
+                "title":"Tribal Area Statistics: ",
+                "linkText":"IPUMS NHGIS, University of Minnesota",
+                "linkUrl":"https://enterprisecontent-usfs.opendata.arcgis.com/datasets/e4e788be8cfc4d1f8ff280a81ffaa69c_0",
+                "description":"Data selected for AMERICAN INDIAN AREA/ALASKA NATIVE AREA/HAWAIIAN HOME LAND, from ACS 2012-2016. Topics included: Total Population, Educational Attainment for the Population 25 Years and Over, Ratio of Income to Poverty Level in the Past 12 Months, Employment Status for the Population 16 Years and Over, Types of Health Insurance Coverage by Age."
+            },
+            {
+                "title":"PNW Average Statistics: ",
+                "linkText":"IPUMS NHGIS, University of Minnesota",
+                "linkUrl":"https://data2.nhgis.org/main",
+                "description":"Data selected for STATES, from ACS 2012-2016. Topics included: Educational Attainment for the Population 25 Years and Over, Ratio of Income to Poverty Level in the Past 12 Months, Employment Status for the Population 16 Years and Over, Types of Health Insurance Coverage by Age."
+            }]
+        }]
+    },
+    {
+        "title":"Energy",
+        "maps":[
+            {
+                "title":"Electric Utilities",
+                "sources":[{
+                    "title":"Power Plants: ",
+                    "linkText":"US Energy Information Administration",
+                    "linkUrl":"https://www.eia.gov/maps/layer_info-m.php",
+                    "description":"Data from 2017."
+                },
+                {
+                    "title":"Electric Utility Areas: ",
+                    "linkText":"Homeland Infrastructure Foundation-Level Data",
+                    "linkUrl":"https://hifld-geoplatform.opendata.arcgis.com/datasets/c4fd0b01c2544a2f83440dab292f0980_0",
+                    "description":"Data from 2017. Statistical data combined with power plant data."
+                }]
+            },
+            {   
+                "title":"Renewable Energy",
+                "sources":[{
+                    "title":"Power Plants: ",
+                    "linkText":"US Energy Information Administration",
+                    "linkUrl":"https://www.eia.gov/maps/layer_info-m.php",
+                    "description":"Data from 2017."
+                },
+                {
+                    "title":"Wind Potential: ",
+                    "linkText":"National Renewable Energy Laboratory",
+                    "linkUrl":"https://www.nrel.gov/gis/data-wind.html",
+                    "description":"Wind Power Classes based on wind speed at 50 meters. Data from 2012."
+                },
+                {
+                    "title":"Solar Irriadiance: ",
+                    "linkText":"National Renewable Energy Laboratory",
+                    "linkUrl":"https://www.nrel.gov/gis/data-solar.html",
+                    "description":"Average daily solar irradiance in kWh/m2/day. Data from 2012. Dataset: Lower 48 and Hawaii DNI 10-km Resolution 1998–2009."
+                },
+                {
+                    "title":"Geothermal Potential: ",
+                    "linkText":"National Renewable Energy Laboratory",
+                    "linkUrl":"https://www.nrel.gov/gis/data-geothermal.html",
+                    "description":"Geothermal potential using enhanced geothermal systems based on potential cost of electricity. Data from 2009."
+                },
+                {
+                    "title":"Biomass by County: ",
+                    "linkText":"National Renewable Energy Laboratory",
+                    "linkUrl":"https://www.nrel.gov/gis/data-biomass.html",
+                    "description":"Biomass production in metric tons per year. and Data from 2014."
+                }]
+        }]
+    },
+    {
+        "title":"Marine",
+        "maps":[
+            {
+                "title":"Conservation",
+                "sources":[{
+                    "title":"Total Marine Protected Areas: ",
+                    "linkText":"National Marine Protected Areas Center",
+                    "linkUrl":"https://marineprotectedareas.noaa.gov/dataanalysis/mpainventory/",
+                    "description":"Data from 2017."
+                  },
+                  {
+                    "title":"National Marine Sanctuary Regulations: ",
+                    "linkText":"NOAA",
+                    "linkUrl":"https://sanctuaries.noaa.gov/protect/regulations/"
+                  },
+                  {
+                    "title":"National Estuarine Regulations",
+                    "linkText":"NOAA National Ocean Service",
+                    "linkUrl":"https://oceanservice.noaa.gov/ecosystems/nerrs/"
+                  },
+                  {
+                    "title":"Oregon Marine Reserve/MPA Regulations",
+                    "linkText":"Oregon Marine Reserves",
+                    "linkUrl":"http://oregonmarinereserves.com/reserves/"
+                  },
+                  {
+                    "title":"Other Oregon Marine Protected Area Regulations",
+                    "linkText":"Oregon Department of Fish and Wildlife",
+                    "linkUrl":"https://www.oregon.gov/oprd/NATRES/pages/rs_faqcoastal.aspx"
+                  },
+                  {
+                    "title":"Washington Marine Protected Area Regulations",
+                    "linkText":"Washington Department of Fish and Wildlife",
+                    "linkUrl":"https://wdfw.wa.gov/fishing/management/mpa"
+                  },
+                  {
+                    "title":"Washington Aquatic Reserve Regulations",
+                    "linkText":"Washington Department of Natural Resources",
+                    "linkUrl":"https://www.dnr.wa.gov/managed-lands/aquatic-reserves"
+                  },
+                  {
+                    "title":"Washington Underwater Park Regulations",
+                    "linkText":"City of Edmonds",
+                    "linkUrl":"http://www.edmondswa.gov/edmonds-underwater-park-discovery.html"
+                  }]
+            },
+            {
+                "title":"Estuaries",
+                "sources":[{
+                    "title":"Estuary Areas",
+                    "linkText":"Pacific Marine & Estuarine Fish Habitat Partnership",
+                    "linkUrl":"http://www.pacificfishhabitat.org/data/estuary-extents",
+                    "description":"Data from 2017."
+                  },
+                  {
+                    "title":"Estuary Habitats",
+                    "linkText":"Pacific Marine & Estuarine Fish Habitat Partnership",
+                    "linkUrl":"http://www.pacificfishhabitat.org/data/estuarine-biotic-habitat",
+                    "description":"Data from 2017."
+                  },
+                  {
+                    "title":"Estuary Points",
+                    "linkText":"Pacific Marine & Estuarine Fish Habitat Partnership",
+                    "linkUrl":"http://www.pacificfishhabitat.org/data/estuary-points",
+                    "description":"Data from 2017."
+                  },
+                  {
+                    "title":"Focal Species & Habitat Degradation",
+                    "linkText":"Pacific Marine & Estuarine Fish Habitat Partnership",
+                    "linkUrl":"http://pmep.apps.nplcc.databasin.org/compare",
+                    "description":"Data from 2017."
+                  }]
+            },
+            {
+                "title":"Fisheries",
+                "sources":[{
+                    "title":"Washington Total Port Landings: ",
+                    "linkText":"NOAA Office of Science and Technology",
+                    "linkUrl":"https://www.st.nmfs.noaa.gov/commercial-fisheries/commercial-landings/other-specialized-programs/total-commercial-fishery-landings-at-an-individual-u-s-port-for-all-years-after-1980/index",
+                    "description":"Data from 2017, copied from each individual port and aggregated."
+                  },
+                  {
+                    "title":"Oregon Total Port Landings: ",
+                    "linkText":"Oregon Department of Fish and Wildlife",
+                    "linkUrl":"https://www.dfw.state.or.us/mrp/regulations/commercial_fishing/",
+                    "description":"Data from 2017, copied from each individual port for each individual year (2004-2017) and aggregated."
+                  },
+                  {
+                    "title":"Fishing Vessel Density",
+                    "linkText":"NOAA Department of Commerce",
+                    "linkUrl":"https://catalog.data.gov/dataset/2013-fishing-vessel-density",
+                    "description":"Data from 2013, derived from Automatic Identification Systems (AIS) data."
+                  },
+                  {
+                    "title":"Essential Habitat",
+                    "linkText":"National Marine Protecte Areas Database",
+                    "linkUrl":"https://marineprotectedareas.noaa.gov/dataanalysis/mpainventory/",
+                    "description":"Data from 2017, filtered to only include areas defined by the National Marine Fisheries Service."
+                  },
+                  {
+                    "title":"Fishery Locations",
+                    "linkText":"West Coast Ocean Data Portal",
+                    "linkUrl":"http://portal.westcoastoceans.org/discover/#?c=Category.Human.Economy~Category.Human.Economy.Fishing&text=ethnography",
+                    "description":"Data from 2012. 'West Coast Fishing Ethnography' dataset downloaded."
+                  },
+                  {
+                    "title":"Aquaculture Statistics",
+                    "linkText":"USDA National Agricultural Statistics Service",
+                    "linkUrl":"https://quickstats.nass.usda.gov/?source_desc=CENSUS#206A0A6D-4A0B-3DAC-9B06-80D9BE6ECB2C",
+                    "description":"Data from 2017. 'Aquaculture Totals' and 'Mollusk' datasets were downloaded."
+                  },
+                  {
+                    "title":"Aquaculture Text: ",
+                    "linkText":"NOAA Fisheries West Coast Region",
+                    "linkUrl":"https://www.westcoast.fisheries.noaa.gov/aquaculture/"
+                  }]
+            },
+            {
+                "title":"Marine Mammals",
+                "sources":[{
+                    "title":"Orca Sightings: ",
+                    "linkText":"The Whale Museum",
+                    "linkUrl":"http://hotline.whalemuseum.org/api",
+                    "description":"Data from 2006 to 2016, downloaded from the Whale Hotline API."
+                  },
+                  {
+                    "title":"Cetacean Densities: ",
+                    "linkText":"NOAA",
+                    "linkUrl":"https://inport.nmfs.noaa.gov/inport/item/55923",
+                    "description":"Modeled density from 2016."
+                  },
+                  {
+                    "title":"Stellar Sea Lion Haulouts",
+                    "linkText":"NOAA National Centers for Environmental Information",
+                    "linkUrl":"https://data.nodc.noaa.gov/cgi-bin/iso?id=gov.noaa.nodc%3A0129877",
+                    "description":"Data from 2016."
+                  },
+                  {
+                    "title":"Stellar Sea Lion Critical Habitat",
+                    "linkText":"National Marine Protected Areas Database",
+                    "linkUrl":"https://www.westcoast.fisheries.noaa.gov/maps_data/marine_mammal_maps.html",
+                    "description":"Data from 2016. Downloaded from the 'Stellar Sea Lion Critical Habitat Map, GIS Data' link."
+                  },
+                  {
+                    "title":"Species Information: ",
+                    "linkText":"Oregon Department of Fish and Wildlife",
+                    "linkUrl":"https://myodfw.com/wildlife-viewing/species/whales-dolphins-and-porpoises"
+                  },
+                  {
+                    "title":"Fin Whale Information: ",
+                    "linkText":"NOAA Fisheries",
+                    "linkUrl":"https://www.fisheries.noaa.gov/species/fin-whale"
+                  },
+                  {
+                    "title":"Whale Images: ",
+                    "linkText":"Cetaceans of the Channel Islands National Marine Sanctuary",
+                    "linkUrl":"https://archive.org/details/cetaceansofchann00leat"
+                  },
+                  {
+                    "title":"Pacific White-Sided Dolphin Image: ",
+                    "linkText":"NOAA Fisheries",
+                    "linkUrl":"https://www.fisheries.noaa.gov/species/pacific-white-sided-dolphin"
+                  },
+                  {
+                    "title":"Dall's Porpoise Image: ",
+                    "linkText":"NOAA Fisheries",
+                    "linkUrl":"https://www.fisheries.noaa.gov/species/dalls-porpoise"
+                  },
+                  {
+                    "title":"Stellar Sea Lion Image: ",
+                    "linkText":"NOAA Fisheries",
+                    "linkUrl":"https://www.fisheries.noaa.gov/species/steller-sea-lion"
+                  }]
+            },
+            {
+                "title":"Ocean Economy",
+                "sources":[{
+                    "title":"Marine Economy Statistics: ",
+                    "linkText":"NOAA: National Ocean Watch",
+                    "linkUrl":"https://coast.noaa.gov/quickreport/#/ENOW/ENOW//2013,2012,2011,2010,2009,2008,2007,2006,2005",
+                    "description":"Data from 2015 and 2016."
+                  },
+                  {
+                    "title":"GDP by County: ",
+                    "linkText":"US Bureau of Economic Analysis",
+                    "linkUrl":"https://www.bea.gov/data/gdp/gdp-county",
+                    "description":"Data from 2015."
+                  }]
+            },
+            {
+                "title":"Ocean Health",
+                "sources":[{
+                    "title":"Dissolved Oxygen Observations: ",
+                    "linkText":"NOAA",
+                    "linkUrl":"https://www.webapps.nwfsc.noaa.gov/apex/parrdata/inventory/tables/table/ocean_ctd_chlorophyll_nutrient_data",
+                    "description":"Observation data from 2008-2018 were requested from NOAA. Observations were CTD casts at various latitudes along the coast. These data were then interpolated to make a raster and record approximate hypoxic zones."
+                  },
+                  {
+                    "title":"Aragonite Saturation State Model: ",
+                    "linkText":"West Coast ResilienSea Bren School",
+                    "linkUrl":"https://github.com/resilienseas/resilienseas.github.io",
+                    "description":"Model created from 2013 data."
+                  },
+                  {
+                    "title":"Hypoxia Description: ",
+                    "linkText":"NOAA Northwest Fisheries Science Center",
+                    "linkUrl":"https://www.nwfsc.noaa.gov/research/divisions/fe/estuarine/oeip/de-hypoxia.cfm"
+                  },
+                  {
+                    "title":"Ocean Acidification Description: ",
+                    "linkText":"NOAA PMEL",
+                    "linkUrl":"https://www.pmel.noaa.gov/co2/story/What+is+Ocean+Acidification%3F"
+                  }]
+            }]
+    },
+    {
+        "title":"Natural Hazards",
+        "maps":[
+            {
+                "title":"Disaster Risk",
+                "sources":[{
+                    "title":"US Natural Hazards Index: ",
+                    "linkText":"National Center for Disaster Preparedness",
+                    "linkUrl":"http://ncdp.columbia.edu/library/mapsmapping-projects/us-natural-hazards-index/",
+                    "description":"Compilation of various risk factors and classified into an index. Data from 2018."
+                },
+                {
+                    "title":"Disaster Declarations: ",
+                    "linkText":"FEMA",
+                    "linkUrl":"https://www.fema.gov/data-visualization-disaster-declarations-states-and-counties",
+                    "description":"Federally declared disasters since 1953. Data from 2017."
+                }]
+            },
+            {
+                "title":"Drought",
+                "sources":[{
+                    "title":"Drought Classifications: ",
+                    "linkText":"NOAA/University of Nebraska",
+                    "linkUrl":"https://www1.ncdc.noaa.gov/pub/data/nidis/shapefiles/",
+                    "description":"Level of Drought classification. Data downloaded for July 2012-2017."
+                },
+                {
+                    "title":"Drought Counties: ",
+                    "linkText":"United States Department of Agriculture",
+                    "linkUrl":"https://www.fsa.usda.gov/programs-and-services/disaster-assistance-program/disaster-designation-information/index",
+                    "description":"County drought status. Combined with PNW county dataset. Data downloaded for July 2012-2017."
+                },
+                {
+                    "title":"Precipitation Anomaly: ",
+                    "linkText":"Oregon State University PRISM Group",
+                    "linkUrl":"http://prism.oregonstate.edu/recent/",
+                    "description":"Percent differentiation from average precipitation. Annual precipitation datasets from 2012-2017 subtracted from 1980-2010 30-year normals."
+                }]
+            },
+            {
+                "title":"Earthquakes",
+                "sources":[{
+                    "title":"Earthquakes (Large and Small): ",
+                    "linkText":"USGS",
+                    "linkUrl":"https://earthquake.usgs.gov/earthquakes/search/",
+                    "description":"Richter Scale magnitude. Small earthquakes search criteria: magnitude 2.5+, 1/1/2000 - 1/1/2018, PNW area, CSV export. Large earthquakes search criteria: magnitude 4.5+, 1/1/1900 - 1/1/2018, PNW area, CSV export."
+                },
+                {
+                    "title":"Earthquake Risk: ",
+                    "linkText":"USGS",
+                    "linkUrl":"https://earthquake.usgs.gov/hazards/hazmaps/conterminous/index.php#2017",
+                    "description":"Peak Ground Acceleration 2% in 50 yrs. Data from 2014."
+                },
+                {
+                    "title":"Cascadia Subduction Zone Risk: ",
+                    "linkText":"USGS",
+                    "linkUrl":"https://earthquake.usgs.gov/scenarios/eventpage/uscasc9.0_expanded_peak_se#shakemap",
+                    "description":"Predicted Instrumental Intensity from a Magnitude 9.0 Earthquake. Data from 2016."
+                },
+                {
+                    "title":"Cascadia Subduction Zone Facts: ",
+                    "linkText":"Pacific Northwest Seismic Network",
+                    "linkUrl":"https://pnsn.org/outreach/earthquakesources/csz"
+                }]
+            },
+            {
+                "title":"Extreme Weather",
+                "sources":[{
+                    "title":"Storm Events: ",
+                    "linkText":"NOAA",
+                    "linkUrl":"https://www.ncdc.noaa.gov/stormevents/ftp.jsp",
+                    "description":"Total damage, and storm classification."
+                }]
+            },
+            {
+                "title":"Flooding",
+                "sources":[{
+                    "title":"Flood Insurance Zones: ",
+                    "linkText":"FEMA",
+                    "linkUrl":"https://data.femadata.com/FIMA/Risk_MAP/NFHL/",
+                    "description":"Data from 2017. Includes some PNW counties. Dataset was clipped to PNW counties and combined with below county-level datasets."
+                },
+                {
+                    "title":"King County Flood Insurance Zones: ",
+                    "linkText":"King County",
+                    "linkUrl":"https://gis-kingcounty.opendata.arcgis.com/datasets/23e700bb05204fd28d19195043386780_2485",
+                    "description":"Data from 2015."
+                },
+                {
+                    "title":"Chelan County Flood Insurance Zones: ",
+                    "linkText":"Chelan County",
+                    "linkUrl":"ftp://ponyexpress.co.chelan.wa.us/gis/",
+                    "description":"Data from 2006."
+                },
+                {
+                    "title":"Kittias County Flood Insurance Zones: ",
+                    "linkText":"Kittias County",
+                    "linkUrl":"http://data-kitcogis.opendata.arcgis.com/datasets/firm-floodplains",
+                    "description":"Data from 2018."
+                }]
+            },
+            {
+                "title":"Volcanoes",
+                "sources":[{
+                    "title":"Volcanoes: ",
+                    "linkText":"Stanford Earth Works",
+                    "linkUrl":"https://earthworks.stanford.edu/catalog/harvard-glb-volc",
+                    "description":"Data from 2003."
+                },
+                {
+                    "title":"Washington Volcano Hazard Zones: ",
+                    "linkText":"Washington State Department of Natural Resources",
+                    "linkUrl":"https://www.dnr.wa.gov/programs-and-services/geology/publications-and-data/gis-data-and-databases",
+                    "description":"Data from 2007."
+                },
+                {
+                    "title":"Mount Hood Hazard Zones: ",
+                    "linkText":"USGS Volcano Hazards Program",
+                    "linkUrl":"https://pubs.usgs.gov/of/2007/1222/data.html",
+                    "description":"Data from 2007."
+                },
+                {
+                    "title":"Mount Jefferson Hazard Zones: ",
+                    "linkText":"USGS Volcano Hazards Program",
+                    "linkUrl":"https://pubs.usgs.gov/of/2007/1224/data.html",
+                    "description":"Data from 2007."
+                },
+                {
+                    "title":"Newberry Hazard Hazard Zones: ",
+                    "linkText":"USGS Volcano Hazards Program",
+                    "linkUrl":"https://pubs.usgs.gov/of/2007/1225/data.html",
+                    "description":"Data from 2007."
+                },
+                {
+                    "title":"Three Sisters Hazard Zones: ",
+                    "linkText":"USGS Volcano Hazards Program",
+                    "linkUrl":"https://pubs.usgs.gov/of/2007/1221/data.html",
+                    "description":"Data from 2007."
+                },
+                {
+                    "title":"Crater Lake Hazard Zones: ",
+                    "linkText":"USGS Volcano Hazards Program",
+                    "linkUrl":"https://pubs.usgs.gov/of/2007/1223/data.html",
+                    "description":"Data from 2007."
+                },
+                {
+                    "title":"Ashfall Risk: ",
+                    "linkText":"American Red Cross",
+                    "linkUrl":"http://maps.redcross.org/website/Maps/Images/NationalLevel/volcano_hires.jpg",
+                    "description":"Map date unknown. Data digitized from static map."
+                },
+                {
+                    "title":"Idaho Geologic Zones: ",
+                    "linkText":"USGS",
+                    "linkUrl":"https://mrdata.usgs.gov/geology/state/state.php?state=ID",
+                    "description":"Data from 2006."
+                },
+                {
+                    "title":"Oregon Geologic Zones: ",
+                    "linkText":"Oregon Department of Geology and Mineral Industries",
+                    "linkUrl":"http://www.oregongeology.org/pubs/dds/p-OGDC-6.htm",
+                    "description":"Data from 2006."
+                },
+                {
+                    "title":"Washington Geologic Zones: ",
+                    "linkText":"Washington State Department of Natural Resources",
+                    "linkUrl":"https://www.dnr.wa.gov/programs-and-services/geology/publications-and-data/gis-data-and-databases",
+                    "description":"Data from 2006."
+                },
+                {
+                    "title":"Volcano Quick Facts: ",
+                    "linkText":"Pacific Northwest Seismic Network",
+                    "linkUrl":"https://pnsn.org/volcanoes"
+                }]
+            },
+            {
+                "title":"Wildfires",
+                "sources":[{
+                    "title":"Modern Wildfires by Year: ",
+                    "linkText":"USGS GeoMAC",
+                    "linkUrl":"https://rmgsc.cr.usgs.gov/outgoing/GeoMAC/historic_fire_data/",
+                    "description":"Data from 2000-2017. [year]_perimiters_dd83 files were downloaded for each year. Used in Modern Fires layer."
+                },
+                {
+                    "title":"BLM OR/WA Historical Wildfires: ",
+                    "linkText":"United States Bureau of Land Management",
+                    "linkUrl":"https://www.blm.gov/or/gis/data-details.php?id=463",
+                    "description":"Data from 2018. Used in Historical Fires layer. Only includes fires of over 10 acres."
+                },
+                {
+                    "title":"Historic Idaho Fire Perimeters: ",
+                    "linkText":"United States Bureau of Land Management",
+                    "linkUrl":"https://catalog.data.gov/dataset/historic-fire-perimeters-bureau-of-land-management-idaho",
+                    "description":"Data from 2018, current through 2015. Doesn't include national forest land. Used in Historical Fires layer."
+                },
+                {
+                    "title":"Idaho Panhandle Historic Wildfires: ",
+                    "linkText":"United States Forest Service: Idaho Panhandle National Forest",
+                    "linkUrl":"https://www.fs.usda.gov/main/ipnf/landmanagement/gis#fire",
+                    "description":"Data from 1885 to 2011. Coverage varies. Used in Historical Fires layer."
+                },
+                {
+                    "title":"Fire History Polygons for Region 1: ",
+                    "linkText":"United States Forest Service: Northern Region",
+                    "linkUrl":"https://www.fs.usda.gov/detailfull/r1/landmanagement/gis/?cid=stelprd3804172&width=full",
+                    "description":"Data from 1985 to 2015. Used in Historical Fires layer."
+                },
+                {
+                    "title":"Ochoco National Forest Fire History: ",
+                    "linkText":"United States Forest Service: Ochoco National Forest",
+                    "linkUrl":"https://www.fs.fed.us/r6/data-library/gis/ochoco/index.shtml",
+                    "description":"Data from 1850 to 2013. Coverage varies. Used in Historical Fires layer."
+                },
+                {
+                    "title":"Wildfire Risk",
+                    "linkText":"United States Forest Service",
+                    "linkUrl":"https://www.fs.usda.gov/rds/archive/Product/RDS-2015-0046",
+                    "description":"Modeled from the USFS Large Fire Simulation system, vegetation data, and observed fire locations. Data from 2015."
+                }]
+            }]
+    },
+    {
+        "title":"Outdoor Recreation",
+        "maps":[{
+            "title":"Hunting",
+                "sources":[
+                {
+                    "title":"Idaho Game Management Units: ",
+                    "linkText":"Idaho Department of Fish and Game",
+                    "linkUrl":"https://data-idfggis.opendata.arcgis.com/datasets/game-management-units",
+                    "description":"Data from 2018."
+                },
+                {
+                    "title":"Idaho Deer Harvest Statistics: ",
+                    "linkText":"Idaho Department of Fish and Game",
+                    "linkUrl":"https://idfg.idaho.gov/ifwis/huntplanner/stats.aspx?season=general&game=deer&yr=2016",
+                    "description":"Total deer harvested. Data from 2016."
+                },
+                {
+                    "title":"Idaho Elk Harvest Statistics: ",
+                    "linkText":"Idaho Department of Fish and Game",
+                    "linkUrl":"https://idfg.idaho.gov/ifwis/huntplanner/stats.aspx?season=general&game=elk&yr=2016",
+                    "description":"Total elk harvested. Data from 2016."
+                },
+                {
+                    "title":"Idaho Bear Harvest Statistics: ",
+                    "linkText":"Idaho Department of Fish and Game",
+                    "linkUrl":"https://idfg.idaho.gov/ifwis/huntplanner/stats.aspx?season=general&game=bear&yr=2016",
+                    "description":"Total bears harvested. Data from 2016."
+                },
+                {
+                    "title":"Oregon Game Management Units: ",
+                    "linkText":"Oregon Department of Fish and Wildlife",
+                    "linkUrl":"https://nrimp.dfw.state.or.us/DataClearinghouse/default.aspx?p=202&XMLname=805.xml",
+                    "description":"Data from 2016."
+                },
+                {
+                    "title":"Oregon Deer Harvest Statistics: ",
+                    "linkText":"Oregon Department of Fish and Wildlife",
+                    "linkUrl":"http://www.dfw.state.or.us/resources/Hunting/big_game/controlled_hunts/reports/index.asp",
+                    "description":"Total deer harvested. Data from 2016. Statistics combined from the following files: ", 
+                    "descriptionLinkUrl":["http://www.dfw.state.or.us/resources/hunting/big_game/controlled_hunts/docs/hunts_summary_reports/2016_Rifle_Deer_Harvest_Est_100_Series.pdf","http://www.dfw.state.or.us/resources/hunting/big_game/controlled_hunts/docs/hunts_summary_reports/2016_Rifle_Antlerless_Deer_Harvest_Est_600_Series.pdf","http://www.dfw.state.or.us/resources/hunting/big_game/controlled_hunts/docs/hunts_summary_reports/2016_Muzzleloader_Deer_Harvest_Est.pdf","http://www.dfw.state.or.us/resources/hunting/big_game/controlled_hunts/docs/hunts_summary_reports/2016_Archery_Deer_Harvest_Est.pdf"],
+                    "descriptionLinkText":["2016 100 Series Deer Harvest,"," 2016 600 Series Deer Harvest,"," 2016 Muzzleloader Deer Harvest,"," 2016 Archery Deer Harvest."]
+                },
+                {
+                    "title":"Oregon Elk Harvest Statistics: ",
+                    "linkText":"Oregon Department of Fish and Wildlife",
+                    "linkUrl":"http://www.dfw.state.or.us/resources/Hunting/big_game/controlled_hunts/reports/index.asp",
+                    "description":"Total elk harvested. Data from 2016. Statistics combined from the following files: ", 
+                    "descriptionLinkUrl":["http://www.dfw.state.or.us/resources/hunting/big_game/controlled_hunts/docs/hunts_summary_reports/2016_Rifle_Elk_Harvest_Est.pdf","http://www.dfw.state.or.us/resources/hunting/big_game/controlled_hunts/docs/hunts_summary_reports/2016_Muzzleloader_Elk_Harvest_Est.pdf","http://www.dfw.state.or.us/resources/hunting/big_game/controlled_hunts/docs/hunts_summary_reports/2016_Archery_Elk_Harvest_Est.pdf"],
+                    "descriptionLinkText":["2016 Rifle Harvest,"," 2016 Muzzleloader Elk Harvest,"," 2016 Archery Elk Harvest."]
+                },
+                {
+                    "title":"Oregon Bear Harvest Statistics: ",
+                    "linkText":"Oregon Department of Fish and Wildlife",
+                    "linkUrl":"http://www.dfw.state.or.us/resources/Hunting/big_game/controlled_hunts/reports/index.asp",
+                    "description":"Total bears harvested. Data from 2016. Statistics combined from the following files: ", 
+                    "descriptionLinkUrl":["http://www.dfw.state.or.us/resources/hunting/big_game/controlled_hunts/docs/hunts_summary_reports/2016_Black_Bear_Harvest_Est.pdf"],
+                    "descriptionLinkText":["2016 Black Bear Harvest."]
+                },
+                {
+                    "title":"Washington Game Management Units: ",
+                    "linkText":"Washington Department of Fish and Wildlife",
+                    "linkUrl":"http://geo.wa.gov/datasets/wdfw::game-management-units-polygons-2018",
+                    "description":"Data from 2018."
+                },
+                {
+                    "title":"Washington Deer Harvest Statistics: ",
+                    "linkText":"Washington Department of Fish and Wildlife",
+                    "linkUrl":"http://wdfw.wa.gov/hunting/harvest/2016/reports/deer_combo_dist_all.php",
+                    "description":"Total deer harvested. Data from 2016."
+                },
+                {
+                    "title":"Washington Elk Harvest Statistics: ",
+                    "linkText":"Washington Department of Fish and Wildlife",
+                    "linkUrl":"http://wdfw.wa.gov/hunting/harvest/2016/reports/elk_combo_dist_all.php",
+                    "description":"Total elk harvested. Data from 2016."
+                },
+                {
+                    "title":"Washington Bear Harvest Statistics: ",
+                    "linkText":"Washington Department of Fish and Wildlife",
+                    "linkUrl":"http://wdfw.wa.gov/hunting/harvest/2016/reports/bear_bmu_all.php",
+                    "description":"Total bear harvested. Data from 2016."
+                }]
+            },
+            {   
+                "title":"Outdoor Activities",
+                "sources":[{
+                    "title":"Campgrounds: ",
+                    "linkText":"USCampgrounds",
+                    "linkUrl":"http://www.uscampgrounds.info/"
+                },
+                {
+                    "title":"Idaho Ski Resorts: ",
+                    "linkText":"Google MyMaps",
+                    "linkUrl":"https://www.google.com/maps/d/u/0/viewer?mid=1B9fdGsbVONzJFnqAIF-JYslyXgY&hl=en_US&ll=44.86332209654876%2C-113.97446376171877&z=7",
+                    "description":"Crowdsourced data."
+                },
+                {
+                    "title":"Oregon Ski Resorts: ",
+                    "linkText":"Google MyMaps",
+                    "linkUrl":"https://www.google.com/maps/d/u/0/viewer?mid=1kglHouudKga-bJYC3Zgyul2yVZs&hl=en_US&ll=43.946186771129085%2C-119.90923214999998&z=7",
+                    "description":"Crowdsourced data."
+                },
+                {
+                    "title":"Washington Ski Resorts: ",
+                    "linkText":"Google MyMaps",
+                    "linkUrl":"https://www.google.com/maps/d/u/0/viewer?mid=1q99S90kSKateNROg2Omn4kEedxE&hl=en_US&ll=46.9634435779086%2C-119.16908730078126&z=7",
+                    "description":"Crowdsourced data."
+                },
+                {
+                    "title":"Annual Snowfall: ",
+                    "linkText":"Andreas Hamann and ClimateWNA",
+                    "linkUrl":"https://sites.ualberta.ca/~ahamann/data/climatewna.html",
+                    "description":"Snowfall data included in 24 Bioclimate Variables dataset. 1961-1990 climate normal."
+                },
+                {
+                    "title":"Idaho Whitewater Rafting Rivers: ",
+                    "linkText":"Go Northwest!",
+                    "linkUrl":"http://www.gonorthwest.com/Idaho/Activities/rafting/rafting.htm"
+                },
+                {
+                    "title":"Oregon Whitewater Rafting Rivers: ",
+                    "linkText":"Go Northwest!",
+                    "linkUrl":"http://www.gonorthwest.com/Oregon/Activities/rafting/rafting.htm"
+                },
+                {
+                    "title":"Washington Whitewater Rafting Rivers: ",
+                    "linkText":"Go Northwest!",
+                    "linkUrl":"http://www.gonorthwest.com/Washington/Activities/rafting/rafting.htm"
+                },
+                {
+                    "title":"Additional Rafting Data for Class and Rapid Location: ",
+                    "linkText":"American Whitewater",
+                    "linkUrl":"https://www.americanwhitewater.org/"
+                },
+                {
+                    "title":"Mountain Elevations: ",
+                    "linkText":"Summit Post",
+                    "linkUrl":"http://www.summitpost.org/"
+                },
+                {
+                    "title":"Background Elevation: ",
+                    "linkText":"United States Geological Survey EarthExplorer",
+                    "linkUrl":"https://earthexplorer.usgs.gov/"
+                }]
+        },
+        {   
+            "title":"Outdoor Economy",
+            "sources":[{
+                "title":"State employment, spending, taxes and wages: ",
+                "linkText":"Outdoor Advocacy",
+                "linkUrl":"https://outdoorindustry.org/advocacy/",
+                "description":"Data from 2017."
+            },
+            {
+                "title":"County Private Sector Employment Totals: ",
+                "linkText":"United States Census Bureau",
+                "linkUrl":"https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=ECN_2012_US_00A1&prodType=table",
+                "description":"Data from 2012. Data obtained using American FactFinder and the following NAICS codes for each PNW county: 71399 (All other amusement and recreation industries), 712190 (Nature parks and other similar institutions), 713920 (Skiing facilities), 451110 (Sporting goods stores), and 7212 (RV parks and recreational camps)."
+            },
+            {
+                "title":"Local Government Parks and Rec. Employment and Wages/Salaries: ",
+                "linkText":"United States Census Bureau",
+                "linkUrl":"https://www.census.gov/govs/local/",
+                "description":"Data from 2012. Data doesn't include state government parks and rec. employment and wages/salaries. Individual Unit File was downloaded."
+            }]
+        },
+        {   
+            "title":"Protected Lands",
+            "sources":[{
+                "title":"Park Boundaries/Area: ",
+                "linkText":"United States Geological Survey Protected Areas Database of the United States",
+                "linkUrl":"https://gapanalysis.usgs.gov/padus/data/download/",
+                "description":"Certain protected land designations impertinent to outdoor recreation and not included in the final map."
+            },
+            {
+                "title":"National Park Visitation Statistics: ",
+                "linkText":"United States National Park Service",
+                "linkUrl":"https://irma.nps.gov/Stats/",
+                "description":"Annual day use visitation. Data from 2016."
+            },
+            {
+                "title":"Idaho State Park Visitation Statistics: ",
+                "linkText":"Idaho Parks and Recreation",
+                "linkUrl":"https://parksandrecreation.idaho.gov/sites/default/files/uploads/documents/Visitation%20Statistics/2013%20Day%20Use%20-%202014-01-15.pdf",
+                "description":"Annual day use visitation. Data from 2013."
+            },
+            {
+                "title":"Oregon State Park Visitation Statistics: ",
+                "linkText":"Oregon Parks and Recreation",
+                "linkUrl":"http://oregonstateparks.org/index.cfm?do=visit.dsp_find",
+                "description":"Annual day use visitation. Data date not available. Annual day use park visitation statistics obtained from the history/FAQ tab of each park page."
+            }]
+        }]
+    },
+    {
+        "title":"Population & Housing",
+        "maps":[
+            {
+                "title":"Demographics",
+                "sources":[{
+                    "title":"Census Block Groups: ",
+                    "linkText":"IPUMS NHGIS, University of Minnesota",
+                    "linkUrl":"https://data2.nhgis.org/main",
+                    "description":"IPUMS Data selected from ACS 2011-2015. Geographic Level: Census Block Group GIS Data."
+                },
+                {
+                    "title":"Demographic Data: ",
+                    "linkText":"IPUMS NHGIS, University of Minnesota",
+                    "linkUrl":"https://data2.nhgis.org/main",
+                    "description":"IPUMS Data selected from ACS 2011-2015. Geographic Level: Census Block Group. Datasets: Sex by Age, Median Sex by Age, Hispanic or Latino Origin by Race."
+                }]
+            },
+            {   
+                "title":"Housing",
+                "sources":[{
+                    "title":"Census Block Groups: ",
+                    "linkText":"IPUMS NHGIS, University of Minnesota",
+                    "linkUrl":"https://data2.nhgis.org/main",
+                    "description":"IPUMS Data selected from ACS 2011-2015. Geographic Level: Census Block Group GIS Data."
+                },
+                {
+                    "title":"Housing Data: ",
+                    "linkText":"IPUMS NHGIS, University of Minnesota",
+                    "linkUrl":"https://data2.nhgis.org/main",
+                    "description":"IPUMS Data selected from ACS 2011-2015. Geographic Level: Census Block Group. Datasets: Occupancy Status, Tenure, Median Year Structure Built, Median Gross Rent, Median Value, Units in Structure."
+                }]
+            },
+            {   
+                "title":"Immigration",
+                "sources":[{
+                    "title":"Foreign Born Population: ",
+                    "linkText":"United States Census Bureau",
+                    "linkUrl":"https://data2.nhgis.org/main",
+                    "description":"ACS data from 2011-2015."
+                }]
+            },
+            {   
+                "title":"Internal Migration",
+                "sources":[{
+                    "title":"County-to-County Migration: ",
+                    "linkText":"United States Census",
+                    "linkUrl":"https://www.census.gov/topics/population/migration/guidance/county-to-county-migration-flows.html",
+                    "description":"ACS data from 2011-2015."
+                }]
+            },
+            {   
+                "title":"Urban & Rural",
+                "sources":[{
+                    "title":"Urban Areas: ",
+                    "linkText":"United States Census Bureau",
+                    "linkUrl":"https://www.census.gov/geo/maps-data/data/cbf/cbf_ua.html",
+                    "description":"Combined with place area data."
+                },
+                {
+                  "title":"Places: ",
+                  "linkText":"United States Census Bureau",
+                  "linkUrl":"https://www.census.gov/geo/maps-data/data/cbf/cbf_place.html",
+                  "description":"Combined with urban area data."
+                },
+                {
+                  "title":"County-Level Education, Income and Employment Data: ",
+                  "linkText":"IPUMS NHGIS, University of Minnesota",
+                  "linkUrl":"https://data2.nhgis.org/main",
+                  "description":"IPUMS Data selected from ACS 2011-2015. Geographic Level: County. Datasets: Educational Attainment for the Population 25 Years and Over, Employment Status for the Population 16 Years and Over, Per Capita Income in the Past 12 Months (in 2015 Inflation-Adjusted Dollars)."
+                },
+                {
+                  "title":"Place-Level Education, Income and Employment Data: ",
+                  "linkText":"IPUMS NHGIS, University of Minnesota",
+                  "linkUrl":"https://data2.nhgis.org/main",
+                  "description":"IPUMS Data selected from ACS 2011-2015. Geographic Level: County By State--Place. Datasets: Educational Attainment for the Population 25 Years and Over, Employment Status for the Population 16 Years and Over, Per Capita Income in the Past 12 Months (in 2015 Inflation-Adjusted Dollars)."
+                }]
+            }]
+    },
+    {
+        "title":"Transportation",
+        "maps":[
+            {
+                "title":"Air Travel",
+                "sources":[{
+                    "title":"Airports & Airport Statistics: ",
+                    "linkText":"US Department of Transportation",
+                    "linkUrl":"http://osav-usdot.opendata.arcgis.com/datasets/a36a509eab4e43b4864fb594a35b90d6_0",
+                    "description":"Data from July 2018."
+                },
+                {
+                    "title":"Flight Routes & Statistics: ",
+                    "linkText":"Bureau of Transportation Statistics",
+                    "linkUrl":"https://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236",
+                    "description":"Datasets download for each available month of 2018, merged into single dataset and dissolved based on route."
+              }]
+            },
+            {   
+                "title":"Commutes",
+                "sources":[{
+                    "title":"Commute Time & Commute Mode: ",
+                    "linkText":"IPUMS NHGIS, University of Minnesota",
+                    "linkUrl":"https://data2.nhgis.org/main",
+                    "description":"IPUMS Data selected from ACS 2013-2017. Geographic Level: Census Block Group GIS Data. Dataset: Commute Time, Means of Transportation to Work"
+                },
+                {
+                    "title":"Commute Flows: ",
+                    "linkText":"U.S Census Bureau",
+                    "linkUrl":"https://www.census.gov/data/tables/2015/demo/metro-micro/commuting-flows-2015.html",
+                    "description":"2011-2015 5-Year American Community Survey Commuting Flows."
+                }]
+            },
+            {   
+                "title":"Highways & Roads",
+                "sources":[{
+                    "title":"Highways: ",
+                    "linkText":"USGS",
+                    "linkUrl":"https://prd-tnm.s3.amazonaws.com/index.html?prefix=StagedProducts/Tran/GDB/",
+                    "description":"Data from 2017."
+                },
+                {
+                    "title":"Idaho Speed Limits: ",
+                    "linkText":"Idaho Department of Transportation",
+                    "linkUrl":"http://data.gis.idaho.gov/datasets/IPLAN::speed-zone-mph?geometry=-130.493%2C39.939%2C-63.74%2C50.705",
+                    "description":"Data from 2018. Combined with Washington and Oregon highway speed limit datasets."
+                },
+                {
+                    "title":"Oregon Speed Limits: ",
+                    "linkText":"Oregon Department of Transportation",
+                    "linkUrl":" ftp://ftp.odot.state.or.us/tdb/trandata/GIS_data/Traffic/",
+                    "description":"Data from 2017. Combined with Washington and Idaho highway speed limit datasets."
+                },
+                {
+                    "title":"Washington Speed Limits: ",
+                    "linkText":"Washington Department of Transportation",
+                    "linkUrl":"http://geo.wa.gov/datasets/WSDOT::wsdot-roadway-data-speed-limits?geometry=-137.459%2C44.631%2C-104.082%2C49.846",
+                    "description":"Data from 2018. Combined with Idaho and Oregon highway speed limit datasets."
+                },
+                {
+                    "title":"Idaho AADT: ",
+                    "linkText":"Idaho Department of Transportation",
+                    "linkUrl":"http://data.gis.idaho.gov/datasets/1acf064aca584aeebac363624a127148_50?geometry=-137.755%2C39.965%2C-104.796%2C50.727",
+                    "description":"Data from 2018. Combined with Washington and Oregon AADTdatasets."
+                },
+                {
+                    "title":"Oregon AADT: ",
+                    "linkText":"Oregon Department of Transportation",
+                    "linkUrl":" ftp://ftp.odot.state.or.us/tdb/trandata/GIS_data/Traffic/",
+                    "description":"Data from 2017. Combined with Washington and Idaho AADT datasets."
+                },
+                {
+                    "title":"Washington AADT: ",
+                    "linkText":"Washington Department of Transportation",
+                    "linkUrl":"http://geo.wa.gov/datasets/WSDOT::wsdot-traffic-counts-aadt",
+                    "description":"Data from 2018. Combined with Idaho and Oregon AADT datasets."
+                },
+                {
+                    "title":"Idaho Road Miles: ",
+                    "linkText":"Idaho Department of Transportation",
+                    "linkUrl":"https://apps.itd.idaho.gov/apps/Fund/Local/SURTYPE17.pdf",
+                    "description":"Data from 2017. Combined with Washington and Oregon road mileage datasets."
+                },
+                {
+                    "title":"Oregon Road Miles: ",
+                    "linkText":"Oregon Department of Transportation",
+                    "linkUrl":"https://www.oregon.gov/ODOT/Data/Documents/OMR_2017.pdf",
+                    "description":"Data from 2017. Combined with Washington and Idaho road mileage datasets."
+                },
+                {
+                    "title":"Washington Road Miles: ",
+                    "linkText":"Washington Department of Transportation",
+                    "linkUrl":"http://www.wsdot.wa.gov/mapsdata/geodatacatalog/Maps/noscale/DOT_TDO/WAPR.htm",
+                    "description":"Data from 2018. Combined with Idaho and Oregon road mileage datasets. Mileage calculated from GIS file. "
+                },
+                {
+                    "title":"Land Area: ",
+                    "linkText":"U.S Census Bureau",
+                    "linkUrl":"https://www.census.gov/library/publications/2011/compendia/usa-counties-2011.html#LND",
+                    "description":"Data from 2010. Used with road mile datasets to calculate road density."
+                }]
+            },
+            {   
+                "title":"Public Transit",
+                "sources":[{
+                    "title":"Bus Routes: ",
+                    "linkText":"National Transit Atlas",
+                    "linkUrl":"https://osav-usdot.opendata.arcgis.com/datasets/fb287fdf48e740d2ac06e9b61e2ff7e8_17",
+                    "description":"Data from 2018. Includes the majority of transit agency bus routes."
+                },
+                {
+                    "title":"Light Rail/Streetcar Routes: ",
+                    "linkText":"National Transit Atlas",
+                    "linkUrl":"https://osav-usdot.opendata.arcgis.com/datasets/6524b0bd02bc4f2aa0c44e11ebccabec_14",
+                    "description":"Data from 2018. Includes all transit agency streetcar and light rail routes."
+                },
+                {
+                    "title":"Ferry Routes: ",
+                    "linkText":"National Transit Atlas",
+                    "linkUrl":"https://osav-usdot.opendata.arcgis.com/datasets/20bbd0a14b6143a291d88e120fbb24e1_8",
+                    "description":"Data from 2018."
+                },
+                {
+                    "title":"Spokane Transit Bus Routes: ",
+                    "linkText":"Spokane Transit",
+                    "linkUrl":"https://www.spokanetransit.com/about-sta/developer-resources-gtfs-and-gtfsr",
+                    "description":"Data from 2018. Includes all Spokane Transit bus routes."
+                },
+                {
+                    "title":"Mountain Rides Bus Routes: ",
+                    "linkText":"GTFS Data Exchange",
+                    "linkUrl":"http://www.gtfs-data-exchange.com/agency/mountain-rides-transportation-authority-mrta/",
+                    "description":"Data from 2018. Includes all Mountain Rides bus routes."
+                },
+                {
+                    "title":"Mason County Bus Routes: ",
+                    "linkText":"Transit Feeds",
+                    "linkUrl":"http://transitfeeds.com/p/mason-transit/590",
+                    "description":"Data from 2018. Includes all Mason County bus routes."
+                },
+                {
+                    "title":"Clallam Transit Bus Routes: ",
+                    "linkText":"Transit Land",
+                    "linkUrl":"https://transit.land/feed-registry/operators/o-c28-clallamtransitsystem",
+                    "description":"Data from 2018. Includes all Clallam Transit Transit bus routes."
+                },
+                {
+                    "title":"Twin Transit Bus Routes: ",
+                    "linkText":"Twin Transit",
+                    "linkUrl":"http://twintransit.org/route",
+                    "description":"Data from 2018. Includes all Twin Transit bus routes."
+                },
+                {
+                    "title":"Valley Transit: ",
+                    "linkText":"Transit Feeds",
+                    "linkUrl":"https://transit.land/feed-registry/operators/o-c25y-valleytransit",
+                    "description":"Data from 2018. Includes all Valley Transit bus routes."
+                },
+                {
+                    "title":"Skagit Transit Transit: ",
+                    "linkText":"GTFS Data Exchange",
+                    "linkUrl":"http://www.gtfs-data-exchange.com/agency/skagit-transit/",
+                    "description":"Data from 2018. Includes all Skagit Transit bus routes."
+                },
+                {
+                    "title":"Wahkiakum on the Move: ",
+                    "linkText":"Wahkiakum County",
+                    "linkUrl":"https://www.co.wahkiakum.wa.us/239/Transit",
+                    "description":"Data from 2018. Includes all Wahkiakum County bus routes."
+                },
+                {
+                    "title":"Idaho Citylink Bus Routes: ",
+                    "linkText":"Idaho Citylink",
+                    "linkUrl":"https://idahocitylink.com/routes.php",
+                    "description":"Data from 2018. Route data digitized from static map."
+                },
+                {
+                    "title":"Idaho Falls Bus Routes: ",
+                    "linkText":"Targhee Regional Public Transportation Authority",
+                    "linkUrl":"http://www.trpta.org/idaho-falls-routes/",
+                    "description":"Data from 2018. Route data digitized from static map."
+                },
+                {
+                    "title":"Treasure Valley Transit Bus Routes: ",
+                    "linkText":"Treasure Valley Transit",
+                    "linkUrl":"https://www.treasurevalleytransit.com/",
+                    "description":"Data from 2018. Route data digitized from static map."
+                },
+                {
+                    "title":"SMART Transit Bus Routes: ",
+                    "linkText":"SMART Transit",
+                    "linkUrl":"http://r2transit.com/Downloads/schedule.pdf",
+                    "description":"Data from 2018. Route data digitized from static map."
+                },
+                {
+                    "title":"Lewiston/Clarkston Bus Routes: ",
+                    "linkText":"Ride the Valley",
+                    "linkUrl":"https://www.arcgis.com/apps/MapJournal/index.html?appid=b2d242cbf2bb4fe1a146513be0f0db1c",
+                    "description":"Data from 2018. Route data digitized from static map."
+                },
+                {
+                    "title":"Ellensburg Bus Routes: ",
+                    "linkText":"City of Ellensburg",
+                    "linkUrl":"https://ci.ellensburg.wa.us/DocumentCenter/View/11597/CENTRAL-TRANSIT-SYS-MAP-1-18",
+                    "description":"Data from 2018. Route data digitized from static map."
+                },
+                {
+                    "title":"SPOT Transit Bus Routes: ",
+                    "linkText":"SPOT Transit",
+                    "linkUrl":"http://spotbus.org/schedule/",
+                    "description":"Data from 2018. Route data digitized from static map."
+                },
+                {
+                    "title":"Okanogan Transit: ",
+                    "linkText":"Transit for Greater Okanogan",
+                    "linkUrl":"https://okanogantransit.com/",
+                    "description":"Data from 2018. Route data digitized from static map."
+                },
+                {
+                    "title":"Pahto Passage: ",
+                    "linkText":"Pahto Transit",
+                    "linkUrl":"http://www.pahtotransit.com/12102015_pahto_tabloid.pdf",
+                    "description":"Data from 2018. Route data digitized from static map."
+                },
+                {
+                    "title":"Moccasin Express: ",
+                    "linkText":"Spokane Tribe",
+                    "linkUrl":"http://www.spokanetribe.com/userfiles/file/The%20Moccasin%20Express%20Web%20Page%2085x1103072011.pdf",
+                    "description":"Data from 2018. Route data digitized from static map."
+                },
+                {
+                    "title":"Kaltran: ",
+                    "linkText":"Kalispel Tribe",
+                    "linkUrl":"https://9b37abdd1c3135d9659b-298f012ea728efea7c302ad9a6f7bba0.ssl.cf2.rackcdn.com/pdf-uploads/KALTRAN-schedule.pdf",
+                    "description":"Data from 2018. Route data digitized from static map."
+                },
+                {
+                    "title":"Colville Shuttle: ",
+                    "linkText":"Colville Confederated Tribes",
+                    "linkUrl":"https://static1.squarespace.com/static/571fa45ce3214047f5004b1a/t/5b6c63a7aa4a99de234266b0/1533830056232/InchNesp+Sheet1.pdf",
+                    "description":"Data from 2018. Route data digitized from static map."
+                },
+                {
+                    "title":"Silver Express: ",
+                    "linkText":"Shoshone County",
+                    "linkUrl":"https://nebula.wsimg.com/7c42b73100864e98eeee19e40a0acdfc?AccessKeyId=1B82DE9A13B9AA9FD04E&disposition=0&alloworigin=1",
+                    "description":"Data from 2018. Route data digitized from static map."
+                },
+                {
+                    "title":"Grant County Transit Bus Routes: ",
+                    "linkText":"WSDOT",
+                    "linkUrl":"http://www.wsdot.wa.gov/mapsdata/geodatacatalog/",
+                    "description":"Data from 2018. Route data created by connecting stop points."
+                },
+                {
+                    "title":"Transit Agencies: ",
+                    "linkText":"Federal Transit Administration",
+                    "linkUrl":"https://cms.fta.dot.gov/ntd/data-product/2016-annual-database-agency-information-1",
+                    "description":"Data from 2016. Address data geocoded using Texas A&M free online geocoder. Some agency points were moved for visual ease."
+                },
+                {
+                    "title":"Ridership: ",
+                    "linkText":"Federal Transit Administration",
+                    "linkUrl":"https://www.transit.dot.gov/ntd/data-product/2016-service",
+                    "description":"Data from 2016. Combined with transit agency data."
+                }]
+            },
+            {   
+                "title":"Railroads",
+                "sources":[{
+                    "title":"Historical Railways",
+                    "linkText":"Jeremy Atack, Vanderbilt University",
+                    "linkUrl":"https://my.vanderbilt.edu/jeremyatack/data-downloads/",
+                    "description":"Jeremy Atack, “Historical Geographic Information Systems (GIS) database of U.S. Railroads for [selected years based on value of .dbf field “InOpBy” or “Exact”]” (May 2016) replacing the contents in brackets with the appropriate years(s) based upon the database selection criteria. Railway data were edited in accordance with the following historical maps."
+                },
+                {
+                    "title":"1873 Oregon and Washington",
+                    "linkText":"Gray's Atlas New Rail Road and County Map of the States of Oregon, California, and Nevada",
+                    "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~264547~5524883:Railroad-and-County-Map-of-Oregon,-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=w4s:/where%2FWashington;q:%3D%22Gray%27s%20Atlas%20Of%20The%20United%20States%2C%20With%20General%20Maps%20Of%20The%20World.%20Accompanied%20By%20Descriptions%20Geographical%2C%20Historical%2C%20Scientific%20and%20Statistical.%20By%20O.W.%20Gray%2C%20Civil%20And%20Topographical%20Engineer%2C%20No.%2010%20North%20Fifth%20Street%2C%20Philadelphia.%20Published%20By%20Stedman%2C%20Brown%20%26%20Lyon%2C%20No.%2010%20North%20Fifth%20Street%2C%20Philadelphia.%201873.%20(on%20verso)%20Entered%20...%201873%2C%20by%20O.W.%20Gray%20...%20Washington.%22;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=1&trs=2",
+                    "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+                },
+                {
+                    "title":"1879 Washington",
+                    "linkText":"Rand McNally and Company map of Washington",
+                    "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~3892~400082:Washington-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=w4s:/where%2FWashington;q:%3D%22Rand%2C%20McNally%20%26%20Co.%27s%20Business%20Atlas%20Containing%20Large%20Scale%20Maps%20of%20Each%20State%20and%20Territory%20of%20the%20United%20States%2C%20The%20Provinces%20Of%20Canada%2C%20West%20India%20Islands%2C%20Etc.%2C%20Etc.%20Together%20with%20a%20Complete%20Reference%20Map%20of%20the%20World%20...%20Accompanied%20by%20a%20New%20and%20Original%20Compilation%20and%20Ready%20Reference%20Index%2C%20Showing%20in%20Detail%20the%20Entire%20Railroad%20System%20of%20North%20America%20...%20Chicago%3A%20Rand%2C%20McNally%20%26%20Co.%2C%20Printers%2C%20Engravers%20And%20Publishers.%201878-9.%20(on%20verso)%20Entered%20...%201878%2C%20by%20Rand%2C%20McNally%20%26%20Co.%20...%20Washington%2C%20D.C.%22;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=0&trs=1",
+                    "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+                },
+                {
+                    "title":"1879 Oregon",
+                    "linkText":"Rand McNally and Company map of Oregon",
+                    "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~3894~410046:Oregon-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No",
+                    "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+                },
+                {
+                    "title":"1889 Washington",
+                    "linkText":"George F. Cram's Standard American Atlas of the World",
+                    "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~212993~5500810:Washington-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No",
+                    "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+                },
+                {
+                    "title":"1889 Oregon",
+                    "linkText":"George F. Cram's Standard American Atlas of the World",
+                    "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~212995~5500811:Oregon-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No",
+                    "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+                },
+                {
+                    "title":"1889 Idaho",
+                    "linkText":"George F. Cram's Standard American Atlas of the World",
+                    "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~212991~5500809:Idaho-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=w4s:/where%2FIdaho%2Fwhen%2F1889;q:Cram%27s%20Standard%20American%20Atlas%20Of%20The%20World;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=0&trs=1",
+                    "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+                },
+                {
+                    "title":"1901 Washington",
+                    "linkText":"George F. Cram's Standard American Railway System Atlas Of The World",
+                    "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~213320~5500961:Washington-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=w4s:/where%2FWashington;q:%3D%22Locations%20of%20banking%20towns%20shown%20by%20red%20circles.%20Railroads%20are%20indicated%20by%20numbers%20and%20colors%20and%20patterns%2C%20and%20each%20railroad%20has%20the%20same%20number%20and%20color%20and%20pattern%20in%20every%20state%20through%20which%20it%20passes.%20All%20railroads%20on%20each%20map%20are%20in%20a%20list%20keyed%20to%20the%20map.%20Border%20of%20map%20has%20a%20table%20of%20contents%20for%20the%20atlas.%20Relief%20shown%20by%20hachures.%20Prime%20meridians%20Washington%20D.C.%20and%20Greenwich.%22;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=0&trs=1",
+                    "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+                },
+                {
+                    "title":"1901 Oregon",
+                    "linkText":"George F. Cram's Standard American Railway System Atlas Of The World",
+                    "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~213322~5500962:Oregon-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No",
+                    "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+                },
+                {
+                    "title":"1901 Idaho",
+                    "linkText":"George F. Cram's Standard American Railway System Atlas Of The World",
+                    "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~213318~5500960:Idaho-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=w4s:/where%2FIdaho;q:Cram%27s%20Standard%20American%20Railway%20Atlas;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=0&trs=3",
+                    "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+                },
+                {
+                    "title":"1912 Washington",
+                    "linkText":"Rand McNally and Company Library Atlas Of The World",
+                    "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~308560~90078288:Washington-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=w4s:/where%2FWashington%2Fwhen%2F1912;q:washington;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=0&trs=2#",
+                    "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+                },
+                {
+                    "title":"1910 Oregon",
+                    "linkText":"George F. Cram's Standard American Railway Atlas",
+                    "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~216312~5502626:Oregon?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=w4s:/who%2FCram%25252C%2BGeorge%2BFranklin%2Fwhere%2FOregon;q:railroad;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=4&trs=9",
+                    "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+                },
+                {
+                    "title":"1909 Idaho",
+                    "linkText":"Idaho: Rand McNally & Company",
+                    "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~214860~5501862",
+                    "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+                },
+                {
+                    "title":"1924 Washington",
+                    "linkText":"Rand McNally Black and White Mileage Map, Washington.",
+                    "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~201792~3000711:Washington-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=w4s:/where%2FWashington%2Fwhen%2F1924;q:railroad;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=2&trs=3",
+                    "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+                },
+                {
+                    "title":"1924 Oregon",
+                    "linkText":"Rand McNally Black and White Mileage Map, Oregon.",
+                    "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~201786~3000708:Oregon-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=w4s:/where%2FOregon%2Fwhen%2F1924;q:railroad;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=2&trs=3",
+                    "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+                },
+                {
+                    "title":"1924 Idaho",
+                    "linkText":"Rand McNally Black and White Mileage Map, Idaho.",
+                    "linkUrl":"https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~201781~3000705:Idaho-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=w4s:/where%2FIdaho%2Fwhen%2F1924;q:railroad;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=2&trs=4",
+                    "description":"Points digitized from historical map. All David Rumsey maps licensed under Creative Commons."
+                },
+                {
+                    "title":"Railroad Ownership",
+                    "linkText":"National Transit Atlas",
+                    "linkUrl":"http://osav-usdot.opendata.arcgis.com/datasets/f15d9e40cd1d4170a36bf31d4e6a3c28_0",
+                    "description":"Data from 2018."
+                },
+                {
+                    "title":"Amtrak Routes",
+                    "linkText":"National Transit Atlas",
+                    "linkUrl":"http://osav-usdot.opendata.arcgis.com/datasets/4e32613ba4c9450880118b2fd639e8cb_0",
+                    "description":"Data from 2018."
+                },
+                {
+                    "title":"Amtrak Stations",
+                    "linkText":"National Transit Atlas",
+                    "linkUrl":"http://osav-usdot.opendata.arcgis.com/datasets/3e9daf681b154fb19372044f4d52941a_0",
+                    "description":"Data from 2018."
+                },
+                {
+                    "title":"Amtrak Station Passenger Statistics",
+                    "linkText":"National Transit Atlas",
+                    "linkUrl":"https://www.railpassengers.org/site/assets/files/1220/wa.pdf",
+                    "description":"Data from 2018. Data joined with Amtrak station layer."
+                }]
+            }]
+    },
+    {
+        "title":"Water",
+        "maps":[
+            {
+                "title":"Groundwater",
+                "sources":[{
+                    "title":"Aquifers: ",
+                    "linkText":"USGS",
+                    "linkUrl":"https://water.usgs.gov/GIS/metadata/usgswrd/XML/aquifers_us.xml#stdorder",
+                    "description":"Data from 2003. Joined with catchments and groundwater recharge datasets."
+                },
+                {
+                  "title":"Catchment Areas:  ",
+                  "linkText":"USGS SPARROW Model",
+                  "linkUrl":"https://water.usgs.gov/GIS/metadata/usgswrd/XML/mrb_e2rf1ws.xml",
+                  "description":"Data from 2002. Joined with catchments and groundwater recharge datasets."
+                },
+                {
+                  "title":"Groundwater Recharge by Catchment Areas: ",
+                  "linkText":"USGS SPARROW Model",
+                  "linkUrl":"https://water.usgs.gov/GIS/metadata/usgswrd/XML/mrb_e2rf1_recharge.xml",
+                  "description":"Recharge rate in mm/yr. Data from 2002. Notes: Joined with catchments and groundwater recharge datasets. Data from 2003."
+                },
+                {
+                  "title":"Sole Source Aquifers: ",
+                  "linkText":"US EPA",
+                  "linkUrl":"https://catalog.data.gov/dataset/national-sole-source-aquifer-gis-layer",
+                  "description":"Data from 2017."
+                },
+                {
+                  "title":"Oregon Groundwater Restricted Areas: ",
+                  "linkText":"Oregon Water Resources Department",
+                  "linkUrl":"https://www.oregon.gov/OWRD/programs/GWWL/GW/Documents/GWAdminAreasMap.pdf",
+                  "description":"Data from 2017. Data digitized from static map."
+                },
+                {
+                  "title":"Idaho Groundwater Restricted Areas: ",
+                  "linkText":"Idaho Department of Water Resources",
+                  "linkUrl":"https://www.idwr.idaho.gov/water-rights/critical-groundwater-areas/",
+                  "description":"Data from 2017."
+                }]
+            },
+            {   
+                "title":"Water Pollution",
+                "sources":[{
+                    "title":"303(d) Pollutant Listings:  ",
+                    "linkText":"U.S Environmental Protection Data",
+                    "linkUrl":"https://www.epa.gov/waterdata/waters-geospatial-data-downloads",
+                    "description":"Data from 2015. Midpoints were calculated on each line segment and counted in each hex on the grid. Process repeated for different categories."
+                },
+                {
+                  "title":"Nitrogen and Phosphorus Inputs: ",
+                  "linkText":"USGS SPARROW Model",
+                  "linkUrl":"https://water.usgs.gov/GIS/metadata/usgswrd/XML/mrb_e2rf1_nutrients.xml",
+                  "description":"Total nitrogen and phosphorus inputs to water sources in KG/Yr. Data from 2003. Joined with catchments. Midpoints calculated and counted in each hex on the grid."
+                },
+                {
+                  "title":"Catchment Areas: ",
+                  "linkText":"USGS SPARROW Model",
+                  "linkUrl":"https://water.usgs.gov/GIS/metadata/usgswrd/XML/mrb_e2rf1ws.xml",
+                  "description":"Data from 2003. Joined with nitrogen and phosphorus inputs."
+                },
+                {
+                  "title":"Arsenic points: ",
+                  "linkText":"USGS National Water-Quality Assessment Program",
+                  "linkUrl":"https://water.usgs.gov/nawqa/trace/pubs/geo_v46n11/index.html",
+                  "description":"Data from 2001. Points were counted in each grid. 3rd Quartile value was calculated for each hexgrid."
+                }]
+            },
+            {   
+                "title":"Water Use",
+                "sources":[{
+                    "title":"Idaho Water Use: ",
+                    "linkText":"USGS National Water Information System",
+                    "linkUrl":"https://waterdata.usgs.gov/id/nwis/water_use?format=html_table&rdb_compression=file&wu_area=County&wu_year=2010&wu_county=ALL&wu_category=ALL&wu_county_nms=--ALL%2BCounties--&wu_category_nms=--ALL%2BCategories--",
+                    "description":"Millions of gallons per day by usage. Data from 2010."
+                },
+                {
+                    "title":"Oregon Water Use: ",
+                    "linkText":"USGS National Water Information System",
+                    "linkUrl":"https://waterdata.usgs.gov/or/nwis/water_use?format=html_table&rdb_compression=file&wu_area=County&wu_year=2010&wu_county=ALL&wu_category=ALL&wu_county_nms=--ALL%2BCounties--&wu_category_nms=--ALL%2BCategories--",
+                    "description":"Millions of gallons per day by usage. Data from 2010."
+                },
+                {
+                    "title":"Washington Water Use: ",
+                    "linkText":"USGS National Water Information System",
+                    "linkUrl":"https://waterdata.usgs.gov/wa/nwis/water_use?format=html_table&rdb_compression=file&wu_area=County&wu_year=2010&wu_county=ALL&wu_category=ALL&wu_county_nms=--ALL%2BCounties--&wu_category_nms=--ALL%2BCategories--",
+                    "description":"Millions of gallons per day by usage. Data from 2010."
+                }]
+            },
+            {   
+                "title":"Watersheds",
+                "sources":[{
+                    "title":"Watershed Boundaries: ",
+                    "linkText":"USGS",
+                    "linkUrl":"https://nhd.usgs.gov/wbd.html",
+                    "description":"Data edited/generalized for readability. Watersheds were joined at each scale."
+                },
+                {
+                  "title":"National Dams: ",
+                  "linkText":"USGS",
+                  "linkUrl":"https://www.sciencebase.gov/catalog/item/581d051ee4b08da350d523db",
+                  "description":"Data from 2006."
+                },
+                {
+                  "title":"Idaho Dams: ",
+                  "linkText":"Idaho Department of Water Resources",
+                  "linkUrl":"https://research.idwr.idaho.gov/gis/GISScripts/metadata.aspx?md=Spatial/DamSafety/dam.shp.xml",
+                  "description":"Data from 2010."
+                },
+                {
+                  "title":"Oregon Dams: ",
+                  "linkText":"Oregon Water Resources Department",
+                  "linkUrl":"http://spatialdata.oregonexplorer.info/geoportal/details;id=523fed781b444e278e86fd0c63fd7c53",
+                  "description":"Data from 2014."
+                },
+                {
+                    "title":"Washington Dams: ",
+                    "linkText":"Washington State Department of Ecology",
+                    "linkUrl":"https://fortress.wa.gov/ecy/publications/documents/94016.pdf",
+                    "description":"Data from 2018. Data had must be requested for use."
+                },
+                {
+                    "title":"Canadian Dams: ",
+                    "linkText":"Natural Resources Canada",
+                    "linkUrl":"https://catalogue.data.gov.bc.ca/dataset/b-c-dams",
+                    "description":"Data from 2017."
+                },
+                {
+                    "title":"American Rivers: ",
+                    "linkText":"USGS",
+                    "linkUrl":"https://www.sciencebase.gov/catalog/item/4fb55df0e4b04cb937751e02",
+                    "description":"Data from 2011."
+                },
+                {
+                    "title":"Canadian Rivers: ",
+                    "linkText":"British Columbia Ministry of Energy, Mines and Petroleum Resources",
+                    "linkUrl":"http://www.empr.gov.bc.ca/Mining/Geoscience/MapPlace/geoData/Pages/default.aspx",
+                    "description":"Data from 2006."
+                },
+                {
+                    "title":"American Lakes: ",
+                    "linkText":"USGS",
+                    "linkUrl":"https://www.sciencebase.gov/catalog/item/4fb55df0e4b04cb937751e02",
+                    "description":"Data from 2011."
+                },
+                {
+                    "title":"Canadian Lakes: ",
+                    "linkText":"British Columbia Ministry of Energy, Mines and Petroleum Resources",
+                    "linkUrl":"http://www.empr.gov.bc.ca/Mining/Geoscience/MapPlace/geoData/Pages/default.aspx",
+                    "description":"Data from 2006."
+                },
+                {
+                    "title":"American Cities: ",
+                    "linkText":"USGS",
+                    "linkUrl":"https://www.sciencebase.gov/catalog/item/581d051ae4b08da350d523a9"
+                },
+                {
+                    "title":"Canadian Cities: ",
+                    "linkText":"British Columbia Ministry of Energy, Mines and Petroleum Resources",
+                    "linkUrl":"http://www.empr.gov.bc.ca/Mining/Geoscience/MapPlace/geoData/Pages/default.aspx"
+                },
+                {
+                    "title":"Tribal Lands: ",
+                    "linkText":"US Census Bureau",
+                    "linkUrl":"https://www.census.gov/geo/maps-data/data/cbf/cbf_aiannh.html"
+                },
+                {
+                    "title":"Population Data: ",
+                    "linkText":"IPUMS NHGIS, University of Minnesota",
+                    "linkUrl":"https://data2.nhgis.org/main",
+                    "description":"Data from 2010 census. Total population by US Census Block retrieved from IPUMS."
+                }]
+            }]
+    },
+    {
+        "title":"Wildlife",
+        "maps":[
+            {
+                "title":"Fauna",
+                "sources":[{
+                    "title":"Level 3 Ecoregions: ",
+                    "linkText":"US Environmental Protection Agency",
+                    "linkUrl":"https://www.epa.gov/eco-research/level-iii-and-iv-ecoregions-continental-united-states"
+                },
+                {
+                    "title":"Ecoregion Wildlife: ",
+                    "linkText":"CEC Publications",
+                    "linkUrl":"http://www3.cec.org/islandora/en/item/10415-north-american-terrestrial-ecoregionslevel-iii-en.pdf"
+                },
+                {
+                    "title":"Habitat Type: ",
+                    "linkText":"USGS Gap Analysis",
+                    "linkUrl":"https://gapanalysis.usgs.gov/gaplandcover/data/download/",
+                    "description":"Data from 2011. Raster data downloaded for each state and merged."
+                },
+                {
+                    "title":"Biodiversity: ",
+                    "linkText":"Biodiveristymapping.org",
+                    "linkUrl":"https://biodiversitymapping.org/wordpress/index.php/download/",
+                    "description":"Number of species by type per area. Date not provided. The following datasets were merged: bird_total_richness, mammal_total_richness, reptile_total_richness, amphibian_total_richness, fish_total_richness. Data derived from BirdLife International, IUCN, NatureServe, and USGS."
+                },
+                {
+                    "title":"Idaho Wolfpack Locations: ",
+                    "linkText":"Idaho Department of Fish and Game",
+                    "linkUrl":"https://idfg.idaho.gov/sites/default/files/idaho-wolf-monitoring-progress-report-2015.pdf",
+                    "description":"Data from 2015. Digitized from map on page 11."
+                },
+                {
+                    "title":"Oregon Wolfpack Locations: ",
+                    "linkText":"Oregon Department of Fish and Wildlife",
+                    "linkUrl":"https://dfw.state.or.us/Wolves/population.asp",
+                    "description":"Data from 2017. Digitized from static map."
+                },
+                {
+                    "title":"Washington Wolfpack Locations: ",
+                    "linkText":"Washington Department of Fish and Wildlife",
+                    "linkUrl":"https://wdfw.wa.gov/conservation/gray_wolf/packs/",
+                    "description":"Data from 2017. Digitized from static map."
+                },
+                {
+                    "title":"Current Endangered Species Habitats: ",
+                    "linkText":"USGS National GAP Analysis Project",
+                    "linkUrl":"https://gapanalysis.usgs.gov/species/data/download/",
+                    "description":"Data from 2013. Distribution data used for Gray Wolf, Northern Spotted Owl, and Greater Sage-Grouse."
+                },
+                {
+                    "title":"Oregon Spotted Frog Critical Habitat: ",
+                    "linkText":"US Department of the Interior",
+                    "linkUrl":"https://catalog.data.gov/dataset/final-critical-habitat-for-oregon-spotted-frog-rana-pretiosa",
+                    "description":"Data from 2016."
+                },
+                {
+                    "title":"Gray Wolf/Spotted Owl Historical Range: ",
+                    "linkText":"USGS National GAP Analysis Project",
+                    "linkUrl":"https://gapanalysis.usgs.gov/species/data/download/",
+                    "description":"Data from 2013."
+                },
+                {
+                    "title":"Greater Sage Grouse Historical Range: ",
+                    "linkText":"USGS ScienceBase Catalog",
+                    "linkUrl":"https://www.sciencebase.gov/catalog/item/52e17ac3e4b0d0c3df9a3968",
+                    "description":"Data from 2002."
+                },
+                {
+                    "title":"Oregon Spotted Frog Historical Range: ",
+                    "linkText":"IUCN Red List",
+                    "linkUrl":"https://commons.wikimedia.org/wiki/File:Oregon_Spotted_Frog_Rana_pretiosa_distribution_map.png",
+                    "description":"Digitized from image."
+                }]
+            },
+            {   
+                "title":"Fish",
+                "sources":[{
+                    "title":"Idaho Fish Distribution: ",
+                    "linkText":"StreamNet",
+                    "linkUrl":"https://www.streamnet.org/data/interactive-maps-and-gis-data/",
+                    "description":"Data from 2012. Fish datasets downloaded and clipped to Idaho, with the exception of Lahontan Trout."
+                },
+                {
+                    "title":"Oregon Fish Distribution: ",
+                    "linkText":"Oregon Department Fish and Wildlife",
+                    "linkUrl":"https://nrimp.dfw.state.or.us/DataClearinghouse/default.aspx?p=202&XMLname=1167.xml",
+                    "description":"Data from 2018."
+                },
+                {
+                    "title":"Washington Fish Distribution: ",
+                    "linkText":"Washington Department of Fish and Wildlife",
+                    "linkUrl":"https://data-wdfw.opendata.arcgis.com/datasets/statewide-washington-integrated-fish-distribution",
+                    "description":"Data from 2018."
+                },
+                {
+                    "title":"Salmon and Steelhead DPS/ESU Boundaries: ",
+                    "linkText":"National Oceanic and Atmospheric Administration Fisheries Department",
+                    "linkUrl":"http://www.westcoast.fisheries.noaa.gov/maps_data/Species_Maps_Data.html",
+                    "description":"Data from 2013. Combined with salmonoid line datasets."
+                },
+                {
+                    "title":"Yellowstone Trout Historical Range: ",
+                    "linkText":"National Parks Service",
+                    "linkUrl":"https://www.nps.gov/subjects/yellowstonescience/images/Figure-1AL-C.jpg?maxwidth=1200&autorotate=false",
+                    "description":"Date not provided. Static map digitized. Only major rivers were digitized."
+                },
+                {
+                    "title":"Bonneville Trout Historical Range: ",
+                    "linkText":"Idaho Department of Fish and Game",
+                    "linkUrl":"https://idfg.idaho.gov/old-web/docs/fish/planBonCutthroat.pdf",
+                    "description":"Data from 2007. Map on page 3 of document used as reference."
+                },
+                {
+                    "title":"Westslope Trout Historical Range: ",
+                    "linkText":"Idaho Department of Fish and Game",
+                    "linkUrl":"http://www.westernnativetrout.org/media/trout/westslope-cutthroat-assessment.pdf",
+                    "description":"Data from 2007. Map on page 1 of document used as reference."
+                },
+                {
+                    "title":"White Sturgeon Population Data: ",
+                    "linkText":"Northwest Power and Conservation Council",
+                    "linkUrl":"https://www.nwcouncil.org/sites/default/files/White_Sturgeon_Framework_review_draft_Feb2013.pdf",
+                    "description":"Data from 2013. Map on page 53 of document used as reference."
+                },
+                {
+                    "title":"Supplemental Stream Data: ",
+                    "linkText":"StreamNet",
+                    "linkUrl":"https://www.streamnet.org/data/interactive-maps-and-gis-data/",
+                    "description":"'Routed Streams' layer downloaded."
+                },
+                {
+                    "title":"Fish Biodiversity: ",
+                    "linkText":"Natureserve",
+                    "linkUrl":"http://www.natureserve.org/library/stateofunions.pdf",
+                    "description":"Number of fish species per watershed. Data from 2002."
+                }]
+            },
+            {   
+                "title":"Flora",
+                "sources":[{
+                    "title":"Level 3 Ecoregions: ",
+                    "linkText":"US Environmental Protection Agency",
+                    "linkUrl":"https://www.epa.gov/eco-research/level-iii-and-iv-ecoregions-continental-united-states"
+                },
+                {
+                    "title":"Vegetation Type: ",
+                    "linkText":"USGS Gap Analysis",
+                    "linkUrl":"https://gapanalysis.usgs.gov/gaplandcover/data/download/",
+                    "description":"Data from 2011. Raster data downloaded for each state and merged."
+                },
+                {
+                    "title":"Forest Cover, Gain, and Loss: ",
+                    "linkText":"Hansen/UMD/Google/USGS/NASA",
+                    "linkUrl":"http://earthenginepartners.appspot.com/science-2013-global-forest/download_v1.5.html",
+                    "description":"The following datasets were downloaded: Global forest cover gain 2000–2012, Year of gross forest cover loss event, Tree canopy cover for year 2000."
+                },
+                {
+                    "title":"Tree Species: ",
+                    "linkText":"US Forest Service",
+                    "linkUrl":"https://www.fs.usda.gov/rds/archive/Product/RDS-2013-0013",
+                    "description":"Species basal area, square feet/acre. RDS-2013-0013_RasterMaps_s10-s350.zip and RDS-2013-0013_RasterMaps_s601-s825.zip were downloaded. Datasets based on FIA species codes."
+                },
+                {
+                    "title":"Sagebrush: ",
+                    "linkText":"Multi-Resolution Land Characteristics Consortium",
+                    "linkUrl":"https://www.mrlc.gov/data?f%5B0%5D=category%3Ashrubland",
+                    "description":"% Sagebrush datasets were downloaded and combined across 3 regions: Columbia Plateau/Blue Mountains, Wyoming/Montana/Black Hills, and Great Basin."
+                }]
+            },
+            {   
+                "title":"Invasive Species",
+                "sources":[{
+                    "title":"Washington and Idaho Invasive Species Sightings",
+                    "linkText":"EDD Maps",
+                    "linkUrl":"https://www.eddmaps.org/distribution/",
+                    "description":"Data current as of July, 2018. Used for all included species."
+                },
+                {
+                    "title":"Oregon Invasive Species Sightings",
+                    "linkText":"iMapInvasives",
+                    "linkUrl":"https://www.imapinvasives.org/",
+                    "description":"Since 2010, Oregon has made a concerted effort to centralize invasive species data from many sources into the Oregon iMapInvasives database. These efforts result in a denser coverage of invasive species observations in Oregon as compared to neighboring states. Lack of data for a specific location does not mean that invasive species are absent from that location."
+                }]
+            }]
+    }]
+}
