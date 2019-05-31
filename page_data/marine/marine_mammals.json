@@ -68,7 +68,7 @@
                 "color":"#f7f7f7",
                 "label":"Less than 1"
             }],
-            "description":"Public sighting reports of Orca Whales from 2006 to 2016, provided by the Whale Musuem's Whale Hotline.",
+            "description":"Public sighting reports of Orca Whales from 2006 to 2016, provided by the Whale Museum's Whale Hotline.",
             "bottomIcon":"orca",
             "bottomIconWidth":300
         },
