@@ -5,7 +5,7 @@
         { 
         "id":0,
         "text":"Fauna",
-        "description":"Aquifer rock type, annual recharge, groundwater protection",
+        "description":"Habitat types, biodiversity, endangered species",
         "imageURL":"fauna_icon",
         "chapter":"wildlife",
         "link":"wildlife/fauna",
@@ -15,7 +15,7 @@
         { 
         "id":1,
         "text":"Fish",
-        "description":"Surface water, groundwater, water use categories",
+        "description":"Current fish habitat, historical fish habitat, fish biodiversity",
         "imageURL":"fish_icon",
         "chapter":"wildlife",
         "link":"wildlife/fish",
@@ -25,7 +25,7 @@
         { 
         "id":2,
         "text":"Flora",
-        "description":"Watershed boundaries, rivers, lakes, dams",
+        "description":"Ecoregions, land cover, forest cover, tree species",
         "imageURL":"flora_icon",
         "chapter":"wildlife",
         "link":"wildlife/flora",
