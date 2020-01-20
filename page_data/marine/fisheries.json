@@ -221,7 +221,7 @@
           {
             "color":"#669999",
             "label":"Salmon Conservation Zone"
-          }]   
+          }]
         },
         {
           "id":1,
@@ -509,7 +509,7 @@
             "fillOpacity":[0.8,0.8,0.8,0.5],
             "opacity":1,
             "tooltipVars":["NAME","STATE","tot_ops"],
-            "tooltipText":["<div style='width:360px'><p3 style='display:inline; font-weight:bold; font-size:26px; white-space:normal; margin-left:5px;'>"," County, ","</p3><p3 style='margin:0px 0px 5px 5px; display:block; font-size:20px; white-space:normal; font-weight:normal;'>Total Aquaculture Operations: ","</p3>"]    
+            "tooltipText":["<div style='width:360px'><p3 style='display:inline; font-weight:bold; font-size:26px; white-space:normal; margin-left:5px;'>"," County, ","</p3><p3 style='margin:0px 0px 5px 5px; display:block; font-size:20px; white-space:normal; font-weight:normal;'>Total Aquaculture Operations: ","</p3>"]
         }],
         "legend":[{
             "id":0,
@@ -532,7 +532,7 @@
               "color":"#ffffff",
               "label":"Less than 5"
             }],
-            "description":"Total number of aquculture operations in a particular county as of 2017."   
+            "description":"Total number of aquaculture operations in a particular county as of 2017."
           },
           {
             "id":1,
@@ -572,7 +572,7 @@
             "fillOpacity":[0.8,0.8,0.8,0.5],
             "opacity":1,
             "tooltipVars":["NAME","STATE","tot_ops","shell_ops"],
-            "tooltipText":["<div style='width:360px'><p3 style='display:inline; font-weight:bold; font-size:26px; white-space:normal; margin-left:5px;'>"," County, ","</p3><p3 style='margin:0px 0px 5px 5px; display:block; font-size:20px; white-space:normal; font-weight:normal;'>Total Aquaculture Operations: ","<br/>Shellfish Aquaculture Operations: ","</p3>"]        
+            "tooltipText":["<div style='width:360px'><p3 style='display:inline; font-weight:bold; font-size:26px; white-space:normal; margin-left:5px;'>"," County, ","</p3><p3 style='margin:0px 0px 5px 5px; display:block; font-size:20px; white-space:normal; font-weight:normal;'>Total Aquaculture Operations: ","<br/>Shellfish Aquaculture Operations: ","</p3>"]
         }],
         "legend":[{
             "id":0,
@@ -595,7 +595,7 @@
               "color":"#ffffff",
               "label":"0 or No Data"
             }],
-            "description":"Total shellfish aquaculture operations as of 2017. Shellfish aquaculture includes oysters, clams, mussels, geoducks, and abalone."   
+            "description":"Total shellfish aquaculture operations as of 2017. Shellfish aquaculture includes oysters, clams, mussels, geoducks, and abalone."
           },
           {
             "id":1,

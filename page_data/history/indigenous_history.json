@@ -8,7 +8,7 @@
     "maps":[{
         "id":0,
         "title":"Tribal Groups",
-        "featureSelected":false, 
+        "featureSelected":false,
         "tileLayers":[{"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjl42fute4l6l2slp422hba6v/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":300,"opacity":1,"type":"mapbox"}],
         "border":{"title":"pnw_borders_black","opacity":0.6},
         "jsonLayers":[
@@ -34,7 +34,7 @@
                 "selectionHover":1,
                 "listWeight":"normal",
                 "varList":["name","lang_grp","confd_res"],
-                "varLabel":["Enlish Name: ","Language Group: ","Reservation(s)/Confederation(s): "]
+                "varLabel":["English Name: ","Language Group: ","Reservation(s)/Confederation(s): "]
             }
         }],
         "legend":[{
@@ -52,7 +52,7 @@
       {
         "id":1,
         "title":"Language",
-        "featureSelected":false, 
+        "featureSelected":false,
         "tileLayers":[{"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjl42fute4l6l2slp422hba6v/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":300,"opacity":1,"type":"mapbox"}],
         "border":{"title":"pnw_borders_black","opacity":0.6},
         "jsonLayers":[
@@ -78,7 +78,7 @@
                 "selectionHover":1,
                 "listWeight":"normal",
                 "varList":["name","lang_grp","confd_res"],
-                "varLabel":["Enlish Name: ","Language Group: ","Reservation(s)/Confederation(s): "]
+                "varLabel":["English Name: ","Language Group: ","Reservation(s)/Confederation(s): "]
             },
             "flow":{
                 "flow_id":"id",
@@ -129,7 +129,7 @@
         "id":2,
         "title":"Confederation",
         "tileLayers":[{"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjl42fute4l6l2slp422hba6v/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":300,"opacity":1,"type":"mapbox"}],
-        "featureSelected":false, 
+        "featureSelected":false,
         "border":{"title":"pnw_borders_black","opacity":0.6},
         "jsonLayers":[
         {
@@ -154,7 +154,7 @@
                 "selectionHover":1,
                 "listWeight":"normal",
                 "varList":["name","lang_grp","confd_res"],
-                "varLabel":["Enlish Name: ","Language Group: ","Reservation(s)/Confederation(s): "]
+                "varLabel":["English Name: ","Language Group: ","Reservation(s)/Confederation(s): "]
             },
             "flow":{
                 "flow_id":"id",
@@ -205,7 +205,7 @@
         "id":3,
         "title":"Combined View",
         "tileLayers":[{"title":"https://api.mapbox.com/styles/v1/pnwatlas/cjl42fute4l6l2slp422hba6v/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoicG53YXRsYXMiLCJhIjoiY2pnM3puY3hwMXVldTJxcXBjZnZseG1jbCJ9.AXk0tP-pS2HjpgLJahLcdw","attribution":"© <a style='font-weight:normal' href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a style='font-weight:normal' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>","pane":300,"opacity":1,"type":"mapbox"}],
-        "featureSelected":false, 
+        "featureSelected":false,
         "border":{"title":"pnw_borders_black","opacity":0.6},
         "jsonLayers":[
         {
@@ -230,7 +230,7 @@
                 "selectionHover":1,
                 "listWeight":"normal",
                 "varList":["name","lang_grp","confd_res"],
-                "varLabel":["Enlish Name: ","Language Group: ","Reservation(s)/Confederation(s): "]
+                "varLabel":["English Name: ","Language Group: ","Reservation(s)/Confederation(s): "]
             },
             "flow":{
                 "flow_id":"id",
